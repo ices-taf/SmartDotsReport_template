@@ -28,6 +28,18 @@ vignettes/*.pdf
 /*_cache/
 /cache/
 
-# Temporary files created by R markdown
+# Project files
 *.utf8.md
 *.knit.md
+.Rproj.user
+*.sublime-workspace
+*.sublime-project
+*.Rproj
+
+# TAF folders
+/data/
+/raw/
+/input/
+/model/
+/output/
+/report/
