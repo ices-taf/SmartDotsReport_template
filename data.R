@@ -14,7 +14,7 @@ source("utilities-smartdots.R")
 load.config("config.json")
 
 # download raw data
-dowload.raw(folders$raw$repo, folders$raw$ref)
+download.raw(folders$raw$repo, folders$raw$ref)
 
 # Get and prepare data ########################################################
 

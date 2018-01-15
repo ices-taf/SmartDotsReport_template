@@ -18,7 +18,7 @@ load.config <- function(file) {
 # * checks to see if there is internet connection, if not, exits giving warning
 # * checks to see if the current raw folder needs to be updated
 # * if appropriate: downloads zip of raw folder and unzips, then deletes the zip.
-dowload.raw <- function(repo, ref) {
+download.raw <- function(repo, ref) {
   # for now just copy the local raw folder
   mkdir("raw")
 
