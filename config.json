@@ -1,0 +1,36 @@
+// SmartDots workshop report congiguration file
+{
+  // TAF project settings
+  // ----------------------------
+
+	"folders":
+  {
+	  "raw":
+	  {
+		  "repo": "2018_smartdotsReportData",
+		  "ref": "master"
+    },
+		"analysis":
+    {
+		  "repo": "2018_smartdotsReport",
+		  "ref": "master"
+    }
+	},
+
+
+  // Analysis specific arguments:
+  // ----------------------------
+
+  // Report output title
+  "report_title": "Otolith Exchange Analysis for Sprat in Area 3A",
+  "report_name": "work_exchange_analysis_121217",
+
+  // Use mode or mean to obtain modal age, when there is no mode
+  // within the age reading
+  "ma_method": "Mode",
+
+  // Choose strata
+  "strata": "ices_area",
+  "strata2": ["qtr", "ices_area"],
+  "strata3": []
+}
