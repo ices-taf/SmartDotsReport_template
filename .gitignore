@@ -36,10 +36,6 @@ vignettes/*.pdf
 *.sublime-project
 *.Rproj
 
-# TAF folders
-/data/
-/raw/
-/input/
+# TAF model folder
 /model/
-/output/
-/report/
+
