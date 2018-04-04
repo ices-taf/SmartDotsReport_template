@@ -11,7 +11,7 @@ library(rmarkdown)
 source("utilities-smartdots.R")
 
 # load configuration data
-load.config("config.json")
+config <- read_json("config.json", simplifyVector = TRUE)
 
 # load data for report
 dist <- read.taf("data/dist.csv")
@@ -30,8 +30,8 @@ for (file in dir("output", pattern = "*.rData")) {
 # render report
 mkdir("report")
 render("report.Rmd",
-       params = list(report_title = report_title),
        output_dir = "report",
-       output_file = paste0(report_name, ".docx"),
+       params = list(report_title = config$report_title),
+       output_file = paste0(config$report_name, ".docx"),
        encoding = "UTF-8")
 
