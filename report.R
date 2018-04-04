@@ -30,10 +30,10 @@ for (file in dir("output", pattern = "*.rData")) {
   load(paste0("output/", file))
 }
 
-# render report
+# render report and copy to report folder
+report_filename <- paste0(config$report_name, ".docx")
 render("report.Rmd",
-       output_dir = "report",
        params = list(report_title = config$report_title),
-       output_file = paste0(config$report_name, ".docx"),
+       output_file = report_filename,
        encoding = "UTF-8")
-
+cp(report_filename, "report", move = TRUE)
