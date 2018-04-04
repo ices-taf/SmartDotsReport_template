@@ -11,7 +11,7 @@ library(rmarkdown)
 mkdir("report")
 
 # source utilities
-source("utilities-smartdots.R")
+source("utilities_report.R")
 
 # load configuration data
 config <- read_json("config.json", simplifyVector = TRUE)
