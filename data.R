@@ -18,9 +18,6 @@ source("utilities-smartdots.R")
 # load configuration
 config <- read_json("config.json", simplifyVector = TRUE)
 
-# download the report template
-download.file(url = config$report_template, "data/reportTemplate.docx", quiet = TRUE, mode = "wb")
-
 # get data from database
 
 
