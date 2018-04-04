@@ -1,5 +1,12 @@
 
 library(ggplot2)
+library(reshape)
+library(dplyr)
+library(tidyr)
+library(pander)
+library(scales)
+library(pipeR)
+
 
 # plot_rb_ma      : Plot of relative bias per modal age
 # plot_growth     : Function to plot growth box plots per reader and modal age
