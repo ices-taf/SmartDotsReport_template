@@ -1,0 +1,1001 @@
+sample,ices_area,fao_code,catch_date,age,length,weight,maturity,sex,reader_name,reader_lastname,reader_number,expertise,country,institution,iso_code,reader,cv,modal_age,month,qtr,year
+6698256.jpg,IIIaS,IIIa,18/01/2013,1,89,0.0045,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,36,1,1,Q1,2013
+6698256.jpg,IIIaS,IIIa,18/01/2013,1,89,0.0045,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,36,1,1,Q1,2013
+6698256.jpg,IIIaS,IIIa,18/01/2013,1,89,0.0045,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,36,1,1,Q1,2013
+6698256.jpg,IIIaS,IIIa,18/01/2013,2,89,0.0045,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,36,1,1,Q1,2013
+6698256.jpg,IIIaS,IIIa,18/01/2013,1,89,0.0045,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,36,1,1,Q1,2013
+6698256.jpg,IIIaS,IIIa,18/01/2013,1,89,0.0045,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,36,1,1,Q1,2013
+6698256.jpg,IIIaS,IIIa,18/01/2013,1,89,0.0045,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,36,1,1,Q1,2013
+6698256.jpg,IIIaS,IIIa,18/01/2013,NA,89,0.0045,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,36,1,1,Q1,2013
+6698256.jpg,IIIaS,IIIa,18/01/2013,1,89,0.0045,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,36,1,1,Q1,2013
+6698256.jpg,IIIaS,IIIa,18/01/2013,2,89,0.0045,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,36,1,1,Q1,2013
+6698257.jpg,IIIaS,IIIa,18/01/2013,3,129,0.0153,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,25,3,1,Q1,2013
+6698257.jpg,IIIaS,IIIa,18/01/2013,2,129,0.0153,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,25,3,1,Q1,2013
+6698257.jpg,IIIaS,IIIa,18/01/2013,3,129,0.0153,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,25,3,1,Q1,2013
+6698257.jpg,IIIaS,IIIa,18/01/2013,3,129,0.0153,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,25,3,1,Q1,2013
+6698257.jpg,IIIaS,IIIa,18/01/2013,3,129,0.0153,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,25,3,1,Q1,2013
+6698257.jpg,IIIaS,IIIa,18/01/2013,3,129,0.0153,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,25,3,1,Q1,2013
+6698257.jpg,IIIaS,IIIa,18/01/2013,1,129,0.0153,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,25,3,1,Q1,2013
+6698257.jpg,IIIaS,IIIa,18/01/2013,3,129,0.0153,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,25,3,1,Q1,2013
+6698257.jpg,IIIaS,IIIa,18/01/2013,3,129,0.0153,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,25,3,1,Q1,2013
+6698257.jpg,IIIaS,IIIa,18/01/2013,3,129,0.0153,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,25,3,1,Q1,2013
+6698258.jpg,IIIaS,IIIa,18/01/2013,3,137,0.0183,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,25,3,1,Q1,2013
+6698258.jpg,IIIaS,IIIa,18/01/2013,1,137,0.0183,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,25,3,1,Q1,2013
+6698258.jpg,IIIaS,IIIa,18/01/2013,3,137,0.0183,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,25,3,1,Q1,2013
+6698258.jpg,IIIaS,IIIa,18/01/2013,3,137,0.0183,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,25,3,1,Q1,2013
+6698258.jpg,IIIaS,IIIa,18/01/2013,3,137,0.0183,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,25,3,1,Q1,2013
+6698258.jpg,IIIaS,IIIa,18/01/2013,3,137,0.0183,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,25,3,1,Q1,2013
+6698258.jpg,IIIaS,IIIa,18/01/2013,3,137,0.0183,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,25,3,1,Q1,2013
+6698258.jpg,IIIaS,IIIa,18/01/2013,3,137,0.0183,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,25,3,1,Q1,2013
+6698258.jpg,IIIaS,IIIa,18/01/2013,3,137,0.0183,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,25,3,1,Q1,2013
+6698258.jpg,IIIaS,IIIa,18/01/2013,2,137,0.0183,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,25,3,1,Q1,2013
+6698259.jpg,IIIaS,IIIa,18/01/2013,3,137,0.0156,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,36,2,1,Q1,2013
+6698259.jpg,IIIaS,IIIa,18/01/2013,2,137,0.0156,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,36,2,1,Q1,2013
+6698259.jpg,IIIaS,IIIa,18/01/2013,2,137,0.0156,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,36,2,1,Q1,2013
+6698259.jpg,IIIaS,IIIa,18/01/2013,1,137,0.0156,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,36,2,1,Q1,2013
+6698259.jpg,IIIaS,IIIa,18/01/2013,3,137,0.0156,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,36,2,1,Q1,2013
+6698259.jpg,IIIaS,IIIa,18/01/2013,2,137,0.0156,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,36,2,1,Q1,2013
+6698259.jpg,IIIaS,IIIa,18/01/2013,2,137,0.0156,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,36,2,1,Q1,2013
+6698259.jpg,IIIaS,IIIa,18/01/2013,3,137,0.0156,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,36,2,1,Q1,2013
+6698259.jpg,IIIaS,IIIa,18/01/2013,1,137,0.0156,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,36,2,1,Q1,2013
+6698259.jpg,IIIaS,IIIa,18/01/2013,3,137,0.0156,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,36,2,1,Q1,2013
+6698260.jpg,IIIaS,IIIa,18/01/2013,3,139,0.0186,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,11,3,1,Q1,2013
+6698260.jpg,IIIaS,IIIa,18/01/2013,3,139,0.0186,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,11,3,1,Q1,2013
+6698260.jpg,IIIaS,IIIa,18/01/2013,3,139,0.0186,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,11,3,1,Q1,2013
+6698260.jpg,IIIaS,IIIa,18/01/2013,3,139,0.0186,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,11,3,1,Q1,2013
+6698260.jpg,IIIaS,IIIa,18/01/2013,3,139,0.0186,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,11,3,1,Q1,2013
+6698260.jpg,IIIaS,IIIa,18/01/2013,3,139,0.0186,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,11,3,1,Q1,2013
+6698260.jpg,IIIaS,IIIa,18/01/2013,3,139,0.0186,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,11,3,1,Q1,2013
+6698260.jpg,IIIaS,IIIa,18/01/2013,3,139,0.0186,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,11,3,1,Q1,2013
+6698260.jpg,IIIaS,IIIa,18/01/2013,3,139,0.0186,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,11,3,1,Q1,2013
+6698260.jpg,IIIaS,IIIa,18/01/2013,2,139,0.0186,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,11,3,1,Q1,2013
+6698261.jpg,IIIaS,IIIa,18/01/2013,2,126,0.0148,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,15,3,1,Q1,2013
+6698261.jpg,IIIaS,IIIa,18/01/2013,3,126,0.0148,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,15,3,1,Q1,2013
+6698261.jpg,IIIaS,IIIa,18/01/2013,3,126,0.0148,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,15,3,1,Q1,2013
+6698261.jpg,IIIaS,IIIa,18/01/2013,3,126,0.0148,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,15,3,1,Q1,2013
+6698261.jpg,IIIaS,IIIa,18/01/2013,3,126,0.0148,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,15,3,1,Q1,2013
+6698261.jpg,IIIaS,IIIa,18/01/2013,3,126,0.0148,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,15,3,1,Q1,2013
+6698261.jpg,IIIaS,IIIa,18/01/2013,3,126,0.0148,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,15,3,1,Q1,2013
+6698261.jpg,IIIaS,IIIa,18/01/2013,3,126,0.0148,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,15,3,1,Q1,2013
+6698261.jpg,IIIaS,IIIa,18/01/2013,3,126,0.0148,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,15,3,1,Q1,2013
+6698261.jpg,IIIaS,IIIa,18/01/2013,2,126,0.0148,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,15,3,1,Q1,2013
+6698262.jpg,IIIaS,IIIa,18/01/2013,1,132,0.0141,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,38,3,1,Q1,2013
+6698262.jpg,IIIaS,IIIa,18/01/2013,2,132,0.0141,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,38,3,1,Q1,2013
+6698262.jpg,IIIaS,IIIa,18/01/2013,3,132,0.0141,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,38,3,1,Q1,2013
+6698262.jpg,IIIaS,IIIa,18/01/2013,4,132,0.0141,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,38,3,1,Q1,2013
+6698262.jpg,IIIaS,IIIa,18/01/2013,5,132,0.0141,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,38,3,1,Q1,2013
+6698262.jpg,IIIaS,IIIa,18/01/2013,4,132,0.0141,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,38,3,1,Q1,2013
+6698262.jpg,IIIaS,IIIa,18/01/2013,3,132,0.0141,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,38,3,1,Q1,2013
+6698262.jpg,IIIaS,IIIa,18/01/2013,3,132,0.0141,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,38,3,1,Q1,2013
+6698262.jpg,IIIaS,IIIa,18/01/2013,5,132,0.0141,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,38,3,1,Q1,2013
+6698262.jpg,IIIaS,IIIa,18/01/2013,3,132,0.0141,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,38,3,1,Q1,2013
+6698263.jpg,IIIaS,IIIa,18/01/2013,3,125,0.0144,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,15,3,1,Q1,2013
+6698263.jpg,IIIaS,IIIa,18/01/2013,3,125,0.0144,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,15,3,1,Q1,2013
+6698263.jpg,IIIaS,IIIa,18/01/2013,3,125,0.0144,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,15,3,1,Q1,2013
+6698263.jpg,IIIaS,IIIa,18/01/2013,3,125,0.0144,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,15,3,1,Q1,2013
+6698263.jpg,IIIaS,IIIa,18/01/2013,3,125,0.0144,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,15,3,1,Q1,2013
+6698263.jpg,IIIaS,IIIa,18/01/2013,3,125,0.0144,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,15,3,1,Q1,2013
+6698263.jpg,IIIaS,IIIa,18/01/2013,2,125,0.0144,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,15,3,1,Q1,2013
+6698263.jpg,IIIaS,IIIa,18/01/2013,2,125,0.0144,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,15,3,1,Q1,2013
+6698263.jpg,IIIaS,IIIa,18/01/2013,3,125,0.0144,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,15,3,1,Q1,2013
+6698263.jpg,IIIaS,IIIa,18/01/2013,3,125,0.0144,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,15,3,1,Q1,2013
+6698264.jpg,IIIaS,IIIa,18/01/2013,2,134,0.0184,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,37,2,1,Q1,2013
+6698264.jpg,IIIaS,IIIa,18/01/2013,4,134,0.0184,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,37,2,1,Q1,2013
+6698264.jpg,IIIaS,IIIa,18/01/2013,3,134,0.0184,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,37,2,1,Q1,2013
+6698264.jpg,IIIaS,IIIa,18/01/2013,4,134,0.0184,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,37,2,1,Q1,2013
+6698264.jpg,IIIaS,IIIa,18/01/2013,4,134,0.0184,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,37,2,1,Q1,2013
+6698264.jpg,IIIaS,IIIa,18/01/2013,3,134,0.0184,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,37,2,1,Q1,2013
+6698264.jpg,IIIaS,IIIa,18/01/2013,1,134,0.0184,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,37,2,1,Q1,2013
+6698264.jpg,IIIaS,IIIa,18/01/2013,2,134,0.0184,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,37,2,1,Q1,2013
+6698264.jpg,IIIaS,IIIa,18/01/2013,3,134,0.0184,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,37,2,1,Q1,2013
+6698264.jpg,IIIaS,IIIa,18/01/2013,2,134,0.0184,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,37,2,1,Q1,2013
+6698268.jpg,IIIaS,IIIa,18/01/2013,4,130,0.0161,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,20,4,1,Q1,2013
+6698268.jpg,IIIaS,IIIa,18/01/2013,4,130,0.0161,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,20,4,1,Q1,2013
+6698268.jpg,IIIaS,IIIa,18/01/2013,2,130,0.0161,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,20,4,1,Q1,2013
+6698268.jpg,IIIaS,IIIa,18/01/2013,4,130,0.0161,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,20,4,1,Q1,2013
+6698268.jpg,IIIaS,IIIa,18/01/2013,4,130,0.0161,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,20,4,1,Q1,2013
+6698268.jpg,IIIaS,IIIa,18/01/2013,3,130,0.0161,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,20,4,1,Q1,2013
+6698268.jpg,IIIaS,IIIa,18/01/2013,3,130,0.0161,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,20,4,1,Q1,2013
+6698268.jpg,IIIaS,IIIa,18/01/2013,4,130,0.0161,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,20,4,1,Q1,2013
+6698268.jpg,IIIaS,IIIa,18/01/2013,4,130,0.0161,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,20,4,1,Q1,2013
+6698268.jpg,IIIaS,IIIa,18/01/2013,3,130,0.0161,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,20,4,1,Q1,2013
+6698269.jpg,IIIaS,IIIa,18/01/2013,4,145,0.0196,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,53,2,1,Q1,2013
+6698269.jpg,IIIaS,IIIa,18/01/2013,3,145,0.0196,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,53,2,1,Q1,2013
+6698269.jpg,IIIaS,IIIa,18/01/2013,4,145,0.0196,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,53,2,1,Q1,2013
+6698269.jpg,IIIaS,IIIa,18/01/2013,3,145,0.0196,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,53,2,1,Q1,2013
+6698269.jpg,IIIaS,IIIa,18/01/2013,2,145,0.0196,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,53,2,1,Q1,2013
+6698269.jpg,IIIaS,IIIa,18/01/2013,7,145,0.0196,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,53,2,1,Q1,2013
+6698269.jpg,IIIaS,IIIa,18/01/2013,2,145,0.0196,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,53,2,1,Q1,2013
+6698269.jpg,IIIaS,IIIa,18/01/2013,1,145,0.0196,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,53,2,1,Q1,2013
+6698269.jpg,IIIaS,IIIa,18/01/2013,2,145,0.0196,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,53,2,1,Q1,2013
+6698269.jpg,IIIaS,IIIa,18/01/2013,4,145,0.0196,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,53,2,1,Q1,2013
+6698270.jpg,IIIaS,IIIa,18/01/2013,2,135,0.0179,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,29,2,1,Q1,2013
+6698270.jpg,IIIaS,IIIa,18/01/2013,2,135,0.0179,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,29,2,1,Q1,2013
+6698270.jpg,IIIaS,IIIa,18/01/2013,2,135,0.0179,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,29,2,1,Q1,2013
+6698270.jpg,IIIaS,IIIa,18/01/2013,2,135,0.0179,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,29,2,1,Q1,2013
+6698270.jpg,IIIaS,IIIa,18/01/2013,2,135,0.0179,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,29,2,1,Q1,2013
+6698270.jpg,IIIaS,IIIa,18/01/2013,2,135,0.0179,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,29,2,1,Q1,2013
+6698270.jpg,IIIaS,IIIa,18/01/2013,4,135,0.0179,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,29,2,1,Q1,2013
+6698270.jpg,IIIaS,IIIa,18/01/2013,2,135,0.0179,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,29,2,1,Q1,2013
+6698270.jpg,IIIaS,IIIa,18/01/2013,3,135,0.0179,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,29,2,1,Q1,2013
+6698270.jpg,IIIaS,IIIa,18/01/2013,3,135,0.0179,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,29,2,1,Q1,2013
+6698280.jpg,IIIaS,IIIa,18/01/2013,4,125,0.0151,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,39,2,1,Q1,2013
+6698280.jpg,IIIaS,IIIa,18/01/2013,4,125,0.0151,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,39,2,1,Q1,2013
+6698280.jpg,IIIaS,IIIa,18/01/2013,2,125,0.0151,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,39,2,1,Q1,2013
+6698280.jpg,IIIaS,IIIa,18/01/2013,1,125,0.0151,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,39,2,1,Q1,2013
+6698280.jpg,IIIaS,IIIa,18/01/2013,3,125,0.0151,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,39,2,1,Q1,2013
+6698280.jpg,IIIaS,IIIa,18/01/2013,2,125,0.0151,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,39,2,1,Q1,2013
+6698280.jpg,IIIaS,IIIa,18/01/2013,2,125,0.0151,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,39,2,1,Q1,2013
+6698280.jpg,IIIaS,IIIa,18/01/2013,2,125,0.0151,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,39,2,1,Q1,2013
+6698280.jpg,IIIaS,IIIa,18/01/2013,3,125,0.0151,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,39,2,1,Q1,2013
+6698280.jpg,IIIaS,IIIa,18/01/2013,4,125,0.0151,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,39,2,1,Q1,2013
+6698281.jpg,IIIaS,IIIa,18/01/2013,3,132,0.0166,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,15,3,1,Q1,2013
+6698281.jpg,IIIaS,IIIa,18/01/2013,3,132,0.0166,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,15,3,1,Q1,2013
+6698281.jpg,IIIaS,IIIa,18/01/2013,3,132,0.0166,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,15,3,1,Q1,2013
+6698281.jpg,IIIaS,IIIa,18/01/2013,3,132,0.0166,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,15,3,1,Q1,2013
+6698281.jpg,IIIaS,IIIa,18/01/2013,2,132,0.0166,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,15,3,1,Q1,2013
+6698281.jpg,IIIaS,IIIa,18/01/2013,3,132,0.0166,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,15,3,1,Q1,2013
+6698281.jpg,IIIaS,IIIa,18/01/2013,3,132,0.0166,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,15,3,1,Q1,2013
+6698281.jpg,IIIaS,IIIa,18/01/2013,2,132,0.0166,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,15,3,1,Q1,2013
+6698281.jpg,IIIaS,IIIa,18/01/2013,3,132,0.0166,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,15,3,1,Q1,2013
+6698281.jpg,IIIaS,IIIa,18/01/2013,3,132,0.0166,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,15,3,1,Q1,2013
+6698282.jpg,IIIaS,IIIa,18/01/2013,2,129,0.0164,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,11,3,1,Q1,2013
+6698282.jpg,IIIaS,IIIa,18/01/2013,3,129,0.0164,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,11,3,1,Q1,2013
+6698282.jpg,IIIaS,IIIa,18/01/2013,3,129,0.0164,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,11,3,1,Q1,2013
+6698282.jpg,IIIaS,IIIa,18/01/2013,3,129,0.0164,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,11,3,1,Q1,2013
+6698282.jpg,IIIaS,IIIa,18/01/2013,3,129,0.0164,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,11,3,1,Q1,2013
+6698282.jpg,IIIaS,IIIa,18/01/2013,3,129,0.0164,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,11,3,1,Q1,2013
+6698282.jpg,IIIaS,IIIa,18/01/2013,3,129,0.0164,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,11,3,1,Q1,2013
+6698282.jpg,IIIaS,IIIa,18/01/2013,3,129,0.0164,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,11,3,1,Q1,2013
+6698282.jpg,IIIaS,IIIa,18/01/2013,3,129,0.0164,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,11,3,1,Q1,2013
+6698282.jpg,IIIaS,IIIa,18/01/2013,3,129,0.0164,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,11,3,1,Q1,2013
+6932318.jpg,IIIaS,IIIa,10/06/2014,1,102,0.01,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,1,6,Q2,2014
+6932318.jpg,IIIaS,IIIa,10/06/2014,1,102,0.01,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,1,6,Q2,2014
+6932318.jpg,IIIaS,IIIa,10/06/2014,1,102,0.01,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,1,6,Q2,2014
+6932318.jpg,IIIaS,IIIa,10/06/2014,1,102,0.01,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,1,6,Q2,2014
+6932318.jpg,IIIaS,IIIa,10/06/2014,1,102,0.01,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,1,6,Q2,2014
+6932318.jpg,IIIaS,IIIa,10/06/2014,1,102,0.01,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,1,6,Q2,2014
+6932318.jpg,IIIaS,IIIa,10/06/2014,1,102,0.01,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,1,6,Q2,2014
+6932318.jpg,IIIaS,IIIa,10/06/2014,1,102,0.01,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,1,6,Q2,2014
+6932318.jpg,IIIaS,IIIa,10/06/2014,1,102,0.01,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,1,6,Q2,2014
+6932318.jpg,IIIaS,IIIa,10/06/2014,1,102,0.01,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,1,6,Q2,2014
+6932319.jpg,IIIaS,IIIa,10/06/2014,1,105,0.01,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,29,1,6,Q2,2014
+6932319.jpg,IIIaS,IIIa,10/06/2014,1,105,0.01,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,29,1,6,Q2,2014
+6932319.jpg,IIIaS,IIIa,10/06/2014,1,105,0.01,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,29,1,6,Q2,2014
+6932319.jpg,IIIaS,IIIa,10/06/2014,1,105,0.01,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,29,1,6,Q2,2014
+6932319.jpg,IIIaS,IIIa,10/06/2014,1,105,0.01,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,29,1,6,Q2,2014
+6932319.jpg,IIIaS,IIIa,10/06/2014,1,105,0.01,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,29,1,6,Q2,2014
+6932319.jpg,IIIaS,IIIa,10/06/2014,2,105,0.01,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,29,1,6,Q2,2014
+6932319.jpg,IIIaS,IIIa,10/06/2014,1,105,0.01,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,29,1,6,Q2,2014
+6932319.jpg,IIIaS,IIIa,10/06/2014,1,105,0.01,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,29,1,6,Q2,2014
+6932319.jpg,IIIaS,IIIa,10/06/2014,1,105,0.01,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,29,1,6,Q2,2014
+6932320.jpg,IIIaS,IIIa,10/06/2014,1,85,0.004,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,60,1,6,Q2,2014
+6932320.jpg,IIIaS,IIIa,10/06/2014,1,85,0.004,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,60,1,6,Q2,2014
+6932320.jpg,IIIaS,IIIa,10/06/2014,3,85,0.004,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,60,1,6,Q2,2014
+6932320.jpg,IIIaS,IIIa,10/06/2014,1,85,0.004,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,60,1,6,Q2,2014
+6932320.jpg,IIIaS,IIIa,10/06/2014,1,85,0.004,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,60,1,6,Q2,2014
+6932320.jpg,IIIaS,IIIa,10/06/2014,1,85,0.004,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,60,1,6,Q2,2014
+6932320.jpg,IIIaS,IIIa,10/06/2014,1,85,0.004,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,60,1,6,Q2,2014
+6932320.jpg,IIIaS,IIIa,10/06/2014,3,85,0.004,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,60,1,6,Q2,2014
+6932320.jpg,IIIaS,IIIa,10/06/2014,1,85,0.004,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,60,1,6,Q2,2014
+6932320.jpg,IIIaS,IIIa,10/06/2014,1,85,0.004,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,60,1,6,Q2,2014
+6932321.jpg,IIIaS,IIIa,10/06/2014,1,87,0.006,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,52,1,6,Q2,2014
+6932321.jpg,IIIaS,IIIa,10/06/2014,1,87,0.006,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,52,1,6,Q2,2014
+6932321.jpg,IIIaS,IIIa,10/06/2014,1,87,0.006,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,52,1,6,Q2,2014
+6932321.jpg,IIIaS,IIIa,10/06/2014,1,87,0.006,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,52,1,6,Q2,2014
+6932321.jpg,IIIaS,IIIa,10/06/2014,3,87,0.006,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,52,1,6,Q2,2014
+6932321.jpg,IIIaS,IIIa,10/06/2014,1,87,0.006,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,52,1,6,Q2,2014
+6932321.jpg,IIIaS,IIIa,10/06/2014,1,87,0.006,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,52,1,6,Q2,2014
+6932321.jpg,IIIaS,IIIa,10/06/2014,1,87,0.006,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,52,1,6,Q2,2014
+6932321.jpg,IIIaS,IIIa,10/06/2014,1,87,0.006,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,52,1,6,Q2,2014
+6932321.jpg,IIIaS,IIIa,10/06/2014,2,87,0.006,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,52,1,6,Q2,2014
+6932322.jpg,IIIaS,IIIa,10/06/2014,1,90,0.004,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,29,1,6,Q2,2014
+6932322.jpg,IIIaS,IIIa,10/06/2014,1,90,0.004,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,29,1,6,Q2,2014
+6932322.jpg,IIIaS,IIIa,10/06/2014,1,90,0.004,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,29,1,6,Q2,2014
+6932322.jpg,IIIaS,IIIa,10/06/2014,1,90,0.004,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,29,1,6,Q2,2014
+6932322.jpg,IIIaS,IIIa,10/06/2014,2,90,0.004,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,29,1,6,Q2,2014
+6932322.jpg,IIIaS,IIIa,10/06/2014,1,90,0.004,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,29,1,6,Q2,2014
+6932322.jpg,IIIaS,IIIa,10/06/2014,1,90,0.004,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,29,1,6,Q2,2014
+6932322.jpg,IIIaS,IIIa,10/06/2014,1,90,0.004,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,29,1,6,Q2,2014
+6932322.jpg,IIIaS,IIIa,10/06/2014,1,90,0.004,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,29,1,6,Q2,2014
+6932322.jpg,IIIaS,IIIa,10/06/2014,1,90,0.004,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,29,1,6,Q2,2014
+6932323.jpg,IIIaS,IIIa,10/06/2014,2,80,0.004,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,47,1,6,Q2,2014
+6932323.jpg,IIIaS,IIIa,10/06/2014,1,80,0.004,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,47,1,6,Q2,2014
+6932323.jpg,IIIaS,IIIa,10/06/2014,1,80,0.004,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,47,1,6,Q2,2014
+6932323.jpg,IIIaS,IIIa,10/06/2014,1,80,0.004,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,47,1,6,Q2,2014
+6932323.jpg,IIIaS,IIIa,10/06/2014,1,80,0.004,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,47,1,6,Q2,2014
+6932323.jpg,IIIaS,IIIa,10/06/2014,1,80,0.004,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,47,1,6,Q2,2014
+6932323.jpg,IIIaS,IIIa,10/06/2014,1,80,0.004,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,47,1,6,Q2,2014
+6932323.jpg,IIIaS,IIIa,10/06/2014,1,80,0.004,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,47,1,6,Q2,2014
+6932323.jpg,IIIaS,IIIa,10/06/2014,0,80,0.004,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,47,1,6,Q2,2014
+6932323.jpg,IIIaS,IIIa,10/06/2014,1,80,0.004,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,47,1,6,Q2,2014
+6932324.jpg,IIIaS,IIIa,10/06/2014,1,84,0.004,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,29,1,6,Q2,2014
+6932324.jpg,IIIaS,IIIa,10/06/2014,2,84,0.004,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,29,1,6,Q2,2014
+6932324.jpg,IIIaS,IIIa,10/06/2014,1,84,0.004,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,29,1,6,Q2,2014
+6932324.jpg,IIIaS,IIIa,10/06/2014,1,84,0.004,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,29,1,6,Q2,2014
+6932324.jpg,IIIaS,IIIa,10/06/2014,1,84,0.004,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,29,1,6,Q2,2014
+6932324.jpg,IIIaS,IIIa,10/06/2014,1,84,0.004,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,29,1,6,Q2,2014
+6932324.jpg,IIIaS,IIIa,10/06/2014,1,84,0.004,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,29,1,6,Q2,2014
+6932324.jpg,IIIaS,IIIa,10/06/2014,1,84,0.004,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,29,1,6,Q2,2014
+6932324.jpg,IIIaS,IIIa,10/06/2014,1,84,0.004,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,29,1,6,Q2,2014
+6932324.jpg,IIIaS,IIIa,10/06/2014,1,84,0.004,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,29,1,6,Q2,2014
+6932325.jpg,IIIaS,IIIa,10/06/2014,1,81,0.004,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,1,6,Q2,2014
+6932325.jpg,IIIaS,IIIa,10/06/2014,1,81,0.004,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,1,6,Q2,2014
+6932325.jpg,IIIaS,IIIa,10/06/2014,1,81,0.004,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,1,6,Q2,2014
+6932325.jpg,IIIaS,IIIa,10/06/2014,1,81,0.004,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,1,6,Q2,2014
+6932325.jpg,IIIaS,IIIa,10/06/2014,1,81,0.004,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,1,6,Q2,2014
+6932325.jpg,IIIaS,IIIa,10/06/2014,1,81,0.004,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,1,6,Q2,2014
+6932325.jpg,IIIaS,IIIa,10/06/2014,1,81,0.004,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,1,6,Q2,2014
+6932325.jpg,IIIaS,IIIa,10/06/2014,1,81,0.004,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,1,6,Q2,2014
+6932325.jpg,IIIaS,IIIa,10/06/2014,1,81,0.004,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,1,6,Q2,2014
+6932325.jpg,IIIaS,IIIa,10/06/2014,1,81,0.004,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,1,6,Q2,2014
+6941185.jpg,IIIaS,IIIa,05/07/2014,1,75,0.00327,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,96,1,7,Q3,2014
+6941185.jpg,IIIaS,IIIa,05/07/2014,2,75,0.00327,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,96,1,7,Q3,2014
+6941185.jpg,IIIaS,IIIa,05/07/2014,0,75,0.00327,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,96,1,7,Q3,2014
+6941185.jpg,IIIaS,IIIa,05/07/2014,1,75,0.00327,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,96,1,7,Q3,2014
+6941185.jpg,IIIaS,IIIa,05/07/2014,0,75,0.00327,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,96,1,7,Q3,2014
+6941185.jpg,IIIaS,IIIa,05/07/2014,0,75,0.00327,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,96,1,7,Q3,2014
+6941185.jpg,IIIaS,IIIa,05/07/2014,0,75,0.00327,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,96,1,7,Q3,2014
+6941185.jpg,IIIaS,IIIa,05/07/2014,1,75,0.00327,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,96,1,7,Q3,2014
+6941185.jpg,IIIaS,IIIa,05/07/2014,1,75,0.00327,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,96,1,7,Q3,2014
+6941185.jpg,IIIaS,IIIa,05/07/2014,1,75,0.00327,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,96,1,7,Q3,2014
+7187385.jpg,IIIaS,IIIa,15/10/2015,1,149,0.02192,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,34,3,10,Q4,2015
+7187385.jpg,IIIaS,IIIa,15/10/2015,5,149,0.02192,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,34,3,10,Q4,2015
+7187385.jpg,IIIaS,IIIa,15/10/2015,3,149,0.02192,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,34,3,10,Q4,2015
+7187385.jpg,IIIaS,IIIa,15/10/2015,4,149,0.02192,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,34,3,10,Q4,2015
+7187385.jpg,IIIaS,IIIa,15/10/2015,3,149,0.02192,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,34,3,10,Q4,2015
+7187385.jpg,IIIaS,IIIa,15/10/2015,4,149,0.02192,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,34,3,10,Q4,2015
+7187385.jpg,IIIaS,IIIa,15/10/2015,3,149,0.02192,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,34,3,10,Q4,2015
+7187385.jpg,IIIaS,IIIa,15/10/2015,4,149,0.02192,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,34,3,10,Q4,2015
+7187385.jpg,IIIaS,IIIa,15/10/2015,3,149,0.02192,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,34,3,10,Q4,2015
+7187385.jpg,IIIaS,IIIa,15/10/2015,5,149,0.02192,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,34,3,10,Q4,2015
+7187386.jpg,IIIaS,IIIa,15/10/2015,2,120,0.01422,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,35,1,10,Q4,2015
+7187386.jpg,IIIaS,IIIa,15/10/2015,1,120,0.01422,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,35,1,10,Q4,2015
+7187386.jpg,IIIaS,IIIa,15/10/2015,1,120,0.01422,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,35,1,10,Q4,2015
+7187386.jpg,IIIaS,IIIa,15/10/2015,1,120,0.01422,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,35,1,10,Q4,2015
+7187386.jpg,IIIaS,IIIa,15/10/2015,1,120,0.01422,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,35,1,10,Q4,2015
+7187386.jpg,IIIaS,IIIa,15/10/2015,1,120,0.01422,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,35,1,10,Q4,2015
+7187386.jpg,IIIaS,IIIa,15/10/2015,1,120,0.01422,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,35,1,10,Q4,2015
+7187386.jpg,IIIaS,IIIa,15/10/2015,1,120,0.01422,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,35,1,10,Q4,2015
+7187386.jpg,IIIaS,IIIa,15/10/2015,2,120,0.01422,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,35,1,10,Q4,2015
+7187386.jpg,IIIaS,IIIa,15/10/2015,1,120,0.01422,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,35,1,10,Q4,2015
+7187387.jpg,IIIaS,IIIa,15/10/2015,1,116,0.01334,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,37,1,10,Q4,2015
+7187387.jpg,IIIaS,IIIa,15/10/2015,1,116,0.01334,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,37,1,10,Q4,2015
+7187387.jpg,IIIaS,IIIa,15/10/2015,2,116,0.01334,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,37,1,10,Q4,2015
+7187387.jpg,IIIaS,IIIa,15/10/2015,2,116,0.01334,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,37,1,10,Q4,2015
+7187387.jpg,IIIaS,IIIa,15/10/2015,1,116,0.01334,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,37,1,10,Q4,2015
+7187387.jpg,IIIaS,IIIa,15/10/2015,1,116,0.01334,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,37,1,10,Q4,2015
+7187387.jpg,IIIaS,IIIa,15/10/2015,2,116,0.01334,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,37,1,10,Q4,2015
+7187387.jpg,IIIaS,IIIa,15/10/2015,1,116,0.01334,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,37,1,10,Q4,2015
+7187387.jpg,IIIaS,IIIa,15/10/2015,2,116,0.01334,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,37,1,10,Q4,2015
+7187387.jpg,IIIaS,IIIa,15/10/2015,1,116,0.01334,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,37,1,10,Q4,2015
+7187388.jpg,IIIaS,IIIa,15/10/2015,1,110,0.01047,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,1,10,Q4,2015
+7187388.jpg,IIIaS,IIIa,15/10/2015,1,110,0.01047,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,1,10,Q4,2015
+7187388.jpg,IIIaS,IIIa,15/10/2015,1,110,0.01047,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,1,10,Q4,2015
+7187388.jpg,IIIaS,IIIa,15/10/2015,1,110,0.01047,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,1,10,Q4,2015
+7187388.jpg,IIIaS,IIIa,15/10/2015,1,110,0.01047,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,1,10,Q4,2015
+7187388.jpg,IIIaS,IIIa,15/10/2015,1,110,0.01047,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,1,10,Q4,2015
+7187388.jpg,IIIaS,IIIa,15/10/2015,1,110,0.01047,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,1,10,Q4,2015
+7187388.jpg,IIIaS,IIIa,15/10/2015,1,110,0.01047,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,1,10,Q4,2015
+7187388.jpg,IIIaS,IIIa,15/10/2015,1,110,0.01047,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,1,10,Q4,2015
+7187388.jpg,IIIaS,IIIa,15/10/2015,1,110,0.01047,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,1,10,Q4,2015
+7187393.jpg,IIIaS,IIIa,15/10/2015,1,107,0.00862,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,1,10,Q4,2015
+7187393.jpg,IIIaS,IIIa,15/10/2015,1,107,0.00862,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,1,10,Q4,2015
+7187393.jpg,IIIaS,IIIa,15/10/2015,1,107,0.00862,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,1,10,Q4,2015
+7187393.jpg,IIIaS,IIIa,15/10/2015,1,107,0.00862,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,1,10,Q4,2015
+7187393.jpg,IIIaS,IIIa,15/10/2015,1,107,0.00862,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,1,10,Q4,2015
+7187393.jpg,IIIaS,IIIa,15/10/2015,1,107,0.00862,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,1,10,Q4,2015
+7187393.jpg,IIIaS,IIIa,15/10/2015,1,107,0.00862,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,1,10,Q4,2015
+7187393.jpg,IIIaS,IIIa,15/10/2015,1,107,0.00862,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,1,10,Q4,2015
+7187393.jpg,IIIaS,IIIa,15/10/2015,1,107,0.00862,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,1,10,Q4,2015
+7187393.jpg,IIIaS,IIIa,15/10/2015,1,107,0.00862,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,1,10,Q4,2015
+7187394.jpg,IIIaS,IIIa,15/10/2015,1,100,0.00832,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,1,10,Q4,2015
+7187394.jpg,IIIaS,IIIa,15/10/2015,1,100,0.00832,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,1,10,Q4,2015
+7187394.jpg,IIIaS,IIIa,15/10/2015,1,100,0.00832,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,1,10,Q4,2015
+7187394.jpg,IIIaS,IIIa,15/10/2015,1,100,0.00832,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,1,10,Q4,2015
+7187394.jpg,IIIaS,IIIa,15/10/2015,1,100,0.00832,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,1,10,Q4,2015
+7187394.jpg,IIIaS,IIIa,15/10/2015,1,100,0.00832,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,1,10,Q4,2015
+7187394.jpg,IIIaS,IIIa,15/10/2015,1,100,0.00832,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,1,10,Q4,2015
+7187394.jpg,IIIaS,IIIa,15/10/2015,1,100,0.00832,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,1,10,Q4,2015
+7187394.jpg,IIIaS,IIIa,15/10/2015,1,100,0.00832,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,1,10,Q4,2015
+7187394.jpg,IIIaS,IIIa,15/10/2015,1,100,0.00832,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,1,10,Q4,2015
+7188165.jpg,IIIaN,IIIa,20/10/2015,1,100,0.00762,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,29,1,10,Q4,2015
+7188165.jpg,IIIaN,IIIa,20/10/2015,1,100,0.00762,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,29,1,10,Q4,2015
+7188165.jpg,IIIaN,IIIa,20/10/2015,1,100,0.00762,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,29,1,10,Q4,2015
+7188165.jpg,IIIaN,IIIa,20/10/2015,1,100,0.00762,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,29,1,10,Q4,2015
+7188165.jpg,IIIaN,IIIa,20/10/2015,2,100,0.00762,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,29,1,10,Q4,2015
+7188165.jpg,IIIaN,IIIa,20/10/2015,1,100,0.00762,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,29,1,10,Q4,2015
+7188165.jpg,IIIaN,IIIa,20/10/2015,1,100,0.00762,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,29,1,10,Q4,2015
+7188165.jpg,IIIaN,IIIa,20/10/2015,1,100,0.00762,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,29,1,10,Q4,2015
+7188165.jpg,IIIaN,IIIa,20/10/2015,1,100,0.00762,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,29,1,10,Q4,2015
+7188165.jpg,IIIaN,IIIa,20/10/2015,1,100,0.00762,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,29,1,10,Q4,2015
+7188166.jpg,IIIaN,IIIa,20/10/2015,1,106,0.00914,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,1,10,Q4,2015
+7188166.jpg,IIIaN,IIIa,20/10/2015,1,106,0.00914,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,1,10,Q4,2015
+7188166.jpg,IIIaN,IIIa,20/10/2015,1,106,0.00914,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,1,10,Q4,2015
+7188166.jpg,IIIaN,IIIa,20/10/2015,1,106,0.00914,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,1,10,Q4,2015
+7188166.jpg,IIIaN,IIIa,20/10/2015,1,106,0.00914,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,1,10,Q4,2015
+7188166.jpg,IIIaN,IIIa,20/10/2015,1,106,0.00914,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,1,10,Q4,2015
+7188166.jpg,IIIaN,IIIa,20/10/2015,1,106,0.00914,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,1,10,Q4,2015
+7188166.jpg,IIIaN,IIIa,20/10/2015,1,106,0.00914,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,1,10,Q4,2015
+7188166.jpg,IIIaN,IIIa,20/10/2015,1,106,0.00914,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,1,10,Q4,2015
+7188166.jpg,IIIaN,IIIa,20/10/2015,1,106,0.00914,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,1,10,Q4,2015
+7188167.jpg,IIIaN,IIIa,20/10/2015,1,110,0.01026,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,1,10,Q4,2015
+7188167.jpg,IIIaN,IIIa,20/10/2015,1,110,0.01026,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,1,10,Q4,2015
+7188167.jpg,IIIaN,IIIa,20/10/2015,1,110,0.01026,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,1,10,Q4,2015
+7188167.jpg,IIIaN,IIIa,20/10/2015,1,110,0.01026,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,1,10,Q4,2015
+7188167.jpg,IIIaN,IIIa,20/10/2015,1,110,0.01026,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,1,10,Q4,2015
+7188167.jpg,IIIaN,IIIa,20/10/2015,1,110,0.01026,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,1,10,Q4,2015
+7188167.jpg,IIIaN,IIIa,20/10/2015,1,110,0.01026,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,1,10,Q4,2015
+7188167.jpg,IIIaN,IIIa,20/10/2015,1,110,0.01026,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,1,10,Q4,2015
+7188167.jpg,IIIaN,IIIa,20/10/2015,1,110,0.01026,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,1,10,Q4,2015
+7188167.jpg,IIIaN,IIIa,20/10/2015,1,110,0.01026,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,1,10,Q4,2015
+7188168.jpg,IIIaN,IIIa,20/10/2015,1,115,0.01091,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,29,1,10,Q4,2015
+7188168.jpg,IIIaN,IIIa,20/10/2015,1,115,0.01091,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,29,1,10,Q4,2015
+7188168.jpg,IIIaN,IIIa,20/10/2015,1,115,0.01091,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,29,1,10,Q4,2015
+7188168.jpg,IIIaN,IIIa,20/10/2015,1,115,0.01091,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,29,1,10,Q4,2015
+7188168.jpg,IIIaN,IIIa,20/10/2015,2,115,0.01091,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,29,1,10,Q4,2015
+7188168.jpg,IIIaN,IIIa,20/10/2015,1,115,0.01091,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,29,1,10,Q4,2015
+7188168.jpg,IIIaN,IIIa,20/10/2015,1,115,0.01091,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,29,1,10,Q4,2015
+7188168.jpg,IIIaN,IIIa,20/10/2015,1,115,0.01091,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,29,1,10,Q4,2015
+7188168.jpg,IIIaN,IIIa,20/10/2015,1,115,0.01091,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,29,1,10,Q4,2015
+7188168.jpg,IIIaN,IIIa,20/10/2015,1,115,0.01091,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,29,1,10,Q4,2015
+7188169.jpg,IIIaN,IIIa,20/10/2015,1,120,0.01223,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,29,1,10,Q4,2015
+7188169.jpg,IIIaN,IIIa,20/10/2015,1,120,0.01223,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,29,1,10,Q4,2015
+7188169.jpg,IIIaN,IIIa,20/10/2015,1,120,0.01223,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,29,1,10,Q4,2015
+7188169.jpg,IIIaN,IIIa,20/10/2015,1,120,0.01223,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,29,1,10,Q4,2015
+7188169.jpg,IIIaN,IIIa,20/10/2015,1,120,0.01223,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,29,1,10,Q4,2015
+7188169.jpg,IIIaN,IIIa,20/10/2015,1,120,0.01223,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,29,1,10,Q4,2015
+7188169.jpg,IIIaN,IIIa,20/10/2015,1,120,0.01223,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,29,1,10,Q4,2015
+7188169.jpg,IIIaN,IIIa,20/10/2015,1,120,0.01223,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,29,1,10,Q4,2015
+7188169.jpg,IIIaN,IIIa,20/10/2015,1,120,0.01223,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,29,1,10,Q4,2015
+7188169.jpg,IIIaN,IIIa,20/10/2015,2,120,0.01223,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,29,1,10,Q4,2015
+7188170.jpg,IIIaN,IIIa,20/10/2015,1,127,0.0163,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,50,1,10,Q4,2015
+7188170.jpg,IIIaN,IIIa,20/10/2015,NA,127,0.0163,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,50,1,10,Q4,2015
+7188170.jpg,IIIaN,IIIa,20/10/2015,1,127,0.0163,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,50,1,10,Q4,2015
+7188170.jpg,IIIaN,IIIa,20/10/2015,1,127,0.0163,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,50,1,10,Q4,2015
+7188170.jpg,IIIaN,IIIa,20/10/2015,2,127,0.0163,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,50,1,10,Q4,2015
+7188170.jpg,IIIaN,IIIa,20/10/2015,1,127,0.0163,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,50,1,10,Q4,2015
+7188170.jpg,IIIaN,IIIa,20/10/2015,1,127,0.0163,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,50,1,10,Q4,2015
+7188170.jpg,IIIaN,IIIa,20/10/2015,3,127,0.0163,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,50,1,10,Q4,2015
+7188170.jpg,IIIaN,IIIa,20/10/2015,2,127,0.0163,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,50,1,10,Q4,2015
+7188170.jpg,IIIaN,IIIa,20/10/2015,NA,127,0.0163,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,50,1,10,Q4,2015
+7188171.jpg,IIIaN,IIIa,20/10/2015,1,103,0.00886,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,1,10,Q4,2015
+7188171.jpg,IIIaN,IIIa,20/10/2015,1,103,0.00886,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,1,10,Q4,2015
+7188171.jpg,IIIaN,IIIa,20/10/2015,1,103,0.00886,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,1,10,Q4,2015
+7188171.jpg,IIIaN,IIIa,20/10/2015,1,103,0.00886,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,1,10,Q4,2015
+7188171.jpg,IIIaN,IIIa,20/10/2015,1,103,0.00886,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,1,10,Q4,2015
+7188171.jpg,IIIaN,IIIa,20/10/2015,1,103,0.00886,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,1,10,Q4,2015
+7188171.jpg,IIIaN,IIIa,20/10/2015,1,103,0.00886,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,1,10,Q4,2015
+7188171.jpg,IIIaN,IIIa,20/10/2015,1,103,0.00886,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,1,10,Q4,2015
+7188171.jpg,IIIaN,IIIa,20/10/2015,1,103,0.00886,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,1,10,Q4,2015
+7188171.jpg,IIIaN,IIIa,20/10/2015,1,103,0.00886,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,1,10,Q4,2015
+7188172.jpg,IIIaN,IIIa,20/10/2015,1,106,0.00913,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,1,10,Q4,2015
+7188172.jpg,IIIaN,IIIa,20/10/2015,1,106,0.00913,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,1,10,Q4,2015
+7188172.jpg,IIIaN,IIIa,20/10/2015,1,106,0.00913,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,1,10,Q4,2015
+7188172.jpg,IIIaN,IIIa,20/10/2015,1,106,0.00913,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,1,10,Q4,2015
+7188172.jpg,IIIaN,IIIa,20/10/2015,1,106,0.00913,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,1,10,Q4,2015
+7188172.jpg,IIIaN,IIIa,20/10/2015,1,106,0.00913,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,1,10,Q4,2015
+7188172.jpg,IIIaN,IIIa,20/10/2015,1,106,0.00913,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,1,10,Q4,2015
+7188172.jpg,IIIaN,IIIa,20/10/2015,1,106,0.00913,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,1,10,Q4,2015
+7188172.jpg,IIIaN,IIIa,20/10/2015,1,106,0.00913,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,1,10,Q4,2015
+7188172.jpg,IIIaN,IIIa,20/10/2015,1,106,0.00913,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,1,10,Q4,2015
+7188173.jpg,IIIaN,IIIa,20/10/2015,1,110,0.0098,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,29,1,10,Q4,2015
+7188173.jpg,IIIaN,IIIa,20/10/2015,1,110,0.0098,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,29,1,10,Q4,2015
+7188173.jpg,IIIaN,IIIa,20/10/2015,1,110,0.0098,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,29,1,10,Q4,2015
+7188173.jpg,IIIaN,IIIa,20/10/2015,1,110,0.0098,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,29,1,10,Q4,2015
+7188173.jpg,IIIaN,IIIa,20/10/2015,2,110,0.0098,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,29,1,10,Q4,2015
+7188173.jpg,IIIaN,IIIa,20/10/2015,1,110,0.0098,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,29,1,10,Q4,2015
+7188173.jpg,IIIaN,IIIa,20/10/2015,1,110,0.0098,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,29,1,10,Q4,2015
+7188173.jpg,IIIaN,IIIa,20/10/2015,1,110,0.0098,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,29,1,10,Q4,2015
+7188173.jpg,IIIaN,IIIa,20/10/2015,1,110,0.0098,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,29,1,10,Q4,2015
+7188173.jpg,IIIaN,IIIa,20/10/2015,1,110,0.0098,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,29,1,10,Q4,2015
+7188174.jpg,IIIaN,IIIa,20/10/2015,1,115,0.01228,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,30,1,10,Q4,2015
+7188174.jpg,IIIaN,IIIa,20/10/2015,1,115,0.01228,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,30,1,10,Q4,2015
+7188174.jpg,IIIaN,IIIa,20/10/2015,NA,115,0.01228,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,30,1,10,Q4,2015
+7188174.jpg,IIIaN,IIIa,20/10/2015,1,115,0.01228,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,30,1,10,Q4,2015
+7188174.jpg,IIIaN,IIIa,20/10/2015,1,115,0.01228,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,30,1,10,Q4,2015
+7188174.jpg,IIIaN,IIIa,20/10/2015,1,115,0.01228,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,30,1,10,Q4,2015
+7188174.jpg,IIIaN,IIIa,20/10/2015,2,115,0.01228,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,30,1,10,Q4,2015
+7188174.jpg,IIIaN,IIIa,20/10/2015,1,115,0.01228,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,30,1,10,Q4,2015
+7188174.jpg,IIIaN,IIIa,20/10/2015,1,115,0.01228,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,30,1,10,Q4,2015
+7188174.jpg,IIIaN,IIIa,20/10/2015,1,115,0.01228,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,30,1,10,Q4,2015
+7190462.jpg,IIIaS,IIIa,24/09/2015,2,138,0.01986,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,36,2,9,Q3,2015
+7190462.jpg,IIIaS,IIIa,24/09/2015,3,138,0.01986,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,36,2,9,Q3,2015
+7190462.jpg,IIIaS,IIIa,24/09/2015,1,138,0.01986,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,36,2,9,Q3,2015
+7190462.jpg,IIIaS,IIIa,24/09/2015,2,138,0.01986,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,36,2,9,Q3,2015
+7190462.jpg,IIIaS,IIIa,24/09/2015,2,138,0.01986,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,36,2,9,Q3,2015
+7190462.jpg,IIIaS,IIIa,24/09/2015,3,138,0.01986,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,36,2,9,Q3,2015
+7190462.jpg,IIIaS,IIIa,24/09/2015,2,138,0.01986,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,36,2,9,Q3,2015
+7190462.jpg,IIIaS,IIIa,24/09/2015,3,138,0.01986,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,36,2,9,Q3,2015
+7190462.jpg,IIIaS,IIIa,24/09/2015,3,138,0.01986,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,36,2,9,Q3,2015
+7190462.jpg,IIIaS,IIIa,24/09/2015,1,138,0.01986,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,36,2,9,Q3,2015
+7190468.jpg,IIIaS,IIIa,24/09/2015,1,110,0.01073,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,1,9,Q3,2015
+7190468.jpg,IIIaS,IIIa,24/09/2015,1,110,0.01073,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,1,9,Q3,2015
+7190468.jpg,IIIaS,IIIa,24/09/2015,1,110,0.01073,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,1,9,Q3,2015
+7190468.jpg,IIIaS,IIIa,24/09/2015,1,110,0.01073,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,1,9,Q3,2015
+7190468.jpg,IIIaS,IIIa,24/09/2015,1,110,0.01073,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,1,9,Q3,2015
+7190468.jpg,IIIaS,IIIa,24/09/2015,1,110,0.01073,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,1,9,Q3,2015
+7190468.jpg,IIIaS,IIIa,24/09/2015,1,110,0.01073,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,1,9,Q3,2015
+7190468.jpg,IIIaS,IIIa,24/09/2015,1,110,0.01073,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,1,9,Q3,2015
+7190468.jpg,IIIaS,IIIa,24/09/2015,NA,110,0.01073,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,1,9,Q3,2015
+7190468.jpg,IIIaS,IIIa,24/09/2015,1,110,0.01073,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,1,9,Q3,2015
+7190469.jpg,IIIaS,IIIa,24/09/2015,1,115,0.01311,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,35,1,9,Q3,2015
+7190469.jpg,IIIaS,IIIa,24/09/2015,2,115,0.01311,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,35,1,9,Q3,2015
+7190469.jpg,IIIaS,IIIa,24/09/2015,1,115,0.01311,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,35,1,9,Q3,2015
+7190469.jpg,IIIaS,IIIa,24/09/2015,1,115,0.01311,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,35,1,9,Q3,2015
+7190469.jpg,IIIaS,IIIa,24/09/2015,1,115,0.01311,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,35,1,9,Q3,2015
+7190469.jpg,IIIaS,IIIa,24/09/2015,2,115,0.01311,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,35,1,9,Q3,2015
+7190469.jpg,IIIaS,IIIa,24/09/2015,1,115,0.01311,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,35,1,9,Q3,2015
+7190469.jpg,IIIaS,IIIa,24/09/2015,1,115,0.01311,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,35,1,9,Q3,2015
+7190469.jpg,IIIaS,IIIa,24/09/2015,1,115,0.01311,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,35,1,9,Q3,2015
+7190469.jpg,IIIaS,IIIa,24/09/2015,1,115,0.01311,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,35,1,9,Q3,2015
+7190470.jpg,IIIaS,IIIa,24/09/2015,3,127,0.01422,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,29,3,9,Q3,2015
+7190470.jpg,IIIaS,IIIa,24/09/2015,1,127,0.01422,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,29,3,9,Q3,2015
+7190470.jpg,IIIaS,IIIa,24/09/2015,2,127,0.01422,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,29,3,9,Q3,2015
+7190470.jpg,IIIaS,IIIa,24/09/2015,2,127,0.01422,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,29,3,9,Q3,2015
+7190470.jpg,IIIaS,IIIa,24/09/2015,2,127,0.01422,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,29,3,9,Q3,2015
+7190470.jpg,IIIaS,IIIa,24/09/2015,3,127,0.01422,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,29,3,9,Q3,2015
+7190470.jpg,IIIaS,IIIa,24/09/2015,2,127,0.01422,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,29,3,9,Q3,2015
+7190470.jpg,IIIaS,IIIa,24/09/2015,3,127,0.01422,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,29,3,9,Q3,2015
+7190470.jpg,IIIaS,IIIa,24/09/2015,3,127,0.01422,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,29,3,9,Q3,2015
+7190470.jpg,IIIaS,IIIa,24/09/2015,3,127,0.01422,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,29,3,9,Q3,2015
+7190486.jpg,IIIaS,IIIa,24/09/2015,2,95,0.00579,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,35,1,9,Q3,2015
+7190486.jpg,IIIaS,IIIa,24/09/2015,1,95,0.00579,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,35,1,9,Q3,2015
+7190486.jpg,IIIaS,IIIa,24/09/2015,1,95,0.00579,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,35,1,9,Q3,2015
+7190486.jpg,IIIaS,IIIa,24/09/2015,1,95,0.00579,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,35,1,9,Q3,2015
+7190486.jpg,IIIaS,IIIa,24/09/2015,1,95,0.00579,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,35,1,9,Q3,2015
+7190486.jpg,IIIaS,IIIa,24/09/2015,1,95,0.00579,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,35,1,9,Q3,2015
+7190486.jpg,IIIaS,IIIa,24/09/2015,1,95,0.00579,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,35,1,9,Q3,2015
+7190486.jpg,IIIaS,IIIa,24/09/2015,2,95,0.00579,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,35,1,9,Q3,2015
+7190486.jpg,IIIaS,IIIa,24/09/2015,1,95,0.00579,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,35,1,9,Q3,2015
+7190486.jpg,IIIaS,IIIa,24/09/2015,1,95,0.00579,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,35,1,9,Q3,2015
+7190487.jpg,IIIaS,IIIa,24/09/2015,2,130,0.01587,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,32,2,9,Q3,2015
+7190487.jpg,IIIaS,IIIa,24/09/2015,1,130,0.01587,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,32,2,9,Q3,2015
+7190487.jpg,IIIaS,IIIa,24/09/2015,2,130,0.01587,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,32,2,9,Q3,2015
+7190487.jpg,IIIaS,IIIa,24/09/2015,1,130,0.01587,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,32,2,9,Q3,2015
+7190487.jpg,IIIaS,IIIa,24/09/2015,1,130,0.01587,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,32,2,9,Q3,2015
+7190487.jpg,IIIaS,IIIa,24/09/2015,1,130,0.01587,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,32,2,9,Q3,2015
+7190487.jpg,IIIaS,IIIa,24/09/2015,2,130,0.01587,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,32,2,9,Q3,2015
+7190487.jpg,IIIaS,IIIa,24/09/2015,2,130,0.01587,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,32,2,9,Q3,2015
+7190487.jpg,IIIaS,IIIa,24/09/2015,2,130,0.01587,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,32,2,9,Q3,2015
+7190487.jpg,IIIaS,IIIa,24/09/2015,2,130,0.01587,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,32,2,9,Q3,2015
+7190488.jpg,IIIaS,IIIa,24/09/2015,1,101,0.00795,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,1,9,Q3,2015
+7190488.jpg,IIIaS,IIIa,24/09/2015,1,101,0.00795,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,1,9,Q3,2015
+7190488.jpg,IIIaS,IIIa,24/09/2015,1,101,0.00795,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,1,9,Q3,2015
+7190488.jpg,IIIaS,IIIa,24/09/2015,1,101,0.00795,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,1,9,Q3,2015
+7190488.jpg,IIIaS,IIIa,24/09/2015,1,101,0.00795,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,1,9,Q3,2015
+7190488.jpg,IIIaS,IIIa,24/09/2015,1,101,0.00795,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,1,9,Q3,2015
+7190488.jpg,IIIaS,IIIa,24/09/2015,1,101,0.00795,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,1,9,Q3,2015
+7190488.jpg,IIIaS,IIIa,24/09/2015,1,101,0.00795,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,1,9,Q3,2015
+7190488.jpg,IIIaS,IIIa,24/09/2015,1,101,0.00795,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,1,9,Q3,2015
+7190488.jpg,IIIaS,IIIa,24/09/2015,1,101,0.00795,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,1,9,Q3,2015
+7190495.jpg,IIIaS,IIIa,24/09/2015,1,118,0.01368,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,1,9,Q3,2015
+7190495.jpg,IIIaS,IIIa,24/09/2015,1,118,0.01368,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,1,9,Q3,2015
+7190495.jpg,IIIaS,IIIa,24/09/2015,1,118,0.01368,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,1,9,Q3,2015
+7190495.jpg,IIIaS,IIIa,24/09/2015,1,118,0.01368,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,1,9,Q3,2015
+7190495.jpg,IIIaS,IIIa,24/09/2015,1,118,0.01368,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,1,9,Q3,2015
+7190495.jpg,IIIaS,IIIa,24/09/2015,1,118,0.01368,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,1,9,Q3,2015
+7190495.jpg,IIIaS,IIIa,24/09/2015,1,118,0.01368,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,1,9,Q3,2015
+7190495.jpg,IIIaS,IIIa,24/09/2015,1,118,0.01368,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,1,9,Q3,2015
+7190495.jpg,IIIaS,IIIa,24/09/2015,1,118,0.01368,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,1,9,Q3,2015
+7190495.jpg,IIIaS,IIIa,24/09/2015,1,118,0.01368,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,1,9,Q3,2015
+7216509.jpg,IIIaS,IIIa,14/12/2015,0,73,0.00241,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,NA,0,12,Q4,2015
+7216509.jpg,IIIaS,IIIa,14/12/2015,0,73,0.00241,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,NA,0,12,Q4,2015
+7216509.jpg,IIIaS,IIIa,14/12/2015,0,73,0.00241,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,NA,0,12,Q4,2015
+7216509.jpg,IIIaS,IIIa,14/12/2015,0,73,0.00241,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,NA,0,12,Q4,2015
+7216509.jpg,IIIaS,IIIa,14/12/2015,0,73,0.00241,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,NA,0,12,Q4,2015
+7216509.jpg,IIIaS,IIIa,14/12/2015,0,73,0.00241,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,NA,0,12,Q4,2015
+7216509.jpg,IIIaS,IIIa,14/12/2015,0,73,0.00241,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,NA,0,12,Q4,2015
+7216509.jpg,IIIaS,IIIa,14/12/2015,0,73,0.00241,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,NA,0,12,Q4,2015
+7216509.jpg,IIIaS,IIIa,14/12/2015,0,73,0.00241,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,NA,0,12,Q4,2015
+7216509.jpg,IIIaS,IIIa,14/12/2015,0,73,0.00241,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,NA,0,12,Q4,2015
+7216510.jpg,IIIaS,IIIa,14/12/2015,0,78,0.00282,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,NA,0,12,Q4,2015
+7216510.jpg,IIIaS,IIIa,14/12/2015,0,78,0.00282,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,NA,0,12,Q4,2015
+7216510.jpg,IIIaS,IIIa,14/12/2015,0,78,0.00282,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,NA,0,12,Q4,2015
+7216510.jpg,IIIaS,IIIa,14/12/2015,0,78,0.00282,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,NA,0,12,Q4,2015
+7216510.jpg,IIIaS,IIIa,14/12/2015,0,78,0.00282,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,NA,0,12,Q4,2015
+7216510.jpg,IIIaS,IIIa,14/12/2015,0,78,0.00282,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,NA,0,12,Q4,2015
+7216510.jpg,IIIaS,IIIa,14/12/2015,0,78,0.00282,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,NA,0,12,Q4,2015
+7216510.jpg,IIIaS,IIIa,14/12/2015,0,78,0.00282,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,NA,0,12,Q4,2015
+7216510.jpg,IIIaS,IIIa,14/12/2015,1,78,0.00282,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,NA,0,12,Q4,2015
+7216510.jpg,IIIaS,IIIa,14/12/2015,0,78,0.00282,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,NA,0,12,Q4,2015
+7216512.jpg,IIIaS,IIIa,14/12/2015,NA,98,0.00632,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,30,1,12,Q4,2015
+7216512.jpg,IIIaS,IIIa,14/12/2015,1,98,0.00632,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,30,1,12,Q4,2015
+7216512.jpg,IIIaS,IIIa,14/12/2015,1,98,0.00632,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,30,1,12,Q4,2015
+7216512.jpg,IIIaS,IIIa,14/12/2015,1,98,0.00632,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,30,1,12,Q4,2015
+7216512.jpg,IIIaS,IIIa,14/12/2015,1,98,0.00632,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,30,1,12,Q4,2015
+7216512.jpg,IIIaS,IIIa,14/12/2015,1,98,0.00632,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,30,1,12,Q4,2015
+7216512.jpg,IIIaS,IIIa,14/12/2015,1,98,0.00632,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,30,1,12,Q4,2015
+7216512.jpg,IIIaS,IIIa,14/12/2015,1,98,0.00632,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,30,1,12,Q4,2015
+7216512.jpg,IIIaS,IIIa,14/12/2015,2,98,0.00632,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,30,1,12,Q4,2015
+7216512.jpg,IIIaS,IIIa,14/12/2015,1,98,0.00632,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,30,1,12,Q4,2015
+7216513.jpg,IIIaS,IIIa,14/12/2015,NA,95,0.00554,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,1,12,Q4,2015
+7216513.jpg,IIIaS,IIIa,14/12/2015,1,95,0.00554,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,1,12,Q4,2015
+7216513.jpg,IIIaS,IIIa,14/12/2015,1,95,0.00554,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,1,12,Q4,2015
+7216513.jpg,IIIaS,IIIa,14/12/2015,1,95,0.00554,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,1,12,Q4,2015
+7216513.jpg,IIIaS,IIIa,14/12/2015,1,95,0.00554,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,1,12,Q4,2015
+7216513.jpg,IIIaS,IIIa,14/12/2015,NA,95,0.00554,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,1,12,Q4,2015
+7216513.jpg,IIIaS,IIIa,14/12/2015,1,95,0.00554,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,1,12,Q4,2015
+7216513.jpg,IIIaS,IIIa,14/12/2015,1,95,0.00554,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,1,12,Q4,2015
+7216513.jpg,IIIaS,IIIa,14/12/2015,1,95,0.00554,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,1,12,Q4,2015
+7216513.jpg,IIIaS,IIIa,14/12/2015,NA,95,0.00554,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,1,12,Q4,2015
+7216514.jpg,IIIaS,IIIa,14/12/2015,1,96,0.00689,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,1,12,Q4,2015
+7216514.jpg,IIIaS,IIIa,14/12/2015,NA,96,0.00689,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,1,12,Q4,2015
+7216514.jpg,IIIaS,IIIa,14/12/2015,1,96,0.00689,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,1,12,Q4,2015
+7216514.jpg,IIIaS,IIIa,14/12/2015,1,96,0.00689,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,1,12,Q4,2015
+7216514.jpg,IIIaS,IIIa,14/12/2015,NA,96,0.00689,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,1,12,Q4,2015
+7216514.jpg,IIIaS,IIIa,14/12/2015,1,96,0.00689,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,1,12,Q4,2015
+7216514.jpg,IIIaS,IIIa,14/12/2015,1,96,0.00689,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,1,12,Q4,2015
+7216514.jpg,IIIaS,IIIa,14/12/2015,NA,96,0.00689,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,1,12,Q4,2015
+7216514.jpg,IIIaS,IIIa,14/12/2015,1,96,0.00689,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,1,12,Q4,2015
+7216514.jpg,IIIaS,IIIa,14/12/2015,1,96,0.00689,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,1,12,Q4,2015
+7216515.jpg,IIIaS,IIIa,14/12/2015,1,102,0.00828,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,1,12,Q4,2015
+7216515.jpg,IIIaS,IIIa,14/12/2015,NA,102,0.00828,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,1,12,Q4,2015
+7216515.jpg,IIIaS,IIIa,14/12/2015,1,102,0.00828,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,1,12,Q4,2015
+7216515.jpg,IIIaS,IIIa,14/12/2015,NA,102,0.00828,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,1,12,Q4,2015
+7216515.jpg,IIIaS,IIIa,14/12/2015,1,102,0.00828,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,1,12,Q4,2015
+7216515.jpg,IIIaS,IIIa,14/12/2015,1,102,0.00828,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,1,12,Q4,2015
+7216515.jpg,IIIaS,IIIa,14/12/2015,1,102,0.00828,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,1,12,Q4,2015
+7216515.jpg,IIIaS,IIIa,14/12/2015,1,102,0.00828,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,1,12,Q4,2015
+7216515.jpg,IIIaS,IIIa,14/12/2015,1,102,0.00828,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,1,12,Q4,2015
+7216515.jpg,IIIaS,IIIa,14/12/2015,NA,102,0.00828,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,1,12,Q4,2015
+7216516.jpg,IIIaS,IIIa,14/12/2015,NA,102,0.00753,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,1,12,Q4,2015
+7216516.jpg,IIIaS,IIIa,14/12/2015,1,102,0.00753,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,1,12,Q4,2015
+7216516.jpg,IIIaS,IIIa,14/12/2015,1,102,0.00753,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,1,12,Q4,2015
+7216516.jpg,IIIaS,IIIa,14/12/2015,1,102,0.00753,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,1,12,Q4,2015
+7216516.jpg,IIIaS,IIIa,14/12/2015,1,102,0.00753,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,1,12,Q4,2015
+7216516.jpg,IIIaS,IIIa,14/12/2015,1,102,0.00753,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,1,12,Q4,2015
+7216516.jpg,IIIaS,IIIa,14/12/2015,1,102,0.00753,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,1,12,Q4,2015
+7216516.jpg,IIIaS,IIIa,14/12/2015,NA,102,0.00753,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,1,12,Q4,2015
+7216516.jpg,IIIaS,IIIa,14/12/2015,NA,102,0.00753,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,1,12,Q4,2015
+7216516.jpg,IIIaS,IIIa,14/12/2015,1,102,0.00753,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,1,12,Q4,2015
+7216517.jpg,IIIaS,IIIa,14/12/2015,1,103,0.00842,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,58,1,12,Q4,2015
+7216517.jpg,IIIaS,IIIa,14/12/2015,0,103,0.00842,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,58,1,12,Q4,2015
+7216517.jpg,IIIaS,IIIa,14/12/2015,1,103,0.00842,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,58,1,12,Q4,2015
+7216517.jpg,IIIaS,IIIa,14/12/2015,2,103,0.00842,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,58,1,12,Q4,2015
+7216517.jpg,IIIaS,IIIa,14/12/2015,1,103,0.00842,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,58,1,12,Q4,2015
+7216517.jpg,IIIaS,IIIa,14/12/2015,NA,103,0.00842,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,58,1,12,Q4,2015
+7216517.jpg,IIIaS,IIIa,14/12/2015,1,103,0.00842,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,58,1,12,Q4,2015
+7216517.jpg,IIIaS,IIIa,14/12/2015,NA,103,0.00842,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,58,1,12,Q4,2015
+7216517.jpg,IIIaS,IIIa,14/12/2015,NA,103,0.00842,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,58,1,12,Q4,2015
+7216517.jpg,IIIaS,IIIa,14/12/2015,1,103,0.00842,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,58,1,12,Q4,2015
+Com'15_N_29.jpg,IIIaN,IIIa,26/10/2015,1,120,17,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,1,10,Q4,2015
+Com'15_N_29.jpg,IIIaN,IIIa,26/10/2015,1,120,17,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,1,10,Q4,2015
+Com'15_N_29.jpg,IIIaN,IIIa,26/10/2015,1,120,17,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,1,10,Q4,2015
+Com'15_N_29.jpg,IIIaN,IIIa,26/10/2015,1,120,17,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,1,10,Q4,2015
+Com'15_N_29.jpg,IIIaN,IIIa,26/10/2015,NA,120,17,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,1,10,Q4,2015
+Com'15_N_29.jpg,IIIaN,IIIa,26/10/2015,1,120,17,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,1,10,Q4,2015
+Com'15_N_29.jpg,IIIaN,IIIa,26/10/2015,1,120,17,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,1,10,Q4,2015
+Com'15_N_29.jpg,IIIaN,IIIa,26/10/2015,NA,120,17,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,1,10,Q4,2015
+Com'15_N_29.jpg,IIIaN,IIIa,26/10/2015,1,120,17,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,1,10,Q4,2015
+Com'15_N_29.jpg,IIIaN,IIIa,26/10/2015,NA,120,17,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,1,10,Q4,2015
+Com'15_N_30.jpg,IIIaN,IIIa,26/10/2015,2,135,22,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,2,10,Q4,2015
+Com'15_N_30.jpg,IIIaN,IIIa,26/10/2015,2,135,22,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,2,10,Q4,2015
+Com'15_N_30.jpg,IIIaN,IIIa,26/10/2015,NA,135,22,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,2,10,Q4,2015
+Com'15_N_30.jpg,IIIaN,IIIa,26/10/2015,2,135,22,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,2,10,Q4,2015
+Com'15_N_30.jpg,IIIaN,IIIa,26/10/2015,2,135,22,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,2,10,Q4,2015
+Com'15_N_30.jpg,IIIaN,IIIa,26/10/2015,2,135,22,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,2,10,Q4,2015
+Com'15_N_30.jpg,IIIaN,IIIa,26/10/2015,NA,135,22,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,2,10,Q4,2015
+Com'15_N_30.jpg,IIIaN,IIIa,26/10/2015,2,135,22,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,2,10,Q4,2015
+Com'15_N_30.jpg,IIIaN,IIIa,26/10/2015,2,135,22,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,2,10,Q4,2015
+Com'15_N_30.jpg,IIIaN,IIIa,26/10/2015,NA,135,22,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,2,10,Q4,2015
+Com'15_N_31.jpg,IIIaN,IIIa,26/10/2015,2,130,19,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,68,2,10,Q4,2015
+Com'15_N_31.jpg,IIIaN,IIIa,26/10/2015,2,130,19,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,68,2,10,Q4,2015
+Com'15_N_31.jpg,IIIaN,IIIa,26/10/2015,NA,130,19,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,68,2,10,Q4,2015
+Com'15_N_31.jpg,IIIaN,IIIa,26/10/2015,0,130,19,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,68,2,10,Q4,2015
+Com'15_N_31.jpg,IIIaN,IIIa,26/10/2015,0,130,19,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,68,2,10,Q4,2015
+Com'15_N_31.jpg,IIIaN,IIIa,26/10/2015,2,130,19,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,68,2,10,Q4,2015
+Com'15_N_31.jpg,IIIaN,IIIa,26/10/2015,2,130,19,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,68,2,10,Q4,2015
+Com'15_N_31.jpg,IIIaN,IIIa,26/10/2015,NA,130,19,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,68,2,10,Q4,2015
+Com'15_N_31.jpg,IIIaN,IIIa,26/10/2015,2,130,19,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,68,2,10,Q4,2015
+Com'15_N_31.jpg,IIIaN,IIIa,26/10/2015,NA,130,19,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,68,2,10,Q4,2015
+Com'15_N_32.jpg,IIIaN,IIIa,26/10/2015,4,140,24,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,12,3,10,Q4,2015
+Com'15_N_32.jpg,IIIaN,IIIa,26/10/2015,NA,140,24,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,12,3,10,Q4,2015
+Com'15_N_32.jpg,IIIaN,IIIa,26/10/2015,NA,140,24,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,12,3,10,Q4,2015
+Com'15_N_32.jpg,IIIaN,IIIa,26/10/2015,3,140,24,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,12,3,10,Q4,2015
+Com'15_N_32.jpg,IIIaN,IIIa,26/10/2015,3,140,24,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,12,3,10,Q4,2015
+Com'15_N_32.jpg,IIIaN,IIIa,26/10/2015,3,140,24,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,12,3,10,Q4,2015
+Com'15_N_32.jpg,IIIaN,IIIa,26/10/2015,3,140,24,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,12,3,10,Q4,2015
+Com'15_N_32.jpg,IIIaN,IIIa,26/10/2015,NA,140,24,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,12,3,10,Q4,2015
+Com'15_N_32.jpg,IIIaN,IIIa,26/10/2015,3,140,24,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,12,3,10,Q4,2015
+Com'15_N_32.jpg,IIIaN,IIIa,26/10/2015,3,140,24,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,12,3,10,Q4,2015
+Com'15_N_33.jpg,IIIaN,IIIa,26/10/2015,1,115,14,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,1,10,Q4,2015
+Com'15_N_33.jpg,IIIaN,IIIa,26/10/2015,NA,115,14,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,1,10,Q4,2015
+Com'15_N_33.jpg,IIIaN,IIIa,26/10/2015,1,115,14,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,1,10,Q4,2015
+Com'15_N_33.jpg,IIIaN,IIIa,26/10/2015,1,115,14,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,1,10,Q4,2015
+Com'15_N_33.jpg,IIIaN,IIIa,26/10/2015,NA,115,14,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,1,10,Q4,2015
+Com'15_N_33.jpg,IIIaN,IIIa,26/10/2015,1,115,14,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,1,10,Q4,2015
+Com'15_N_33.jpg,IIIaN,IIIa,26/10/2015,1,115,14,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,1,10,Q4,2015
+Com'15_N_33.jpg,IIIaN,IIIa,26/10/2015,1,115,14,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,1,10,Q4,2015
+Com'15_N_33.jpg,IIIaN,IIIa,26/10/2015,NA,115,14,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,1,10,Q4,2015
+Com'15_N_33.jpg,IIIaN,IIIa,26/10/2015,1,115,14,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,1,10,Q4,2015
+Com'15_N_41.jpg,IIIaN,IIIa,26/10/2015,NA,120,16,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,1,10,Q4,2015
+Com'15_N_41.jpg,IIIaN,IIIa,26/10/2015,1,120,16,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,1,10,Q4,2015
+Com'15_N_41.jpg,IIIaN,IIIa,26/10/2015,NA,120,16,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,1,10,Q4,2015
+Com'15_N_41.jpg,IIIaN,IIIa,26/10/2015,NA,120,16,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,1,10,Q4,2015
+Com'15_N_41.jpg,IIIaN,IIIa,26/10/2015,1,120,16,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,1,10,Q4,2015
+Com'15_N_41.jpg,IIIaN,IIIa,26/10/2015,1,120,16,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,1,10,Q4,2015
+Com'15_N_41.jpg,IIIaN,IIIa,26/10/2015,1,120,16,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,1,10,Q4,2015
+Com'15_N_41.jpg,IIIaN,IIIa,26/10/2015,1,120,16,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,1,10,Q4,2015
+Com'15_N_41.jpg,IIIaN,IIIa,26/10/2015,1,120,16,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,1,10,Q4,2015
+Com'15_N_41.jpg,IIIaN,IIIa,26/10/2015,1,120,16,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,1,10,Q4,2015
+Com'15_N_42.jpg,IIIaN,IIIa,26/10/2015,1,140,26,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,32,2,10,Q4,2015
+Com'15_N_42.jpg,IIIaN,IIIa,26/10/2015,2,140,26,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,32,2,10,Q4,2015
+Com'15_N_42.jpg,IIIaN,IIIa,26/10/2015,2,140,26,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,32,2,10,Q4,2015
+Com'15_N_42.jpg,IIIaN,IIIa,26/10/2015,3,140,26,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,32,2,10,Q4,2015
+Com'15_N_42.jpg,IIIaN,IIIa,26/10/2015,3,140,26,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,32,2,10,Q4,2015
+Com'15_N_42.jpg,IIIaN,IIIa,26/10/2015,NA,140,26,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,32,2,10,Q4,2015
+Com'15_N_42.jpg,IIIaN,IIIa,26/10/2015,2,140,26,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,32,2,10,Q4,2015
+Com'15_N_42.jpg,IIIaN,IIIa,26/10/2015,NA,140,26,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,32,2,10,Q4,2015
+Com'15_N_42.jpg,IIIaN,IIIa,26/10/2015,NA,140,26,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,32,2,10,Q4,2015
+Com'15_N_42.jpg,IIIaN,IIIa,26/10/2015,2,140,26,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,32,2,10,Q4,2015
+Com'15_N_43.jpg,IIIaN,IIIa,26/10/2015,2,150,28,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,28,2,10,Q4,2015
+Com'15_N_43.jpg,IIIaN,IIIa,26/10/2015,NA,150,28,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,28,2,10,Q4,2015
+Com'15_N_43.jpg,IIIaN,IIIa,26/10/2015,3,150,28,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,28,2,10,Q4,2015
+Com'15_N_43.jpg,IIIaN,IIIa,26/10/2015,2,150,28,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,28,2,10,Q4,2015
+Com'15_N_43.jpg,IIIaN,IIIa,26/10/2015,3,150,28,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,28,2,10,Q4,2015
+Com'15_N_43.jpg,IIIaN,IIIa,26/10/2015,3,150,28,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,28,2,10,Q4,2015
+Com'15_N_43.jpg,IIIaN,IIIa,26/10/2015,NA,150,28,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,28,2,10,Q4,2015
+Com'15_N_43.jpg,IIIaN,IIIa,26/10/2015,4,150,28,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,28,2,10,Q4,2015
+Com'15_N_43.jpg,IIIaN,IIIa,26/10/2015,2,150,28,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,28,2,10,Q4,2015
+Com'15_N_43.jpg,IIIaN,IIIa,26/10/2015,NA,150,28,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,28,2,10,Q4,2015
+Com'15_N_44.jpg,IIIaN,IIIa,26/10/2015,NA,145,29,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,20,2,10,Q4,2015
+Com'15_N_44.jpg,IIIaN,IIIa,26/10/2015,2,145,29,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,20,2,10,Q4,2015
+Com'15_N_44.jpg,IIIaN,IIIa,26/10/2015,2,145,29,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,20,2,10,Q4,2015
+Com'15_N_44.jpg,IIIaN,IIIa,26/10/2015,2,145,29,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,20,2,10,Q4,2015
+Com'15_N_44.jpg,IIIaN,IIIa,26/10/2015,2,145,29,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,20,2,10,Q4,2015
+Com'15_N_44.jpg,IIIaN,IIIa,26/10/2015,NA,145,29,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,20,2,10,Q4,2015
+Com'15_N_44.jpg,IIIaN,IIIa,26/10/2015,2,145,29,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,20,2,10,Q4,2015
+Com'15_N_44.jpg,IIIaN,IIIa,26/10/2015,2,145,29,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,20,2,10,Q4,2015
+Com'15_N_44.jpg,IIIaN,IIIa,26/10/2015,1,145,29,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,20,2,10,Q4,2015
+Com'15_N_44.jpg,IIIaN,IIIa,26/10/2015,NA,145,29,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,20,2,10,Q4,2015
+Com'15_N_45.jpg,IIIaN,IIIa,26/10/2015,4,155,33,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,23,4,10,Q4,2015
+Com'15_N_45.jpg,IIIaN,IIIa,26/10/2015,NA,155,33,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,23,4,10,Q4,2015
+Com'15_N_45.jpg,IIIaN,IIIa,26/10/2015,4,155,33,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,23,4,10,Q4,2015
+Com'15_N_45.jpg,IIIaN,IIIa,26/10/2015,3,155,33,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,23,4,10,Q4,2015
+Com'15_N_45.jpg,IIIaN,IIIa,26/10/2015,2,155,33,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,23,4,10,Q4,2015
+Com'15_N_45.jpg,IIIaN,IIIa,26/10/2015,NA,155,33,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,23,4,10,Q4,2015
+Com'15_N_45.jpg,IIIaN,IIIa,26/10/2015,4,155,33,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,23,4,10,Q4,2015
+Com'15_N_45.jpg,IIIaN,IIIa,26/10/2015,4,155,33,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,23,4,10,Q4,2015
+Com'15_N_45.jpg,IIIaN,IIIa,26/10/2015,3,155,33,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,23,4,10,Q4,2015
+Com'15_N_45.jpg,IIIaN,IIIa,26/10/2015,NA,155,33,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,23,4,10,Q4,2015
+Com'15_N_46.jpg,IIIaN,IIIa,26/10/2015,2,140,25,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,28,2,10,Q4,2015
+Com'15_N_46.jpg,IIIaN,IIIa,26/10/2015,2,140,25,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,28,2,10,Q4,2015
+Com'15_N_46.jpg,IIIaN,IIIa,26/10/2015,2,140,25,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,28,2,10,Q4,2015
+Com'15_N_46.jpg,IIIaN,IIIa,26/10/2015,1,140,25,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,28,2,10,Q4,2015
+Com'15_N_46.jpg,IIIaN,IIIa,26/10/2015,1,140,25,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,28,2,10,Q4,2015
+Com'15_N_46.jpg,IIIaN,IIIa,26/10/2015,NA,140,25,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,28,2,10,Q4,2015
+Com'15_N_46.jpg,IIIaN,IIIa,26/10/2015,2,140,25,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,28,2,10,Q4,2015
+Com'15_N_46.jpg,IIIaN,IIIa,26/10/2015,NA,140,25,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,28,2,10,Q4,2015
+Com'15_N_46.jpg,IIIaN,IIIa,26/10/2015,2,140,25,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,28,2,10,Q4,2015
+Com'15_N_46.jpg,IIIaN,IIIa,26/10/2015,NA,140,25,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,28,2,10,Q4,2015
+Com'15_N_56.jpg,IIIaN,IIIa,26/10/2015,4,150,32,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,23,4,10,Q4,2015
+Com'15_N_56.jpg,IIIaN,IIIa,26/10/2015,4,150,32,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,23,4,10,Q4,2015
+Com'15_N_56.jpg,IIIaN,IIIa,26/10/2015,NA,150,32,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,23,4,10,Q4,2015
+Com'15_N_56.jpg,IIIaN,IIIa,26/10/2015,4,150,32,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,23,4,10,Q4,2015
+Com'15_N_56.jpg,IIIaN,IIIa,26/10/2015,NA,150,32,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,23,4,10,Q4,2015
+Com'15_N_56.jpg,IIIaN,IIIa,26/10/2015,3,150,32,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,23,4,10,Q4,2015
+Com'15_N_56.jpg,IIIaN,IIIa,26/10/2015,4,150,32,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,23,4,10,Q4,2015
+Com'15_N_56.jpg,IIIaN,IIIa,26/10/2015,2,150,32,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,23,4,10,Q4,2015
+Com'15_N_56.jpg,IIIaN,IIIa,26/10/2015,3,150,32,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,23,4,10,Q4,2015
+Com'15_N_56.jpg,IIIaN,IIIa,26/10/2015,NA,150,32,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,23,4,10,Q4,2015
+Com'15_N_57.jpg,IIIaN,IIIa,26/10/2015,4,160,33,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,39,4,10,Q4,2015
+Com'15_N_57.jpg,IIIaN,IIIa,26/10/2015,4,160,33,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,39,4,10,Q4,2015
+Com'15_N_57.jpg,IIIaN,IIIa,26/10/2015,NA,160,33,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,39,4,10,Q4,2015
+Com'15_N_57.jpg,IIIaN,IIIa,26/10/2015,1,160,33,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,39,4,10,Q4,2015
+Com'15_N_57.jpg,IIIaN,IIIa,26/10/2015,NA,160,33,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,39,4,10,Q4,2015
+Com'15_N_57.jpg,IIIaN,IIIa,26/10/2015,2,160,33,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,39,4,10,Q4,2015
+Com'15_N_57.jpg,IIIaN,IIIa,26/10/2015,4,160,33,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,39,4,10,Q4,2015
+Com'15_N_57.jpg,IIIaN,IIIa,26/10/2015,NA,160,33,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,39,4,10,Q4,2015
+Com'15_N_57.jpg,IIIaN,IIIa,26/10/2015,3,160,33,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,39,4,10,Q4,2015
+Com'15_N_57.jpg,IIIaN,IIIa,26/10/2015,4,160,33,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,39,4,10,Q4,2015
+Com'15_N_58.jpg,IIIaN,IIIa,26/10/2015,NA,135,26,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,37,2,10,Q4,2015
+Com'15_N_58.jpg,IIIaN,IIIa,26/10/2015,1,135,26,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,37,2,10,Q4,2015
+Com'15_N_58.jpg,IIIaN,IIIa,26/10/2015,2,135,26,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,37,2,10,Q4,2015
+Com'15_N_58.jpg,IIIaN,IIIa,26/10/2015,2,135,26,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,37,2,10,Q4,2015
+Com'15_N_58.jpg,IIIaN,IIIa,26/10/2015,NA,135,26,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,37,2,10,Q4,2015
+Com'15_N_58.jpg,IIIaN,IIIa,26/10/2015,1,135,26,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,37,2,10,Q4,2015
+Com'15_N_58.jpg,IIIaN,IIIa,26/10/2015,2,135,26,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,37,2,10,Q4,2015
+Com'15_N_58.jpg,IIIaN,IIIa,26/10/2015,3,135,26,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,37,2,10,Q4,2015
+Com'15_N_58.jpg,IIIaN,IIIa,26/10/2015,2,135,26,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,37,2,10,Q4,2015
+Com'15_N_58.jpg,IIIaN,IIIa,26/10/2015,NA,135,26,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,37,2,10,Q4,2015
+Com'15_N_59.jpg,IIIaN,IIIa,26/10/2015,NA,130,22,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,41,2,10,Q4,2015
+Com'15_N_59.jpg,IIIaN,IIIa,26/10/2015,2,130,22,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,41,2,10,Q4,2015
+Com'15_N_59.jpg,IIIaN,IIIa,26/10/2015,1,130,22,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,41,2,10,Q4,2015
+Com'15_N_59.jpg,IIIaN,IIIa,26/10/2015,NA,130,22,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,41,2,10,Q4,2015
+Com'15_N_59.jpg,IIIaN,IIIa,26/10/2015,2,130,22,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,41,2,10,Q4,2015
+Com'15_N_59.jpg,IIIaN,IIIa,26/10/2015,3,130,22,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,41,2,10,Q4,2015
+Com'15_N_59.jpg,IIIaN,IIIa,26/10/2015,NA,130,22,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,41,2,10,Q4,2015
+Com'15_N_59.jpg,IIIaN,IIIa,26/10/2015,1,130,22,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,41,2,10,Q4,2015
+Com'15_N_59.jpg,IIIaN,IIIa,26/10/2015,NA,130,22,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,41,2,10,Q4,2015
+Com'15_N_59.jpg,IIIaN,IIIa,26/10/2015,2,130,22,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,41,2,10,Q4,2015
+IBTS'15_S_34.jpg,IIIaS,IIIa,28/08/2015,NA,135,15,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,59,2,8,Q3,2015
+IBTS'15_S_34.jpg,IIIaS,IIIa,28/08/2015,1,135,15,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,59,2,8,Q3,2015
+IBTS'15_S_34.jpg,IIIaS,IIIa,28/08/2015,1,135,15,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,59,2,8,Q3,2015
+IBTS'15_S_34.jpg,IIIaS,IIIa,28/08/2015,NA,135,15,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,59,2,8,Q3,2015
+IBTS'15_S_34.jpg,IIIaS,IIIa,28/08/2015,NA,135,15,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,59,2,8,Q3,2015
+IBTS'15_S_34.jpg,IIIaS,IIIa,28/08/2015,0,135,15,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,59,2,8,Q3,2015
+IBTS'15_S_34.jpg,IIIaS,IIIa,28/08/2015,2,135,15,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,59,2,8,Q3,2015
+IBTS'15_S_34.jpg,IIIaS,IIIa,28/08/2015,1,135,15,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,59,2,8,Q3,2015
+IBTS'15_S_34.jpg,IIIaS,IIIa,28/08/2015,2,135,15,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,59,2,8,Q3,2015
+IBTS'15_S_34.jpg,IIIaS,IIIa,28/08/2015,2,135,15,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,59,2,8,Q3,2015
+IBTS'15_S_35.jpg,IIIaS,IIIa,28/08/2015,3,115,12,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,59,1,8,Q3,2015
+IBTS'15_S_35.jpg,IIIaS,IIIa,28/08/2015,1,115,12,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,59,1,8,Q3,2015
+IBTS'15_S_35.jpg,IIIaS,IIIa,28/08/2015,1,115,12,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,59,1,8,Q3,2015
+IBTS'15_S_35.jpg,IIIaS,IIIa,28/08/2015,NA,115,12,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,59,1,8,Q3,2015
+IBTS'15_S_35.jpg,IIIaS,IIIa,28/08/2015,NA,115,12,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,59,1,8,Q3,2015
+IBTS'15_S_35.jpg,IIIaS,IIIa,28/08/2015,NA,115,12,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,59,1,8,Q3,2015
+IBTS'15_S_35.jpg,IIIaS,IIIa,28/08/2015,1,115,12,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,59,1,8,Q3,2015
+IBTS'15_S_35.jpg,IIIaS,IIIa,28/08/2015,1,115,12,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,59,1,8,Q3,2015
+IBTS'15_S_35.jpg,IIIaS,IIIa,28/08/2015,1,115,12,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,59,1,8,Q3,2015
+IBTS'15_S_35.jpg,IIIaS,IIIa,28/08/2015,1,115,12,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,59,1,8,Q3,2015
+IBTS'15_S_36.jpg,IIIaS,IIIa,28/08/2015,2,130,16,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,2,8,Q3,2015
+IBTS'15_S_36.jpg,IIIaS,IIIa,28/08/2015,2,130,16,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,2,8,Q3,2015
+IBTS'15_S_36.jpg,IIIaS,IIIa,28/08/2015,2,130,16,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,2,8,Q3,2015
+IBTS'15_S_36.jpg,IIIaS,IIIa,28/08/2015,NA,130,16,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,2,8,Q3,2015
+IBTS'15_S_36.jpg,IIIaS,IIIa,28/08/2015,NA,130,16,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,2,8,Q3,2015
+IBTS'15_S_36.jpg,IIIaS,IIIa,28/08/2015,2,130,16,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,2,8,Q3,2015
+IBTS'15_S_36.jpg,IIIaS,IIIa,28/08/2015,2,130,16,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,2,8,Q3,2015
+IBTS'15_S_36.jpg,IIIaS,IIIa,28/08/2015,2,130,16,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,2,8,Q3,2015
+IBTS'15_S_36.jpg,IIIaS,IIIa,28/08/2015,2,130,16,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,2,8,Q3,2015
+IBTS'15_S_36.jpg,IIIaS,IIIa,28/08/2015,NA,130,16,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,2,8,Q3,2015
+IBTS'16_N_1.jpg,IIIaN,IIIa,27/01/2016,NA,115,9,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,20,2,1,Q1,2016
+IBTS'16_N_1.jpg,IIIaN,IIIa,27/01/2016,2,115,9,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,20,2,1,Q1,2016
+IBTS'16_N_1.jpg,IIIaN,IIIa,27/01/2016,NA,115,9,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,20,2,1,Q1,2016
+IBTS'16_N_1.jpg,IIIaN,IIIa,27/01/2016,2,115,9,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,20,2,1,Q1,2016
+IBTS'16_N_1.jpg,IIIaN,IIIa,27/01/2016,1,115,9,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,20,2,1,Q1,2016
+IBTS'16_N_1.jpg,IIIaN,IIIa,27/01/2016,2,115,9,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,20,2,1,Q1,2016
+IBTS'16_N_1.jpg,IIIaN,IIIa,27/01/2016,2,115,9,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,20,2,1,Q1,2016
+IBTS'16_N_1.jpg,IIIaN,IIIa,27/01/2016,NA,115,9,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,20,2,1,Q1,2016
+IBTS'16_N_1.jpg,IIIaN,IIIa,27/01/2016,2,115,9,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,20,2,1,Q1,2016
+IBTS'16_N_1.jpg,IIIaN,IIIa,27/01/2016,2,115,9,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,20,2,1,Q1,2016
+IBTS'16_N_2.jpg,IIIaN,IIIa,27/01/2016,2,115,9,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,2,1,Q1,2016
+IBTS'16_N_2.jpg,IIIaN,IIIa,27/01/2016,2,115,9,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,2,1,Q1,2016
+IBTS'16_N_2.jpg,IIIaN,IIIa,27/01/2016,NA,115,9,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,2,1,Q1,2016
+IBTS'16_N_2.jpg,IIIaN,IIIa,27/01/2016,2,115,9,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,2,1,Q1,2016
+IBTS'16_N_2.jpg,IIIaN,IIIa,27/01/2016,NA,115,9,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,2,1,Q1,2016
+IBTS'16_N_2.jpg,IIIaN,IIIa,27/01/2016,2,115,9,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,2,1,Q1,2016
+IBTS'16_N_2.jpg,IIIaN,IIIa,27/01/2016,2,115,9,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,2,1,Q1,2016
+IBTS'16_N_2.jpg,IIIaN,IIIa,27/01/2016,2,115,9,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,2,1,Q1,2016
+IBTS'16_N_2.jpg,IIIaN,IIIa,27/01/2016,2,115,9,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,2,1,Q1,2016
+IBTS'16_N_2.jpg,IIIaN,IIIa,27/01/2016,NA,115,9,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,2,1,Q1,2016
+IBTS'16_N_20.jpg,IIIaN,IIIa,27/01/2016,2,100,6,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,2,1,Q1,2016
+IBTS'16_N_20.jpg,IIIaN,IIIa,27/01/2016,2,100,6,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,2,1,Q1,2016
+IBTS'16_N_20.jpg,IIIaN,IIIa,27/01/2016,2,100,6,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,2,1,Q1,2016
+IBTS'16_N_20.jpg,IIIaN,IIIa,27/01/2016,NA,100,6,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,2,1,Q1,2016
+IBTS'16_N_20.jpg,IIIaN,IIIa,27/01/2016,2,100,6,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,2,1,Q1,2016
+IBTS'16_N_20.jpg,IIIaN,IIIa,27/01/2016,2,100,6,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,2,1,Q1,2016
+IBTS'16_N_20.jpg,IIIaN,IIIa,27/01/2016,NA,100,6,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,2,1,Q1,2016
+IBTS'16_N_20.jpg,IIIaN,IIIa,27/01/2016,2,100,6,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,2,1,Q1,2016
+IBTS'16_N_20.jpg,IIIaN,IIIa,27/01/2016,NA,100,6,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,2,1,Q1,2016
+IBTS'16_N_20.jpg,IIIaN,IIIa,27/01/2016,2,100,6,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,2,1,Q1,2016
+IBTS'16_N_21.jpg,IIIaN,IIIa,27/01/2016,NA,70,2,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,20,2,1,Q1,2016
+IBTS'16_N_21.jpg,IIIaN,IIIa,27/01/2016,2,70,2,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,20,2,1,Q1,2016
+IBTS'16_N_21.jpg,IIIaN,IIIa,27/01/2016,2,70,2,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,20,2,1,Q1,2016
+IBTS'16_N_21.jpg,IIIaN,IIIa,27/01/2016,2,70,2,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,20,2,1,Q1,2016
+IBTS'16_N_21.jpg,IIIaN,IIIa,27/01/2016,2,70,2,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,20,2,1,Q1,2016
+IBTS'16_N_21.jpg,IIIaN,IIIa,27/01/2016,NA,70,2,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,20,2,1,Q1,2016
+IBTS'16_N_21.jpg,IIIaN,IIIa,27/01/2016,1,70,2,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,20,2,1,Q1,2016
+IBTS'16_N_21.jpg,IIIaN,IIIa,27/01/2016,2,70,2,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,20,2,1,Q1,2016
+IBTS'16_N_21.jpg,IIIaN,IIIa,27/01/2016,NA,70,2,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,20,2,1,Q1,2016
+IBTS'16_N_21.jpg,IIIaN,IIIa,27/01/2016,2,70,2,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,20,2,1,Q1,2016
+IBTS'16_N_22.jpg,IIIaN,IIIa,27/01/2016,NA,80,3,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,20,2,1,Q1,2016
+IBTS'16_N_22.jpg,IIIaN,IIIa,27/01/2016,2,80,3,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,20,2,1,Q1,2016
+IBTS'16_N_22.jpg,IIIaN,IIIa,27/01/2016,NA,80,3,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,20,2,1,Q1,2016
+IBTS'16_N_22.jpg,IIIaN,IIIa,27/01/2016,2,80,3,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,20,2,1,Q1,2016
+IBTS'16_N_22.jpg,IIIaN,IIIa,27/01/2016,NA,80,3,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,20,2,1,Q1,2016
+IBTS'16_N_22.jpg,IIIaN,IIIa,27/01/2016,1,80,3,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,20,2,1,Q1,2016
+IBTS'16_N_22.jpg,IIIaN,IIIa,27/01/2016,2,80,3,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,20,2,1,Q1,2016
+IBTS'16_N_22.jpg,IIIaN,IIIa,27/01/2016,2,80,3,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,20,2,1,Q1,2016
+IBTS'16_N_22.jpg,IIIaN,IIIa,27/01/2016,2,80,3,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,20,2,1,Q1,2016
+IBTS'16_N_22.jpg,IIIaN,IIIa,27/01/2016,2,80,3,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,20,2,1,Q1,2016
+IBTS'16_N_23.jpg,IIIaN,IIIa,27/01/2016,2,125,13,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,28,2,1,Q1,2016
+IBTS'16_N_23.jpg,IIIaN,IIIa,27/01/2016,2,125,13,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,28,2,1,Q1,2016
+IBTS'16_N_23.jpg,IIIaN,IIIa,27/01/2016,NA,125,13,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,28,2,1,Q1,2016
+IBTS'16_N_23.jpg,IIIaN,IIIa,27/01/2016,2,125,13,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,28,2,1,Q1,2016
+IBTS'16_N_23.jpg,IIIaN,IIIa,27/01/2016,2,125,13,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,28,2,1,Q1,2016
+IBTS'16_N_23.jpg,IIIaN,IIIa,27/01/2016,2,125,13,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,28,2,1,Q1,2016
+IBTS'16_N_23.jpg,IIIaN,IIIa,27/01/2016,NA,125,13,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,28,2,1,Q1,2016
+IBTS'16_N_23.jpg,IIIaN,IIIa,27/01/2016,NA,125,13,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,28,2,1,Q1,2016
+IBTS'16_N_23.jpg,IIIaN,IIIa,27/01/2016,1,125,13,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,28,2,1,Q1,2016
+IBTS'16_N_23.jpg,IIIaN,IIIa,27/01/2016,1,125,13,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,28,2,1,Q1,2016
+IBTS'16_N_24.jpg,IIIaN,IIIa,27/01/2016,NA,75,2,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,2,1,Q1,2016
+IBTS'16_N_24.jpg,IIIaN,IIIa,27/01/2016,NA,75,2,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,2,1,Q1,2016
+IBTS'16_N_24.jpg,IIIaN,IIIa,27/01/2016,2,75,2,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,2,1,Q1,2016
+IBTS'16_N_24.jpg,IIIaN,IIIa,27/01/2016,2,75,2,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,2,1,Q1,2016
+IBTS'16_N_24.jpg,IIIaN,IIIa,27/01/2016,2,75,2,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,2,1,Q1,2016
+IBTS'16_N_24.jpg,IIIaN,IIIa,27/01/2016,2,75,2,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,2,1,Q1,2016
+IBTS'16_N_24.jpg,IIIaN,IIIa,27/01/2016,2,75,2,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,2,1,Q1,2016
+IBTS'16_N_24.jpg,IIIaN,IIIa,27/01/2016,2,75,2,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,2,1,Q1,2016
+IBTS'16_N_24.jpg,IIIaN,IIIa,27/01/2016,2,75,2,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,2,1,Q1,2016
+IBTS'16_N_24.jpg,IIIaN,IIIa,27/01/2016,NA,75,2,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,2,1,Q1,2016
+IBTS'16_N_3.jpg,IIIaN,IIIa,27/01/2016,2,125,12,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,2,1,Q1,2016
+IBTS'16_N_3.jpg,IIIaN,IIIa,27/01/2016,NA,125,12,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,2,1,Q1,2016
+IBTS'16_N_3.jpg,IIIaN,IIIa,27/01/2016,2,125,12,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,2,1,Q1,2016
+IBTS'16_N_3.jpg,IIIaN,IIIa,27/01/2016,2,125,12,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,2,1,Q1,2016
+IBTS'16_N_3.jpg,IIIaN,IIIa,27/01/2016,2,125,12,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,2,1,Q1,2016
+IBTS'16_N_3.jpg,IIIaN,IIIa,27/01/2016,2,125,12,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,2,1,Q1,2016
+IBTS'16_N_3.jpg,IIIaN,IIIa,27/01/2016,NA,125,12,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,2,1,Q1,2016
+IBTS'16_N_3.jpg,IIIaN,IIIa,27/01/2016,NA,125,12,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,2,1,Q1,2016
+IBTS'16_N_3.jpg,IIIaN,IIIa,27/01/2016,2,125,12,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,2,1,Q1,2016
+IBTS'16_N_3.jpg,IIIaN,IIIa,27/01/2016,2,125,12,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,2,1,Q1,2016
+IBTS'16_N_39.jpg,IIIaN,IIIa,27/01/2016,NA,85,4,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,20,2,1,Q1,2016
+IBTS'16_N_39.jpg,IIIaN,IIIa,27/01/2016,NA,85,4,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,20,2,1,Q1,2016
+IBTS'16_N_39.jpg,IIIaN,IIIa,27/01/2016,1,85,4,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,20,2,1,Q1,2016
+IBTS'16_N_39.jpg,IIIaN,IIIa,27/01/2016,2,85,4,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,20,2,1,Q1,2016
+IBTS'16_N_39.jpg,IIIaN,IIIa,27/01/2016,2,85,4,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,20,2,1,Q1,2016
+IBTS'16_N_39.jpg,IIIaN,IIIa,27/01/2016,2,85,4,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,20,2,1,Q1,2016
+IBTS'16_N_39.jpg,IIIaN,IIIa,27/01/2016,2,85,4,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,20,2,1,Q1,2016
+IBTS'16_N_39.jpg,IIIaN,IIIa,27/01/2016,2,85,4,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,20,2,1,Q1,2016
+IBTS'16_N_39.jpg,IIIaN,IIIa,27/01/2016,2,85,4,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,20,2,1,Q1,2016
+IBTS'16_N_39.jpg,IIIaN,IIIa,27/01/2016,NA,85,4,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,20,2,1,Q1,2016
+IBTS'16_N_4.jpg,IIIaN,IIIa,27/01/2016,2,100,6,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,18,2,1,Q1,2016
+IBTS'16_N_4.jpg,IIIaN,IIIa,27/01/2016,NA,100,6,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,18,2,1,Q1,2016
+IBTS'16_N_4.jpg,IIIaN,IIIa,27/01/2016,2,100,6,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,18,2,1,Q1,2016
+IBTS'16_N_4.jpg,IIIaN,IIIa,27/01/2016,2,100,6,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,18,2,1,Q1,2016
+IBTS'16_N_4.jpg,IIIaN,IIIa,27/01/2016,NA,100,6,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,18,2,1,Q1,2016
+IBTS'16_N_4.jpg,IIIaN,IIIa,27/01/2016,NA,100,6,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,18,2,1,Q1,2016
+IBTS'16_N_4.jpg,IIIaN,IIIa,27/01/2016,3,100,6,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,18,2,1,Q1,2016
+IBTS'16_N_4.jpg,IIIaN,IIIa,27/01/2016,2,100,6,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,18,2,1,Q1,2016
+IBTS'16_N_4.jpg,IIIaN,IIIa,27/01/2016,2,100,6,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,18,2,1,Q1,2016
+IBTS'16_N_4.jpg,IIIaN,IIIa,27/01/2016,2,100,6,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,18,2,1,Q1,2016
+IBTS'16_N_40.jpg,IIIaN,IIIa,27/01/2016,2,120,11,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,2,1,Q1,2016
+IBTS'16_N_40.jpg,IIIaN,IIIa,27/01/2016,2,120,11,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,2,1,Q1,2016
+IBTS'16_N_40.jpg,IIIaN,IIIa,27/01/2016,NA,120,11,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,2,1,Q1,2016
+IBTS'16_N_40.jpg,IIIaN,IIIa,27/01/2016,2,120,11,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,2,1,Q1,2016
+IBTS'16_N_40.jpg,IIIaN,IIIa,27/01/2016,2,120,11,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,2,1,Q1,2016
+IBTS'16_N_40.jpg,IIIaN,IIIa,27/01/2016,2,120,11,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,2,1,Q1,2016
+IBTS'16_N_40.jpg,IIIaN,IIIa,27/01/2016,NA,120,11,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,2,1,Q1,2016
+IBTS'16_N_40.jpg,IIIaN,IIIa,27/01/2016,NA,120,11,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,2,1,Q1,2016
+IBTS'16_N_40.jpg,IIIaN,IIIa,27/01/2016,2,120,11,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,2,1,Q1,2016
+IBTS'16_N_40.jpg,IIIaN,IIIa,27/01/2016,2,120,11,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,2,1,Q1,2016
+IBTS'16_N_41.jpg,IIIaN,IIIa,27/01/2016,NA,120,12,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,18,2,1,Q1,2016
+IBTS'16_N_41.jpg,IIIaN,IIIa,27/01/2016,2,120,12,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,18,2,1,Q1,2016
+IBTS'16_N_41.jpg,IIIaN,IIIa,27/01/2016,2,120,12,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,18,2,1,Q1,2016
+IBTS'16_N_41.jpg,IIIaN,IIIa,27/01/2016,2,120,12,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,18,2,1,Q1,2016
+IBTS'16_N_41.jpg,IIIaN,IIIa,27/01/2016,NA,120,12,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,18,2,1,Q1,2016
+IBTS'16_N_41.jpg,IIIaN,IIIa,27/01/2016,2,120,12,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,18,2,1,Q1,2016
+IBTS'16_N_41.jpg,IIIaN,IIIa,27/01/2016,3,120,12,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,18,2,1,Q1,2016
+IBTS'16_N_41.jpg,IIIaN,IIIa,27/01/2016,NA,120,12,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,18,2,1,Q1,2016
+IBTS'16_N_41.jpg,IIIaN,IIIa,27/01/2016,2,120,12,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,18,2,1,Q1,2016
+IBTS'16_N_41.jpg,IIIaN,IIIa,27/01/2016,2,120,12,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,18,2,1,Q1,2016
+IBTS'16_N_5.jpg,IIIaN,IIIa,27/01/2016,NA,120,9,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,2,1,Q1,2016
+IBTS'16_N_5.jpg,IIIaN,IIIa,27/01/2016,2,120,9,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,2,1,Q1,2016
+IBTS'16_N_5.jpg,IIIaN,IIIa,27/01/2016,2,120,9,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,2,1,Q1,2016
+IBTS'16_N_5.jpg,IIIaN,IIIa,27/01/2016,NA,120,9,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,2,1,Q1,2016
+IBTS'16_N_5.jpg,IIIaN,IIIa,27/01/2016,2,120,9,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,2,1,Q1,2016
+IBTS'16_N_5.jpg,IIIaN,IIIa,27/01/2016,2,120,9,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,2,1,Q1,2016
+IBTS'16_N_5.jpg,IIIaN,IIIa,27/01/2016,2,120,9,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,2,1,Q1,2016
+IBTS'16_N_5.jpg,IIIaN,IIIa,27/01/2016,2,120,9,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,2,1,Q1,2016
+IBTS'16_N_5.jpg,IIIaN,IIIa,27/01/2016,2,120,9,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,2,1,Q1,2016
+IBTS'16_N_5.jpg,IIIaN,IIIa,27/01/2016,NA,120,9,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,2,1,Q1,2016
+IBTS'16_N_6.jpg,IIIaN,IIIa,27/01/2016,1,90,4,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,1,1,Q1,2016
+IBTS'16_N_6.jpg,IIIaN,IIIa,27/01/2016,NA,90,4,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,1,1,Q1,2016
+IBTS'16_N_6.jpg,IIIaN,IIIa,27/01/2016,1,90,4,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,1,1,Q1,2016
+IBTS'16_N_6.jpg,IIIaN,IIIa,27/01/2016,1,90,4,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,1,1,Q1,2016
+IBTS'16_N_6.jpg,IIIaN,IIIa,27/01/2016,1,90,4,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,1,1,Q1,2016
+IBTS'16_N_6.jpg,IIIaN,IIIa,27/01/2016,NA,90,4,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,1,1,Q1,2016
+IBTS'16_N_6.jpg,IIIaN,IIIa,27/01/2016,NA,90,4,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,1,1,Q1,2016
+IBTS'16_N_6.jpg,IIIaN,IIIa,27/01/2016,1,90,4,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,1,1,Q1,2016
+IBTS'16_N_6.jpg,IIIaN,IIIa,27/01/2016,1,90,4,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,1,1,Q1,2016
+IBTS'16_N_6.jpg,IIIaN,IIIa,27/01/2016,NA,90,4,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,1,1,Q1,2016
+IBTS'16_S_52.jpg,IIIaS,IIIa,27/01/2016,2,105,9,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,2,1,Q1,2016
+IBTS'16_S_52.jpg,IIIaS,IIIa,27/01/2016,2,105,9,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,2,1,Q1,2016
+IBTS'16_S_52.jpg,IIIaS,IIIa,27/01/2016,2,105,9,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,2,1,Q1,2016
+IBTS'16_S_52.jpg,IIIaS,IIIa,27/01/2016,NA,105,9,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,2,1,Q1,2016
+IBTS'16_S_52.jpg,IIIaS,IIIa,27/01/2016,2,105,9,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,2,1,Q1,2016
+IBTS'16_S_52.jpg,IIIaS,IIIa,27/01/2016,NA,105,9,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,2,1,Q1,2016
+IBTS'16_S_52.jpg,IIIaS,IIIa,27/01/2016,2,105,9,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,2,1,Q1,2016
+IBTS'16_S_52.jpg,IIIaS,IIIa,27/01/2016,2,105,9,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,2,1,Q1,2016
+IBTS'16_S_52.jpg,IIIaS,IIIa,27/01/2016,NA,105,9,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,2,1,Q1,2016
+IBTS'16_S_52.jpg,IIIaS,IIIa,27/01/2016,2,105,9,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,2,1,Q1,2016
+IBTS'16_S_53.jpg,IIIaS,IIIa,27/01/2016,2,135,18,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,24,3,1,Q1,2016
+IBTS'16_S_53.jpg,IIIaS,IIIa,27/01/2016,NA,135,18,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,24,3,1,Q1,2016
+IBTS'16_S_53.jpg,IIIaS,IIIa,27/01/2016,NA,135,18,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,24,3,1,Q1,2016
+IBTS'16_S_53.jpg,IIIaS,IIIa,27/01/2016,3,135,18,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,24,3,1,Q1,2016
+IBTS'16_S_53.jpg,IIIaS,IIIa,27/01/2016,3,135,18,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,24,3,1,Q1,2016
+IBTS'16_S_53.jpg,IIIaS,IIIa,27/01/2016,3,135,18,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,24,3,1,Q1,2016
+IBTS'16_S_53.jpg,IIIaS,IIIa,27/01/2016,3,135,18,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,24,3,1,Q1,2016
+IBTS'16_S_53.jpg,IIIaS,IIIa,27/01/2016,4,135,18,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,24,3,1,Q1,2016
+IBTS'16_S_53.jpg,IIIaS,IIIa,27/01/2016,2,135,18,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,24,3,1,Q1,2016
+IBTS'16_S_53.jpg,IIIaS,IIIa,27/01/2016,NA,135,18,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,24,3,1,Q1,2016
+IBTS'16_S_54.jpg,IIIaS,IIIa,27/01/2016,2,125,15,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,28,2,1,Q1,2016
+IBTS'16_S_54.jpg,IIIaS,IIIa,27/01/2016,NA,125,15,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,28,2,1,Q1,2016
+IBTS'16_S_54.jpg,IIIaS,IIIa,27/01/2016,3,125,15,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,28,2,1,Q1,2016
+IBTS'16_S_54.jpg,IIIaS,IIIa,27/01/2016,NA,125,15,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,28,2,1,Q1,2016
+IBTS'16_S_54.jpg,IIIaS,IIIa,27/01/2016,2,125,15,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,28,2,1,Q1,2016
+IBTS'16_S_54.jpg,IIIaS,IIIa,27/01/2016,NA,125,15,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,28,2,1,Q1,2016
+IBTS'16_S_54.jpg,IIIaS,IIIa,27/01/2016,3,125,15,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,28,2,1,Q1,2016
+IBTS'16_S_54.jpg,IIIaS,IIIa,27/01/2016,4,125,15,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,28,2,1,Q1,2016
+IBTS'16_S_54.jpg,IIIaS,IIIa,27/01/2016,2,125,15,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,28,2,1,Q1,2016
+IBTS'16_S_54.jpg,IIIaS,IIIa,27/01/2016,3,125,15,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,28,2,1,Q1,2016
+IBTS'16_S_80.jpg,IIIaS,IIIa,27/01/2016,2,130,15,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,22,2,1,Q1,2016
+IBTS'16_S_80.jpg,IIIaS,IIIa,27/01/2016,3,130,15,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,22,2,1,Q1,2016
+IBTS'16_S_80.jpg,IIIaS,IIIa,27/01/2016,2,130,15,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,22,2,1,Q1,2016
+IBTS'16_S_80.jpg,IIIaS,IIIa,27/01/2016,2,130,15,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,22,2,1,Q1,2016
+IBTS'16_S_80.jpg,IIIaS,IIIa,27/01/2016,NA,130,15,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,22,2,1,Q1,2016
+IBTS'16_S_80.jpg,IIIaS,IIIa,27/01/2016,2,130,15,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,22,2,1,Q1,2016
+IBTS'16_S_80.jpg,IIIaS,IIIa,27/01/2016,NA,130,15,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,22,2,1,Q1,2016
+IBTS'16_S_80.jpg,IIIaS,IIIa,27/01/2016,NA,130,15,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,22,2,1,Q1,2016
+IBTS'16_S_80.jpg,IIIaS,IIIa,27/01/2016,NA,130,15,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,22,2,1,Q1,2016
+IBTS'16_S_80.jpg,IIIaS,IIIa,27/01/2016,3,130,15,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,22,2,1,Q1,2016
+IBTS'16_S_82.jpg,IIIaS,IIIa,27/01/2016,5,140,18,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,18,4,1,Q1,2016
+IBTS'16_S_82.jpg,IIIaS,IIIa,27/01/2016,5,140,18,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,18,4,1,Q1,2016
+IBTS'16_S_82.jpg,IIIaS,IIIa,27/01/2016,3,140,18,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,18,4,1,Q1,2016
+IBTS'16_S_82.jpg,IIIaS,IIIa,27/01/2016,5,140,18,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,18,4,1,Q1,2016
+IBTS'16_S_82.jpg,IIIaS,IIIa,27/01/2016,NA,140,18,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,18,4,1,Q1,2016
+IBTS'16_S_82.jpg,IIIaS,IIIa,27/01/2016,4,140,18,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,18,4,1,Q1,2016
+IBTS'16_S_82.jpg,IIIaS,IIIa,27/01/2016,NA,140,18,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,18,4,1,Q1,2016
+IBTS'16_S_82.jpg,IIIaS,IIIa,27/01/2016,4,140,18,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,18,4,1,Q1,2016
+IBTS'16_S_82.jpg,IIIaS,IIIa,27/01/2016,4,140,18,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,18,4,1,Q1,2016
+IBTS'16_S_82.jpg,IIIaS,IIIa,27/01/2016,NA,140,18,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,18,4,1,Q1,2016
+IBTS'16_S_83.jpg,IIIaS,IIIa,27/01/2016,2,125,13,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,18,2,1,Q1,2016
+IBTS'16_S_83.jpg,IIIaS,IIIa,27/01/2016,2,125,13,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,18,2,1,Q1,2016
+IBTS'16_S_83.jpg,IIIaS,IIIa,27/01/2016,2,125,13,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,18,2,1,Q1,2016
+IBTS'16_S_83.jpg,IIIaS,IIIa,27/01/2016,2,125,13,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,18,2,1,Q1,2016
+IBTS'16_S_83.jpg,IIIaS,IIIa,27/01/2016,2,125,13,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,18,2,1,Q1,2016
+IBTS'16_S_83.jpg,IIIaS,IIIa,27/01/2016,3,125,13,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,18,2,1,Q1,2016
+IBTS'16_S_83.jpg,IIIaS,IIIa,27/01/2016,NA,125,13,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,18,2,1,Q1,2016
+IBTS'16_S_83.jpg,IIIaS,IIIa,27/01/2016,NA,125,13,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,18,2,1,Q1,2016
+IBTS'16_S_83.jpg,IIIaS,IIIa,27/01/2016,NA,125,13,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,18,2,1,Q1,2016
+IBTS'16_S_83.jpg,IIIaS,IIIa,27/01/2016,2,125,13,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,18,2,1,Q1,2016
+IBTS'16_S_86.jpg,IIIaS,IIIa,27/01/2016,1,85,4,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,1,1,Q1,2016
+IBTS'16_S_86.jpg,IIIaS,IIIa,27/01/2016,NA,85,4,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,1,1,Q1,2016
+IBTS'16_S_86.jpg,IIIaS,IIIa,27/01/2016,NA,85,4,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,1,1,Q1,2016
+IBTS'16_S_86.jpg,IIIaS,IIIa,27/01/2016,1,85,4,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,1,1,Q1,2016
+IBTS'16_S_86.jpg,IIIaS,IIIa,27/01/2016,1,85,4,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,1,1,Q1,2016
+IBTS'16_S_86.jpg,IIIaS,IIIa,27/01/2016,1,85,4,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,1,1,Q1,2016
+IBTS'16_S_86.jpg,IIIaS,IIIa,27/01/2016,NA,85,4,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,1,1,Q1,2016
+IBTS'16_S_86.jpg,IIIaS,IIIa,27/01/2016,1,85,4,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,1,1,Q1,2016
+IBTS'16_S_86.jpg,IIIaS,IIIa,27/01/2016,1,85,4,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,1,1,Q1,2016
+IBTS'16_S_86.jpg,IIIaS,IIIa,27/01/2016,1,85,4,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,1,1,Q1,2016
+IBTS'16_S_87.jpg,IIIaS,IIIa,27/01/2016,NA,110,10,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,2,1,Q1,2016
+IBTS'16_S_87.jpg,IIIaS,IIIa,27/01/2016,NA,110,10,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,2,1,Q1,2016
+IBTS'16_S_87.jpg,IIIaS,IIIa,27/01/2016,NA,110,10,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,2,1,Q1,2016
+IBTS'16_S_87.jpg,IIIaS,IIIa,27/01/2016,2,110,10,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,2,1,Q1,2016
+IBTS'16_S_87.jpg,IIIaS,IIIa,27/01/2016,2,110,10,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,2,1,Q1,2016
+IBTS'16_S_87.jpg,IIIaS,IIIa,27/01/2016,2,110,10,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,2,1,Q1,2016
+IBTS'16_S_87.jpg,IIIaS,IIIa,27/01/2016,2,110,10,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,2,1,Q1,2016
+IBTS'16_S_87.jpg,IIIaS,IIIa,27/01/2016,2,110,10,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,2,1,Q1,2016
+IBTS'16_S_87.jpg,IIIaS,IIIa,27/01/2016,2,110,10,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,2,1,Q1,2016
+IBTS'16_S_87.jpg,IIIaS,IIIa,27/01/2016,2,110,10,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,2,1,Q1,2016
+IBTS'16_S_88.jpg,IIIaS,IIIa,27/01/2016,1,115,10,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,28,2,1,Q1,2016
+IBTS'16_S_88.jpg,IIIaS,IIIa,27/01/2016,2,115,10,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,28,2,1,Q1,2016
+IBTS'16_S_88.jpg,IIIaS,IIIa,27/01/2016,NA,115,10,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,28,2,1,Q1,2016
+IBTS'16_S_88.jpg,IIIaS,IIIa,27/01/2016,2,115,10,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,28,2,1,Q1,2016
+IBTS'16_S_88.jpg,IIIaS,IIIa,27/01/2016,NA,115,10,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,28,2,1,Q1,2016
+IBTS'16_S_88.jpg,IIIaS,IIIa,27/01/2016,NA,115,10,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,28,2,1,Q1,2016
+IBTS'16_S_88.jpg,IIIaS,IIIa,27/01/2016,1,115,10,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,28,2,1,Q1,2016
+IBTS'16_S_88.jpg,IIIaS,IIIa,27/01/2016,2,115,10,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,28,2,1,Q1,2016
+IBTS'16_S_88.jpg,IIIaS,IIIa,27/01/2016,2,115,10,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,28,2,1,Q1,2016
+IBTS'16_S_88.jpg,IIIaS,IIIa,27/01/2016,2,115,10,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,28,2,1,Q1,2016
+IBTS'16_S_89.jpg,IIIaS,IIIa,27/01/2016,4,135,15,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,46,4,1,Q1,2016
+IBTS'16_S_89.jpg,IIIaS,IIIa,27/01/2016,4,135,15,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,46,4,1,Q1,2016
+IBTS'16_S_89.jpg,IIIaS,IIIa,27/01/2016,4,135,15,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,46,4,1,Q1,2016
+IBTS'16_S_89.jpg,IIIaS,IIIa,27/01/2016,4,135,15,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,46,4,1,Q1,2016
+IBTS'16_S_89.jpg,IIIaS,IIIa,27/01/2016,5,135,15,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,46,4,1,Q1,2016
+IBTS'16_S_89.jpg,IIIaS,IIIa,27/01/2016,NA,135,15,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,46,4,1,Q1,2016
+IBTS'16_S_89.jpg,IIIaS,IIIa,27/01/2016,0,135,15,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,46,4,1,Q1,2016
+IBTS'16_S_89.jpg,IIIaS,IIIa,27/01/2016,5,135,15,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,46,4,1,Q1,2016
+IBTS'16_S_89.jpg,IIIaS,IIIa,27/01/2016,NA,135,15,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,46,4,1,Q1,2016
+IBTS'16_S_89.jpg,IIIaS,IIIa,27/01/2016,NA,135,15,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,46,4,1,Q1,2016
+IBTS'16_S_90.jpg,IIIaS,IIIa,27/01/2016,2,120,12,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,20,2,1,Q1,2016
+IBTS'16_S_90.jpg,IIIaS,IIIa,27/01/2016,2,120,12,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,20,2,1,Q1,2016
+IBTS'16_S_90.jpg,IIIaS,IIIa,27/01/2016,NA,120,12,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,20,2,1,Q1,2016
+IBTS'16_S_90.jpg,IIIaS,IIIa,27/01/2016,2,120,12,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,20,2,1,Q1,2016
+IBTS'16_S_90.jpg,IIIaS,IIIa,27/01/2016,2,120,12,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,20,2,1,Q1,2016
+IBTS'16_S_90.jpg,IIIaS,IIIa,27/01/2016,1,120,12,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,20,2,1,Q1,2016
+IBTS'16_S_90.jpg,IIIaS,IIIa,27/01/2016,NA,120,12,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,20,2,1,Q1,2016
+IBTS'16_S_90.jpg,IIIaS,IIIa,27/01/2016,NA,120,12,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,20,2,1,Q1,2016
+IBTS'16_S_90.jpg,IIIaS,IIIa,27/01/2016,2,120,12,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,20,2,1,Q1,2016
+IBTS'16_S_90.jpg,IIIaS,IIIa,27/01/2016,2,120,12,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,20,2,1,Q1,2016
+IBTS'16_S_91.jpg,IIIaS,IIIa,27/01/2016,2,105,8,NA,U,Marianne,Johansson,3,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R03 SWE,0,2,1,Q1,2016
+IBTS'16_S_91.jpg,IIIaS,IIIa,27/01/2016,NA,105,8,NA,U,Eilert,Hermansen,5,Trainee,Norway,Institute of Marine Research (Norway),NOR,R05 NOR,0,2,1,Q1,2016
+IBTS'16_S_91.jpg,IIIaS,IIIa,27/01/2016,2,105,8,NA,U,Stina,Bilstrup Stenersen Hansen,12,Expert,Denmark,Reykjavik,DNK,R12 DNK,0,2,1,Q1,2016
+IBTS'16_S_91.jpg,IIIaS,IIIa,27/01/2016,2,105,8,NA,U,Inger,Henriksen,10,Trainee,Norway,Institute of Marine Research (Norway),NOR,R10 NOR,0,2,1,Q1,2016
+IBTS'16_S_91.jpg,IIIaS,IIIa,27/01/2016,2,105,8,NA,U,Ian,McCausland,1,Trainee,United Kingdom,The Agri-Food & Biosciences Institute (UK),GBR,R01 GBR,0,2,1,Q1,2016
+IBTS'16_S_91.jpg,IIIaS,IIIa,27/01/2016,NA,105,8,NA,U,Claire,Moore,7,Trainee,Ireland,Guest,IRL,R07 IRL,0,2,1,Q1,2016
+IBTS'16_S_91.jpg,IIIaS,IIIa,27/01/2016,2,105,8,NA,U,Annelie,Hilvarsson,4,Expert,Sweden,Swedish Board of Fisheries (Sweden),SWE,R04 SWE,0,2,1,Q1,2016
+IBTS'16_S_91.jpg,IIIaS,IIIa,27/01/2016,NA,105,8,NA,U,Jostein,Røttingen,6,Trainee,Norway,Institute of Marine Research (Norway),NOR,R06 NOR,0,2,1,Q1,2016
+IBTS'16_S_91.jpg,IIIaS,IIIa,27/01/2016,2,105,8,NA,U,Gertrud,Delfs,8,Trainee,Germany,Johann Heinrich von Thünen Institute (Germany),DEU,R08 DEU,0,2,1,Q1,2016
+IBTS'16_S_91.jpg,IIIaS,IIIa,27/01/2016,2,105,8,NA,U,Maria,Jarnum,2,Expert,Denmark,DTU Aqua,DNK,R02 DNK,0,2,1,Q1,2016
