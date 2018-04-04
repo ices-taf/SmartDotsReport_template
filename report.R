@@ -8,7 +8,6 @@ library(icesTAF)
 library(rmarkdown)
 
 # source utilities
-source("utilities.R")
 source("utilities-smartdots.R")
 
 # load configuration data
