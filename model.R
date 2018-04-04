@@ -16,7 +16,7 @@ config <- read_json("config.json", simplifyVector = TRUE)
 download.file(url = config$report_template, "model/reportTemplate.docx", quiet = TRUE, mode = "wb")
 
 # load utilities
-source("utilities-smartdots.R")
+source("utilities_model.R")
 
 # read input data
 ad_long <- read.taf("data/ad_long.csv")
