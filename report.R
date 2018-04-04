@@ -7,6 +7,9 @@
 library(icesTAF)
 library(rmarkdown)
 
+# make report directory
+mkdir("report")
+
 # source utilities
 source("utilities-smartdots.R")
 
@@ -28,7 +31,6 @@ for (file in dir("output", pattern = "*.rData")) {
 }
 
 # render report
-mkdir("report")
 render("report.Rmd",
        output_dir = "report",
        params = list(report_title = config$report_title),
