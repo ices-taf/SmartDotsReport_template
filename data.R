@@ -1,26 +1,34 @@
 ## Preprocess data, write TAF data tables
 
 ## Before:
-## After:
+## After: report_template.docx, dist.csv,
+##        ad_long.csv, ad_long_ex.csv,
+##        ad_wide.csv, ad_wide_ex.csv
 
 library(icesTAF)
+library(jsonlite)
+
+# create data directory
+mkdir("data")
 
 # get utility functions
-source("utilities.R")
 # I think this should be a smartdotsReport package...
 source("utilities-smartdots.R")
 
 # load configuration
-load.config("config.json")
+config <- read_json("config.json", simplifyVector = TRUE)
 
-# download raw data
-download.raw(folders$raw$repo, folders$raw$ref)
+# download the report template
+download.file(url = config$report_template, "data/reportTemplate.docx", quiet = TRUE, mode = "wb")
 
-# Get and prepare data ########################################################
+# get data from database
+
+
+
 
 # Get data
-ad <- read.csv("raw/data.csv", stringsAsFactors = FALSE, header = TRUE)
-dist <- read.csv("raw/dist.csv", stringsAsFactors = FALSE, header = TRUE)
+ad <- read.csv("../2018_smartDotsReportData/output/data.csv", stringsAsFactors = FALSE, header = TRUE)
+dist <- read.csv("../2018_smartDotsReportData/output/dist.csv", stringsAsFactors = FALSE, header = TRUE)
 
 # Calculate modal ages and create main data structures ########################
 
@@ -28,14 +36,11 @@ dist <- read.csv("raw/dist.csv", stringsAsFactors = FALSE, header = TRUE)
 ad_long <- make_data1(ad, "All", "Mode")
 ad_long_ex <- make_data1(ad, "Expert", "Mode")
 
-
 # wide format with one column per reader
 ad_wide <- make_data2(ad_long)
 ad_wide_ex <- make_data2(ad_long_ex)
 
-
 # write out input data tables
-mkdir("data")
 write.taf(dist, "data/dist.csv")
 write.taf(ad_long, "data/ad_long.csv")
 write.taf(ad_long_ex, "data/ad_long_ex.csv")
