@@ -6,12 +6,15 @@
 # load libraries
 library(icesTAF)
 library(rmarkdown)
+library(jsonlite)
+
 
 # make report directory
 mkdir("report")
 
 # source utilities
 source("utilities_report.R")
+source("utilities.R")
 
 # load configuration data
 config <- read_json("config.json", simplifyVector = TRUE)

@@ -5,6 +5,7 @@
 ## After:
 
 library(icesTAF)
+library(jsonlite)
 
 # make model directory
 mkdir("model")
@@ -17,6 +18,7 @@ download.file(url = config$report_template, "model/reportTemplate.docx", quiet =
 
 # load utilities
 source("utilities_model.R")
+source("utilities.R")
 
 # read input data
 ad_long <- read.taf("data/ad_long.csv")

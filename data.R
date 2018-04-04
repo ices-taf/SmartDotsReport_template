@@ -8,6 +8,7 @@
 library(icesTAF)
 library(jsonlite)
 library(RODBC)
+library(tidyr)
 
 # create data directory
 mkdir("data")
@@ -15,6 +16,7 @@ mkdir("data")
 # get utility functions
 # I think this should be a smartdotsReport package...
 source("utilities_data.R")
+source("utilities.R")
 
 # load configuration
 config <- read_json("config.json", simplifyVector = TRUE)
@@ -35,10 +37,12 @@ ad <- sqlQuery(conn, sqlq)
 odbcClose(conn)
 
 # prepare data
-ad <- ad %>%
-      mutate(month = lubridate::month(catch_date),
-             qtr = lubridate::quarter(catch_date),
-             year = lubridate::year(catch_date))
+ad <-
+  within(ad, {
+    year = lubridate::year(catch_date)
+    qtr = lubridate::quarter(catch_date)
+    month = lubridate::month(catch_date)
+  })
 
 # Calculate modal ages and cv of modal age
 ad_long <- add_modalage(ad, config$ma_method)
