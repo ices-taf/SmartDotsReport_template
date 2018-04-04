@@ -4,7 +4,7 @@ output:
     fig_caption: true
     fig_height: 10
     fig_width: 10
-    reference_docx: raw/exchange_style_8.docx
+    reference_docx: data/reportTemplate.docx
     toc: TRUE
 params:
   report_title: ""
