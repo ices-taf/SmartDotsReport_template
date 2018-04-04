@@ -4,6 +4,12 @@
   // Analysis specific arguments:
   // ----------------------------
 
+  // report template location
+  // most recent version:
+  // "report_template": "https://github.com/ices-eg/wg_WGBIOP/raw/master/SmartDotsTemplate/exchange_style_8.docx"
+  // example of a fixed version, fixed at commit = a51cb11d1ee5910f9f2aa201821c7dd4ba9da91a
+  "report_template": "https://github.com/ices-eg/wg_WGBIOP/raw/a51cb11d1ee5910f9f2aa201821c7dd4ba9da91a/SmartDotsTemplate/exchange_style_8.docx",
+
   // Report output title
   "report_title": "Otolith Exchange Analysis for Sprat in Area 3A",
   "report_name": "work_exchange_analysis_121217",
