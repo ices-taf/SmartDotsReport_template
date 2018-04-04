@@ -1,22 +1,5 @@
 // SmartDots workshop report congiguration file
 {
-  // TAF project settings
-  // ----------------------------
-
-	"folders":
-  {
-	  "raw":
-	  {
-		  "repo": "2018_smartdotsReportData",
-		  "ref": "master"
-    },
-		"analysis":
-    {
-		  "repo": "2018_smartdotsReport",
-		  "ref": "master"
-    }
-	},
-
 
   // Analysis specific arguments:
   // ----------------------------
