@@ -112,76 +112,6 @@ sample_ov <- function(dat_in){
 }
 
 
-# Determine modal age and CV ##################################################
-
-# For each sample the cv and modal age are calculated.
-# If one age is more frequent than others, that age is chosen as modal age.
-# If no age is more frequent, then the average of all ages are chosen or
-# if two (or more) ages are equally frequent then the age read by the most
-# expericed reader will be chosen as modal age.
-# WHich method to use is set in the ma_method variable.
-# If the modal age is 0 the CV is set to 0 as well.
-
-make_data1 <- function(dat_in, ex_level, ma_method){
-
-  # Select subset of data depending on input parameter
-  if (ex_level == "Expert") {
-    dat_un <- dat_in[dat_in$expertise == "Expert", ]
-  } else {
-    dat_un <- dat_in
-  }
-
-  # Determine modal age and calculate cv depending on ma_method
-  if (ma_method == "Mean") {
-    ma_cv <- ddply(dat_un[!is.na(dat_un$age),], .(sample), function(x)
-                    data.frame(cv = round2(sdNA(x$age)/(meanNA(x$age))*100),
-                               modal_age = ifelse(length(which(table(x$age) ==
-                                                    max(table(x$age)))) < 2,
-                                                  Mode(x$age),
-                                                  round2(meanNA(x$age)))
-                      )
-                   )
-  } else if (ma_method == "Mode") {
-    ma_cv <- ddply(dat_un[!is.na(dat_un$age),], .(sample), function(x)
-                    data.frame(cv = round2(sdNA(x$age)/(meanNA(x$age))*100),
-                               modal_age = ifelse(!is.null(Mode(x$age)),
-                                                  Mode(x$age),
-                                                  round2(meanNA(x$age)))
-                      )
-                   )
-  }
-
-
-  # If modal as is NA or 0 then CV is set to NA
-  ma_cv[is.na(ma_cv$modal_age) | ma_cv$modal_age == 0, "cv"] <- NA
-
-  # merge CV and modal age to data
-  ma_cv2 <- merge(dat_un, ma_cv, all.x = TRUE)
-
-  dat_out <-  ma_cv2 %>%
-              mutate(month = as.integer(substr(catch_date, 4, 5)),
-              qtr = paste0("Q", ceiling(as.integer(substr(catch_date,
-                                                          4, 5))/3)),
-              year = as.integer(substr(catch_date, 7, 10)))
-
-  return(dat_out)
-
-}
-
-# Data in wide format #########################################################
-
-# Create wide data with one row per sample.
-# Reader will be used as new column headings for the age readings.
-make_data2 <- function(dat_in){
-
-  var_in <- c("sample", "length", "sex", "catch_date", "ices_area",
-              "year", "qtr","month","reader", "age", "cv", "modal_age")
-
-  dat_out <- spread(dat_in[, var_in], key = reader, value = age)
-  return(dat_out)
-}
-
-
 
 # Table 1 #####################################################################
 
@@ -274,6 +204,8 @@ number_readings <- function(dat_in){
 # and standard deviation of the ages.
 # Total values for all readers and all modal ages are also calculated.
 # Readers are ranked from lowest to highest cv.
+#get_cv(mean_dat, std_dat, num_read, ad_wide)
+# n_read <- num_read; dat_in <- ad_wide
 get_cv <- function(mean_dat, std_dat, n_read, dat_in){
 
   # CV, (ratio std/mean)
@@ -284,17 +216,19 @@ get_cv <- function(mean_dat, std_dat, n_read, dat_in){
   cv$modal_age <- NULL
 
   # Add overall CV from all individual ages
-  all_cv <- dat_in %>% dplyr::group_by(modal_age) %>%
-            dplyr::summarize(all = meanNA(as.numeric(cv)) ) %>%
-            setup_nice2(., "modal_age")
-  all_cv[all_cv$modal_age==0,"all"] <- NA
-  cv$all <-  all_cv$all
+  all_cv <-
+    dat_in %>%
+    dplyr::group_by(modal_age) %>%
+    dplyr::summarize(all = meanNA(as.numeric(cv)) ) %>%
+    setup_nice2(., "modal_age")
+  all_cv[all_cv$modal_age == 0, "all"] <- NA
 
+  cv$all <- all_cv$all
 
   cv0 <- as.data.frame(cv)
   cv0[is.nan(cv0)] <- NA
 
-  cv0[] <- Map(paste3, round2(cv0),"%",sep=" ")
+  cv0[] <- Map(paste3, round2(cv0), "%", sep = " ")
 
   # Add weighted mean
   cv2 <- rbind(cv0, get_wm(cv, n_read, "y")[[2]])
@@ -310,7 +244,6 @@ get_cv <- function(mean_dat, std_dat, n_read, dat_in){
   names(cv_out)[names(cv_out) %in% "modal_age"] <- "Modal age"
 
   return(list(cv_out,cbind("modal_age" = 0:max, "cv" = cv$all)))
-
 }
 
 
@@ -382,38 +315,41 @@ std_ages <- function(dat_in){
 # Get % agreement (rate of number of age reading = modal age) per reader
 # by modal age and total per modal age. Rank is assigned based on a
 # weighted mean (based on number of readings) per reader.
+# get_perc_agree(ad_long, num_read)
+# dat_in <- ad_long; n_read <- num_read
 get_perc_agree <- function(dat_in, n_read){
 
-    # Get data with agreement between reading and modal age and
-    # create table with number of agreements per reader
-    n_agree <- setDT(dat_in)[age == modal_age,]
-    max <- max(dat_in$modal_age,na.rm=T)
-    n_agree2 <- as.data.frame.matrix(unlist(table(n_agree$modal_age,
-                                                  n_agree$reader))) %>%
-                setup_nice(.,max) %>% select(-modal_age)/
-                                       select(n_read, -total)*100
+  # Get data with agreement between reading and modal age and
+  # create table with number of agreements per reader
+  n_agree <- setDT(dat_in)[age == modal_age,]
+  max <- max(dat_in$modal_age,na.rm=T)
+  n_agree2 <-
+    as.data.frame.matrix(
+      unlist(table(n_agree$modal_age, factor(n_agree$reader, levels = unique(dat_in$reader))))) %>%
+    setup_nice(.,max) %>%
+    select(-modal_age)
+  n_agree2 <- n_agree2 / select(n_read, -total) * 100
 
-    # overall agreement per modal age
-    n_agree2$all <- as.data.table(table(n_agree$modal_age)) %>%
-                    setup_nice(.,max) %>%
-                    dplyr::select(-modal_age)/n_read$total*100
+  # overall agreement per modal age
+  n_agree2$all <-
+    as.data.table(table(n_agree$modal_age)) %>%
+    setup_nice(.,max) %>%
+    dplyr::select(-modal_age) / n_read$total * 100
 
-    # Add % sign to cells
-    new_PA <- as.data.frame(lapply(n_agree2, function(x)
-                              paste(round2(x), "%")), stringsAsFactors = FALSE)
-    names(new_PA) = gsub(pattern = "\\.", replacement = " ", names(new_PA))
+  # Add % sign to cells
+  new_PA <- as.data.frame(n_agree2)
+  new_PA[] <- sprintf("%0.0f %%", round2(unlist(new_PA)))
 
-    # Combined agreement table
-     pa <-  cbind("modal_age" = c(0:max, "Weighted Mean", "Rank"),
-            rbind(new_PA, get_wm(n_agree2, n_read)[[2]],
-                  c(get_rank(n_agree2, n_read, -1), NA) ) )
+  # Combined agreement table
+  pa <-  cbind("modal_age" = c(0:max, "Weighted Mean", "Rank"),
+        rbind(new_PA, get_wm(n_agree2, n_read)[[2]],
+              c(get_rank(n_agree2, n_read, -1), NA) ) )
 
-     # Minor cleaning up..
-     pa[pa=="NA %"] <- NA
-     names(pa)[names(pa) %in% c("modal_age")] <- c("Modal age")
+  # Minor cleaning up..
+  pa[pa=="NA %"] <- NA
+  names(pa)[names(pa) %in% c("modal_age")] <- c("Modal age")
 
-     return(list(pa, cbind("modal_age" = 0:max, "pa" = n_agree2$all)))
-
+  list(pa, cbind("modal_age" = 0:max, "pa" = n_agree2$all))
 }
 
 
@@ -1203,31 +1139,25 @@ plot_growth <- function(dist, compl, part,exp){
 # age readings per modal age and reader
 # Outputting also a version of wm with added % sign to the results if needed
 
-get_wm <- function(data, nr, val = "n", cor = TRUE){
+get_wm <- function(data, nr, val = "n", cor = TRUE) {
 
   # Calcaulte weighted means
-  wm <- colSums(data*nr, na.rm = TRUE)/
-    colSums(nr, na.rm = TRUE)
+  wm <- colSums(data * nr, na.rm = TRUE) / colSums(nr, na.rm = TRUE)
 
-  if (cor == TRUE) {
-
+  if (cor) {
     # Total value
     if (val == "y") {
-      wm["all"] <- meanNA(as.numeric(data$cv))
+      wm["all"] <- mean(as.numeric(data$cv), na.rm = TRUE)
     }
 
     # Adding percentage sign to results
-    wm_out <- as.data.frame(lapply(wm, function(x)
-      paste(sprintf("%.1f", round(x, 1)), "%")))
-    names(wm_out) = gsub(pattern = "\\.", replacement = " ", names(wm_out))
+    wm_out <- wm
+    wm_out[] <- sprintf("%.1f %%", round(wm, 1))
 
     return(list(wm, wm_out))
-
   } else {
     return(wm)
-
   }
-
 }
 
 
@@ -1266,14 +1196,13 @@ get_ages <- function(dat_in){
 
 # Different setups to order data from 0:n either by age or modal age
 
-setup_nice <- function(dat_in, max){
-
-  clean_dat <- setDT(dat_in, keep.rownames = TRUE) %>%
-               setnames(., 1, "modal_age") %>%
-               mutate(modal_age=as.integer(modal_age)) %>%
-               setDT(key = "modal_age") %>%
-               .[CJ(0:max),]
-
+setup_nice <- function(dat_in, max) {
+  dat_in %>%
+    setDT(., keep.rownames = TRUE) %>%
+    setnames(., 1, "modal_age") %>%
+    mutate(modal_age=as.integer(modal_age)) %>%
+    setDT(key = "modal_age") %>%
+    .[CJ(0:max),]
 }
 
 setup_nice1 <- function(dat_in, key_in,max){
@@ -1289,25 +1218,24 @@ setup_nice1 <- function(dat_in, key_in,max){
 setup_nice2 <- function(dat_in, key_in){
 
   if (key_in == "modal_age") {
-    max <- max(dat_in$modal_age, na.rm=T)
-  } else if (key_in == "age"){
-    max <- max(dat_in$age, na.rm=T)
-  } else if (key_in == "modal_age-age"){
+    max <- max(dat_in$modal_age, na.rm = TRUE)
+  } else if (key_in == "age") {
+    max <- max(dat_in$age, na.rm = TRUE)
+  } else if (key_in == "modal_age-age") {
     max <- as.numeric(colnames(dat_in)[ncol(dat_in)])
     key_in <- "modal_age"
   }
 
-  clean_dat <- setDT(dat_in, key = key_in) %>%
-    .[CJ(0:max)]
+  setDT(dat_in, key = key_in) %>% .[CJ(0:max)]
 }
 
 
 # Variuous small functions for simpler coding #################################
 
 # na.rm versions of several function
-meanNA <- function(x) mean(x, na.rm = T)
-sumNA <- function(x) sum(x, na.rm = T)
-sdNA <- function(x) sd(x, na.rm = T)
+meanNA <- function(x) mean(x, na.rm = TRUE)
+sumNA <- function(x) sum(x, na.rm = TRUE)
+sdNA <- function(x) sd(x, na.rm = TRUE)
 
 #Rounding
 round2 <- function(x) trunc(x + 0.5)
@@ -1318,9 +1246,9 @@ capFirst <- function(s) {
 }
 
 # is.nan for data.frames
-is.nan.data.frame <- function(x)
+is.nan.data.frame <- function(x) {
   do.call(cbind, lapply(x, is.nan))
-
+}
 
 # List function needed to output multiple variables from function
 list <- structure(NA, class = "result")
