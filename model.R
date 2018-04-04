@@ -5,9 +5,12 @@
 ## After:
 
 library(icesTAF)
-source("utilities.R")
 
-load.config("config.json")
+# make model directory
+mkdir("model")
+
+# load configuration
+config <- read_json("config.json", simplifyVector = TRUE)
 
 # load utilities
 source("utilities-smartdots.R")
@@ -116,20 +119,20 @@ rb_mo_tab_ex <- rb_strata(ad_long_ex, num_mo_ex, "month")
 # TABLES 5 GE - Statistisc per strata #########################################
 
 # Number readings per strata
-list[num_st, num_st_comp] <- number_strata(ad_wide, strata)
-list[num_st_ex, num_st_comp_ex] <- number_strata(ad_wide_ex, strata)
+list[num_st, num_st_comp] <- number_strata(ad_wide, config$strata)
+list[num_st_ex, num_st_comp_ex] <- number_strata(ad_wide_ex, config$strata)
 
 # CV per strata
-cv_st_tab <- cv_strata(ad_wide, num_st, strata)
-cv_st_tab_ex <- cv_strata(ad_wide_ex, num_st_ex, strata)
+cv_st_tab <- cv_strata(ad_wide, num_st, config$strata)
+cv_st_tab_ex <- cv_strata(ad_wide_ex, num_st_ex, config$strata)
 
 # PA per strata
-pa_st_tab <- pa_strata(ad_long, num_st, strata)
-pa_st_tab_ex <- pa_strata(ad_long_ex, num_st_ex, strata)
+pa_st_tab <- pa_strata(ad_long, num_st, config$strata)
+pa_st_tab_ex <- pa_strata(ad_long_ex, num_st_ex, config$strata)
 
 # Relative bias per strata
-rb_st_tab <- rb_strata(ad_long, num_st, strata)
-rb_st_tab_ex <- rb_strata(ad_long_ex, num_st_ex, strata)
+rb_st_tab <- rb_strata(ad_long, num_st, config$strata)
+rb_st_tab_ex <- rb_strata(ad_long_ex, num_st_ex, config$strata)
 
 # Age error matrix ############################################################
 
@@ -149,7 +152,6 @@ list[dif_tab_co_ex, dif_tab_ex] <- rel_dist(ad_long_ex, num_read_ex)
 # write (almost) everything out
 rm(list)
 rm("[<-.result")
-mkdir("model")
 
 for (obj in ls()) {
   x <- get(obj)
