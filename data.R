@@ -7,6 +7,7 @@
 
 library(icesTAF)
 library(jsonlite)
+library(RODBC)
 
 # create data directory
 mkdir("data")
@@ -20,12 +21,34 @@ config <- read_json("config.json", simplifyVector = TRUE)
 
 # get data from database
 
+# DB settings
+dbConnection <- 'Driver={SQL Server};Server=SQL06;Database=SmartDots;Trusted_Connection=yes'
+
+# data: one row per set of dots
+filter <- paste(sprintf("EventID = %i", config$event_ids), collapse = " or ")
+sqlq <- sprintf(paste("select * FROM vw_report_Annotations where %s"), filter)
+
+# connect to DB and fetch
+msg("downloading annotations for ... ")
+conn <- odbcDriverConnect(connection = dbConnection)
+ad <- sqlQuery(conn, sqlq)
+odbcClose(conn)
+
+ad[ad$sample == "Npout_054_whole",]
 
 
+# dist: one row per dot
+# reader1, sample, reader_number, mark, distance, ices_area, reader
+# R01, 6698256.jpg, 1, 1, 0, IIIaS, R01 GBR
+# set up sql command
+filter <- "tblEventID = 74 or tblEventID = 77"
+sqlq <- sprintf(paste("select * FROM vw_report_DotsDistances where %s"), filter)
 
-# Get data
-ad <- read.csv("../2018_smartDotsReportData/output/data.csv", stringsAsFactors = FALSE, header = TRUE)
-dist <- read.csv("../2018_smartDotsReportData/output/dist.csv", stringsAsFactors = FALSE, header = TRUE)
+# connect to DB and fetch
+msg("downloading dots for ... ")
+conn <- odbcDriverConnect(connection = dbConnection)
+dist <- sqlQuery(conn, sqlq)
+odbcClose(conn)
 
 # Calculate modal ages and create main data structures ########################
 
