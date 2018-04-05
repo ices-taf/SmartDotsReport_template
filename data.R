@@ -86,8 +86,5 @@ conn <- odbcDriverConnect(connection = dbConnection)
 dist <- sqlQuery(conn, sqlq)
 odbcClose(conn)
 
-# calculate distances between dots
-
-
 # write out input data tables
 write.taf(dist, "data/dist.csv")
