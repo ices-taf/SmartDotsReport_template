@@ -21,7 +21,7 @@ source("utilities.R")
 # load configuration
 config <- read_json("config.json", simplifyVector = TRUE)
 
-# get data from database
+# get data from database -------------------------------
 
 # DB settings
 dbConnection <- 'Driver={SQL Server};Server=SQL06;Database=SmartDots;Trusted_Connection=yes'
@@ -42,7 +42,35 @@ conn <- odbcDriverConnect(connection = dbConnection)
 ad <- sqlQuery(conn, sqlq)
 odbcClose(conn)
 
-# prepare data
+
+# update view
+conn <- odbcDriverConnect(connection = dbConnection)
+sqlq <- paste(readLines("utilities_vw_report_DotsDistances.sql"), collapse = "\n")
+sqlQuery(conn, sqlq)
+odbcClose(conn)
+
+# dist: one row per dot
+msg("downloading dots for ... ", filter)
+sqlq <- sprintf(paste("select * FROM vw_report_DotsDistances where %s"), filter)
+conn <- odbcDriverConnect(connection = dbConnection)
+dist <- sqlQuery(conn, sqlq)
+odbcClose(conn)
+
+# quick hacks -------------------------------
+
+# use pixel distance if no scale
+dist$distance[is.na(dist$distance)] <- dist$pixelDistance
+
+# remove annotations on (and very near) the centre
+dist <- dist[dist$pixelDistance > 2,]
+# adjust ages in age data
+ad$age <- unname(table(dist$AnnotationID)[paste(ad$AnnotationID)])
+table(ad$age)
+
+
+# prepare data -------------------------------
+
+# add date columns
 ad <-
   within(ad, {
     year = lubridate::year(catch_date)
@@ -63,31 +91,11 @@ ad_wide <- spread(ad_long[var_in], key = reader, value = age)
 ad_wide_ex <- spread(ad_long_ex[var_in], key = reader, value = age)
 
 
+
 # write out input data tables
+write.taf(dist, "data/dist.csv")
 write.taf(ad, "data/data.csv")
 write.taf(ad_long, "data/ad_long.csv")
 write.taf(ad_long_ex, "data/ad_long_ex.csv")
 write.taf(ad_wide, "data/ad_wide.csv")
 write.taf(ad_wide_ex, "data/ad_wide_ex.csv")
-
-
-
-
-# update view
-conn <- odbcDriverConnect(connection = dbConnection)
-sqlq <- paste(readLines("utilities_vw_report_DotsDistances.sql"), collapse = "\n")
-sqlQuery(conn, sqlq)
-odbcClose(conn)
-
-# dist: one row per dot
-msg("downloading dots for ... ", filter)
-sqlq <- sprintf(paste("select * FROM vw_report_DotsDistances where %s"), filter)
-conn <- odbcDriverConnect(connection = dbConnection)
-dist <- sqlQuery(conn, sqlq)
-odbcClose(conn)
-
-# quick hack
-dist$distance <- dist$pixelDistance / 280
-
-# write out input data tables
-write.taf(dist, "data/dist.csv")
