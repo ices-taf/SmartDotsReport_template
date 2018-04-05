@@ -160,7 +160,7 @@ number_readings <- function(dat_in) {
 
   # Calculate number of readings per reader grouped by modal age and add total
   # number of readings per modal age
-  max <- max(dat_un$modal_age, na.rm = T)
+  max <- max(dat_un$modal_age, na.rm = TRUE)
   num_read <- as.data.frame.matrix(table(dat_un$modal_age, dat_un$reader)) %>%
               setup_nice(.,max) %>% mutate(total = rowSums(.[, -1]))
 
@@ -217,12 +217,12 @@ get_cv <- function(mean_dat, std_dat, n_read, dat_in) {
   cv2 <- rbind(cv0, get_wm(cv, n_read, "y")[[2]])
 
   cv2[cv2 == "%"] <- NA
+  cv2[cv2 == "NaN %"] <- NA
 
   # Add modal age and rank
   max <- max(dat_in$modal_age, na.rm = T)
   cv_out <- cbind("modal_age" = c(c(0:max), "Weighted Mean", "Rank"),
                   rbind(cv2, c(get_rank(cv, n_read, 1), NA)  ))
-
 
   names(cv_out)[names(cv_out) %in% "modal_age"] <- "Modal age"
 
@@ -256,12 +256,14 @@ mean_ages <- function(dat_in){
 
   # Mean age per reader per modal age
   mean_ages <- as.data.table(dat_in)[, lapply(.SD, meanNA), by = modal_age]
+  mean_ages[is.nan(mean_ages)] <- NA
 
   # Reorganize and add overall mean column
   ma_out <- mean_ages %>% setup_nice2(., "modal_age") %>%
-            mutate(all = rowMeans(.[, -1])) %>%
-            setDT
+            mutate(all = rowMeans(.[, -1], na.rm = TRUE))
 
+  ma_out[is.nan(ma_out)] <- NA
+  ma_out %>% as.data.table
 }
 
 
@@ -304,27 +306,29 @@ get_perc_agree <- function(dat_in, n_read){
 
   # Get data with agreement between reading and modal age and
   # create table with number of agreements per reader
-  n_agree <- setDT(dat_in)[age == modal_age,]
-  max <- max(dat_in$modal_age,na.rm=T)
+  n_agree <- as.data.table(dat_in)[age == modal_age,]
+  max_age <- max(dat_in$modal_age, na.rm = TRUE)
+
   n_agree2 <-
-    as.data.frame.matrix(
-      unlist(table(n_agree$modal_age, factor(n_agree$reader, levels = unique(dat_in$reader))))) %>%
-    setup_nice(.,max) %>%
+    table(n_agree$modal_age, factor(n_agree$reader, levels = sort(unique(dat_in$reader)))) %>%
+    as.data.frame.matrix %>%
+    setup_nice(., max_age) %>%
     select(-modal_age)
-  n_agree2 <- n_agree2 / select(n_read, -total) * 100
+  n_agree2 <- n_agree2 / select(as.data.table(n_read), -total) * 100
 
   # overall agreement per modal age
   n_agree2$all <-
     as.data.table(table(n_agree$modal_age)) %>%
-    setup_nice(.,max) %>%
+    setup_nice(., max_age) %>%
     dplyr::select(-modal_age) / n_read$total * 100
+    n_agree2[is.nan(n_agree2)] <- NA
 
   # Add % sign to cells
   new_PA <- as.data.frame(n_agree2)
   new_PA[] <- sprintf("%0.0f %%", round2(unlist(new_PA)))
 
   # Combined agreement table
-  pa <-  cbind("modal_age" = c(0:max, "Weighted Mean", "Rank"),
+  pa <-  cbind("modal_age" = c(0:max_age, "Weighted Mean", "Rank"),
         rbind(new_PA, get_wm(n_agree2, n_read)[[2]],
               c(get_rank(n_agree2, n_read, -1), NA) ) )
 
@@ -332,7 +336,7 @@ get_perc_agree <- function(dat_in, n_read){
   pa[pa=="NA %"] <- NA
   names(pa)[names(pa) %in% c("modal_age")] <- c("Modal age")
 
-  list(pa, cbind("modal_age" = 0:max, "pa" = n_agree2$all))
+  list(pa, cbind("modal_age" = 0:max_age, "pa" = n_agree2$all))
 }
 
 
@@ -371,7 +375,7 @@ get_rel_bias <- function(mean_dat, n_read){
                                  "all" = rel_n$all))
 
   # Minor cleaning
-  rel_out[rel_out==" NA"] <- NA
+  rel_out[rel_out=="NA %"] <- NA
   names(rel_out)[names(rel_out) %in% "modal_age"] <- "Modal age"
 
   list(rel_out, rel_num)
@@ -636,7 +640,8 @@ number_strata <- function(dat_in, var){
 # cv of modal age per month/strata ############################################
 
 # Calculate CV per month, area, stock...
-
+# cv_strata(ad_wide, num_st, config$strata)
+# dat_in <- ad_wide; num <- num_st; var <- config$strata
 cv_strata <- function(dat_in, num, var){
 
   # Select data and re-name months
@@ -666,9 +671,8 @@ cv_strata <- function(dat_in, num, var){
   # Weighted mean per month/strata and corrections
   wm <- paste(round2(colSums(num_mon2[,-1]*num, na.rm = TRUE)/
                        colSums(num, na.rm = TRUE)), "%")
-  num_mon3 <- as.data.frame(lapply(num_mon2[,-1],
-                                   function(x) paste(round2(x), "%")),
-                            stringsAsFactors = FALSE)
+  num_mon3 <- round2(num_mon2[,-1])
+  num_mon3[] <- paste(unlist(num_mon3), "%")
 
   # Combine all
   num_mon_out <- cbind("Modal age" = c(c(0:max(dat_un$modal_age, na.rm=T)),
@@ -682,7 +686,8 @@ cv_strata <- function(dat_in, num, var){
 # Percentage agreement per month/strata #######################################
 
 # Percentage agreement per strata/month
-
+# pa_strata(ad_long, num_mo, "month")
+# n_read <- num_mo; var <- "month"; dat_in <- ad_long
 pa_strata <- function(dat_in, n_read, var){
 
   # Re-naming month
@@ -693,8 +698,8 @@ pa_strata <- function(dat_in, n_read, var){
   }
 
   # Number of agreements per modal age and strata
-  n_agree <- setDT(dat_un)[age == modal_age,] %>% as.data.frame()
-  max <- max(dat_un$modal_age,na.rm=T)
+  n_agree <- dat_un[dat_un$age == dat_un$modal_age,] %>% as.data.frame
+  max <- max(dat_un$modal_age, na.rm = TRUE)
   n_agree2 <- as.data.frame.matrix(unlist(table(
                       n_agree[, "modal_age"], n_agree[, var]))) %>%
               setup_nice(.,max)
@@ -727,15 +732,15 @@ pa_strata <- function(dat_in, n_read, var){
   wm <- paste(round2(colSums(agree_mon[, -1]*n_read, na.rm = TRUE)/
                        colSums(n_read, na.rm = TRUE)), "%")
   # Add percentage sign to results
-  agree_mon2 <- as.data.frame(lapply(agree_mon[, -1],
-                       function(x) paste(round2(x), "%")),
-                stringsAsFactors = FALSE)
+  agree_mon2 <- round2(agree_mon[,-1])
+  agree_mon2[] <- paste(unlist(agree_mon2), "%")
 
   # Combined agreement table
   agree_mon_out <- cbind("Modal age" = c(c(0:max), "Weighted Mean"),
                        rbind(agree_mon2, wm))
   agree_mon_out[agree_mon_out == "NA %" | agree_mon_out == "NaN %"] <- NA
 
+  agree_mon_out
  }
 
 
@@ -776,18 +781,21 @@ rb_strata <- function(dat_in, n_read, var){
         setDT %>% setup_nice2(., "modal_age")
   rb_mon$mean_bias <- mb$mean_bias
 
+
   # Weighted mean
-  wm <- round(colSums(rb_mon[, -1]*n_read, na.rm = TRUE)/
-                colSums(n_read, na.rm = TRUE), 2)
-  # Combined result
-  rel_out <- cbind("Modal age" = c(0:max(rb_mon$modal_age, na.rm=T),
-                   "Weighted Mean"),
-                   as.data.frame(lapply(rbind(rb_mon[, -1], wm),
-                      function(x) formatC(x, format = 'f', digits = 2)),
-                      stringsAsFactors = F))
+  wm <- paste(round(colSums(rb_mon[, -1]*n_read, na.rm = TRUE)/
+                colSums(n_read, na.rm = TRUE), 2), "%")
+
+  # Add percentage sign to results
+  rb_mon2 <- round2(rb_mon[,-1])
+  rb_mon2[] <- paste(unlist(rb_mon2), "%")
+
+  # Combined agreement table
+  rel_out <- cbind("Modal age" = c(c(0:max(rb_mon$modal_age, na.rm = TRUE)), "Weighted Mean"),
+                       rbind(rb_mon2, wm))
+  rel_out[rel_out == "NA %" | rel_out == "NaN %"] <- NA
 
   # Corrections
-  rel_out[rel_out == "NaN" | rel_out == " NA"  ] <- NA
   names(rel_out)[names(rel_out) %in% c("mean_bias")] <- "Mean bias"
 
   return(rel_out)

@@ -67,4 +67,5 @@ on
   xCountry.tblCodeID = tblDoYouHaveAccess.tblCodeID_Country
 where
   tblAnnotations.IsApproved = 1 and
-  tblEventParticipants.Number is not null
+  tblEventParticipants.Number is not null and
+  a.age is not null
