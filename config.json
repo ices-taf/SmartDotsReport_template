@@ -15,7 +15,8 @@
   "report_name": "smartdots_exchange_analysis_04042018",
 
   // Smartdote event IDs
-  "event_ids": [74, 77],
+  //"event_ids": [74, 77],
+  "event_ids": 74,
 
   // Use mode or mean to obtain modal age, when there is no mode
   // within the age reading
