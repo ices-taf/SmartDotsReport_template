@@ -86,5 +86,8 @@ conn <- odbcDriverConnect(connection = dbConnection)
 dist <- sqlQuery(conn, sqlq)
 odbcClose(conn)
 
+# quick hack
+dist$distance <- dist$pixelDistance / 280
+
 # write out input data tables
 write.taf(dist, "data/dist.csv")
