@@ -33,6 +33,8 @@ part_tab <- reader_info(ad_long)
 part_tab2 <- part_tab
 
 colnames(part_tab) <- c("Reader code", "Institution", "Country", "Expertise")
+part_tab <- part_tab[order(part_tab$`Reader code`),]
+rownames(part_tab) <- NULL
 
 # Sample overview
 sample_dat_ov <- sample_ov(ad_wide)
