@@ -15,12 +15,12 @@ SELECT
   xSex.Code as sex,
   tblAnnotations.SmartUser as reader_name,
   tblAnnotations.SmartUser as reader_lastname,
-  reader_number,
+  Number as reader_number,
   ExpertiseLevel as expertise,
   xCountry.Description as country,
   NULL as institution,
   upper(xCountry.Code) as iso_code,
-  'R' + FORMAT(reader_number, '00') + ' ' + upper(xCountry.Code) as reader,
+  'R' + FORMAT(Number, '00') + ' ' + upper(xCountry.Code) as reader,
   tblAnnotations.tblAnnotationID as AnnotationID,
   tblSamples.FishID
 FROM
@@ -65,10 +65,6 @@ left join
   tblCode as xCountry
 on
   xCountry.tblCodeID = tblDoYouHaveAccess.tblCodeID_Country
-inner join
-  (select tblEventID, SmartUser, isnull(Number, 99) as reader_number
-   from tblEventParticipants) as xReader
-on
-  xReader.tblEventID = tblSamples.tblEventID and
-  xReader.SmartUser = tblAnnotations.SmartUser
-where tblAnnotations.IsApproved = 1
+where
+  tblAnnotations.IsApproved = 1 and
+  tblEventParticipants.Number is not null

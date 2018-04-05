@@ -2,17 +2,17 @@ ALTER  VIEW [dbo].[vw_report_DotsDistances]
 AS
 SELECT
   tblDots.tblEventID as EventID,
-  'R' + FORMAT(reader_number, '00') as reader1,
+  'R' + FORMAT(Number, '00') as reader1,
   tblSmartImage.tblSmartImageID as sample,
   tblAnnotations.tblAnnotationID as AnnotationID,
-  reader_number,
+  Number,
   tblAnnotations.SmartUser as smartUser,
   DotIndex as mark,
   ((X-X1) * cos(-theta) - (Y-Y1) * sin(-theta)) / Scale as distance,
   (X-X1) * cos(-theta) - (Y-Y1) * sin(-theta) as pixelDistance,
   Scale as pixelsPerMillimeter,
   xArea.Code as ices_area,
-  'R' + FORMAT(reader_number, '00') + ' ' + upper(xCountry.Code) as reader
+  'R' + FORMAT(Number, '00') + ' ' + upper(xCountry.Code) as reader
 FROM
   tblDots
 left join
@@ -48,11 +48,10 @@ left join
 on
   xCountry.tblCodeID = tblDoYouHaveAccess.tblCodeID_Country
 inner join
-  (select tblEventID, SmartUser, Number as reader_number
-   from tblEventParticipants) as xReader
+  tblEventParticipants
 on
-  xReader.tblEventID = tblSamples.tblEventID and
-  xReader.SmartUser = tblAnnotations.SmartUser
+  tblEventParticipants.tblEventID = tblSamples.tblEventID and
+  tblEventParticipants.SmartUser = tblAnnotations.SmartUser
 where
   tblAnnotations.IsApproved = 1 and
-  xReader.reader_number is not null
+  tblEventParticipants.Number is not null

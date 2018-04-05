@@ -1,99 +1,56 @@
 EventID,event_name,sample,tblSampleID,ices_area,fao_code,catch_date,age,length,weight,maturity,sex,reader_name,reader_lastname,reader_number,expertise,country,institution,iso_code,reader,AnnotationID,FishID,month,qtr,year,cv,modal_age
-74,2018 Norway Pout Exchange - Whole and Broken,535,1508,27.4.a,27.4.a,2014-10-25,2,170,40,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4881,Npout_054,10,4,2014,47,2
-74,2018 Norway Pout Exchange - Whole and Broken,535,1508,27.4.a,27.4.a,2014-10-25,1,170,40,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5119,Npout_054,10,4,2014,47,2
-74,2018 Norway Pout Exchange - Whole and Broken,536,1509,27.4.a,27.4.a,2014-10-25,1,175,44,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4830,Npout_055,10,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,536,1509,27.4.a,27.4.a,2014-10-25,1,175,44,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5117,Npout_055,10,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,537,1510,27.4.a,27.4.a,2014-10-25,2,175,42,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4882,Npout_056,10,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,537,1510,27.4.a,27.4.a,2014-10-25,2,175,42,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5115,Npout_056,10,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,538,1511,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4883,Npout_057,10,4,2014,NA,2
-74,2018 Norway Pout Exchange - Whole and Broken,539,1512,27.4.a,27.4.a,2014-10-25,2,180,48,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4884,Npout_058,10,4,2014,NA,2
-74,2018 Norway Pout Exchange - Whole and Broken,545,1460,27.4.a,27.4.a,2014-11-01,1,135,18,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4848,Npout_006,11,4,2014,NA,1
+74,2018 Norway Pout Exchange - Whole and Broken,535,1508,27.4.a,27.4.a,2014-10-25,1,170,40,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5119,Npout_054,10,4,2014,NA,1
+74,2018 Norway Pout Exchange - Whole and Broken,536,1509,27.4.a,27.4.a,2014-10-25,1,175,44,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5117,Npout_055,10,4,2014,NA,1
+74,2018 Norway Pout Exchange - Whole and Broken,537,1510,27.4.a,27.4.a,2014-10-25,2,175,42,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5115,Npout_056,10,4,2014,NA,2
 74,2018 Norway Pout Exchange - Whole and Broken,546,1461,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1399,Npout_007,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,546,1461,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4850,Npout_007,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,546,1461,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5219,Npout_007,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,547,1462,27.4.a,27.4.a,2014-11-01,1,140,20,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1401,Npout_008,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,547,1462,27.4.a,27.4.a,2014-11-01,1,140,20,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4852,Npout_008,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,548,1463,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1403,Npout_009,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,548,1463,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4855,Npout_009,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,549,1464,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1405,Npout_010,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,549,1464,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4857,Npout_010,11,4,2014,0,1
+74,2018 Norway Pout Exchange - Whole and Broken,547,1462,27.4.a,27.4.a,2014-11-01,1,140,20,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1401,Npout_008,11,4,2014,NA,1
+74,2018 Norway Pout Exchange - Whole and Broken,548,1463,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1403,Npout_009,11,4,2014,NA,1
+74,2018 Norway Pout Exchange - Whole and Broken,549,1464,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1405,Npout_010,11,4,2014,NA,1
 74,2018 Norway Pout Exchange - Whole and Broken,550,1465,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1407,Npout_011,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,550,1465,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4859,Npout_011,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,550,1465,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5211,Npout_011,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,551,1466,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1409,Npout_012,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,551,1466,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4861,Npout_012,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,551,1466,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5209,Npout_012,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,552,1467,27.4.a,27.4.a,2014-11-01,1,150,26,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1609,Npout_013,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,552,1467,27.4.a,27.4.a,2014-11-01,1,150,26,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4863,Npout_013,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,553,1468,27.4.a,27.4.a,2014-11-01,1,150,28,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1413,Npout_014,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,553,1468,27.4.a,27.4.a,2014-11-01,1,150,28,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4865,Npout_014,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,554,1469,27.4.a,27.4.a,2014-11-01,1,155,32,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4867,Npout_015,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,554,1469,27.4.a,27.4.a,2014-11-01,1,155,32,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5203,Npout_015,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,555,1470,27.4.a,27.4.a,2014-11-01,1,155,32,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4869,Npout_016,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,555,1470,27.4.a,27.4.a,2014-11-01,1,155,32,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5201,Npout_016,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,556,1471,27.4.a,27.4.a,2014-11-01,1,160,32,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4871,Npout_017,11,4,2014,NA,1
-74,2018 Norway Pout Exchange - Whole and Broken,557,1472,27.4.a,27.4.a,2014-11-01,1,160,34,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4877,Npout_018,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,557,1472,27.4.a,27.4.a,2014-11-01,1,160,34,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5197,Npout_018,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,558,1473,27.4.a,27.4.a,2014-11-01,1,165,36,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4875,Npout_019,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,558,1473,27.4.a,27.4.a,2014-11-01,1,165,36,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5195,Npout_019,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,559,1474,27.4.a,27.4.a,2014-11-01,2,165,38,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4885,Npout_020,11,4,2014,47,2
-74,2018 Norway Pout Exchange - Whole and Broken,559,1474,27.4.a,27.4.a,2014-11-01,1,165,38,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5193,Npout_020,11,4,2014,47,2
-74,2018 Norway Pout Exchange - Whole and Broken,560,1475,27.4.a,27.4.a,2014-11-01,2,165,38,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1435,Npout_021,11,4,2014,35,2
-74,2018 Norway Pout Exchange - Whole and Broken,560,1475,27.4.a,27.4.a,2014-11-01,2,165,38,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4887,Npout_021,11,4,2014,35,2
-74,2018 Norway Pout Exchange - Whole and Broken,560,1475,27.4.a,27.4.a,2014-11-01,1,165,38,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5191,Npout_021,11,4,2014,35,2
-74,2018 Norway Pout Exchange - Whole and Broken,561,1476,27.4.a,27.4.a,2014-11-01,1,170,46,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4889,Npout_022,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,561,1476,27.4.a,27.4.a,2014-11-01,1,170,46,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5189,Npout_022,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,562,1477,27.4.a,27.4.a,2014-11-01,2,170,44,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4891,Npout_023,11,4,2014,47,2
-74,2018 Norway Pout Exchange - Whole and Broken,562,1477,27.4.a,27.4.a,2014-11-01,1,170,44,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5187,Npout_023,11,4,2014,47,2
-74,2018 Norway Pout Exchange - Whole and Broken,563,1478,27.4.a,27.4.a,2014-11-01,2,175,42,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1441,Npout_024,11,4,2014,43,1
-74,2018 Norway Pout Exchange - Whole and Broken,563,1478,27.4.a,27.4.a,2014-11-01,1,175,42,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4893,Npout_024,11,4,2014,43,1
-74,2018 Norway Pout Exchange - Whole and Broken,563,1478,27.4.a,27.4.a,2014-11-01,1,175,42,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5185,Npout_024,11,4,2014,43,1
-74,2018 Norway Pout Exchange - Whole and Broken,564,1479,27.4.a,27.4.a,2014-11-01,2,180,42,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4895,Npout_025,11,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,564,1479,27.4.a,27.4.a,2014-11-01,2,180,42,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5182,Npout_025,11,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,565,1480,27.4.a,27.4.a,2014-11-01,2,180,48,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4897,Npout_026,11,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,565,1480,27.4.a,27.4.a,2014-11-01,2,180,48,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5180,Npout_026,11,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,566,1481,27.4.a,27.4.a,2014-11-01,2,180,50,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4899,Npout_027,11,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,566,1481,27.4.a,27.4.a,2014-11-01,2,180,50,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5178,Npout_027,11,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,567,1482,27.4.a,27.4.a,2014-11-01,2,185,54,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4901,Npout_028,11,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,567,1482,27.4.a,27.4.a,2014-11-01,2,185,54,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5176,Npout_028,11,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,568,1483,27.4.a,27.4.a,2014-11-01,2,185,52,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4903,Npout_029,11,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,568,1483,27.4.a,27.4.a,2014-11-01,2,185,52,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5174,Npout_029,11,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,581,1496,27.4.a,27.4.a,2014-10-25,1,135,18,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4935,Npout_042,10,4,2014,NA,1
-74,2018 Norway Pout Exchange - Whole and Broken,582,1497,27.4.a,27.4.a,2014-10-25,1,140,20,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4939,Npout_043,10,4,2014,NA,1
-74,2018 Norway Pout Exchange - Whole and Broken,583,1498,27.4.a,27.4.a,2014-10-25,1,140,20,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4942,Npout_044,10,4,2014,NA,1
-74,2018 Norway Pout Exchange - Whole and Broken,584,1499,27.4.a,27.4.a,2014-10-25,1,145,22,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4944,Npout_045,10,4,2014,NA,1
-74,2018 Norway Pout Exchange - Whole and Broken,585,1500,27.4.a,27.4.a,2014-10-25,1,150,28,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4946,Npout_046,10,4,2014,NA,1
-74,2018 Norway Pout Exchange - Whole and Broken,586,1501,27.4.a,27.4.a,2014-10-25,1,150,26,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4948,Npout_047,10,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,586,1501,27.4.a,27.4.a,2014-10-25,1,150,26,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5135,Npout_047,10,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,587,1502,27.4.a,27.4.a,2014-10-25,2,155,28,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1496,Npout_048,10,4,2014,35,2
-74,2018 Norway Pout Exchange - Whole and Broken,587,1502,27.4.a,27.4.a,2014-10-25,2,155,28,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4950,Npout_048,10,4,2014,35,2
-74,2018 Norway Pout Exchange - Whole and Broken,587,1502,27.4.a,27.4.a,2014-10-25,1,155,28,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5133,Npout_048,10,4,2014,35,2
-74,2018 Norway Pout Exchange - Whole and Broken,588,1503,27.4.a,27.4.a,2014-10-25,1,155,28,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4953,Npout_049,10,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,588,1503,27.4.a,27.4.a,2014-10-25,1,155,28,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5131,Npout_049,10,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,589,1504,27.4.a,27.4.a,2014-10-25,1,155,26,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4955,Npout_050,10,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,589,1504,27.4.a,27.4.a,2014-10-25,1,155,26,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5127,Npout_050,10,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,590,1505,27.4.a,27.4.a,2014-10-25,1,160,32,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4957,Npout_051,10,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,590,1505,27.4.a,27.4.a,2014-10-25,1,160,32,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5125,Npout_051,10,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,591,1506,27.4.a,27.4.a,2014-10-25,2,160,34,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4959,Npout_052,10,4,2014,47,2
-74,2018 Norway Pout Exchange - Whole and Broken,591,1506,27.4.a,27.4.a,2014-10-25,1,160,34,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5123,Npout_052,10,4,2014,47,2
-74,2018 Norway Pout Exchange - Whole and Broken,592,1507,27.4.a,27.4.a,2014-10-25,2,170,40,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4961,Npout_053,10,4,2014,47,2
-74,2018 Norway Pout Exchange - Whole and Broken,592,1507,27.4.a,27.4.a,2014-10-25,1,170,40,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5121,Npout_053,10,4,2014,47,2
-74,2018 Norway Pout Exchange - Whole and Broken,593,1566,27.4.a,27.4.a,2014-10-25,2,170,40,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1508,Npout_054,10,4,2014,30,2
-74,2018 Norway Pout Exchange - Whole and Broken,593,1566,27.4.a,27.4.a,2014-10-25,2,170,40,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2513,Npout_054,10,4,2014,30,2
-74,2018 Norway Pout Exchange - Whole and Broken,593,1566,27.4.a,27.4.a,2014-10-25,2,170,40,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2774,Npout_054,10,4,2014,30,2
-74,2018 Norway Pout Exchange - Whole and Broken,593,1566,27.4.a,27.4.a,2014-10-25,2,170,40,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3304,Npout_054,10,4,2014,30,2
-74,2018 Norway Pout Exchange - Whole and Broken,593,1566,27.4.a,27.4.a,2014-10-25,2,170,40,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3698,Npout_054,10,4,2014,30,2
-74,2018 Norway Pout Exchange - Whole and Broken,593,1566,27.4.a,27.4.a,2014-10-25,4,170,40,NA,U,gault,gault,4,1,Scotland,NA,GB-SCT,R04 GB-SCT,3783,Npout_054,10,4,2014,30,2
-74,2018 Norway Pout Exchange - Whole and Broken,593,1566,27.4.a,27.4.a,2014-10-25,2,170,40,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4350,Npout_054,10,4,2014,30,2
-74,2018 Norway Pout Exchange - Whole and Broken,593,1566,27.4.a,27.4.a,2014-10-25,3,170,40,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4572,Npout_054,10,4,2014,30,2
-74,2018 Norway Pout Exchange - Whole and Broken,593,1566,27.4.a,27.4.a,2014-10-25,2,170,40,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4963,Npout_054,10,4,2014,30,2
-74,2018 Norway Pout Exchange - Whole and Broken,594,1567,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1510,Npout_055,10,4,2014,34,2
-74,2018 Norway Pout Exchange - Whole and Broken,594,1567,27.4.a,27.4.a,2014-10-25,1,175,44,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2512,Npout_055,10,4,2014,34,2
-74,2018 Norway Pout Exchange - Whole and Broken,594,1567,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3300,Npout_055,10,4,2014,34,2
-74,2018 Norway Pout Exchange - Whole and Broken,594,1567,27.4.a,27.4.a,2014-10-25,1,175,44,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3699,Npout_055,10,4,2014,34,2
-74,2018 Norway Pout Exchange - Whole and Broken,594,1567,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4352,Npout_055,10,4,2014,34,2
-74,2018 Norway Pout Exchange - Whole and Broken,594,1567,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4574,Npout_055,10,4,2014,34,2
-74,2018 Norway Pout Exchange - Whole and Broken,594,1567,27.4.a,27.4.a,2014-10-25,1,175,44,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4965,Npout_055,10,4,2014,34,2
+74,2018 Norway Pout Exchange - Whole and Broken,552,1467,27.4.a,27.4.a,2014-11-01,1,150,26,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1609,Npout_013,11,4,2014,NA,1
+74,2018 Norway Pout Exchange - Whole and Broken,553,1468,27.4.a,27.4.a,2014-11-01,1,150,28,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1413,Npout_014,11,4,2014,NA,1
+74,2018 Norway Pout Exchange - Whole and Broken,554,1469,27.4.a,27.4.a,2014-11-01,1,155,32,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5203,Npout_015,11,4,2014,NA,1
+74,2018 Norway Pout Exchange - Whole and Broken,555,1470,27.4.a,27.4.a,2014-11-01,1,155,32,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5201,Npout_016,11,4,2014,NA,1
+74,2018 Norway Pout Exchange - Whole and Broken,557,1472,27.4.a,27.4.a,2014-11-01,1,160,34,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5197,Npout_018,11,4,2014,NA,1
+74,2018 Norway Pout Exchange - Whole and Broken,558,1473,27.4.a,27.4.a,2014-11-01,1,165,36,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5195,Npout_019,11,4,2014,NA,1
+74,2018 Norway Pout Exchange - Whole and Broken,559,1474,27.4.a,27.4.a,2014-11-01,1,165,38,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5193,Npout_020,11,4,2014,NA,1
+74,2018 Norway Pout Exchange - Whole and Broken,560,1475,27.4.a,27.4.a,2014-11-01,2,165,38,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1435,Npout_021,11,4,2014,47,2
+74,2018 Norway Pout Exchange - Whole and Broken,560,1475,27.4.a,27.4.a,2014-11-01,1,165,38,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5191,Npout_021,11,4,2014,47,2
+74,2018 Norway Pout Exchange - Whole and Broken,561,1476,27.4.a,27.4.a,2014-11-01,1,170,46,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5189,Npout_022,11,4,2014,NA,1
+74,2018 Norway Pout Exchange - Whole and Broken,562,1477,27.4.a,27.4.a,2014-11-01,1,170,44,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5187,Npout_023,11,4,2014,NA,1
+74,2018 Norway Pout Exchange - Whole and Broken,563,1478,27.4.a,27.4.a,2014-11-01,2,175,42,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1441,Npout_024,11,4,2014,47,2
+74,2018 Norway Pout Exchange - Whole and Broken,563,1478,27.4.a,27.4.a,2014-11-01,1,175,42,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5185,Npout_024,11,4,2014,47,2
+74,2018 Norway Pout Exchange - Whole and Broken,564,1479,27.4.a,27.4.a,2014-11-01,2,180,42,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5182,Npout_025,11,4,2014,NA,2
+74,2018 Norway Pout Exchange - Whole and Broken,565,1480,27.4.a,27.4.a,2014-11-01,2,180,48,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5180,Npout_026,11,4,2014,NA,2
+74,2018 Norway Pout Exchange - Whole and Broken,566,1481,27.4.a,27.4.a,2014-11-01,2,180,50,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5178,Npout_027,11,4,2014,NA,2
+74,2018 Norway Pout Exchange - Whole and Broken,567,1482,27.4.a,27.4.a,2014-11-01,2,185,54,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5176,Npout_028,11,4,2014,NA,2
+74,2018 Norway Pout Exchange - Whole and Broken,568,1483,27.4.a,27.4.a,2014-11-01,2,185,52,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5174,Npout_029,11,4,2014,NA,2
+74,2018 Norway Pout Exchange - Whole and Broken,586,1501,27.4.a,27.4.a,2014-10-25,1,150,26,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5135,Npout_047,10,4,2014,NA,1
+74,2018 Norway Pout Exchange - Whole and Broken,587,1502,27.4.a,27.4.a,2014-10-25,2,155,28,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1496,Npout_048,10,4,2014,47,2
+74,2018 Norway Pout Exchange - Whole and Broken,587,1502,27.4.a,27.4.a,2014-10-25,1,155,28,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5133,Npout_048,10,4,2014,47,2
+74,2018 Norway Pout Exchange - Whole and Broken,588,1503,27.4.a,27.4.a,2014-10-25,1,155,28,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5131,Npout_049,10,4,2014,NA,1
+74,2018 Norway Pout Exchange - Whole and Broken,589,1504,27.4.a,27.4.a,2014-10-25,1,155,26,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5127,Npout_050,10,4,2014,NA,1
+74,2018 Norway Pout Exchange - Whole and Broken,590,1505,27.4.a,27.4.a,2014-10-25,1,160,32,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5125,Npout_051,10,4,2014,NA,1
+74,2018 Norway Pout Exchange - Whole and Broken,591,1506,27.4.a,27.4.a,2014-10-25,1,160,34,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5123,Npout_052,10,4,2014,NA,1
+74,2018 Norway Pout Exchange - Whole and Broken,592,1507,27.4.a,27.4.a,2014-10-25,1,170,40,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5121,Npout_053,10,4,2014,NA,1
+74,2018 Norway Pout Exchange - Whole and Broken,593,1566,27.4.a,27.4.a,2014-10-25,2,170,40,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1508,Npout_054,10,4,2014,31,2
+74,2018 Norway Pout Exchange - Whole and Broken,593,1566,27.4.a,27.4.a,2014-10-25,2,170,40,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2513,Npout_054,10,4,2014,31,2
+74,2018 Norway Pout Exchange - Whole and Broken,593,1566,27.4.a,27.4.a,2014-10-25,2,170,40,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2774,Npout_054,10,4,2014,31,2
+74,2018 Norway Pout Exchange - Whole and Broken,593,1566,27.4.a,27.4.a,2014-10-25,2,170,40,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3304,Npout_054,10,4,2014,31,2
+74,2018 Norway Pout Exchange - Whole and Broken,593,1566,27.4.a,27.4.a,2014-10-25,2,170,40,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3698,Npout_054,10,4,2014,31,2
+74,2018 Norway Pout Exchange - Whole and Broken,593,1566,27.4.a,27.4.a,2014-10-25,4,170,40,NA,U,gault,gault,4,1,Scotland,NA,GB-SCT,R04 GB-SCT,3783,Npout_054,10,4,2014,31,2
+74,2018 Norway Pout Exchange - Whole and Broken,593,1566,27.4.a,27.4.a,2014-10-25,2,170,40,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4350,Npout_054,10,4,2014,31,2
+74,2018 Norway Pout Exchange - Whole and Broken,593,1566,27.4.a,27.4.a,2014-10-25,3,170,40,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4572,Npout_054,10,4,2014,31,2
+74,2018 Norway Pout Exchange - Whole and Broken,594,1567,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1510,Npout_055,10,4,2014,31,2
+74,2018 Norway Pout Exchange - Whole and Broken,594,1567,27.4.a,27.4.a,2014-10-25,1,175,44,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2512,Npout_055,10,4,2014,31,2
+74,2018 Norway Pout Exchange - Whole and Broken,594,1567,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3300,Npout_055,10,4,2014,31,2
+74,2018 Norway Pout Exchange - Whole and Broken,594,1567,27.4.a,27.4.a,2014-10-25,1,175,44,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3699,Npout_055,10,4,2014,31,2
+74,2018 Norway Pout Exchange - Whole and Broken,594,1567,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4352,Npout_055,10,4,2014,31,2
+74,2018 Norway Pout Exchange - Whole and Broken,594,1567,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4574,Npout_055,10,4,2014,31,2
 74,2018 Norway Pout Exchange - Whole and Broken,595,1568,27.4.a,27.4.a,2014-10-25,2,175,42,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1512,Npout_056,10,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,595,1568,27.4.a,27.4.a,2014-10-25,2,175,42,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2510,Npout_056,10,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,595,1568,27.4.a,27.4.a,2014-10-25,2,175,42,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2778,Npout_056,10,4,2014,0,2
@@ -101,16 +58,14 @@ EventID,event_name,sample,tblSampleID,ices_area,fao_code,catch_date,age,length,w
 74,2018 Norway Pout Exchange - Whole and Broken,595,1568,27.4.a,27.4.a,2014-10-25,2,175,42,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3700,Npout_056,10,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,595,1568,27.4.a,27.4.a,2014-10-25,2,175,42,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4354,Npout_056,10,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,595,1568,27.4.a,27.4.a,2014-10-25,2,175,42,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4576,Npout_056,10,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,595,1568,27.4.a,27.4.a,2014-10-25,2,175,42,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4967,Npout_056,10,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,596,1569,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1514,Npout_057,10,4,2014,16,2
-74,2018 Norway Pout Exchange - Whole and Broken,596,1569,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2509,Npout_057,10,4,2014,16,2
-74,2018 Norway Pout Exchange - Whole and Broken,596,1569,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2772,Npout_057,10,4,2014,16,2
-74,2018 Norway Pout Exchange - Whole and Broken,596,1569,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3296,Npout_057,10,4,2014,16,2
-74,2018 Norway Pout Exchange - Whole and Broken,596,1569,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3701,Npout_057,10,4,2014,16,2
-74,2018 Norway Pout Exchange - Whole and Broken,596,1569,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4356,Npout_057,10,4,2014,16,2
-74,2018 Norway Pout Exchange - Whole and Broken,596,1569,27.4.a,27.4.a,2014-10-25,3,175,44,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4578,Npout_057,10,4,2014,16,2
-74,2018 Norway Pout Exchange - Whole and Broken,596,1569,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4969,Npout_057,10,4,2014,16,2
-74,2018 Norway Pout Exchange - Whole and Broken,596,1569,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5113,Npout_057,10,4,2014,16,2
+74,2018 Norway Pout Exchange - Whole and Broken,596,1569,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1514,Npout_057,10,4,2014,17,2
+74,2018 Norway Pout Exchange - Whole and Broken,596,1569,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2509,Npout_057,10,4,2014,17,2
+74,2018 Norway Pout Exchange - Whole and Broken,596,1569,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2772,Npout_057,10,4,2014,17,2
+74,2018 Norway Pout Exchange - Whole and Broken,596,1569,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3296,Npout_057,10,4,2014,17,2
+74,2018 Norway Pout Exchange - Whole and Broken,596,1569,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3701,Npout_057,10,4,2014,17,2
+74,2018 Norway Pout Exchange - Whole and Broken,596,1569,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4356,Npout_057,10,4,2014,17,2
+74,2018 Norway Pout Exchange - Whole and Broken,596,1569,27.4.a,27.4.a,2014-10-25,3,175,44,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4578,Npout_057,10,4,2014,17,2
+74,2018 Norway Pout Exchange - Whole and Broken,596,1569,27.4.a,27.4.a,2014-10-25,2,175,44,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5113,Npout_057,10,4,2014,17,2
 74,2018 Norway Pout Exchange - Whole and Broken,597,1570,27.4.a,27.4.a,2014-10-25,2,180,48,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1516,Npout_058,10,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,597,1570,27.4.a,27.4.a,2014-10-25,2,180,48,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2508,Npout_058,10,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,597,1570,27.4.a,27.4.a,2014-10-25,2,180,48,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2782,Npout_058,10,4,2014,0,2
@@ -118,7 +73,6 @@ EventID,event_name,sample,tblSampleID,ices_area,fao_code,catch_date,age,length,w
 74,2018 Norway Pout Exchange - Whole and Broken,597,1570,27.4.a,27.4.a,2014-10-25,2,180,48,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3702,Npout_058,10,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,597,1570,27.4.a,27.4.a,2014-10-25,2,180,48,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4358,Npout_058,10,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,597,1570,27.4.a,27.4.a,2014-10-25,2,180,48,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4580,Npout_058,10,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,597,1570,27.4.a,27.4.a,2014-10-25,2,180,48,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4971,Npout_058,10,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,597,1570,27.4.a,27.4.a,2014-10-25,2,180,48,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5110,Npout_058,10,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,598,1513,27.4.a,27.4.a,2014-11-01,1,105,8,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1387,Npout_001,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,598,1513,27.4.a,27.4.a,2014-11-01,NA,105,8,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2501,Npout_001,11,4,2014,0,1
@@ -127,14 +81,12 @@ EventID,event_name,sample,tblSampleID,ices_area,fao_code,catch_date,age,length,w
 74,2018 Norway Pout Exchange - Whole and Broken,598,1513,27.4.a,27.4.a,2014-11-01,NA,105,8,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3703,Npout_001,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,598,1513,27.4.a,27.4.a,2014-11-01,NA,105,8,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4103,Npout_001,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,598,1513,27.4.a,27.4.a,2014-11-01,1,105,8,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4587,Npout_001,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,598,1513,27.4.a,27.4.a,2014-11-01,NA,105,8,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4973,Npout_001,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,599,1514,27.4.a,27.4.a,2014-11-01,1,105,8,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1599,Npout_002,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,599,1514,27.4.a,27.4.a,2014-11-01,NA,105,8,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2500,Npout_002,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,599,1514,27.4.a,27.4.a,2014-11-01,NA,105,8,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3323,Npout_002,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,599,1514,27.4.a,27.4.a,2014-11-01,NA,105,8,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3704,Npout_002,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,599,1514,27.4.a,27.4.a,2014-11-01,NA,105,8,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4106,Npout_002,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,599,1514,27.4.a,27.4.a,2014-11-01,1,105,8,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4590,Npout_002,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,599,1514,27.4.a,27.4.a,2014-11-01,NA,105,8,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4975,Npout_002,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,600,1515,27.4.a,27.4.a,2014-11-01,1,105,8,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1391,Npout_003,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,600,1515,27.4.a,27.4.a,2014-11-01,NA,105,8,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2499,Npout_003,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,600,1515,27.4.a,27.4.a,2014-11-01,1,105,8,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2789,Npout_003,11,4,2014,0,1
@@ -142,20 +94,17 @@ EventID,event_name,sample,tblSampleID,ices_area,fao_code,catch_date,age,length,w
 74,2018 Norway Pout Exchange - Whole and Broken,600,1515,27.4.a,27.4.a,2014-11-01,NA,105,8,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3705,Npout_003,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,600,1515,27.4.a,27.4.a,2014-11-01,NA,105,8,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4108,Npout_003,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,600,1515,27.4.a,27.4.a,2014-11-01,1,105,8,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4413,Npout_003,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,600,1515,27.4.a,27.4.a,2014-11-01,NA,105,8,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4977,Npout_003,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,601,1516,27.4.a,27.4.a,2014-11-01,NA,110,8,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2498,Npout_004,11,4,2014,NA,1
 74,2018 Norway Pout Exchange - Whole and Broken,601,1516,27.4.a,27.4.a,2014-11-01,NA,110,8,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3325,Npout_004,11,4,2014,NA,1
 74,2018 Norway Pout Exchange - Whole and Broken,601,1516,27.4.a,27.4.a,2014-11-01,NA,110,8,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3706,Npout_004,11,4,2014,NA,1
 74,2018 Norway Pout Exchange - Whole and Broken,601,1516,27.4.a,27.4.a,2014-11-01,NA,110,8,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4110,Npout_004,11,4,2014,NA,1
 74,2018 Norway Pout Exchange - Whole and Broken,601,1516,27.4.a,27.4.a,2014-11-01,1,110,8,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4415,Npout_004,11,4,2014,NA,1
-74,2018 Norway Pout Exchange - Whole and Broken,601,1516,27.4.a,27.4.a,2014-11-01,NA,110,8,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4979,Npout_004,11,4,2014,NA,1
 74,2018 Norway Pout Exchange - Whole and Broken,602,1517,27.4.a,27.4.a,2014-11-01,1,120,10,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1397,Npout_005,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,602,1517,27.4.a,27.4.a,2014-11-01,NA,120,10,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2497,Npout_005,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,602,1517,27.4.a,27.4.a,2014-11-01,NA,120,10,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3326,Npout_005,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,602,1517,27.4.a,27.4.a,2014-11-01,NA,120,10,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3707,Npout_005,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,602,1517,27.4.a,27.4.a,2014-11-01,NA,120,10,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4112,Npout_005,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,602,1517,27.4.a,27.4.a,2014-11-01,1,120,10,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4592,Npout_005,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,602,1517,27.4.a,27.4.a,2014-11-01,NA,120,10,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4981,Npout_005,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,603,1518,27.4.a,27.4.a,2014-11-01,1,135,18,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1395,Npout_006,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,603,1518,27.4.a,27.4.a,2014-11-01,1,135,18,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2496,Npout_006,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,603,1518,27.4.a,27.4.a,2014-11-01,1,135,18,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2797,Npout_006,11,4,2014,0,1
@@ -163,95 +112,82 @@ EventID,event_name,sample,tblSampleID,ices_area,fao_code,catch_date,age,length,w
 74,2018 Norway Pout Exchange - Whole and Broken,603,1518,27.4.a,27.4.a,2014-11-01,1,135,18,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3709,Npout_006,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,603,1518,27.4.a,27.4.a,2014-11-01,1,135,18,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4114,Npout_006,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,603,1518,27.4.a,27.4.a,2014-11-01,1,135,18,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4594,Npout_006,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,603,1518,27.4.a,27.4.a,2014-11-01,1,135,18,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4983,Npout_006,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,603,1518,27.4.a,27.4.a,2014-11-01,1,135,18,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5221,Npout_006,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,604,1519,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2495,Npout_007,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,604,1519,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3230,Npout_007,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,604,1519,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3710,Npout_007,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,604,1519,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4116,Npout_007,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,604,1519,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4596,Npout_007,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,604,1519,27.4.a,27.4.a,2014-11-01,NA,140,22,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4992,Npout_007,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,605,1520,27.4.a,27.4.a,2014-11-01,1,140,20,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2494,Npout_008,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,605,1520,27.4.a,27.4.a,2014-11-01,1,140,20,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2801,Npout_008,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,605,1520,27.4.a,27.4.a,2014-11-01,1,140,20,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3232,Npout_008,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,605,1520,27.4.a,27.4.a,2014-11-01,1,140,20,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3711,Npout_008,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,605,1520,27.4.a,27.4.a,2014-11-01,1,140,20,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4324,Npout_008,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,605,1520,27.4.a,27.4.a,2014-11-01,1,140,20,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4598,Npout_008,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,605,1520,27.4.a,27.4.a,2014-11-01,1,140,20,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4994,Npout_008,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,605,1520,27.4.a,27.4.a,2014-11-01,1,140,20,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5217,Npout_008,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,606,1521,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2493,Npout_009,11,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,606,1521,27.4.a,27.4.a,2014-11-01,2,140,22,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2803,Npout_009,11,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,606,1521,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3234,Npout_009,11,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,606,1521,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3712,Npout_009,11,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,606,1521,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4122,Npout_009,11,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,606,1521,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4600,Npout_009,11,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,606,1521,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4996,Npout_009,11,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,606,1521,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5215,Npout_009,11,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,607,1522,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2492,Npout_010,11,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,607,1522,27.4.a,27.4.a,2014-11-01,2,145,20,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2805,Npout_010,11,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,607,1522,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3334,Npout_010,11,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,607,1522,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3713,Npout_010,11,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,607,1522,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4124,Npout_010,11,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,607,1522,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4602,Npout_010,11,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,607,1522,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,4998,Npout_010,11,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,607,1522,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5213,Npout_010,11,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,608,1523,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2491,Npout_011,11,4,2014,33,1
-74,2018 Norway Pout Exchange - Whole and Broken,608,1523,27.4.a,27.4.a,2014-11-01,2,145,20,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2807,Npout_011,11,4,2014,33,1
-74,2018 Norway Pout Exchange - Whole and Broken,608,1523,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3239,Npout_011,11,4,2014,33,1
-74,2018 Norway Pout Exchange - Whole and Broken,608,1523,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3714,Npout_011,11,4,2014,33,1
-74,2018 Norway Pout Exchange - Whole and Broken,608,1523,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4126,Npout_011,11,4,2014,33,1
-74,2018 Norway Pout Exchange - Whole and Broken,608,1523,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4604,Npout_011,11,4,2014,33,1
-74,2018 Norway Pout Exchange - Whole and Broken,608,1523,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5000,Npout_011,11,4,2014,33,1
+74,2018 Norway Pout Exchange - Whole and Broken,606,1521,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2493,Npout_009,11,4,2014,33,1
+74,2018 Norway Pout Exchange - Whole and Broken,606,1521,27.4.a,27.4.a,2014-11-01,2,140,22,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2803,Npout_009,11,4,2014,33,1
+74,2018 Norway Pout Exchange - Whole and Broken,606,1521,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3234,Npout_009,11,4,2014,33,1
+74,2018 Norway Pout Exchange - Whole and Broken,606,1521,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3712,Npout_009,11,4,2014,33,1
+74,2018 Norway Pout Exchange - Whole and Broken,606,1521,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4122,Npout_009,11,4,2014,33,1
+74,2018 Norway Pout Exchange - Whole and Broken,606,1521,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4600,Npout_009,11,4,2014,33,1
+74,2018 Norway Pout Exchange - Whole and Broken,606,1521,27.4.a,27.4.a,2014-11-01,1,140,22,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5215,Npout_009,11,4,2014,33,1
+74,2018 Norway Pout Exchange - Whole and Broken,607,1522,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2492,Npout_010,11,4,2014,33,1
+74,2018 Norway Pout Exchange - Whole and Broken,607,1522,27.4.a,27.4.a,2014-11-01,2,145,20,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2805,Npout_010,11,4,2014,33,1
+74,2018 Norway Pout Exchange - Whole and Broken,607,1522,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3334,Npout_010,11,4,2014,33,1
+74,2018 Norway Pout Exchange - Whole and Broken,607,1522,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3713,Npout_010,11,4,2014,33,1
+74,2018 Norway Pout Exchange - Whole and Broken,607,1522,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4124,Npout_010,11,4,2014,33,1
+74,2018 Norway Pout Exchange - Whole and Broken,607,1522,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4602,Npout_010,11,4,2014,33,1
+74,2018 Norway Pout Exchange - Whole and Broken,607,1522,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5213,Npout_010,11,4,2014,33,1
+74,2018 Norway Pout Exchange - Whole and Broken,608,1523,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2491,Npout_011,11,4,2014,35,1
+74,2018 Norway Pout Exchange - Whole and Broken,608,1523,27.4.a,27.4.a,2014-11-01,2,145,20,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2807,Npout_011,11,4,2014,35,1
+74,2018 Norway Pout Exchange - Whole and Broken,608,1523,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3239,Npout_011,11,4,2014,35,1
+74,2018 Norway Pout Exchange - Whole and Broken,608,1523,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3714,Npout_011,11,4,2014,35,1
+74,2018 Norway Pout Exchange - Whole and Broken,608,1523,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4126,Npout_011,11,4,2014,35,1
+74,2018 Norway Pout Exchange - Whole and Broken,608,1523,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4604,Npout_011,11,4,2014,35,1
 74,2018 Norway Pout Exchange - Whole and Broken,609,1524,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2490,Npout_012,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,609,1524,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3241,Npout_012,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,609,1524,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3715,Npout_012,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,609,1524,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4129,Npout_012,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,609,1524,27.4.a,27.4.a,2014-11-01,1,145,20,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4606,Npout_012,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,609,1524,27.4.a,27.4.a,2014-11-01,NA,145,20,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5002,Npout_012,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,610,1525,27.4.a,27.4.a,2014-11-01,1,150,26,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2489,Npout_013,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,610,1525,27.4.a,27.4.a,2014-11-01,1,150,26,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3243,Npout_013,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,610,1525,27.4.a,27.4.a,2014-11-01,1,150,26,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3716,Npout_013,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,610,1525,27.4.a,27.4.a,2014-11-01,1,150,26,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4131,Npout_013,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,610,1525,27.4.a,27.4.a,2014-11-01,1,150,26,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4608,Npout_013,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,610,1525,27.4.a,27.4.a,2014-11-01,1,150,26,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5016,Npout_013,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,610,1525,27.4.a,27.4.a,2014-11-01,1,150,26,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5207,Npout_013,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,611,1526,27.4.a,27.4.a,2014-11-01,1,150,28,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2488,Npout_014,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,611,1526,27.4.a,27.4.a,2014-11-01,1,150,28,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3336,Npout_014,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,611,1526,27.4.a,27.4.a,2014-11-01,1,150,28,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3717,Npout_014,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,611,1526,27.4.a,27.4.a,2014-11-01,1,150,28,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4133,Npout_014,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,611,1526,27.4.a,27.4.a,2014-11-01,1,150,28,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4610,Npout_014,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,611,1526,27.4.a,27.4.a,2014-11-01,1,150,28,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5018,Npout_014,11,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,611,1526,27.4.a,27.4.a,2014-11-01,1,150,28,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5205,Npout_014,11,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,612,1527,27.4.a,27.4.a,2014-11-01,2,155,32,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1415,Npout_015,11,4,2014,29,2
-74,2018 Norway Pout Exchange - Whole and Broken,612,1527,27.4.a,27.4.a,2014-11-01,1,155,32,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2504,Npout_015,11,4,2014,29,2
-74,2018 Norway Pout Exchange - Whole and Broken,612,1527,27.4.a,27.4.a,2014-11-01,2,155,32,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3248,Npout_015,11,4,2014,29,2
-74,2018 Norway Pout Exchange - Whole and Broken,612,1527,27.4.a,27.4.a,2014-11-01,2,155,32,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3718,Npout_015,11,4,2014,29,2
-74,2018 Norway Pout Exchange - Whole and Broken,612,1527,27.4.a,27.4.a,2014-11-01,2,155,32,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4137,Npout_015,11,4,2014,29,2
-74,2018 Norway Pout Exchange - Whole and Broken,612,1527,27.4.a,27.4.a,2014-11-01,3,155,32,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4450,Npout_015,11,4,2014,29,2
-74,2018 Norway Pout Exchange - Whole and Broken,612,1527,27.4.a,27.4.a,2014-11-01,2,155,32,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5020,Npout_015,11,4,2014,29,2
-74,2018 Norway Pout Exchange - Whole and Broken,613,1528,27.4.a,27.4.a,2014-11-01,2,155,32,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1612,Npout_016,11,4,2014,32,2
-74,2018 Norway Pout Exchange - Whole and Broken,613,1528,27.4.a,27.4.a,2014-11-01,1,155,32,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2482,Npout_016,11,4,2014,32,2
-74,2018 Norway Pout Exchange - Whole and Broken,613,1528,27.4.a,27.4.a,2014-11-01,2,155,32,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2817,Npout_016,11,4,2014,32,2
-74,2018 Norway Pout Exchange - Whole and Broken,613,1528,27.4.a,27.4.a,2014-11-01,2,155,32,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3331,Npout_016,11,4,2014,32,2
-74,2018 Norway Pout Exchange - Whole and Broken,613,1528,27.4.a,27.4.a,2014-11-01,2,155,32,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3719,Npout_016,11,4,2014,32,2
-74,2018 Norway Pout Exchange - Whole and Broken,613,1528,27.4.a,27.4.a,2014-11-01,1,155,32,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4326,Npout_016,11,4,2014,32,2
-74,2018 Norway Pout Exchange - Whole and Broken,613,1528,27.4.a,27.4.a,2014-11-01,2,155,32,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4452,Npout_016,11,4,2014,32,2
-74,2018 Norway Pout Exchange - Whole and Broken,613,1528,27.4.a,27.4.a,2014-11-01,1,155,32,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5022,Npout_016,11,4,2014,32,2
-74,2018 Norway Pout Exchange - Whole and Broken,614,1529,27.4.a,27.4.a,2014-11-01,1,160,32,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2480,Npout_017,11,4,2014,38,1
-74,2018 Norway Pout Exchange - Whole and Broken,614,1529,27.4.a,27.4.a,2014-11-01,2,160,32,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3337,Npout_017,11,4,2014,38,1
-74,2018 Norway Pout Exchange - Whole and Broken,614,1529,27.4.a,27.4.a,2014-11-01,1,160,32,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3720,Npout_017,11,4,2014,38,1
-74,2018 Norway Pout Exchange - Whole and Broken,614,1529,27.4.a,27.4.a,2014-11-01,1,160,32,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4329,Npout_017,11,4,2014,38,1
-74,2018 Norway Pout Exchange - Whole and Broken,614,1529,27.4.a,27.4.a,2014-11-01,2,160,32,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4612,Npout_017,11,4,2014,38,1
-74,2018 Norway Pout Exchange - Whole and Broken,614,1529,27.4.a,27.4.a,2014-11-01,1,160,32,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5024,Npout_017,11,4,2014,38,1
-74,2018 Norway Pout Exchange - Whole and Broken,614,1529,27.4.a,27.4.a,2014-11-01,1,160,32,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5199,Npout_017,11,4,2014,38,1
-74,2018 Norway Pout Exchange - Whole and Broken,615,1530,27.4.a,27.4.a,2014-11-01,2,160,34,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1426,Npout_018,11,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,615,1530,27.4.a,27.4.a,2014-11-01,2,160,34,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2478,Npout_018,11,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,615,1530,27.4.a,27.4.a,2014-11-01,2,160,34,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2821,Npout_018,11,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,615,1530,27.4.a,27.4.a,2014-11-01,2,160,34,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3254,Npout_018,11,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,615,1530,27.4.a,27.4.a,2014-11-01,2,160,34,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3721,Npout_018,11,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,615,1530,27.4.a,27.4.a,2014-11-01,2,160,34,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4143,Npout_018,11,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,615,1530,27.4.a,27.4.a,2014-11-01,2,160,34,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4468,Npout_018,11,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,615,1530,27.4.a,27.4.a,2014-11-01,3,160,34,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5026,Npout_018,11,4,2014,17,2
+74,2018 Norway Pout Exchange - Whole and Broken,612,1527,27.4.a,27.4.a,2014-11-01,2,155,32,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1415,Npout_015,11,4,2014,32,2
+74,2018 Norway Pout Exchange - Whole and Broken,612,1527,27.4.a,27.4.a,2014-11-01,1,155,32,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2504,Npout_015,11,4,2014,32,2
+74,2018 Norway Pout Exchange - Whole and Broken,612,1527,27.4.a,27.4.a,2014-11-01,2,155,32,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3248,Npout_015,11,4,2014,32,2
+74,2018 Norway Pout Exchange - Whole and Broken,612,1527,27.4.a,27.4.a,2014-11-01,2,155,32,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3718,Npout_015,11,4,2014,32,2
+74,2018 Norway Pout Exchange - Whole and Broken,612,1527,27.4.a,27.4.a,2014-11-01,2,155,32,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4137,Npout_015,11,4,2014,32,2
+74,2018 Norway Pout Exchange - Whole and Broken,612,1527,27.4.a,27.4.a,2014-11-01,3,155,32,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4450,Npout_015,11,4,2014,32,2
+74,2018 Norway Pout Exchange - Whole and Broken,613,1528,27.4.a,27.4.a,2014-11-01,2,155,32,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1612,Npout_016,11,4,2014,28,2
+74,2018 Norway Pout Exchange - Whole and Broken,613,1528,27.4.a,27.4.a,2014-11-01,1,155,32,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2482,Npout_016,11,4,2014,28,2
+74,2018 Norway Pout Exchange - Whole and Broken,613,1528,27.4.a,27.4.a,2014-11-01,2,155,32,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2817,Npout_016,11,4,2014,28,2
+74,2018 Norway Pout Exchange - Whole and Broken,613,1528,27.4.a,27.4.a,2014-11-01,2,155,32,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3331,Npout_016,11,4,2014,28,2
+74,2018 Norway Pout Exchange - Whole and Broken,613,1528,27.4.a,27.4.a,2014-11-01,2,155,32,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3719,Npout_016,11,4,2014,28,2
+74,2018 Norway Pout Exchange - Whole and Broken,613,1528,27.4.a,27.4.a,2014-11-01,1,155,32,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4326,Npout_016,11,4,2014,28,2
+74,2018 Norway Pout Exchange - Whole and Broken,613,1528,27.4.a,27.4.a,2014-11-01,2,155,32,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4452,Npout_016,11,4,2014,28,2
+74,2018 Norway Pout Exchange - Whole and Broken,614,1529,27.4.a,27.4.a,2014-11-01,1,160,32,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2480,Npout_017,11,4,2014,39,1
+74,2018 Norway Pout Exchange - Whole and Broken,614,1529,27.4.a,27.4.a,2014-11-01,2,160,32,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3337,Npout_017,11,4,2014,39,1
+74,2018 Norway Pout Exchange - Whole and Broken,614,1529,27.4.a,27.4.a,2014-11-01,1,160,32,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3720,Npout_017,11,4,2014,39,1
+74,2018 Norway Pout Exchange - Whole and Broken,614,1529,27.4.a,27.4.a,2014-11-01,1,160,32,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4329,Npout_017,11,4,2014,39,1
+74,2018 Norway Pout Exchange - Whole and Broken,614,1529,27.4.a,27.4.a,2014-11-01,2,160,32,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4612,Npout_017,11,4,2014,39,1
+74,2018 Norway Pout Exchange - Whole and Broken,614,1529,27.4.a,27.4.a,2014-11-01,1,160,32,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5199,Npout_017,11,4,2014,39,1
+74,2018 Norway Pout Exchange - Whole and Broken,615,1530,27.4.a,27.4.a,2014-11-01,2,160,34,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1426,Npout_018,11,4,2014,0,2
+74,2018 Norway Pout Exchange - Whole and Broken,615,1530,27.4.a,27.4.a,2014-11-01,2,160,34,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2478,Npout_018,11,4,2014,0,2
+74,2018 Norway Pout Exchange - Whole and Broken,615,1530,27.4.a,27.4.a,2014-11-01,2,160,34,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2821,Npout_018,11,4,2014,0,2
+74,2018 Norway Pout Exchange - Whole and Broken,615,1530,27.4.a,27.4.a,2014-11-01,2,160,34,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3254,Npout_018,11,4,2014,0,2
+74,2018 Norway Pout Exchange - Whole and Broken,615,1530,27.4.a,27.4.a,2014-11-01,2,160,34,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3721,Npout_018,11,4,2014,0,2
+74,2018 Norway Pout Exchange - Whole and Broken,615,1530,27.4.a,27.4.a,2014-11-01,2,160,34,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4143,Npout_018,11,4,2014,0,2
+74,2018 Norway Pout Exchange - Whole and Broken,615,1530,27.4.a,27.4.a,2014-11-01,2,160,34,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4468,Npout_018,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,616,1531,27.4.a,27.4.a,2014-11-01,2,165,36,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1622,Npout_019,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,616,1531,27.4.a,27.4.a,2014-11-01,2,165,36,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2476,Npout_019,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,616,1531,27.4.a,27.4.a,2014-11-01,2,165,36,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2823,Npout_019,11,4,2014,0,2
@@ -259,28 +195,24 @@ EventID,event_name,sample,tblSampleID,ices_area,fao_code,catch_date,age,length,w
 74,2018 Norway Pout Exchange - Whole and Broken,616,1531,27.4.a,27.4.a,2014-11-01,2,165,36,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3722,Npout_019,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,616,1531,27.4.a,27.4.a,2014-11-01,2,165,36,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4334,Npout_019,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,616,1531,27.4.a,27.4.a,2014-11-01,2,165,36,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4614,Npout_019,11,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,616,1531,27.4.a,27.4.a,2014-11-01,NA,165,36,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5029,Npout_019,11,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,617,1532,27.4.a,27.4.a,2014-11-01,2,165,38,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1433,Npout_020,11,4,2014,22,2
-74,2018 Norway Pout Exchange - Whole and Broken,617,1532,27.4.a,27.4.a,2014-11-01,1,165,38,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2474,Npout_020,11,4,2014,22,2
-74,2018 Norway Pout Exchange - Whole and Broken,617,1532,27.4.a,27.4.a,2014-11-01,2,165,38,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3258,Npout_020,11,4,2014,22,2
-74,2018 Norway Pout Exchange - Whole and Broken,617,1532,27.4.a,27.4.a,2014-11-01,2,165,38,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3723,Npout_020,11,4,2014,22,2
-74,2018 Norway Pout Exchange - Whole and Broken,617,1532,27.4.a,27.4.a,2014-11-01,2,165,38,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4478,Npout_020,11,4,2014,22,2
-74,2018 Norway Pout Exchange - Whole and Broken,617,1532,27.4.a,27.4.a,2014-11-01,2,165,38,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5031,Npout_020,11,4,2014,22,2
+74,2018 Norway Pout Exchange - Whole and Broken,617,1532,27.4.a,27.4.a,2014-11-01,2,165,38,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1433,Npout_020,11,4,2014,25,2
+74,2018 Norway Pout Exchange - Whole and Broken,617,1532,27.4.a,27.4.a,2014-11-01,1,165,38,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2474,Npout_020,11,4,2014,25,2
+74,2018 Norway Pout Exchange - Whole and Broken,617,1532,27.4.a,27.4.a,2014-11-01,2,165,38,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3258,Npout_020,11,4,2014,25,2
+74,2018 Norway Pout Exchange - Whole and Broken,617,1532,27.4.a,27.4.a,2014-11-01,2,165,38,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3723,Npout_020,11,4,2014,25,2
+74,2018 Norway Pout Exchange - Whole and Broken,617,1532,27.4.a,27.4.a,2014-11-01,2,165,38,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4478,Npout_020,11,4,2014,25,2
 74,2018 Norway Pout Exchange - Whole and Broken,618,1533,27.4.a,27.4.a,2014-11-01,2,165,38,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2465,Npout_021,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,618,1533,27.4.a,27.4.a,2014-11-01,2,165,38,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2827,Npout_021,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,618,1533,27.4.a,27.4.a,2014-11-01,2,165,38,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3260,Npout_021,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,618,1533,27.4.a,27.4.a,2014-11-01,2,165,38,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3724,Npout_021,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,618,1533,27.4.a,27.4.a,2014-11-01,2,165,38,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4151,Npout_021,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,618,1533,27.4.a,27.4.a,2014-11-01,2,165,38,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4481,Npout_021,11,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,618,1533,27.4.a,27.4.a,2014-11-01,NA,165,38,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5033,Npout_021,11,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,619,1534,27.4.a,27.4.a,2014-11-01,2,170,46,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1437,Npout_022,11,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,619,1534,27.4.a,27.4.a,2014-11-01,2,170,46,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2463,Npout_022,11,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,619,1534,27.4.a,27.4.a,2014-11-01,2,170,46,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2829,Npout_022,11,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,619,1534,27.4.a,27.4.a,2014-11-01,2,170,46,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3262,Npout_022,11,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,619,1534,27.4.a,27.4.a,2014-11-01,2,170,46,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3725,Npout_022,11,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,619,1534,27.4.a,27.4.a,2014-11-01,2,170,46,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4153,Npout_022,11,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,619,1534,27.4.a,27.4.a,2014-11-01,3,170,46,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4483,Npout_022,11,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,619,1534,27.4.a,27.4.a,2014-11-01,2,170,46,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5035,Npout_022,11,4,2014,17,2
+74,2018 Norway Pout Exchange - Whole and Broken,619,1534,27.4.a,27.4.a,2014-11-01,2,170,46,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1437,Npout_022,11,4,2014,18,2
+74,2018 Norway Pout Exchange - Whole and Broken,619,1534,27.4.a,27.4.a,2014-11-01,2,170,46,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2463,Npout_022,11,4,2014,18,2
+74,2018 Norway Pout Exchange - Whole and Broken,619,1534,27.4.a,27.4.a,2014-11-01,2,170,46,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2829,Npout_022,11,4,2014,18,2
+74,2018 Norway Pout Exchange - Whole and Broken,619,1534,27.4.a,27.4.a,2014-11-01,2,170,46,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3262,Npout_022,11,4,2014,18,2
+74,2018 Norway Pout Exchange - Whole and Broken,619,1534,27.4.a,27.4.a,2014-11-01,2,170,46,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3725,Npout_022,11,4,2014,18,2
+74,2018 Norway Pout Exchange - Whole and Broken,619,1534,27.4.a,27.4.a,2014-11-01,2,170,46,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4153,Npout_022,11,4,2014,18,2
+74,2018 Norway Pout Exchange - Whole and Broken,619,1534,27.4.a,27.4.a,2014-11-01,3,170,46,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4483,Npout_022,11,4,2014,18,2
 74,2018 Norway Pout Exchange - Whole and Broken,620,1535,27.4.a,27.4.a,2014-11-01,2,170,44,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1439,Npout_023,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,620,1535,27.4.a,27.4.a,2014-11-01,2,170,44,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2461,Npout_023,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,620,1535,27.4.a,27.4.a,2014-11-01,2,170,44,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2831,Npout_023,11,4,2014,0,2
@@ -288,34 +220,29 @@ EventID,event_name,sample,tblSampleID,ices_area,fao_code,catch_date,age,length,w
 74,2018 Norway Pout Exchange - Whole and Broken,620,1535,27.4.a,27.4.a,2014-11-01,2,170,44,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3726,Npout_023,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,620,1535,27.4.a,27.4.a,2014-11-01,2,170,44,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4158,Npout_023,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,620,1535,27.4.a,27.4.a,2014-11-01,2,170,44,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4485,Npout_023,11,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,620,1535,27.4.a,27.4.a,2014-11-01,2,170,44,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5037,Npout_023,11,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,621,1536,27.4.a,27.4.a,2014-11-01,1,175,42,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2459,Npout_024,11,4,2014,37,1
-74,2018 Norway Pout Exchange - Whole and Broken,621,1536,27.4.a,27.4.a,2014-11-01,1,175,42,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3266,Npout_024,11,4,2014,37,1
-74,2018 Norway Pout Exchange - Whole and Broken,621,1536,27.4.a,27.4.a,2014-11-01,2,175,42,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3727,Npout_024,11,4,2014,37,1
-74,2018 Norway Pout Exchange - Whole and Broken,621,1536,27.4.a,27.4.a,2014-11-01,2,175,42,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4336,Npout_024,11,4,2014,37,1
-74,2018 Norway Pout Exchange - Whole and Broken,621,1536,27.4.a,27.4.a,2014-11-01,2,175,42,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4487,Npout_024,11,4,2014,37,1
-74,2018 Norway Pout Exchange - Whole and Broken,621,1536,27.4.a,27.4.a,2014-11-01,1,175,42,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5039,Npout_024,11,4,2014,37,1
+74,2018 Norway Pout Exchange - Whole and Broken,621,1536,27.4.a,27.4.a,2014-11-01,1,175,42,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2459,Npout_024,11,4,2014,34,2
+74,2018 Norway Pout Exchange - Whole and Broken,621,1536,27.4.a,27.4.a,2014-11-01,1,175,42,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3266,Npout_024,11,4,2014,34,2
+74,2018 Norway Pout Exchange - Whole and Broken,621,1536,27.4.a,27.4.a,2014-11-01,2,175,42,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3727,Npout_024,11,4,2014,34,2
+74,2018 Norway Pout Exchange - Whole and Broken,621,1536,27.4.a,27.4.a,2014-11-01,2,175,42,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4336,Npout_024,11,4,2014,34,2
+74,2018 Norway Pout Exchange - Whole and Broken,621,1536,27.4.a,27.4.a,2014-11-01,2,175,42,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4487,Npout_024,11,4,2014,34,2
 74,2018 Norway Pout Exchange - Whole and Broken,622,1537,27.4.a,27.4.a,2014-11-01,2,180,42,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1443,Npout_025,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,622,1537,27.4.a,27.4.a,2014-11-01,2,180,42,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2457,Npout_025,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,622,1537,27.4.a,27.4.a,2014-11-01,2,180,42,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3268,Npout_025,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,622,1537,27.4.a,27.4.a,2014-11-01,2,180,42,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3728,Npout_025,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,622,1537,27.4.a,27.4.a,2014-11-01,2,180,42,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4162,Npout_025,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,622,1537,27.4.a,27.4.a,2014-11-01,2,180,42,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4489,Npout_025,11,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,622,1537,27.4.a,27.4.a,2014-11-01,2,180,42,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5041,Npout_025,11,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,623,1538,27.4.a,27.4.a,2014-11-01,2,180,48,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1445,Npout_026,11,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,623,1538,27.4.a,27.4.a,2014-11-01,2,180,48,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2455,Npout_026,11,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,623,1538,27.4.a,27.4.a,2014-11-01,2,180,48,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2837,Npout_026,11,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,623,1538,27.4.a,27.4.a,2014-11-01,2,180,48,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3270,Npout_026,11,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,623,1538,27.4.a,27.4.a,2014-11-01,2,180,48,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3729,Npout_026,11,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,623,1538,27.4.a,27.4.a,2014-11-01,2,180,48,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4164,Npout_026,11,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,623,1538,27.4.a,27.4.a,2014-11-01,3,180,48,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4491,Npout_026,11,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,623,1538,27.4.a,27.4.a,2014-11-01,2,180,48,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5043,Npout_026,11,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,624,1539,27.4.a,27.4.a,2014-11-01,2,180,50,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2453,Npout_027,11,4,2014,22,2
-74,2018 Norway Pout Exchange - Whole and Broken,624,1539,27.4.a,27.4.a,2014-11-01,2,180,50,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3272,Npout_027,11,4,2014,22,2
-74,2018 Norway Pout Exchange - Whole and Broken,624,1539,27.4.a,27.4.a,2014-11-01,2,180,50,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3730,Npout_027,11,4,2014,22,2
-74,2018 Norway Pout Exchange - Whole and Broken,624,1539,27.4.a,27.4.a,2014-11-01,3,180,50,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4340,Npout_027,11,4,2014,22,2
-74,2018 Norway Pout Exchange - Whole and Broken,624,1539,27.4.a,27.4.a,2014-11-01,3,180,50,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4493,Npout_027,11,4,2014,22,2
-74,2018 Norway Pout Exchange - Whole and Broken,624,1539,27.4.a,27.4.a,2014-11-01,3,180,50,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5045,Npout_027,11,4,2014,22,2
+74,2018 Norway Pout Exchange - Whole and Broken,623,1538,27.4.a,27.4.a,2014-11-01,2,180,48,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1445,Npout_026,11,4,2014,18,2
+74,2018 Norway Pout Exchange - Whole and Broken,623,1538,27.4.a,27.4.a,2014-11-01,2,180,48,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2455,Npout_026,11,4,2014,18,2
+74,2018 Norway Pout Exchange - Whole and Broken,623,1538,27.4.a,27.4.a,2014-11-01,2,180,48,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2837,Npout_026,11,4,2014,18,2
+74,2018 Norway Pout Exchange - Whole and Broken,623,1538,27.4.a,27.4.a,2014-11-01,2,180,48,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3270,Npout_026,11,4,2014,18,2
+74,2018 Norway Pout Exchange - Whole and Broken,623,1538,27.4.a,27.4.a,2014-11-01,2,180,48,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3729,Npout_026,11,4,2014,18,2
+74,2018 Norway Pout Exchange - Whole and Broken,623,1538,27.4.a,27.4.a,2014-11-01,2,180,48,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4164,Npout_026,11,4,2014,18,2
+74,2018 Norway Pout Exchange - Whole and Broken,623,1538,27.4.a,27.4.a,2014-11-01,3,180,48,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4491,Npout_026,11,4,2014,18,2
+74,2018 Norway Pout Exchange - Whole and Broken,624,1539,27.4.a,27.4.a,2014-11-01,2,180,50,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2453,Npout_027,11,4,2014,23,2
+74,2018 Norway Pout Exchange - Whole and Broken,624,1539,27.4.a,27.4.a,2014-11-01,2,180,50,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3272,Npout_027,11,4,2014,23,2
+74,2018 Norway Pout Exchange - Whole and Broken,624,1539,27.4.a,27.4.a,2014-11-01,2,180,50,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3730,Npout_027,11,4,2014,23,2
+74,2018 Norway Pout Exchange - Whole and Broken,624,1539,27.4.a,27.4.a,2014-11-01,3,180,50,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4340,Npout_027,11,4,2014,23,2
+74,2018 Norway Pout Exchange - Whole and Broken,624,1539,27.4.a,27.4.a,2014-11-01,3,180,50,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4493,Npout_027,11,4,2014,23,2
 74,2018 Norway Pout Exchange - Whole and Broken,625,1540,27.4.a,27.4.a,2014-11-01,2,185,54,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1451,Npout_028,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,625,1540,27.4.a,27.4.a,2014-11-01,2,185,54,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2451,Npout_028,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,625,1540,27.4.a,27.4.a,2014-11-01,2,185,54,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2841,Npout_028,11,4,2014,0,2
@@ -323,7 +250,6 @@ EventID,event_name,sample,tblSampleID,ices_area,fao_code,catch_date,age,length,w
 74,2018 Norway Pout Exchange - Whole and Broken,625,1540,27.4.a,27.4.a,2014-11-01,2,185,54,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3731,Npout_028,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,625,1540,27.4.a,27.4.a,2014-11-01,2,185,54,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4168,Npout_028,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,625,1540,27.4.a,27.4.a,2014-11-01,2,185,54,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4495,Npout_028,11,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,625,1540,27.4.a,27.4.a,2014-11-01,2,185,54,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5047,Npout_028,11,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,626,1541,27.4.a,27.4.a,2014-11-01,2,185,52,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1453,Npout_029,11,4,2014,21,2
 74,2018 Norway Pout Exchange - Whole and Broken,626,1541,27.4.a,27.4.a,2014-11-01,2,185,52,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2449,Npout_029,11,4,2014,21,2
 74,2018 Norway Pout Exchange - Whole and Broken,626,1541,27.4.a,27.4.a,2014-11-01,2,185,52,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2843,Npout_029,11,4,2014,21,2
@@ -331,27 +257,23 @@ EventID,event_name,sample,tblSampleID,ices_area,fao_code,catch_date,age,length,w
 74,2018 Norway Pout Exchange - Whole and Broken,626,1541,27.4.a,27.4.a,2014-11-01,2,185,52,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3732,Npout_029,11,4,2014,21,2
 74,2018 Norway Pout Exchange - Whole and Broken,626,1541,27.4.a,27.4.a,2014-11-01,3,185,52,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4170,Npout_029,11,4,2014,21,2
 74,2018 Norway Pout Exchange - Whole and Broken,626,1541,27.4.a,27.4.a,2014-11-01,3,185,52,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4497,Npout_029,11,4,2014,21,2
-74,2018 Norway Pout Exchange - Whole and Broken,626,1541,27.4.a,27.4.a,2014-11-01,2,185,52,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5049,Npout_029,11,4,2014,21,2
 74,2018 Norway Pout Exchange - Whole and Broken,631,1546,27.4.a,27.4.a,2014-10-25,1,100,6,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1463,Npout_034,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,631,1546,27.4.a,27.4.a,2014-10-25,NA,100,6,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2506,Npout_034,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,631,1546,27.4.a,27.4.a,2014-10-25,NA,100,6,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3317,Npout_034,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,631,1546,27.4.a,27.4.a,2014-10-25,NA,100,6,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3738,Npout_034,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,631,1546,27.4.a,27.4.a,2014-10-25,NA,100,6,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4181,Npout_034,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,631,1546,27.4.a,27.4.a,2014-10-25,1,100,6,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4527,Npout_034,10,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,631,1546,27.4.a,27.4.a,2014-10-25,NA,100,6,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5059,Npout_034,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,634,1549,27.4.a,27.4.a,2014-10-25,NA,105,8,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2532,Npout_037,10,4,2014,NA,1
 74,2018 Norway Pout Exchange - Whole and Broken,634,1549,27.4.a,27.4.a,2014-10-25,NA,105,8,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3315,Npout_037,10,4,2014,NA,1
 74,2018 Norway Pout Exchange - Whole and Broken,634,1549,27.4.a,27.4.a,2014-10-25,NA,105,8,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3741,Npout_037,10,4,2014,NA,1
 74,2018 Norway Pout Exchange - Whole and Broken,634,1549,27.4.a,27.4.a,2014-10-25,NA,105,8,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4187,Npout_037,10,4,2014,NA,1
 74,2018 Norway Pout Exchange - Whole and Broken,634,1549,27.4.a,27.4.a,2014-10-25,1,105,8,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4538,Npout_037,10,4,2014,NA,1
-74,2018 Norway Pout Exchange - Whole and Broken,634,1549,27.4.a,27.4.a,2014-10-25,NA,105,8,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5065,Npout_037,10,4,2014,NA,1
 74,2018 Norway Pout Exchange - Whole and Broken,635,1550,27.4.a,27.4.a,2014-10-25,1,105,8,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1471,Npout_038,10,4,2014,NA,1
 74,2018 Norway Pout Exchange - Whole and Broken,635,1550,27.4.a,27.4.a,2014-10-25,NA,105,8,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2531,Npout_038,10,4,2014,NA,1
 74,2018 Norway Pout Exchange - Whole and Broken,635,1550,27.4.a,27.4.a,2014-10-25,NA,105,8,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3210,Npout_038,10,4,2014,NA,1
 74,2018 Norway Pout Exchange - Whole and Broken,635,1550,27.4.a,27.4.a,2014-10-25,NA,105,8,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3742,Npout_038,10,4,2014,NA,1
 74,2018 Norway Pout Exchange - Whole and Broken,635,1550,27.4.a,27.4.a,2014-10-25,NA,105,8,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4189,Npout_038,10,4,2014,NA,1
 74,2018 Norway Pout Exchange - Whole and Broken,635,1550,27.4.a,27.4.a,2014-10-25,NA,105,8,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4540,Npout_038,10,4,2014,NA,1
-74,2018 Norway Pout Exchange - Whole and Broken,635,1550,27.4.a,27.4.a,2014-10-25,NA,105,8,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5067,Npout_038,10,4,2014,NA,1
 74,2018 Norway Pout Exchange - Whole and Broken,636,1551,27.4.a,27.4.a,2014-10-25,1,105,7,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1473,Npout_039,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,636,1551,27.4.a,27.4.a,2014-10-25,NA,105,7,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2530,Npout_039,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,636,1551,27.4.a,27.4.a,2014-10-25,1,105,7,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2864,Npout_039,10,4,2014,0,1
@@ -359,29 +281,25 @@ EventID,event_name,sample,tblSampleID,ices_area,fao_code,catch_date,age,length,w
 74,2018 Norway Pout Exchange - Whole and Broken,636,1551,27.4.a,27.4.a,2014-10-25,NA,105,7,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3743,Npout_039,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,636,1551,27.4.a,27.4.a,2014-10-25,NA,105,7,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4247,Npout_039,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,636,1551,27.4.a,27.4.a,2014-10-25,1,105,7,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4542,Npout_039,10,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,636,1551,27.4.a,27.4.a,2014-10-25,NA,105,7,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5069,Npout_039,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,637,1552,27.4.a,27.4.a,2014-10-25,2,110,8,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1475,Npout_040,10,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,637,1552,27.4.a,27.4.a,2014-10-25,NA,110,8,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2529,Npout_040,10,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,637,1552,27.4.a,27.4.a,2014-10-25,NA,110,8,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3313,Npout_040,10,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,637,1552,27.4.a,27.4.a,2014-10-25,NA,110,8,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3744,Npout_040,10,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,637,1552,27.4.a,27.4.a,2014-10-25,NA,110,8,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4251,Npout_040,10,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,637,1552,27.4.a,27.4.a,2014-10-25,2,110,8,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4544,Npout_040,10,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,637,1552,27.4.a,27.4.a,2014-10-25,NA,110,8,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5071,Npout_040,10,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,638,1553,27.4.a,27.4.a,2014-10-25,2,135,18,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1477,Npout_041,10,4,2014,37,1
-74,2018 Norway Pout Exchange - Whole and Broken,638,1553,27.4.a,27.4.a,2014-10-25,1,135,18,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2528,Npout_041,10,4,2014,37,1
-74,2018 Norway Pout Exchange - Whole and Broken,638,1553,27.4.a,27.4.a,2014-10-25,2,135,18,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2868,Npout_041,10,4,2014,37,1
-74,2018 Norway Pout Exchange - Whole and Broken,638,1553,27.4.a,27.4.a,2014-10-25,1,135,18,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3204,Npout_041,10,4,2014,37,1
-74,2018 Norway Pout Exchange - Whole and Broken,638,1553,27.4.a,27.4.a,2014-10-25,1,135,18,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4257,Npout_041,10,4,2014,37,1
-74,2018 Norway Pout Exchange - Whole and Broken,638,1553,27.4.a,27.4.a,2014-10-25,1,135,18,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4546,Npout_041,10,4,2014,37,1
-74,2018 Norway Pout Exchange - Whole and Broken,638,1553,27.4.a,27.4.a,2014-10-25,1,135,18,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5073,Npout_041,10,4,2014,37,1
-74,2018 Norway Pout Exchange - Whole and Broken,638,1553,27.4.a,27.4.a,2014-10-25,1,135,18,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5148,Npout_041,10,4,2014,37,1
+74,2018 Norway Pout Exchange - Whole and Broken,638,1553,27.4.a,27.4.a,2014-10-25,2,135,18,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1477,Npout_041,10,4,2014,38,1
+74,2018 Norway Pout Exchange - Whole and Broken,638,1553,27.4.a,27.4.a,2014-10-25,1,135,18,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2528,Npout_041,10,4,2014,38,1
+74,2018 Norway Pout Exchange - Whole and Broken,638,1553,27.4.a,27.4.a,2014-10-25,2,135,18,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2868,Npout_041,10,4,2014,38,1
+74,2018 Norway Pout Exchange - Whole and Broken,638,1553,27.4.a,27.4.a,2014-10-25,1,135,18,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3204,Npout_041,10,4,2014,38,1
+74,2018 Norway Pout Exchange - Whole and Broken,638,1553,27.4.a,27.4.a,2014-10-25,1,135,18,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4257,Npout_041,10,4,2014,38,1
+74,2018 Norway Pout Exchange - Whole and Broken,638,1553,27.4.a,27.4.a,2014-10-25,1,135,18,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4546,Npout_041,10,4,2014,38,1
+74,2018 Norway Pout Exchange - Whole and Broken,638,1553,27.4.a,27.4.a,2014-10-25,1,135,18,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5148,Npout_041,10,4,2014,38,1
 74,2018 Norway Pout Exchange - Whole and Broken,639,1554,27.4.a,27.4.a,2014-10-25,1,135,18,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1484,Npout_042,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,639,1554,27.4.a,27.4.a,2014-10-25,1,135,18,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2527,Npout_042,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,639,1554,27.4.a,27.4.a,2014-10-25,1,135,18,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2870,Npout_042,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,639,1554,27.4.a,27.4.a,2014-10-25,1,135,18,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3310,Npout_042,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,639,1554,27.4.a,27.4.a,2014-10-25,1,135,18,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4261,Npout_042,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,639,1554,27.4.a,27.4.a,2014-10-25,1,135,18,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4548,Npout_042,10,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,639,1554,27.4.a,27.4.a,2014-10-25,1,135,18,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5075,Npout_042,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,639,1554,27.4.a,27.4.a,2014-10-25,1,135,18,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5146,Npout_042,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,640,1555,27.4.a,27.4.a,2014-10-25,1,140,20,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1486,Npout_043,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,640,1555,27.4.a,27.4.a,2014-10-25,1,140,20,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2526,Npout_043,10,4,2014,0,1
@@ -390,7 +308,6 @@ EventID,event_name,sample,tblSampleID,ices_area,fao_code,catch_date,age,length,w
 74,2018 Norway Pout Exchange - Whole and Broken,640,1555,27.4.a,27.4.a,2014-10-25,1,140,20,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3747,Npout_043,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,640,1555,27.4.a,27.4.a,2014-10-25,1,140,20,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4264,Npout_043,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,640,1555,27.4.a,27.4.a,2014-10-25,1,140,20,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4550,Npout_043,10,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,640,1555,27.4.a,27.4.a,2014-10-25,1,140,20,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5077,Npout_043,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,640,1555,27.4.a,27.4.a,2014-10-25,1,140,20,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5143,Npout_043,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,641,1556,27.4.a,27.4.a,2014-10-25,1,140,20,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1488,Npout_044,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,641,1556,27.4.a,27.4.a,2014-10-25,1,140,20,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2525,Npout_044,10,4,2014,0,1
@@ -399,7 +316,6 @@ EventID,event_name,sample,tblSampleID,ices_area,fao_code,catch_date,age,length,w
 74,2018 Norway Pout Exchange - Whole and Broken,641,1556,27.4.a,27.4.a,2014-10-25,1,140,20,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3748,Npout_044,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,641,1556,27.4.a,27.4.a,2014-10-25,1,140,20,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4268,Npout_044,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,641,1556,27.4.a,27.4.a,2014-10-25,1,140,20,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4552,Npout_044,10,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,641,1556,27.4.a,27.4.a,2014-10-25,1,140,20,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5079,Npout_044,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,641,1556,27.4.a,27.4.a,2014-10-25,1,140,20,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5141,Npout_044,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,642,1557,27.4.a,27.4.a,2014-10-25,1,145,22,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1490,Npout_045,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,642,1557,27.4.a,27.4.a,2014-10-25,1,145,22,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2524,Npout_045,10,4,2014,0,1
@@ -408,7 +324,6 @@ EventID,event_name,sample,tblSampleID,ices_area,fao_code,catch_date,age,length,w
 74,2018 Norway Pout Exchange - Whole and Broken,642,1557,27.4.a,27.4.a,2014-10-25,1,145,22,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3749,Npout_045,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,642,1557,27.4.a,27.4.a,2014-10-25,1,145,22,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4272,Npout_045,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,642,1557,27.4.a,27.4.a,2014-10-25,1,145,22,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4554,Npout_045,10,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,642,1557,27.4.a,27.4.a,2014-10-25,1,145,22,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5081,Npout_045,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,642,1557,27.4.a,27.4.a,2014-10-25,1,145,22,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5139,Npout_045,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,643,1558,27.4.a,27.4.a,2014-10-25,1,150,28,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1492,Npout_046,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,643,1558,27.4.a,27.4.a,2014-10-25,1,150,28,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2523,Npout_046,10,4,2014,0,1
@@ -417,21 +332,18 @@ EventID,event_name,sample,tblSampleID,ices_area,fao_code,catch_date,age,length,w
 74,2018 Norway Pout Exchange - Whole and Broken,643,1558,27.4.a,27.4.a,2014-10-25,1,150,28,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3750,Npout_046,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,643,1558,27.4.a,27.4.a,2014-10-25,1,150,28,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4279,Npout_046,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,643,1558,27.4.a,27.4.a,2014-10-25,1,150,28,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4556,Npout_046,10,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,643,1558,27.4.a,27.4.a,2014-10-25,1,150,28,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5083,Npout_046,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,643,1558,27.4.a,27.4.a,2014-10-25,1,150,28,NA,U,sindahl,sindahl,3,1,DENMARK,NA,DK,R03 DK,5137,Npout_046,10,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,644,1559,27.4.a,27.4.a,2014-10-25,2,150,26,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1494,Npout_047,10,4,2014,34,2
-74,2018 Norway Pout Exchange - Whole and Broken,644,1559,27.4.a,27.4.a,2014-10-25,1,150,26,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2522,Npout_047,10,4,2014,34,2
-74,2018 Norway Pout Exchange - Whole and Broken,644,1559,27.4.a,27.4.a,2014-10-25,1,150,26,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3192,Npout_047,10,4,2014,34,2
-74,2018 Norway Pout Exchange - Whole and Broken,644,1559,27.4.a,27.4.a,2014-10-25,2,150,26,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4285,Npout_047,10,4,2014,34,2
-74,2018 Norway Pout Exchange - Whole and Broken,644,1559,27.4.a,27.4.a,2014-10-25,1,150,26,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,4333,Npout_047,10,4,2014,34,2
-74,2018 Norway Pout Exchange - Whole and Broken,644,1559,27.4.a,27.4.a,2014-10-25,2,150,26,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4558,Npout_047,10,4,2014,34,2
-74,2018 Norway Pout Exchange - Whole and Broken,644,1559,27.4.a,27.4.a,2014-10-25,2,150,26,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5087,Npout_047,10,4,2014,34,2
+74,2018 Norway Pout Exchange - Whole and Broken,644,1559,27.4.a,27.4.a,2014-10-25,2,150,26,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1494,Npout_047,10,4,2014,37,2
+74,2018 Norway Pout Exchange - Whole and Broken,644,1559,27.4.a,27.4.a,2014-10-25,1,150,26,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2522,Npout_047,10,4,2014,37,2
+74,2018 Norway Pout Exchange - Whole and Broken,644,1559,27.4.a,27.4.a,2014-10-25,1,150,26,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3192,Npout_047,10,4,2014,37,2
+74,2018 Norway Pout Exchange - Whole and Broken,644,1559,27.4.a,27.4.a,2014-10-25,2,150,26,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4285,Npout_047,10,4,2014,37,2
+74,2018 Norway Pout Exchange - Whole and Broken,644,1559,27.4.a,27.4.a,2014-10-25,1,150,26,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,4333,Npout_047,10,4,2014,37,2
+74,2018 Norway Pout Exchange - Whole and Broken,644,1559,27.4.a,27.4.a,2014-10-25,2,150,26,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4558,Npout_047,10,4,2014,37,2
 74,2018 Norway Pout Exchange - Whole and Broken,645,1560,27.4.a,27.4.a,2014-10-25,1,155,28,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2521,Npout_048,10,4,2014,64,1
 74,2018 Norway Pout Exchange - Whole and Broken,645,1560,27.4.a,27.4.a,2014-10-25,1,155,28,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3190,Npout_048,10,4,2014,64,1
 74,2018 Norway Pout Exchange - Whole and Broken,645,1560,27.4.a,27.4.a,2014-10-25,1,155,28,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3752,Npout_048,10,4,2014,64,1
 74,2018 Norway Pout Exchange - Whole and Broken,645,1560,27.4.a,27.4.a,2014-10-25,1,155,28,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4320,Npout_048,10,4,2014,64,1
 74,2018 Norway Pout Exchange - Whole and Broken,645,1560,27.4.a,27.4.a,2014-10-25,3,155,28,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4560,Npout_048,10,4,2014,64,1
-74,2018 Norway Pout Exchange - Whole and Broken,645,1560,27.4.a,27.4.a,2014-10-25,NA,155,28,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5089,Npout_048,10,4,2014,64,1
 74,2018 Norway Pout Exchange - Whole and Broken,646,1561,27.4.a,27.4.a,2014-10-25,1,155,28,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1498,Npout_049,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,646,1561,27.4.a,27.4.a,2014-10-25,1,155,28,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2520,Npout_049,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,646,1561,27.4.a,27.4.a,2014-10-25,1,155,28,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2884,Npout_049,10,4,2014,0,1
@@ -439,31 +351,27 @@ EventID,event_name,sample,tblSampleID,ices_area,fao_code,catch_date,age,length,w
 74,2018 Norway Pout Exchange - Whole and Broken,646,1561,27.4.a,27.4.a,2014-10-25,1,155,28,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3753,Npout_049,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,646,1561,27.4.a,27.4.a,2014-10-25,1,155,28,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4322,Npout_049,10,4,2014,0,1
 74,2018 Norway Pout Exchange - Whole and Broken,646,1561,27.4.a,27.4.a,2014-10-25,1,155,28,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4562,Npout_049,10,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,646,1561,27.4.a,27.4.a,2014-10-25,1,155,28,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5091,Npout_049,10,4,2014,0,1
-74,2018 Norway Pout Exchange - Whole and Broken,647,1562,27.4.a,27.4.a,2014-10-25,1,155,26,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1500,Npout_050,10,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,647,1562,27.4.a,27.4.a,2014-10-25,1,155,26,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2519,Npout_050,10,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,647,1562,27.4.a,27.4.a,2014-10-25,1,155,26,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2886,Npout_050,10,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,647,1562,27.4.a,27.4.a,2014-10-25,1,155,26,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3186,Npout_050,10,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,647,1562,27.4.a,27.4.a,2014-10-25,1,155,26,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3754,Npout_050,10,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,647,1562,27.4.a,27.4.a,2014-10-25,1,155,26,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4342,Npout_050,10,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,647,1562,27.4.a,27.4.a,2014-10-25,2,155,26,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4564,Npout_050,10,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,647,1562,27.4.a,27.4.a,2014-10-25,1,155,26,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5093,Npout_050,10,4,2014,31,1
-74,2018 Norway Pout Exchange - Whole and Broken,648,1563,27.4.a,27.4.a,2014-10-25,2,160,32,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1502,Npout_051,10,4,2014,36,2
-74,2018 Norway Pout Exchange - Whole and Broken,648,1563,27.4.a,27.4.a,2014-10-25,1,160,32,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2518,Npout_051,10,4,2014,36,2
-74,2018 Norway Pout Exchange - Whole and Broken,648,1563,27.4.a,27.4.a,2014-10-25,1,160,32,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2888,Npout_051,10,4,2014,36,2
-74,2018 Norway Pout Exchange - Whole and Broken,648,1563,27.4.a,27.4.a,2014-10-25,2,160,32,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3327,Npout_051,10,4,2014,36,2
-74,2018 Norway Pout Exchange - Whole and Broken,648,1563,27.4.a,27.4.a,2014-10-25,1,160,32,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,4330,Npout_051,10,4,2014,36,2
-74,2018 Norway Pout Exchange - Whole and Broken,648,1563,27.4.a,27.4.a,2014-10-25,2,160,32,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4344,Npout_051,10,4,2014,36,2
-74,2018 Norway Pout Exchange - Whole and Broken,648,1563,27.4.a,27.4.a,2014-10-25,2,160,32,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4566,Npout_051,10,4,2014,36,2
-74,2018 Norway Pout Exchange - Whole and Broken,648,1563,27.4.a,27.4.a,2014-10-25,1,160,32,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5096,Npout_051,10,4,2014,36,2
-74,2018 Norway Pout Exchange - Whole and Broken,649,1564,27.4.a,27.4.a,2014-10-25,2,160,34,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1504,Npout_052,10,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,649,1564,27.4.a,27.4.a,2014-10-25,2,160,34,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2515,Npout_052,10,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,649,1564,27.4.a,27.4.a,2014-10-25,2,160,34,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2890,Npout_052,10,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,649,1564,27.4.a,27.4.a,2014-10-25,2,160,34,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3302,Npout_052,10,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,649,1564,27.4.a,27.4.a,2014-10-25,2,160,34,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3697,Npout_052,10,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,649,1564,27.4.a,27.4.a,2014-10-25,2,160,34,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4346,Npout_052,10,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,649,1564,27.4.a,27.4.a,2014-10-25,3,160,34,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4568,Npout_052,10,4,2014,17,2
-74,2018 Norway Pout Exchange - Whole and Broken,649,1564,27.4.a,27.4.a,2014-10-25,2,160,34,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5098,Npout_052,10,4,2014,17,2
+74,2018 Norway Pout Exchange - Whole and Broken,647,1562,27.4.a,27.4.a,2014-10-25,1,155,26,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1500,Npout_050,10,4,2014,33,1
+74,2018 Norway Pout Exchange - Whole and Broken,647,1562,27.4.a,27.4.a,2014-10-25,1,155,26,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2519,Npout_050,10,4,2014,33,1
+74,2018 Norway Pout Exchange - Whole and Broken,647,1562,27.4.a,27.4.a,2014-10-25,1,155,26,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2886,Npout_050,10,4,2014,33,1
+74,2018 Norway Pout Exchange - Whole and Broken,647,1562,27.4.a,27.4.a,2014-10-25,1,155,26,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3186,Npout_050,10,4,2014,33,1
+74,2018 Norway Pout Exchange - Whole and Broken,647,1562,27.4.a,27.4.a,2014-10-25,1,155,26,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3754,Npout_050,10,4,2014,33,1
+74,2018 Norway Pout Exchange - Whole and Broken,647,1562,27.4.a,27.4.a,2014-10-25,1,155,26,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4342,Npout_050,10,4,2014,33,1
+74,2018 Norway Pout Exchange - Whole and Broken,647,1562,27.4.a,27.4.a,2014-10-25,2,155,26,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4564,Npout_050,10,4,2014,33,1
+74,2018 Norway Pout Exchange - Whole and Broken,648,1563,27.4.a,27.4.a,2014-10-25,2,160,32,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1502,Npout_051,10,4,2014,34,2
+74,2018 Norway Pout Exchange - Whole and Broken,648,1563,27.4.a,27.4.a,2014-10-25,1,160,32,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2518,Npout_051,10,4,2014,34,2
+74,2018 Norway Pout Exchange - Whole and Broken,648,1563,27.4.a,27.4.a,2014-10-25,1,160,32,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2888,Npout_051,10,4,2014,34,2
+74,2018 Norway Pout Exchange - Whole and Broken,648,1563,27.4.a,27.4.a,2014-10-25,2,160,32,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3327,Npout_051,10,4,2014,34,2
+74,2018 Norway Pout Exchange - Whole and Broken,648,1563,27.4.a,27.4.a,2014-10-25,1,160,32,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,4330,Npout_051,10,4,2014,34,2
+74,2018 Norway Pout Exchange - Whole and Broken,648,1563,27.4.a,27.4.a,2014-10-25,2,160,32,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4344,Npout_051,10,4,2014,34,2
+74,2018 Norway Pout Exchange - Whole and Broken,648,1563,27.4.a,27.4.a,2014-10-25,2,160,32,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4566,Npout_051,10,4,2014,34,2
+74,2018 Norway Pout Exchange - Whole and Broken,649,1564,27.4.a,27.4.a,2014-10-25,2,160,34,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1504,Npout_052,10,4,2014,18,2
+74,2018 Norway Pout Exchange - Whole and Broken,649,1564,27.4.a,27.4.a,2014-10-25,2,160,34,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2515,Npout_052,10,4,2014,18,2
+74,2018 Norway Pout Exchange - Whole and Broken,649,1564,27.4.a,27.4.a,2014-10-25,2,160,34,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2890,Npout_052,10,4,2014,18,2
+74,2018 Norway Pout Exchange - Whole and Broken,649,1564,27.4.a,27.4.a,2014-10-25,2,160,34,NA,U,Huseboe,Huseboe,6,1,NORWAY,NA,NO,R06 NO,3302,Npout_052,10,4,2014,18,2
+74,2018 Norway Pout Exchange - Whole and Broken,649,1564,27.4.a,27.4.a,2014-10-25,2,160,34,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,3697,Npout_052,10,4,2014,18,2
+74,2018 Norway Pout Exchange - Whole and Broken,649,1564,27.4.a,27.4.a,2014-10-25,2,160,34,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4346,Npout_052,10,4,2014,18,2
+74,2018 Norway Pout Exchange - Whole and Broken,649,1564,27.4.a,27.4.a,2014-10-25,3,160,34,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4568,Npout_052,10,4,2014,18,2
 74,2018 Norway Pout Exchange - Whole and Broken,650,1565,27.4.a,27.4.a,2014-10-25,2,170,40,NA,U,Rasmussenh,Rasmussenh,7,1,DENMARK,NA,DK,R07 DK,1506,Npout_053,10,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,650,1565,27.4.a,27.4.a,2014-10-25,2,170,40,NA,U,gillespiemules,gillespiemules,9,0,Scotland,NA,GB-SCT,R09 GB-SCT,2514,Npout_053,10,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,650,1565,27.4.a,27.4.a,2014-10-25,2,170,40,NA,U,hendersong,hendersong,8,0,Scotland,NA,GB-SCT,R08 GB-SCT,2892,Npout_053,10,4,2014,0,2
@@ -471,433 +379,3 @@ EventID,event_name,sample,tblSampleID,ices_area,fao_code,catch_date,age,length,w
 74,2018 Norway Pout Exchange - Whole and Broken,650,1565,27.4.a,27.4.a,2014-10-25,2,170,40,NA,U,Mjanger,Mjanger,2,1,NORWAY,NA,NO,R02 NO,4328,Npout_053,10,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,650,1565,27.4.a,27.4.a,2014-10-25,2,170,40,NA,U,solbakken,solbakken,1,1,NORWAY,NA,NO,R01 NO,4348,Npout_053,10,4,2014,0,2
 74,2018 Norway Pout Exchange - Whole and Broken,650,1565,27.4.a,27.4.a,2014-10-25,2,170,40,NA,U,skadal,skadal,5,1,NORWAY,NA,NO,R05 NO,4570,Npout_053,10,4,2014,0,2
-74,2018 Norway Pout Exchange - Whole and Broken,650,1565,27.4.a,27.4.a,2014-10-25,2,170,40,NA,U,chantre,chantre,99,0,FRANCE,NA,FR,R99 FR,5100,Npout_053,10,4,2014,0,2
-77,2018 Norway Pout Exchange - Sectioned ,763,1761,27.4.a,27.4.a,2016-09-01,2,180,43,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1711,Npout_147_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,763,1761,27.4.a,27.4.a,2016-09-01,2,180,43,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2213,Npout_147_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,763,1761,27.4.a,27.4.a,2016-09-01,2,180,43,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2537,Npout_147_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,763,1761,27.4.a,27.4.a,2016-09-01,2,180,43,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4190,Npout_147_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,763,1761,27.4.a,27.4.a,2016-09-01,2,180,43,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4616,Npout_147_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,764,1762,27.4.a,27.4.a,2016-09-01,2,170,37,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2322,Npout_148_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,764,1762,27.4.a,27.4.a,2016-09-01,2,170,37,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,3338,Npout_148_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,764,1762,27.4.a,27.4.a,2016-09-01,2,170,37,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,3764,Npout_148_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,764,1762,27.4.a,27.4.a,2016-09-01,2,170,37,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4192,Npout_148_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,764,1762,27.4.a,27.4.a,2016-09-01,2,170,37,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4619,Npout_148_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,765,1763,27.4.a,27.4.a,2016-09-01,2,160,37,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1779,Npout_149_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,765,1763,27.4.a,27.4.a,2016-09-01,2,160,37,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2232,Npout_149_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,765,1763,27.4.a,27.4.a,2016-09-01,2,160,37,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2548,Npout_149_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,765,1763,27.4.a,27.4.a,2016-09-01,2,160,37,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4193,Npout_149_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,765,1763,27.4.a,27.4.a,2016-09-01,2,160,37,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4622,Npout_149_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,766,1764,27.4.a,27.4.a,2016-09-01,2,190,45,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2250,Npout_150_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,766,1764,27.4.a,27.4.a,2016-09-01,2,190,45,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2555,Npout_150_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,766,1764,27.4.a,27.4.a,2016-09-01,2,190,45,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4194,Npout_150_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,766,1764,27.4.a,27.4.a,2016-09-01,2,190,45,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4625,Npout_150_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,767,1765,27.4.a,27.4.a,2016-09-01,2,150,24,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1723,Npout_151_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,767,1765,27.4.a,27.4.a,2016-09-01,2,150,24,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2266,Npout_151_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,767,1765,27.4.a,27.4.a,2016-09-01,2,150,24,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2557,Npout_151_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,767,1765,27.4.a,27.4.a,2016-09-01,2,150,24,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4195,Npout_151_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,767,1765,27.4.a,27.4.a,2016-09-01,2,150,24,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4628,Npout_151_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,768,1766,27.4.a,27.4.a,2016-09-01,2,150,28,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1726,Npout_152_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,768,1766,27.4.a,27.4.a,2016-09-01,2,150,28,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2254,Npout_152_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,768,1766,27.4.a,27.4.a,2016-09-01,2,150,28,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2561,Npout_152_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,768,1766,27.4.a,27.4.a,2016-09-01,2,150,28,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4196,Npout_152_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,768,1766,27.4.a,27.4.a,2016-09-01,2,150,28,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4631,Npout_152_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,769,1767,27.4.a,27.4.a,2016-09-01,2,160,31,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2060,Npout_153_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,769,1767,27.4.a,27.4.a,2016-09-01,2,160,31,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2278,Npout_153_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,769,1767,27.4.a,27.4.a,2016-09-01,2,160,31,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2563,Npout_153_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,769,1767,27.4.a,27.4.a,2016-09-01,2,160,31,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4197,Npout_153_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,769,1767,27.4.a,27.4.a,2016-09-01,2,160,31,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4634,Npout_153_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,770,1768,27.4.a,27.4.a,2016-09-01,2,180,43,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1735,Npout_154_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,770,1768,27.4.a,27.4.a,2016-09-01,2,180,43,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2565,Npout_154_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,770,1768,27.4.a,27.4.a,2016-09-01,2,180,43,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4198,Npout_154_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,770,1768,27.4.a,27.4.a,2016-09-01,2,180,43,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4639,Npout_154_sectioned,9,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,773,1675,27.4.a,27.4.a,2016-08-25,1,150,25,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1795,Npout_061_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,773,1675,27.4.a,27.4.a,2016-08-25,1,150,25,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2158,Npout_061_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,773,1675,27.4.a,27.4.a,2016-08-25,1,150,25,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2587,Npout_061_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,773,1675,27.4.a,27.4.a,2016-08-25,1,150,25,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4201,Npout_061_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,773,1675,27.4.a,27.4.a,2016-08-25,1,150,25,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4645,Npout_061_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,774,1676,27.4.a,27.4.a,2016-08-25,1,150,27,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1798,Npout_062_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,774,1676,27.4.a,27.4.a,2016-08-25,1,150,27,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2270,Npout_062_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,774,1676,27.4.a,27.4.a,2016-08-25,1,150,27,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2589,Npout_062_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,774,1676,27.4.a,27.4.a,2016-08-25,1,150,27,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4202,Npout_062_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,774,1676,27.4.a,27.4.a,2016-08-25,1,150,27,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4647,Npout_062_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,775,1677,27.4.a,27.4.a,2016-08-25,1,140,22,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1801,Npout_063_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,775,1677,27.4.a,27.4.a,2016-08-25,1,140,22,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2187,Npout_063_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,775,1677,27.4.a,27.4.a,2016-08-25,1,140,22,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2591,Npout_063_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,775,1677,27.4.a,27.4.a,2016-08-25,1,140,22,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4203,Npout_063_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,775,1677,27.4.a,27.4.a,2016-08-25,1,140,22,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4650,Npout_063_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,776,1678,27.4.a,27.4.a,2016-08-25,1,140,24,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1758,Npout_064_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,776,1678,27.4.a,27.4.a,2016-08-25,1,140,24,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2286,Npout_064_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,776,1678,27.4.a,27.4.a,2016-08-25,1,140,24,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2593,Npout_064_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,776,1678,27.4.a,27.4.a,2016-08-25,1,140,24,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4204,Npout_064_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,776,1678,27.4.a,27.4.a,2016-08-25,1,140,24,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4653,Npout_064_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,777,1679,27.4.a,27.4.a,2016-08-25,1,160,32,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2114,Npout_065_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,777,1679,27.4.a,27.4.a,2016-08-25,1,160,32,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2338,Npout_065_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,777,1679,27.4.a,27.4.a,2016-08-25,1,160,32,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2595,Npout_065_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,777,1679,27.4.a,27.4.a,2016-08-25,1,160,32,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4205,Npout_065_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,777,1679,27.4.a,27.4.a,2016-08-25,1,160,32,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4655,Npout_065_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,778,1680,27.4.a,27.4.a,2016-08-25,1,160,34,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2111,Npout_066_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,778,1680,27.4.a,27.4.a,2016-08-25,1,160,34,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2183,Npout_066_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,778,1680,27.4.a,27.4.a,2016-08-25,1,160,34,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2597,Npout_066_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,778,1680,27.4.a,27.4.a,2016-08-25,1,160,34,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4206,Npout_066_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,778,1680,27.4.a,27.4.a,2016-08-25,1,160,34,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4657,Npout_066_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,779,1681,27.4.a,27.4.a,2016-08-25,2,170,44,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2069,Npout_067_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,779,1681,27.4.a,27.4.a,2016-08-25,2,170,44,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2193,Npout_067_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,779,1681,27.4.a,27.4.a,2016-08-25,2,170,44,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2599,Npout_067_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,779,1681,27.4.a,27.4.a,2016-08-25,2,170,44,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4207,Npout_067_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,779,1681,27.4.a,27.4.a,2016-08-25,2,170,44,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4659,Npout_067_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,780,1682,27.4.a,27.4.a,2016-08-25,1,130,19,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1770,Npout_068_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,780,1682,27.4.a,27.4.a,2016-08-25,1,130,19,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2272,Npout_068_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,780,1682,27.4.a,27.4.a,2016-08-25,1,130,19,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2601,Npout_068_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,780,1682,27.4.a,27.4.a,2016-08-25,1,130,19,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4208,Npout_068_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,780,1682,27.4.a,27.4.a,2016-08-25,1,130,19,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4661,Npout_068_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,781,1683,27.4.a,27.4.a,2016-08-25,2,180,45,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1807,Npout_069_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,781,1683,27.4.a,27.4.a,2016-08-25,2,180,45,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2262,Npout_069_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,781,1683,27.4.a,27.4.a,2016-08-25,2,180,45,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2603,Npout_069_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,781,1683,27.4.a,27.4.a,2016-08-25,2,180,45,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4209,Npout_069_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,781,1683,27.4.a,27.4.a,2016-08-25,2,180,45,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4663,Npout_069_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,782,1684,27.4.a,27.4.a,2016-08-25,1,150,28,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2132,Npout_070_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,782,1684,27.4.a,27.4.a,2016-08-25,1,150,28,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2191,Npout_070_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,782,1684,27.4.a,27.4.a,2016-08-25,1,150,28,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2605,Npout_070_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,782,1684,27.4.a,27.4.a,2016-08-25,1,150,28,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4210,Npout_070_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,782,1684,27.4.a,27.4.a,2016-08-25,1,150,28,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4665,Npout_070_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,783,1685,27.4.a,27.4.a,2016-08-25,1,150,30,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1813,Npout_071_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,783,1685,27.4.a,27.4.a,2016-08-25,1,150,30,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2607,Npout_071_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,783,1685,27.4.a,27.4.a,2016-08-25,1,150,30,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4211,Npout_071_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,783,1685,27.4.a,27.4.a,2016-08-25,1,150,30,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4667,Npout_071_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,784,1686,27.4.a,27.4.a,2016-08-25,1,140,23,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1816,Npout_072_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,784,1686,27.4.a,27.4.a,2016-08-25,1,140,23,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2282,Npout_072_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,784,1686,27.4.a,27.4.a,2016-08-25,1,140,23,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2609,Npout_072_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,784,1686,27.4.a,27.4.a,2016-08-25,1,140,23,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4212,Npout_072_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,784,1686,27.4.a,27.4.a,2016-08-25,1,140,23,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4669,Npout_072_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,785,1687,27.4.a,27.4.a,2016-08-25,1,130,20,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1819,Npout_073_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,785,1687,27.4.a,27.4.a,2016-08-25,1,130,20,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2234,Npout_073_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,785,1687,27.4.a,27.4.a,2016-08-25,1,130,20,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2758,Npout_073_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,785,1687,27.4.a,27.4.a,2016-08-25,1,130,20,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4213,Npout_073_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,785,1687,27.4.a,27.4.a,2016-08-25,1,130,20,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4671,Npout_073_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,786,1688,27.4.a,27.4.a,2016-08-25,1,140,23,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1822,Npout_074_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,786,1688,27.4.a,27.4.a,2016-08-25,1,140,23,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2222,Npout_074_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,786,1688,27.4.a,27.4.a,2016-08-25,1,140,23,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2612,Npout_074_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,786,1688,27.4.a,27.4.a,2016-08-25,1,140,23,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4214,Npout_074_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,786,1688,27.4.a,27.4.a,2016-08-25,1,140,23,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4675,Npout_074_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,787,1689,27.4.a,27.4.a,2016-08-25,1,130,19,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2135,Npout_075_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,787,1689,27.4.a,27.4.a,2016-08-25,1,130,19,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2236,Npout_075_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,787,1689,27.4.a,27.4.a,2016-08-25,1,130,19,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2615,Npout_075_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,787,1689,27.4.a,27.4.a,2016-08-25,1,130,19,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4215,Npout_075_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,787,1689,27.4.a,27.4.a,2016-08-25,1,130,19,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4677,Npout_075_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,788,1690,27.4.a,27.4.a,2016-08-25,1,160,32,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2117,Npout_076_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,788,1690,27.4.a,27.4.a,2016-08-25,1,160,32,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2180,Npout_076_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,788,1690,27.4.a,27.4.a,2016-08-25,1,160,32,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2756,Npout_076_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,788,1690,27.4.a,27.4.a,2016-08-25,1,160,32,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4216,Npout_076_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,788,1690,27.4.a,27.4.a,2016-08-25,1,160,32,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4681,Npout_076_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,789,1691,27.4.a,27.4.a,2016-08-25,1,140,26,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1831,Npout_077_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,789,1691,27.4.a,27.4.a,2016-08-25,1,140,26,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2258,Npout_077_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,789,1691,27.4.a,27.4.a,2016-08-25,1,140,26,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2618,Npout_077_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,789,1691,27.4.a,27.4.a,2016-08-25,1,140,26,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4217,Npout_077_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,789,1691,27.4.a,27.4.a,2016-08-25,1,140,26,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4683,Npout_077_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,790,1692,27.4.a,27.4.a,2016-08-25,1,150,27,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1834,Npout_078_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,790,1692,27.4.a,27.4.a,2016-08-25,1,150,27,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2312,Npout_078_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,790,1692,27.4.a,27.4.a,2016-08-25,1,150,27,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2621,Npout_078_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,790,1692,27.4.a,27.4.a,2016-08-25,1,150,27,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4218,Npout_078_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,790,1692,27.4.a,27.4.a,2016-08-25,1,150,27,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4685,Npout_078_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,791,1693,27.4.a,27.4.a,2016-08-25,1,170,36,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2138,Npout_079_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,791,1693,27.4.a,27.4.a,2016-08-25,1,170,36,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2164,Npout_079_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,791,1693,27.4.a,27.4.a,2016-08-25,1,170,36,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2623,Npout_079_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,791,1693,27.4.a,27.4.a,2016-08-25,1,170,36,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4219,Npout_079_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,791,1693,27.4.a,27.4.a,2016-08-25,1,170,36,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4687,Npout_079_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,792,1694,27.4.a,27.4.a,2016-08-25,1,140,20,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1840,Npout_080_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,792,1694,27.4.a,27.4.a,2016-08-25,1,140,20,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2288,Npout_080_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,792,1694,27.4.a,27.4.a,2016-08-25,1,140,20,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2625,Npout_080_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,792,1694,27.4.a,27.4.a,2016-08-25,1,140,20,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4220,Npout_080_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,792,1694,27.4.a,27.4.a,2016-08-25,1,140,20,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4689,Npout_080_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,793,1695,27.4.a,27.4.a,2016-08-25,2,170,33,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1843,Npout_081_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,793,1695,27.4.a,27.4.a,2016-08-25,2,170,33,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2172,Npout_081_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,793,1695,27.4.a,27.4.a,2016-08-25,2,170,33,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2627,Npout_081_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,793,1695,27.4.a,27.4.a,2016-08-25,2,170,33,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4221,Npout_081_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,793,1695,27.4.a,27.4.a,2016-08-25,2,170,33,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4691,Npout_081_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,794,1696,27.4.a,27.4.a,2016-08-25,1,150,20,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1846,Npout_082_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,794,1696,27.4.a,27.4.a,2016-08-25,1,150,20,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2242,Npout_082_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,794,1696,27.4.a,27.4.a,2016-08-25,1,150,20,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2629,Npout_082_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,794,1696,27.4.a,27.4.a,2016-08-25,1,150,20,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4222,Npout_082_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,794,1696,27.4.a,27.4.a,2016-08-25,1,150,20,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4693,Npout_082_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,795,1697,27.4.a,27.4.a,2016-08-25,1,160,24,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2120,Npout_083_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,795,1697,27.4.a,27.4.a,2016-08-25,1,160,24,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2176,Npout_083_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,795,1697,27.4.a,27.4.a,2016-08-25,1,160,24,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,3339,Npout_083_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,795,1697,27.4.a,27.4.a,2016-08-25,1,160,24,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4223,Npout_083_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,795,1697,27.4.a,27.4.a,2016-08-25,1,160,24,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4695,Npout_083_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,796,1698,27.4.a,27.4.a,2016-08-25,2,160,28,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1852,Npout_084_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,796,1698,27.4.a,27.4.a,2016-08-25,2,160,28,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2276,Npout_084_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,796,1698,27.4.a,27.4.a,2016-08-25,2,160,28,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2633,Npout_084_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,796,1698,27.4.a,27.4.a,2016-08-25,2,160,28,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4224,Npout_084_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,796,1698,27.4.a,27.4.a,2016-08-25,2,160,28,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4697,Npout_084_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,797,1699,27.4.a,27.4.a,2016-08-26,3,190,57,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1855,Npout_085_sectioned,8,3,2016,0,3
-77,2018 Norway Pout Exchange - Sectioned ,797,1699,27.4.a,27.4.a,2016-08-26,3,190,57,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2296,Npout_085_sectioned,8,3,2016,0,3
-77,2018 Norway Pout Exchange - Sectioned ,797,1699,27.4.a,27.4.a,2016-08-26,3,190,57,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2635,Npout_085_sectioned,8,3,2016,0,3
-77,2018 Norway Pout Exchange - Sectioned ,797,1699,27.4.a,27.4.a,2016-08-26,3,190,57,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4225,Npout_085_sectioned,8,3,2016,0,3
-77,2018 Norway Pout Exchange - Sectioned ,797,1699,27.4.a,27.4.a,2016-08-26,3,190,57,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4699,Npout_085_sectioned,8,3,2016,0,3
-77,2018 Norway Pout Exchange - Sectioned ,798,1700,27.4.a,27.4.a,2016-08-26,2,180,48,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1858,Npout_086_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,798,1700,27.4.a,27.4.a,2016-08-26,2,180,48,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2238,Npout_086_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,798,1700,27.4.a,27.4.a,2016-08-26,2,180,48,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2637,Npout_086_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,798,1700,27.4.a,27.4.a,2016-08-26,2,180,48,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4226,Npout_086_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,798,1700,27.4.a,27.4.a,2016-08-26,2,180,48,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4701,Npout_086_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,799,1701,27.4.a,27.4.a,2016-08-26,2,160,39,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1861,Npout_087_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,799,1701,27.4.a,27.4.a,2016-08-26,2,160,39,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2156,Npout_087_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,799,1701,27.4.a,27.4.a,2016-08-26,2,160,39,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2639,Npout_087_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,799,1701,27.4.a,27.4.a,2016-08-26,2,160,39,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4227,Npout_087_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,799,1701,27.4.a,27.4.a,2016-08-26,2,160,39,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4704,Npout_087_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,800,1702,27.4.a,27.4.a,2016-08-26,2,180,46,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2141,Npout_088_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,800,1702,27.4.a,27.4.a,2016-08-26,2,180,46,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2246,Npout_088_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,800,1702,27.4.a,27.4.a,2016-08-26,2,180,46,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2641,Npout_088_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,800,1702,27.4.a,27.4.a,2016-08-26,2,180,46,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4228,Npout_088_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,800,1702,27.4.a,27.4.a,2016-08-26,2,180,46,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4706,Npout_088_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,801,1703,27.4.a,27.4.a,2016-08-26,2,160,31,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1867,Npout_089_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,801,1703,27.4.a,27.4.a,2016-08-26,2,160,31,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2240,Npout_089_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,801,1703,27.4.a,27.4.a,2016-08-26,2,160,31,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2643,Npout_089_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,801,1703,27.4.a,27.4.a,2016-08-26,2,160,31,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4229,Npout_089_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,801,1703,27.4.a,27.4.a,2016-08-26,2,160,31,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4708,Npout_089_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,802,1704,27.4.a,27.4.a,2016-08-26,2,170,41,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1870,Npout_090_sectioned,8,3,2016,20,2
-77,2018 Norway Pout Exchange - Sectioned ,802,1704,27.4.a,27.4.a,2016-08-26,2,170,41,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2324,Npout_090_sectioned,8,3,2016,20,2
-77,2018 Norway Pout Exchange - Sectioned ,802,1704,27.4.a,27.4.a,2016-08-26,2,170,41,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2760,Npout_090_sectioned,8,3,2016,20,2
-77,2018 Norway Pout Exchange - Sectioned ,802,1704,27.4.a,27.4.a,2016-08-26,3,170,41,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4230,Npout_090_sectioned,8,3,2016,20,2
-77,2018 Norway Pout Exchange - Sectioned ,802,1704,27.4.a,27.4.a,2016-08-26,2,170,41,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4711,Npout_090_sectioned,8,3,2016,20,2
-77,2018 Norway Pout Exchange - Sectioned ,803,1705,27.4.a,27.4.a,2016-08-26,2,170,39,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1873,Npout_091_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,803,1705,27.4.a,27.4.a,2016-08-26,2,170,39,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2162,Npout_091_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,803,1705,27.4.a,27.4.a,2016-08-26,2,170,39,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2647,Npout_091_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,803,1705,27.4.a,27.4.a,2016-08-26,2,170,39,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4231,Npout_091_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,803,1705,27.4.a,27.4.a,2016-08-26,2,170,39,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4713,Npout_091_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,804,1706,27.4.a,27.4.a,2016-08-26,1,150,30,61,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1876,Npout_092_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,804,1706,27.4.a,27.4.a,2016-08-26,1,150,30,61,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2332,Npout_092_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,804,1706,27.4.a,27.4.a,2016-08-26,1,150,30,61,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2649,Npout_092_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,804,1706,27.4.a,27.4.a,2016-08-26,1,150,30,61,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4232,Npout_092_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,804,1706,27.4.a,27.4.a,2016-08-26,1,150,30,61,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4715,Npout_092_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,805,1707,27.4.a,27.4.a,2016-08-26,1,150,25,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1879,Npout_093_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,805,1707,27.4.a,27.4.a,2016-08-26,1,150,25,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2306,Npout_093_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,805,1707,27.4.a,27.4.a,2016-08-26,1,150,25,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2651,Npout_093_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,805,1707,27.4.a,27.4.a,2016-08-26,1,150,25,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4233,Npout_093_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,805,1707,27.4.a,27.4.a,2016-08-26,1,150,25,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4717,Npout_093_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,806,1708,27.4.a,27.4.a,2016-08-26,2,190,50,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1882,Npout_094_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,806,1708,27.4.a,27.4.a,2016-08-26,2,190,50,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2244,Npout_094_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,806,1708,27.4.a,27.4.a,2016-08-26,2,190,50,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2653,Npout_094_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,806,1708,27.4.a,27.4.a,2016-08-26,2,190,50,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4236,Npout_094_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,806,1708,27.4.a,27.4.a,2016-08-26,2,190,50,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4719,Npout_094_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,807,1709,27.4.a,27.4.a,2016-08-26,1,140,21,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1885,Npout_095_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,807,1709,27.4.a,27.4.a,2016-08-26,1,140,21,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2318,Npout_095_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,807,1709,27.4.a,27.4.a,2016-08-26,1,140,21,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2655,Npout_095_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,807,1709,27.4.a,27.4.a,2016-08-26,1,140,21,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4237,Npout_095_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,807,1709,27.4.a,27.4.a,2016-08-26,1,140,21,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4721,Npout_095_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,808,1710,27.4.a,27.4.a,2016-08-26,1,130,19,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1888,Npout_096_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,808,1710,27.4.a,27.4.a,2016-08-26,1,130,19,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2326,Npout_096_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,808,1710,27.4.a,27.4.a,2016-08-26,1,130,19,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2657,Npout_096_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,808,1710,27.4.a,27.4.a,2016-08-26,1,130,19,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4238,Npout_096_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,808,1710,27.4.a,27.4.a,2016-08-26,1,130,19,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4723,Npout_096_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,809,1711,27.4.a,27.4.a,2016-08-26,1,140,23,61,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1891,Npout_097_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,809,1711,27.4.a,27.4.a,2016-08-26,1,140,23,61,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2220,Npout_097_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,809,1711,27.4.a,27.4.a,2016-08-26,1,140,23,61,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2659,Npout_097_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,809,1711,27.4.a,27.4.a,2016-08-26,1,140,23,61,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4239,Npout_097_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,809,1711,27.4.a,27.4.a,2016-08-26,1,140,23,61,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4725,Npout_097_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,810,1712,27.4.a,27.4.a,2016-08-26,1,130,16,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1894,Npout_098_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,810,1712,27.4.a,27.4.a,2016-08-26,1,130,16,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2197,Npout_098_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,810,1712,27.4.a,27.4.a,2016-08-26,1,130,16,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2661,Npout_098_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,810,1712,27.4.a,27.4.a,2016-08-26,1,130,16,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4240,Npout_098_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,810,1712,27.4.a,27.4.a,2016-08-26,1,130,16,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4727,Npout_098_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,811,1713,27.4.a,27.4.a,2016-08-26,2,170,41,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1897,Npout_099_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,811,1713,27.4.a,27.4.a,2016-08-26,2,170,41,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2304,Npout_099_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,811,1713,27.4.a,27.4.a,2016-08-26,2,170,41,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2663,Npout_099_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,811,1713,27.4.a,27.4.a,2016-08-26,2,170,41,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4241,Npout_099_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,811,1713,27.4.a,27.4.a,2016-08-26,2,170,41,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4729,Npout_099_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,812,1714,27.4.a,27.4.a,2016-08-26,1,150,23,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1900,Npout_100_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,812,1714,27.4.a,27.4.a,2016-08-26,1,150,23,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2228,Npout_100_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,812,1714,27.4.a,27.4.a,2016-08-26,1,150,23,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2665,Npout_100_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,812,1714,27.4.a,27.4.a,2016-08-26,1,150,23,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4242,Npout_100_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,812,1714,27.4.a,27.4.a,2016-08-26,1,150,23,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4731,Npout_100_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,815,1717,27.4.a,27.4.a,2016-08-29,1,170,38,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1909,Npout_103_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,815,1717,27.4.a,27.4.a,2016-08-29,1,170,38,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2274,Npout_103_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,815,1717,27.4.a,27.4.a,2016-08-29,1,170,38,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2671,Npout_103_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,815,1717,27.4.a,27.4.a,2016-08-29,1,170,38,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4246,Npout_103_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,815,1717,27.4.a,27.4.a,2016-08-29,1,170,38,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4737,Npout_103_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,816,1718,27.4.a,27.4.a,2016-08-29,1,150,31,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1912,Npout_104_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,816,1718,27.4.a,27.4.a,2016-08-29,1,150,31,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2292,Npout_104_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,816,1718,27.4.a,27.4.a,2016-08-29,1,150,31,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2673,Npout_104_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,816,1718,27.4.a,27.4.a,2016-08-29,1,150,31,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4248,Npout_104_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,816,1718,27.4.a,27.4.a,2016-08-29,1,150,31,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4739,Npout_104_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,817,1719,27.4.a,27.4.a,2016-08-29,1,130,21,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2123,Npout_105_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,817,1719,27.4.a,27.4.a,2016-08-29,1,130,21,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2256,Npout_105_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,817,1719,27.4.a,27.4.a,2016-08-29,1,130,21,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2675,Npout_105_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,817,1719,27.4.a,27.4.a,2016-08-29,1,130,21,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4250,Npout_105_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,817,1719,27.4.a,27.4.a,2016-08-29,1,130,21,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4741,Npout_105_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,818,1720,27.4.a,27.4.a,2016-08-29,1,160,37,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2144,Npout_106_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,818,1720,27.4.a,27.4.a,2016-08-29,1,160,37,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2224,Npout_106_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,818,1720,27.4.a,27.4.a,2016-08-29,1,160,37,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2677,Npout_106_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,818,1720,27.4.a,27.4.a,2016-08-29,1,160,37,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4252,Npout_106_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,818,1720,27.4.a,27.4.a,2016-08-29,1,160,37,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4743,Npout_106_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,819,1721,27.4.a,27.4.a,2016-08-29,1,160,38,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1921,Npout_107_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,819,1721,27.4.a,27.4.a,2016-08-29,1,160,38,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,3340,Npout_107_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,819,1721,27.4.a,27.4.a,2016-08-29,1,160,38,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4254,Npout_107_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,819,1721,27.4.a,27.4.a,2016-08-29,1,160,38,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4745,Npout_107_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,820,1722,27.4.a,27.4.a,2016-08-29,1,150,28,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1924,Npout_108_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,820,1722,27.4.a,27.4.a,2016-08-29,1,150,28,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2260,Npout_108_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,820,1722,27.4.a,27.4.a,2016-08-29,1,150,28,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2681,Npout_108_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,820,1722,27.4.a,27.4.a,2016-08-29,1,150,28,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4256,Npout_108_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,820,1722,27.4.a,27.4.a,2016-08-29,1,150,28,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4747,Npout_108_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,821,1723,27.4.a,27.4.a,2016-08-29,2,180,45,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2328,Npout_109_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,821,1723,27.4.a,27.4.a,2016-08-29,2,180,45,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2683,Npout_109_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,821,1723,27.4.a,27.4.a,2016-08-29,2,180,45,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,3767,Npout_109_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,821,1723,27.4.a,27.4.a,2016-08-29,2,180,45,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4258,Npout_109_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,821,1723,27.4.a,27.4.a,2016-08-29,2,180,45,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4749,Npout_109_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,822,1724,27.4.a,27.4.a,2016-08-29,1,140,28,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1930,Npout_110_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,822,1724,27.4.a,27.4.a,2016-08-29,1,140,28,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2195,Npout_110_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,822,1724,27.4.a,27.4.a,2016-08-29,1,140,28,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2685,Npout_110_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,822,1724,27.4.a,27.4.a,2016-08-29,1,140,28,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4260,Npout_110_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,822,1724,27.4.a,27.4.a,2016-08-29,1,140,28,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4751,Npout_110_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,823,1725,27.4.a,27.4.a,2016-08-29,2,170,44,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2199,Npout_111_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,823,1725,27.4.a,27.4.a,2016-08-29,2,170,44,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2687,Npout_111_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,823,1725,27.4.a,27.4.a,2016-08-29,2,170,44,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,3770,Npout_111_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,823,1725,27.4.a,27.4.a,2016-08-29,2,170,44,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4263,Npout_111_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,823,1725,27.4.a,27.4.a,2016-08-29,2,170,44,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4753,Npout_111_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,824,1726,27.4.a,27.4.a,2016-08-29,1,140,23,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1936,Npout_112_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,824,1726,27.4.a,27.4.a,2016-08-29,1,140,23,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2294,Npout_112_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,824,1726,27.4.a,27.4.a,2016-08-29,1,140,23,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2689,Npout_112_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,824,1726,27.4.a,27.4.a,2016-08-29,1,140,23,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4266,Npout_112_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,824,1726,27.4.a,27.4.a,2016-08-29,1,140,23,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4755,Npout_112_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,825,1727,27.4.a,27.4.a,2016-08-29,1,130,22,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1939,Npout_113_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,825,1727,27.4.a,27.4.a,2016-08-29,1,130,22,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2691,Npout_113_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,825,1727,27.4.a,27.4.a,2016-08-29,1,130,22,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4267,Npout_113_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,825,1727,27.4.a,27.4.a,2016-08-29,1,130,22,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4757,Npout_113_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,828,1730,27.4.a,27.4.a,2016-08-30,1,140,21,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1948,Npout_116_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,828,1730,27.4.a,27.4.a,2016-08-30,1,140,21,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2226,Npout_116_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,828,1730,27.4.a,27.4.a,2016-08-30,1,140,21,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2697,Npout_116_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,828,1730,27.4.a,27.4.a,2016-08-30,1,140,21,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4274,Npout_116_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,828,1730,27.4.a,27.4.a,2016-08-30,1,140,21,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4763,Npout_116_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,829,1731,27.4.a,27.4.a,2016-08-30,1,150,27,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2126,Npout_117_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,829,1731,27.4.a,27.4.a,2016-08-30,1,150,27,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2216,Npout_117_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,829,1731,27.4.a,27.4.a,2016-08-30,1,150,27,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2699,Npout_117_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,829,1731,27.4.a,27.4.a,2016-08-30,1,150,27,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4275,Npout_117_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,829,1731,27.4.a,27.4.a,2016-08-30,1,150,27,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4765,Npout_117_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,830,1732,27.4.a,27.4.a,2016-08-30,1,150,26,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2129,Npout_118_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,830,1732,27.4.a,27.4.a,2016-08-30,1,150,26,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2264,Npout_118_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,830,1732,27.4.a,27.4.a,2016-08-30,1,150,26,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2701,Npout_118_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,830,1732,27.4.a,27.4.a,2016-08-30,1,150,26,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4276,Npout_118_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,830,1732,27.4.a,27.4.a,2016-08-30,1,150,26,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4767,Npout_118_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,831,1733,27.4.a,27.4.a,2016-08-30,1,140,18,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1959,Npout_119_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,831,1733,27.4.a,27.4.a,2016-08-30,1,140,18,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2334,Npout_119_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,831,1733,27.4.a,27.4.a,2016-08-30,1,140,18,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2703,Npout_119_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,831,1733,27.4.a,27.4.a,2016-08-30,1,140,18,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4277,Npout_119_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,831,1733,27.4.a,27.4.a,2016-08-30,1,140,18,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4769,Npout_119_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,832,1734,27.4.a,27.4.a,2016-08-30,2,160,32,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1962,Npout_120_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,832,1734,27.4.a,27.4.a,2016-08-30,2,160,32,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2284,Npout_120_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,832,1734,27.4.a,27.4.a,2016-08-30,2,160,32,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2705,Npout_120_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,832,1734,27.4.a,27.4.a,2016-08-30,2,160,32,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4278,Npout_120_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,832,1734,27.4.a,27.4.a,2016-08-30,2,160,32,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4771,Npout_120_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,833,1735,27.4.a,27.4.a,2016-08-30,1,130,16,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1965,Npout_121_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,833,1735,27.4.a,27.4.a,2016-08-30,1,130,16,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2340,Npout_121_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,833,1735,27.4.a,27.4.a,2016-08-30,1,130,16,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2707,Npout_121_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,833,1735,27.4.a,27.4.a,2016-08-30,1,130,16,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4280,Npout_121_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,833,1735,27.4.a,27.4.a,2016-08-30,1,130,16,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4773,Npout_121_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,834,1736,27.4.a,27.4.a,2016-08-30,1,130,19,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1968,Npout_122_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,834,1736,27.4.a,27.4.a,2016-08-30,1,130,19,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2252,Npout_122_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,834,1736,27.4.a,27.4.a,2016-08-30,1,130,19,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2709,Npout_122_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,834,1736,27.4.a,27.4.a,2016-08-30,1,130,19,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4282,Npout_122_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,834,1736,27.4.a,27.4.a,2016-08-30,1,130,19,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4775,Npout_122_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,835,1737,27.4.a,27.4.a,2016-08-30,1,160,30,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1971,Npout_123_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,835,1737,27.4.a,27.4.a,2016-08-30,1,160,30,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2298,Npout_123_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,835,1737,27.4.a,27.4.a,2016-08-30,1,160,30,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2711,Npout_123_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,835,1737,27.4.a,27.4.a,2016-08-30,1,160,30,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4283,Npout_123_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,835,1737,27.4.a,27.4.a,2016-08-30,1,160,30,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4777,Npout_123_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,836,1738,27.4.a,27.4.a,2016-08-31,1,140,23,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1974,Npout_124_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,836,1738,27.4.a,27.4.a,2016-08-31,1,140,23,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2290,Npout_124_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,836,1738,27.4.a,27.4.a,2016-08-31,1,140,23,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2713,Npout_124_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,836,1738,27.4.a,27.4.a,2016-08-31,1,140,23,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4284,Npout_124_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,836,1738,27.4.a,27.4.a,2016-08-31,1,140,23,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4779,Npout_124_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,837,1739,27.4.a,27.4.a,2016-08-31,1,150,23,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1977,Npout_125_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,837,1739,27.4.a,27.4.a,2016-08-31,1,150,23,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2320,Npout_125_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,837,1739,27.4.a,27.4.a,2016-08-31,1,150,23,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2715,Npout_125_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,837,1739,27.4.a,27.4.a,2016-08-31,1,150,23,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4287,Npout_125_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,837,1739,27.4.a,27.4.a,2016-08-31,1,150,23,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4781,Npout_125_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,838,1740,27.4.a,27.4.a,2016-08-31,1,150,29,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1980,Npout_126_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,838,1740,27.4.a,27.4.a,2016-08-31,1,150,29,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2280,Npout_126_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,838,1740,27.4.a,27.4.a,2016-08-31,1,150,29,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2717,Npout_126_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,838,1740,27.4.a,27.4.a,2016-08-31,1,150,29,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4288,Npout_126_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,838,1740,27.4.a,27.4.a,2016-08-31,1,150,29,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4783,Npout_126_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,839,1741,27.4.a,27.4.a,2016-08-31,1,140,25,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1983,Npout_127_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,839,1741,27.4.a,27.4.a,2016-08-31,1,140,25,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2154,Npout_127_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,839,1741,27.4.a,27.4.a,2016-08-31,1,140,25,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2719,Npout_127_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,839,1741,27.4.a,27.4.a,2016-08-31,1,140,25,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4289,Npout_127_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,839,1741,27.4.a,27.4.a,2016-08-31,1,140,25,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4785,Npout_127_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,840,1742,27.4.a,27.4.a,2016-08-31,2,170,32,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1986,Npout_128_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,840,1742,27.4.a,27.4.a,2016-08-31,2,170,32,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2178,Npout_128_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,840,1742,27.4.a,27.4.a,2016-08-31,2,170,32,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2721,Npout_128_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,840,1742,27.4.a,27.4.a,2016-08-31,2,170,32,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4296,Npout_128_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,840,1742,27.4.a,27.4.a,2016-08-31,2,170,32,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4787,Npout_128_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,841,1743,27.4.a,27.4.a,2016-08-31,2,160,35,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1989,Npout_129_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,841,1743,27.4.a,27.4.a,2016-08-31,2,160,35,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2152,Npout_129_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,841,1743,27.4.a,27.4.a,2016-08-31,2,160,35,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2723,Npout_129_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,841,1743,27.4.a,27.4.a,2016-08-31,2,160,35,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4789,Npout_129_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,842,1744,27.4.a,27.4.a,2016-08-31,2,170,45,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1992,Npout_130_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,842,1744,27.4.a,27.4.a,2016-08-31,2,170,45,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2160,Npout_130_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,842,1744,27.4.a,27.4.a,2016-08-31,2,170,45,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2725,Npout_130_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,842,1744,27.4.a,27.4.a,2016-08-31,2,170,45,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4298,Npout_130_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,842,1744,27.4.a,27.4.a,2016-08-31,2,170,45,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4791,Npout_130_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,843,1745,27.4.a,27.4.a,2016-08-31,1,160,31,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1995,Npout_131_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,843,1745,27.4.a,27.4.a,2016-08-31,1,160,31,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2310,Npout_131_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,843,1745,27.4.a,27.4.a,2016-08-31,1,160,31,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2727,Npout_131_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,843,1745,27.4.a,27.4.a,2016-08-31,1,160,31,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4299,Npout_131_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,843,1745,27.4.a,27.4.a,2016-08-31,1,160,31,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4793,Npout_131_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,844,1746,27.4.a,27.4.a,2016-08-31,2,180,42,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,1998,Npout_132_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,844,1746,27.4.a,27.4.a,2016-08-31,2,180,42,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2168,Npout_132_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,844,1746,27.4.a,27.4.a,2016-08-31,2,180,42,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,3341,Npout_132_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,844,1746,27.4.a,27.4.a,2016-08-31,2,180,42,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4300,Npout_132_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,844,1746,27.4.a,27.4.a,2016-08-31,2,180,42,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4795,Npout_132_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,845,1747,27.4.a,27.4.a,2016-08-31,1,130,18,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2001,Npout_133_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,845,1747,27.4.a,27.4.a,2016-08-31,1,130,18,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2302,Npout_133_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,845,1747,27.4.a,27.4.a,2016-08-31,1,130,18,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2732,Npout_133_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,845,1747,27.4.a,27.4.a,2016-08-31,1,130,18,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4301,Npout_133_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,845,1747,27.4.a,27.4.a,2016-08-31,1,130,18,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4797,Npout_133_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,846,1748,27.4.a,27.4.a,2016-08-31,2,180,43,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2004,Npout_134_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,846,1748,27.4.a,27.4.a,2016-08-31,2,180,43,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2174,Npout_134_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,846,1748,27.4.a,27.4.a,2016-08-31,2,180,43,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2734,Npout_134_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,846,1748,27.4.a,27.4.a,2016-08-31,2,180,43,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4304,Npout_134_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,846,1748,27.4.a,27.4.a,2016-08-31,2,180,43,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4799,Npout_134_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,847,1749,27.4.a,27.4.a,2016-08-31,1,130,21,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2007,Npout_135_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,847,1749,27.4.a,27.4.a,2016-08-31,1,130,21,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2248,Npout_135_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,847,1749,27.4.a,27.4.a,2016-08-31,1,130,21,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2736,Npout_135_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,847,1749,27.4.a,27.4.a,2016-08-31,1,130,21,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4305,Npout_135_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,847,1749,27.4.a,27.4.a,2016-08-31,1,130,21,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4801,Npout_135_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,850,1752,27.4.a,27.4.a,2016-08-31,1,140,22,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2016,Npout_138_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,850,1752,27.4.a,27.4.a,2016-08-31,1,140,22,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2150,Npout_138_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,850,1752,27.4.a,27.4.a,2016-08-31,1,140,22,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2762,Npout_138_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,850,1752,27.4.a,27.4.a,2016-08-31,1,140,22,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4308,Npout_138_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,850,1752,27.4.a,27.4.a,2016-08-31,1,140,22,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4807,Npout_138_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,851,1753,27.4.a,27.4.a,2016-08-31,1,150,22,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2019,Npout_139_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,851,1753,27.4.a,27.4.a,2016-08-31,1,150,22,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2211,Npout_139_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,851,1753,27.4.a,27.4.a,2016-08-31,1,150,22,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2764,Npout_139_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,851,1753,27.4.a,27.4.a,2016-08-31,1,150,22,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4309,Npout_139_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,851,1753,27.4.a,27.4.a,2016-08-31,1,150,22,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4809,Npout_139_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,852,1754,27.4.a,27.4.a,2016-08-31,1,140,22,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2022,Npout_140_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,852,1754,27.4.a,27.4.a,2016-08-31,1,140,22,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2268,Npout_140_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,852,1754,27.4.a,27.4.a,2016-08-31,1,140,22,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2766,Npout_140_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,852,1754,27.4.a,27.4.a,2016-08-31,1,140,22,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4310,Npout_140_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,852,1754,27.4.a,27.4.a,2016-08-31,1,140,22,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4811,Npout_140_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,853,1755,27.4.a,27.4.a,2016-08-31,1,150,30,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2025,Npout_141_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,853,1755,27.4.a,27.4.a,2016-08-31,1,150,30,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2218,Npout_141_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,853,1755,27.4.a,27.4.a,2016-08-31,1,150,30,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2768,Npout_141_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,853,1755,27.4.a,27.4.a,2016-08-31,1,150,30,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4311,Npout_141_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,853,1755,27.4.a,27.4.a,2016-08-31,1,150,30,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4813,Npout_141_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,854,1756,27.4.a,27.4.a,2016-08-31,2,170,41,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2028,Npout_142_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,854,1756,27.4.a,27.4.a,2016-08-31,2,170,41,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2166,Npout_142_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,854,1756,27.4.a,27.4.a,2016-08-31,2,170,41,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,3342,Npout_142_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,854,1756,27.4.a,27.4.a,2016-08-31,2,170,41,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4313,Npout_142_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,854,1756,27.4.a,27.4.a,2016-08-31,2,170,41,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4815,Npout_142_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,855,1757,27.4.a,27.4.a,2016-08-31,2,160,35,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2031,Npout_143_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,855,1757,27.4.a,27.4.a,2016-08-31,2,160,35,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2209,Npout_143_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,855,1757,27.4.a,27.4.a,2016-08-31,2,160,35,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2742,Npout_143_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,855,1757,27.4.a,27.4.a,2016-08-31,2,160,35,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4314,Npout_143_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,855,1757,27.4.a,27.4.a,2016-08-31,2,160,35,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4817,Npout_143_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,856,1758,27.4.a,27.4.a,2016-08-31,1,130,22,62,M,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2034,Npout_144_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,856,1758,27.4.a,27.4.a,2016-08-31,1,130,22,62,M,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2230,Npout_144_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,856,1758,27.4.a,27.4.a,2016-08-31,1,130,22,62,M,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2744,Npout_144_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,856,1758,27.4.a,27.4.a,2016-08-31,1,130,22,62,M,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4316,Npout_144_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,856,1758,27.4.a,27.4.a,2016-08-31,1,130,22,62,M,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4819,Npout_144_sectioned,8,3,2016,0,1
-77,2018 Norway Pout Exchange - Sectioned ,857,1759,27.4.a,27.4.a,2016-08-31,2,170,43,62,F,wilhelmsi,wilhelmsi,2,1,GERMANY,NA,DE,R02 DE,2037,Npout_145_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,857,1759,27.4.a,27.4.a,2016-08-31,2,170,43,62,F,Brownd,Brownd,3,1,UNITED KINGDOM,NA,GB,R03 GB,2316,Npout_145_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,857,1759,27.4.a,27.4.a,2016-08-31,2,170,43,62,F,os,os,4,0,NETHERLANDS,NA,NL,R04 NL,2746,Npout_145_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,857,1759,27.4.a,27.4.a,2016-08-31,2,170,43,62,F,beussel,beussel,1,1,GERMANY,NA,DE,R01 DE,4317,Npout_145_sectioned,8,3,2016,0,2
-77,2018 Norway Pout Exchange - Sectioned ,857,1759,27.4.a,27.4.a,2016-08-31,2,170,43,62,F,chantre,chantre,5,0,FRANCE,NA,FR,R05 FR,4821,Npout_145_sectioned,8,3,2016,0,2
