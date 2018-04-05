@@ -2,18 +2,27 @@ ALTER  VIEW [dbo].[vw_report_DotsDistances]
 AS
 SELECT
   tblDots.tblEventID as EventID,
-  NULL as test,
   'R' + FORMAT(reader_number, '00') as reader1,
   tblSmartImage.tblSmartImageID as sample,
+  tblAnnotations.tblAnnotationID as AnnotationID,
   reader_number,
+  tblAnnotations.SmartUser as smartUser,
   DotIndex as mark,
-  tblDots.X as xpos,
-  tblDots.Y as ypos,
-  1.0 as distance,
+  ((X-X1) * cos(-theta) - (Y-Y1) * sin(-theta)) / Scale as distance,
+  (X-X1) * cos(-theta) - (Y-Y1) * sin(-theta) as pixelDistance,
+  Scale as pixelsPerMillimeter,
   xArea.Code as ices_area,
   'R' + FORMAT(reader_number, '00') + ' ' + upper(xCountry.Code) as reader
 FROM
   tblDots
+left join
+  (select *, atn2(Y2 - Y1, X2 - X1) as theta
+   from
+     tblLines
+   where
+     abs(Y2 - Y1) > 0 and abs(X2 - X1) > 0) as xLines
+on
+  tblDots.tblAnnotationID = xLines.tblAnnotationID
 left join
   tblAnnotations
 on
@@ -39,10 +48,11 @@ left join
 on
   xCountry.tblCodeID = tblDoYouHaveAccess.tblCodeID_Country
 inner join
-  (select tblEventID, SmartUser, isnull(Number, 99) as reader_number
+  (select tblEventID, SmartUser, Number as reader_number
    from tblEventParticipants) as xReader
 on
   xReader.tblEventID = tblSamples.tblEventID and
   xReader.SmartUser = tblAnnotations.SmartUser
-where tblAnnotations.IsApproved = 1
-
+where
+  tblAnnotations.IsApproved = 1 and
+  xReader.reader_number is not null
