@@ -36,7 +36,7 @@ sqlQuery(conn, sqlq)
 odbcClose(conn)
 
 # data: one row per set of dots
-msg("downloading annotations for ... ")
+msg("downloading annotations for ... ", filter)
 sqlq <- sprintf(paste("select * FROM vw_report_Annotations where %s"), filter)
 conn <- odbcDriverConnect(connection = dbConnection)
 ad <- sqlQuery(conn, sqlq)
@@ -80,7 +80,7 @@ sqlQuery(conn, sqlq)
 odbcClose(conn)
 
 # dist: one row per dot
-msg("downloading dots for ... ")
+msg("downloading dots for ... ", filter)
 sqlq <- sprintf(paste("select * FROM vw_report_DotsDistances where %s"), filter)
 conn <- odbcDriverConnect(connection = dbConnection)
 dist <- sqlQuery(conn, sqlq)
