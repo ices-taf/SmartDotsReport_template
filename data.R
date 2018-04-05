@@ -29,6 +29,12 @@ dbConnection <- 'Driver={SQL Server};Server=SQL06;Database=SmartDots;Trusted_Con
 # create filter for events
 filter <- paste(sprintf("EventID = %i", config$event_ids), collapse = " or ")
 
+# update view
+conn <- odbcDriverConnect(connection = dbConnection)
+sqlq <- paste(readLines("utilities_vw_report_Annotations.sql"), collapse = "\n")
+sqlQuery(conn, sqlq)
+odbcClose(conn)
+
 # data: one row per set of dots
 msg("downloading annotations for ... ")
 sqlq <- sprintf(paste("select * FROM vw_report_Annotations where %s"), filter)
@@ -66,6 +72,12 @@ write.taf(ad_wide_ex, "data/ad_wide_ex.csv")
 
 
 
+
+# update view
+conn <- odbcDriverConnect(connection = dbConnection)
+sqlq <- paste(readLines("utilities_vw_report_DotsDistances.sql"), collapse = "\n")
+sqlQuery(conn, sqlq)
+odbcClose(conn)
 
 # dist: one row per dot
 msg("downloading dots for ... ")
