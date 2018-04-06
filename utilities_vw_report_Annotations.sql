@@ -8,7 +8,7 @@ SELECT
   xArea.Code as ices_area,
   xArea.Code as fao_code,
   CatchDate as catch_date,
-  a.age as age,
+  isnull(a.age, 0) as age,
   FishLength as length,
   FishWeight as weight,
   xMat.Code as maturity,
@@ -66,6 +66,4 @@ left join
 on
   xCountry.tblCodeID = tblDoYouHaveAccess.tblCodeID_Country
 where
-  tblAnnotations.IsApproved = 1 and
-  tblEventParticipants.Number is not null and
-  a.age is not null
+  tblEventParticipants.Number is not null
