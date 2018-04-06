@@ -6,6 +6,7 @@ output:
     fig_width: 10
     reference_docx: model/reportTemplate.docx
     toc: true
+    keep_md: true
 params:
   report_title: ""
 ---
@@ -220,7 +221,7 @@ set.caption('**Table X:** Percentage agreement (PA) table represents the PA per
              A rank is also assgned to each reader.')
 
 # Output table
-pander(style_table1(pa_tab[,c(1:ncol(pa_tab))]), missing="-")
+pander(style_table2(pa_tab[,c(1:ncol(pa_tab))]), missing="-")
 
 ```
 
@@ -241,7 +242,7 @@ set.caption('**Table X:** Relative bias table represents the relative bias per
              A rank is also assigned to each reader.')
 
 # Output table
-pander(style_table1(rb_tab), missing = "-")
+pander(style_table2(rb_tab), missing = "-")
 
 ```
 
@@ -300,55 +301,7 @@ plot_growth(dist, compl_sample, part_tab2, "All")
 
 ```
 
-**Results by area (or stock?)** 
 
-```{r num_strata}
-
-# NUMEBR OF AGE READINGS PER STRATA - All readers #################################
-
-# Table caption
-set.caption('**Table X:** Number of age readings per strata. (area or stock?)')
-
-# Output table
-pander(style_table1(num_st_comp), missing = "-")
-
-```
-
-```{r cv_strata}
-
-# CV PER STRATA - All readers #################################################
-
-# Table caption
-set.caption('**Table X:** CV per strata. (area or stock?)')
-
-# Output table
-pander(style_table2(cv_st_tab), missing = "-")
-
-```
-
-```{r pa_strata}
-
-# PA PER STRATA - All readers #################################################
-
-# Table caption
-set.caption('**Table X:** Percentage Agreement per strata. (area or stock?)')
-
-# Output table
-pander(style_table2(pa_st_tab), missing = "-")
-
-```
-
-```{r rb_strata}
-
-# RELATIVE BIAS PER STRATA - All readers ######################################
-
-# Table caption
-set.caption('**Table X:** Relative Bias per strata. (area or stock?)')
-
-# Output table
-pander(style_table2(rb_st_tab), missing = "-")
-
-```
 
 **Results by month** 
 
@@ -430,7 +383,7 @@ set.caption('**Table X:** Percentage agreement (PA) table represents the PA per
              A rank is also assgned to each reader.')
 
 # Output table
-pander(style_table1(pa_tab_ex), missing = "-")
+pander(style_table2(pa_tab_ex), missing = "-")
 
 ```
 
@@ -446,7 +399,7 @@ set.caption('**Table X:** Relative bias table represents the relative bias per
              each reader.')
 
 # Output table 
-pander(style_table1(rb_tab_ex), missing = "-")
+pander(style_table2(rb_tab_ex), missing = "-")
 
 ```
 
@@ -478,83 +431,6 @@ plot_growth(dist, compl_sample, part_tab2, "Expert")
 
 ```
 
-**Results by area (or stock)**
-
-```{r num_strata_ex}
-
-# NUMBER OF AGE READINGS PER STRATA - Advanced readers ############################
-
-# Table caption
-set.caption('**Table X:** Number of age readings per strata for advanced readers.')
-
-# Output table
-pander(style_table1(num_st_comp_ex), missing = "-")
-
-```
-
-```{r cv_strata_ex}
-
-# CV PER STRATA - Advanced readers ############################################
-
-# Table caption
-set.caption('**Table X:** CV per strata.')
-
-# Output table
-pander(style_table2(cv_st_tab_ex), missing = "-")
-
-```
-
-```{r pa_strata_ex}
-
-# PA PER STRATA - Advanced readers ############################################
-
-# Table caption
-set.caption('**Table X:** Percentage Agreement per strata.')
-
-# Output table
-pander(style_table2(pa_st_tab_ex), missing = "-")
-
-```
-
-```{r rb_strata_ex}
-
-# RELATIVE BIAS PER STRATA - Advanced readers #################################
-
-# Table caption
-set.caption('**Table X:** Relative Bias per strata.')
-
-# Output table
-pander(style_table2(rb_st_tab_ex), missing = "-")
-
-```
-
-<!-- Age error matrix text -->
-Age error matrices are calculated per area and only based on the age 
-readings of the advanced readers.
-
-```{r age_error_matrix_ex, results='asis'}
-
-# AEM STRATA - Advanced readers ############################################
-
-panderOptions('knitr.auto.asis', FALSE)
-
-# Loop through each area and output AEM for that area
-for (i in unique(areas)) {
-  
-  # Table caption
-  cap_i <- paste0("**Table X:** Age error matrix (AEM) for area ",i,". 
-                   The AEM shows the proportional distribution 
-                   of age readings for each modal age. Age column should sum to
-                   one but due to rounding there might be small deviations in 
-                   some cases. Only advanced readers are used. 
-                   Only advanced readers are used for calculating the AEM.")
-  
-  set.caption(cap_i)
-  pander(style_table3(ae_mat_ex[[i]]), missing = "-")
-    
-}
-
-```
 
 **Results by month**
 
@@ -681,21 +557,6 @@ set.caption('**Table X:** Number of age readings table gives an overview of
              of the table.')
 # Output table
 pander(style_table2(num_read_comp),missing="-")
-
-```
-
-```{r or, echo = FALSE}
-
-# OVERALL RANKING - All readers ###############################################
-
-# Table caption
-set.caption('**Table X:** Overall ranking of readers combines the ranking
-             valuesof table 2.2, 2.3 and 2.4 and a total rank is assigned based
-             on the individual ranking results of the three tables. ')
-
-# Output table
-emphasize.strong.rows((nrow(rank_tab)))
-pander(style_table0(rank_tab), missing = "-")
 
 ```
 
@@ -851,19 +712,6 @@ set.caption('**Table X:** Number of age readings table gives an overview of
 
 # Output table
 pander(style_table2(num_read_comp_ex),missing="-")
-
-```
-
-```{r or_ex}
-
-# OVERALL RANKING - Advanced readers ##########################################
-
-# Set caption
-set.caption('**Table X:** Overall ranking of advanced readers.')
-
-# Output table
-emphasize.strong.rows((nrow(rank_tab_ex)))
-pander(style_table0(rank_tab_ex), missing = "-")
 
 ```
 
