@@ -285,7 +285,7 @@ plot_growth <- function(dist, compl, part,exp){
   gro_dat2 <- merge(gro_dat1, part[, c("reader", "expertise")], all.x = TRUE)
 
   if (exp == "Expert") {
-    gro_dat1 <- gro_dat2[gro_dat2$expertise == "Expert",]
+    gro_dat1 <- gro_dat2[gro_dat2$expertise == "Advanced",]
   }
 
 

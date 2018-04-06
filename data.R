@@ -65,8 +65,9 @@ dist$distance[is.na(dist$distance)] <- dist$pixelDistance
 dist <- dist[dist$pixelDistance > 2,]
 # adjust ages in age data
 ad$age <- unname(table(dist$AnnotationID)[paste(ad$AnnotationID)])
-table(ad$age)
 
+# convert reader expertise
+ad$expertise <- c("Basic", "Advanced")[ad$expertise + 1]
 
 # prepare data -------------------------------
 
@@ -78,9 +79,11 @@ ad <-
     month = lubridate::month(catch_date)
   })
 
+
+
 # Calculate modal ages and cv of modal age
 ad_long <- add_modalage(ad, config$ma_method)
-ad_long_ex <- add_modalage(ad[ad$expertise == 1, ], config$ma_method)
+ad_long_ex <- add_modalage(ad[ad$expertise == "Advanced", ], config$ma_method)
 
 # Create wide data with one row per sample.
 # Reader will be used as new column headings for the age readings.
