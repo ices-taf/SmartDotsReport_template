@@ -99,6 +99,8 @@ sample_ov <- function(dat_in){
 
 # Creates Table 1 in GE with sample info, age readings, modal age, CV and PA
 # Additionally APE is also added to the output (not part of GE table 1)
+#  data_ov(ad_wide, ad_long)
+#  dat_in <- ad_wide; dat_in2 <- ad_long
 data_ov <- function(dat_in, dat_in2) {
 
   # Select only columns of age readings
@@ -128,10 +130,10 @@ data_ov <- function(dat_in, dat_in2) {
                                     "Total number NOT read"), dat_sum)
 
   # Summary information on the CV and PA
-  sum_stat <- data.frame("Mean PA %" = meanNA(dat_out2$perc_agree),
-                         "Mean CV %" = meanNA(dat_out2$cv),
-                         "Mean APE %" = meanNA(dat_out2$ape))
-  colnames(sum_stat) <- c("Mean CV %", "Mean PA %", "Mean APE %")
+  sum_stat <- data.frame("Mean PA %" = mean(dat_out2$perc_agree, na.rm = TRUE),
+                         "Mean CV %" = mean(dat_out2$cv, na.rm = TRUE),
+                         "Mean APE %" = mean(dat_out2$ape, na.rm = TRUE))
+  colnames(sum_stat) <- c("Mean PA %", "Mean CV %", "Mean APE %")
 
   # Renaming selected columns
   date_vals <- "catch_date"

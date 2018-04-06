@@ -185,8 +185,8 @@ Those writing the report put TEXT here describing the results.
 
 <!-- PA, CV and APE text --> 
 
-The overall percentage agreement based on modal ages for all readers 
-is `r round(sum_stat[2],1)`%, with an overall CV of `r round(sum_stat[1],1)`%.
+The average percentage agreement based on modal ages accross all annotations 
+is `r round(sum_stat[1],1)`%, with an average CV of `r round(sum_stat[2],1)`%.
 The APE is `r round(sum_stat[3],1)`%.
 
 ```{r cv_table}
