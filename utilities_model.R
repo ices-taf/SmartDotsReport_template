@@ -359,7 +359,7 @@ get_rel_bias <- function(mean_dat, n_read){
   rel <- cbind(modal_age = 0:max, rel)
 
   # Combine with weighted mean and rank
-  wm <- get_wm(rel_n, n_read, "n", FALSE) * 100
+  wm <- get_wm(rel_n, n_read, "n", FALSE)
   wm[] <- sprintf("%0.2f %%", unlist(wm) * 100)
 
   # Combine
