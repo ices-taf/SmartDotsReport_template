@@ -214,7 +214,7 @@ get_cv <- function(mean_dat, std_dat, n_read, dat_in) {
   cv0[] <- Map(paste3, round2(cv0), "%", sep = " ")
 
   # Add weighted mean
-  cv2 <- rbind(cv0, get_wm(cv, n_read, "y")[[2]])
+  cv2 <- rbind(cv0, get_wm(cv, n_read, "n")[[2]])
 
   cv2[cv2 == "%"] <- NA
   cv2[cv2 == "NaN %"] <- NA
@@ -846,7 +846,8 @@ rel_dist <- function(dat_in, num_r){
 # Calculate and output weighted mean of input data weighted on sumber of
 # age readings per modal age and reader
 # Outputting also a version of wm with added % sign to the results if needed
-
+# get_wm(cv, n_read, "y")
+# data <- cv; nr <- n_read; val <- "y"
 get_wm <- function(data, nr, val = "n", cor = TRUE) {
 
   # Calcaulte weighted means
