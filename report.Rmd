@@ -200,7 +200,7 @@ set.caption('**Table X:** Coefficient of Variation (CV) table presents the CV
              A rank is also assigned to each reader.')
 
 # Output table
-pander(style_table1(cv_tab), missing = "-")
+pander(style_table2(cv_tab), missing = "-")
 
 ```
 
