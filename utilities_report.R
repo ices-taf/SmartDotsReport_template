@@ -293,8 +293,12 @@ plot_growth <- function(dist, compl, part,exp) {
   # add fake data
   fake <- expand.grid(winterring = unique(gro_dat1$winterring), Reader = levels(gro_dat1$Reader))
   fake <- anti_join(fake, unique(select(gro_dat1, -distance)))
-  fake$distance <- max(gro_dat1$distance) * 2
-  gro_dat3 <- rbind(gro_dat1, fake)
+  if (nrow(fake)) {
+    fake$distance <- max(gro_dat1$distance) * 2
+    gro_dat3 <- rbind(gro_dat1, fake)
+  } else {
+    gro_dat3 <- gro_dat1
+  }
 
   p_all <-
     ggplot(gro_dat3,
