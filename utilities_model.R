@@ -219,8 +219,7 @@ get_cv <- function(mean_dat, std_dat, n_read, dat_in) {
 
   # Add modal age and rank
   max <- max(dat_in$modal_age, na.rm = T)
-  cv_out <- cbind("modal_age" = c(c(0:max), "Weighted Mean"))
-
+  cv_out <- cbind("modal_age" = c(c(0:max), "Weighted Mean"), cv2)
   names(cv_out)[names(cv_out) %in% "modal_age"] <- "Modal age"
 
   return(list(cv_out,cbind("modal_age" = 0:max, "cv" = cv$all)))
