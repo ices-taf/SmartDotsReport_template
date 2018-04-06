@@ -45,8 +45,6 @@ library(tibble)
 # cv_strata       : cv per strata/month
 # pa_strata       : percentage agreement per strata/month
 # rb_strata       : relative buas per strata/month
-# plot_stat       : plot std, cv and pa for each modal age
-# plot_mla        : plot mean lengths per reader and modal age
 # rel_dist        : Relative distribution of each age to the modal age
 # get_wm          : help function, weighted means per reader or strata
 # get_rank        : help function, ranks of each reader based on weighted means
@@ -221,8 +219,7 @@ get_cv <- function(mean_dat, std_dat, n_read, dat_in) {
 
   # Add modal age and rank
   max <- max(dat_in$modal_age, na.rm = T)
-  cv_out <- cbind("modal_age" = c(c(0:max), "Weighted Mean", "Rank"),
-                  rbind(cv2, c(get_rank(cv, n_read, 1), NA)  ))
+  cv_out <- cbind("modal_age" = c(c(0:max), "Weighted Mean"))
 
   names(cv_out)[names(cv_out) %in% "modal_age"] <- "Modal age"
 
@@ -328,9 +325,8 @@ get_perc_agree <- function(dat_in, n_read){
   new_PA[] <- sprintf("%0.0f %%", round2(unlist(new_PA)))
 
   # Combined agreement table
-  pa <-  cbind("modal_age" = c(0:max_age, "Weighted Mean", "Rank"),
-        rbind(new_PA, get_wm(n_agree2, n_read)[[2]],
-              c(get_rank(n_agree2, n_read, -1), NA) ) )
+  pa <-  cbind("modal_age" = c(0:max_age, "Weighted Mean"),
+        rbind(new_PA, get_wm(n_agree2, n_read)[[2]] ) )
 
   # Minor cleaning up..
   pa[pa=="NA %"] <- NA
@@ -359,16 +355,16 @@ get_rel_bias <- function(mean_dat, n_read){
   rel <- as.data.frame(rel)
 
   # numebrs to string to keep two digits
-  rel[] <- sprintf("%0.2f %%", unlist(rel))
+  rel[] <- sprintf("%0.2f %%", unlist(rel) * 100)
   rel <- cbind(modal_age = 0:max, rel)
 
   # Combine with weighted mean and rank
-  wm <- formatC(get_wm(rel_n, n_read, "n", FALSE),
-                format = 'f', digits = 2)
+  wm <- get_wm(rel_n, n_read, "n", FALSE) * 100
+  wm[] <- sprintf("%0.2f %%", unlist(wm) * 100)
+
   # Combine
   rel_out <- rbind(rel,
-                   c("Weighted Mean", wm),
-                   c("Rank", get_rank(rel_n, n_read, 1, FALSE), NA))
+                   c("Weighted Mean", wm))
 
   # For outputting only total bias per modal age
   rel_num <- as.data.frame(cbind("modal_age" = 0:max,
