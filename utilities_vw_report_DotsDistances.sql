@@ -53,5 +53,4 @@ on
   tblEventParticipants.tblEventID = tblSamples.tblEventID and
   tblEventParticipants.SmartUser = tblAnnotations.SmartUser
 where
-  tblAnnotations.IsApproved = 1 and
   tblEventParticipants.Number is not null
