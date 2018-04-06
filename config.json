@@ -23,7 +23,7 @@
   "ma_method": "Mode",
 
   // Choose strata
-  "strata": "ices_area",
-  "strata2": ["qtr", "ices_area"],
+  "strata": [],
+  "strata2": [],
   "strata3": []
 }
