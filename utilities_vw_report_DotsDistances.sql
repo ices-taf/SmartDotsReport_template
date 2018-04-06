@@ -5,6 +5,7 @@ SELECT
   'R' + FORMAT(Number, '00') as reader1,
   tblSmartImage.tblSmartImageID as sample,
   tblAnnotations.tblAnnotationID as AnnotationID,
+  tblSamples.FishID,
   Number,
   tblAnnotations.SmartUser as smartUser,
   DotIndex as mark,
