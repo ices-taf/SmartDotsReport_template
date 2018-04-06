@@ -20,6 +20,8 @@ download.file(url = config$report_template, "model/reportTemplate.docx", quiet =
 source("utilities_model.R")
 source("utilities.R")
 
+
+
 # read input data
 ad_long <- read.taf("data/ad_long.csv")
 ad_long_ex <- read.taf("data/ad_long_ex.csv")
@@ -83,11 +85,6 @@ list[pa_tab_ex, pa_all_ex] <- get_perc_agree(ad_long_ex, num_read_ex)
 list[rb_tab, rb_all] <- get_rel_bias(mean_dat,num_read)
 list[rb_tab_ex, rb_all_ex] <- get_rel_bias(mean_dat_ex, num_read_ex)
 
-# Overall rank
-rank_tab <- get_overall_rank(rbind(cv_tab, pa_tab, rb_tab))
-rank_tab_ex <- get_overall_rank(rbind(cv_tab_ex, pa_tab_ex, rb_tab_ex))
-
-
 # TABLES 3 GE - age statistics per reader #####################################
 
 # Age composition
@@ -122,25 +119,6 @@ rb_mo_tab <- rb_strata(ad_long, num_mo, "month")
 rb_mo_tab_ex <- rb_strata(ad_long_ex, num_mo_ex, "month")
 
 
-
-# TABLES 5 GE - Statistisc per strata #########################################
-
-# Number readings per strata
-list[num_st, num_st_comp] <- number_strata(ad_wide, config$strata)
-list[num_st_ex, num_st_comp_ex] <- number_strata(ad_wide_ex, config$strata)
-
-# CV per strata
-cv_st_tab <- cv_strata(ad_wide, num_st, config$strata)
-cv_st_tab_ex <- cv_strata(ad_wide_ex, num_st_ex, config$strata)
-
-# PA per strata
-pa_st_tab <- pa_strata(ad_long, num_st, config$strata)
-pa_st_tab_ex <- pa_strata(ad_long_ex, num_st_ex, config$strata)
-
-# Relative bias per strata
-rb_st_tab <- rb_strata(ad_long, num_st, config$strata)
-rb_st_tab_ex <- rb_strata(ad_long_ex, num_st_ex, config$strata)
-
 # Age error matrix ############################################################
 
 # Age error matrix (AEM)
@@ -157,10 +135,23 @@ list[dif_tab_co, dif_tab] <- rel_dist(ad_long, num_read)
 list[dif_tab_co_ex, dif_tab_ex] <- rel_dist(ad_long_ex, num_read_ex)
 
 # write (almost) everything out
-rm(list)
-rm("[<-.result")
+list_of_obj <-
+  c("ac_tab", "ac_tab_ex", "ad_long", "ad_long_ex", "ad_wide", "ad_wide_ex",
+    "ae_mat_ex", "areas", "bias_tab", "bias_tab_ex", "compl_sample", "compl_sample_ex",
+    "cv_all", "cv_all_ex", "cv_mo_tab", "cv_mo_tab_ex",
+    "cv_tab", "cv_tab_ex", "dif_tab", "dif_tab_co", "dif_tab_co_ex", "dif_tab_ex",
+    "max_age", "max_age_ex", "max_modal", "max_modal_ex", "mean_dat", "mean_dat_ex",
+    "mla_num", "mla_num_ex", "mla_tab", "mla_tab_ex", "num_mo", "num_mo_comp",
+    "num_mo_comp_ex", "num_mo_ex", "num_read", "num_read_comp", "num_read_comp_ex",
+    "num_read_ex",
+    "pa_all", "pa_all_ex", "pa_mo_tab", "pa_mo_tab_ex",
+    "pa_tab", "pa_tab_ex", "part_tab", "part_tab2", "rb_all",
+    "rb_all_ex", "rb_mo_tab", "rb_mo_tab_ex", "rb_tab",
+    "rb_tab_ex", "sample_dat_ov", "std_all", "std_all_ex", "std_dat", "std_dat_ex",
+    "sum_readings", "sum_readings_ex", "sum_stat", "sum_stat_ex", "table1_data",
+    "table1_data_ex")
 
-for (obj in ls()) {
+for (obj in list_of_obj) {
   x <- get(obj)
   if (inherits(x, "data.frame")) {
     write.taf(x, paste0("model/", obj, ".csv"))
