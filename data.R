@@ -30,10 +30,12 @@ dbConnection <- 'Driver={SQL Server};Server=SQL06;Database=SmartDots;Trusted_Con
 filter <- paste(sprintf("EventID = %i", config$event_ids), collapse = " or ")
 
 # update view
+msg("updating annotate view")
 conn <- odbcDriverConnect(connection = dbConnection)
 sqlq <- paste(readLines("utilities_vw_report_Annotations.sql"), collapse = "\n")
-sqlQuery(conn, sqlq)
+ret <- sqlQuery(conn, sqlq)
 odbcClose(conn)
+if (length(ret)) msg(ret)
 
 # data: one row per set of dots
 msg("downloading annotations for ... ", filter)
@@ -44,10 +46,12 @@ odbcClose(conn)
 
 
 # update view
+msg("updating dots distances view")
 conn <- odbcDriverConnect(connection = dbConnection)
 sqlq <- paste(readLines("utilities_vw_report_DotsDistances.sql"), collapse = "\n")
-sqlQuery(conn, sqlq)
+ret <- sqlQuery(conn, sqlq)
 odbcClose(conn)
+if (length(ret)) msg(ret)
 
 # dist: one row per dot
 msg("downloading dots for ... ", filter)
