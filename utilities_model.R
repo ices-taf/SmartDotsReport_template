@@ -113,7 +113,7 @@ data_ov <- function(dat_in, dat_in2) {
 
   # Combine data in correct order
 
-  sample_vars <- select(dat_in, c(sample, length, sex, catch_date, ices_area))
+  sample_vars <- select(dat_in, c(FishID, sample, length, sex, catch_date, ices_area))
 
   dat_out <- as.data.frame(cbind(sample_vars,
                                  select(readings, -modal_age),
@@ -144,6 +144,10 @@ data_ov <- function(dat_in, dat_in2) {
                      "modal_age", "perc_agree",'cv', 'ape')] <-
                    c("Sample", "Length (mm)", "Sex", date_name,"ICES area",
                      "Modal age", "PA %", "CV %", "APE %")
+
+  dat_out2$Sample <-
+    sprintf("[%1$i](https://smartdots.ices.dk/manage/viewDetailsImage?tblEventID=74&SmartImageID=%1$i)",
+            dat_out2$Sample)
 
   return(list(dat_out2, sum_stat, dat_sum_out))
 
@@ -895,7 +899,7 @@ get_rank <- function(data, nr, char, cor = TRUE){
 # from data in wide format
 get_ages <- function(dat_in){
 
-   dat_out <- dplyr::select(dat_in, -c(sample, length, sex, catch_date, year,
+   dat_out <- dplyr::select(dat_in, -c(FishID, sample, length, sex, catch_date, year,
                                        qtr, month, ices_area, cv))
   return(dat_out)
 }
