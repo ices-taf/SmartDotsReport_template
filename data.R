@@ -97,6 +97,22 @@ var_in <- c("sample", "length", "sex", "catch_date", "ices_area",
 ad_wide <- spread(ad_long[var_in], key = reader, value = age)
 ad_wide_ex <- spread(ad_long_ex[var_in], key = reader, value = age)
 
+# prepare data in wbgr output format
+# IMAGE,1,2,3,4,5,6,7,8,9,10,11,12,13
+# Expertise level,-,-,-,-,-,-,-,-,-,-,-,-,-
+# Stock assessment,no,no,no,no,no,no,no,no,no,no,no,no,no
+# 6698256.jpg,1,1,1,1,1,-,2,1,-,2,-,1,-
+# 6698257.jpg,3,3,3,3,2,1,3,3,-,3,-,3,-
+readers <- sort(unique(ad$reader))
+webgr <- ad_wide[c("sample", readers)]
+webgr[] <- paste(unlist(webgr))
+webgr[webgr == "NA"] <- "-"
+webgr <-
+  rbind(c("Expertise level", rep("-", length(readers))),
+        c("Stock assessment", rep("no", length(readers))),
+        webgr)
+names(webgr) <- c("IMAGE", 1:length(readers))
+head(webgr)
 
 
 # write out input data tables
@@ -106,3 +122,4 @@ write.taf(ad_long, "data/ad_long.csv")
 write.taf(ad_long_ex, "data/ad_long_ex.csv")
 write.taf(ad_wide, "data/ad_wide.csv")
 write.taf(ad_wide_ex, "data/ad_wide_ex.csv")
+write.taf(webgr, "data/WebGR_ages_all.csv")
