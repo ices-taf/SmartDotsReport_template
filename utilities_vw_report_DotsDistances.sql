@@ -38,7 +38,7 @@ on
 left join
   tblDoYouHaveAccess
 on
-  tblDoYouHaveAccess.SmartUser = tblSamples.SmartUser
+  tblDoYouHaveAccess.SmartUser = tblAnnotations.SmartUser
 left join
   tblCode as xArea
 on
