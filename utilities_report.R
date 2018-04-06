@@ -266,8 +266,9 @@ plot_rb_ma <- function(dat_in){
 # Growth analysis #############################################################
 
 # Plot
-
-plot_growth <- function(dist, compl, part,exp){
+# plot_growth(dist, compl_sample, part_tab2, "Expert")
+# compl <- compl_sample; part <- part_tab2; exp <- "Expert"
+plot_growth <- function(dist, compl, part,exp) {
 
   gro_dat  <- dist[dist$sample %in% compl,] %>%
               mutate(meas_dist = distance,  # to keep original measurements
@@ -280,24 +281,34 @@ plot_growth <- function(dist, compl, part,exp){
   # Add subsequent growth increments to growth curves by reader
   gro_dat1$distance <- ave(gro_dat1$distance, gro_dat1$readerXimage, FUN = cumsum)
 
-
-  #Merge with readers2 and remove readers if an expertise level is used
-  gro_dat2 <- merge(gro_dat1, part[, c("reader", "expertise")], all.x = TRUE)
-
   if (exp == "Expert") {
+    # Merge with readers2 and remove readers if an expertise level is used
+    gro_dat2 <- merge(gro_dat1, part[, c("reader", "expertise")], all.x = TRUE)
     gro_dat1 <- gro_dat2[gro_dat2$expertise == "Advanced",]
   }
 
+  gro_dat1$Reader <- factor(gro_dat1$reader)
+  gro_dat1 <- select(gro_dat1, winterring, distance, Reader)
 
-  p_all <- ggplot(gro_dat1, aes(factor(winterring), y = distance))
-  p_all + geom_boxplot(aes(fill = factor(reader)), lwd = 0.2)+
-          scale_fill_discrete(name = "Reader")+
-          xlab("Winter ring") +
-          ylab("Distance from center (mm)")+
-          theme_bw() +
-          theme(axis.text = element_text(size = 12),
-                axis.title = element_text(size = 14),
-                legend.title = element_text(size = 12)) +
-          scale_fill_brewer("Reader", palette = "Set3")
+  # add fake data
+  fake <- expand.grid(winterring = unique(gro_dat1$winterring), Reader = levels(gro_dat1$Reader))
+  fake <- anti_join(fake, unique(select(gro_dat1, -distance)))
+  fake$distance <- max(gro_dat1$distance) * 2
+  gro_dat3 <- rbind(gro_dat1, fake)
 
+  p_all <-
+    ggplot(gro_dat3,
+           aes(x = factor(winterring), y = distance, col = Reader))
+  p <-
+    p_all +
+    geom_boxplot(lwd = 0.2, cex = 0.7) +
+    xlab("Winter ring") +
+    ylab("Distance from center (mm)")+
+    theme_bw() +
+    theme(axis.text = element_text(size = 12),
+          axis.title = element_text(size = 14),
+          legend.title = element_text(size = 12)) +
+    coord_cartesian(ylim = range(gro_dat1$distance) + c(-.25, .25))
+
+  p
 }
