@@ -24,6 +24,10 @@
   //"event_ids": [74, 77],
   "event_ids": 74,
 
+  // report tokens
+  //"report_tokens": ["07BAF7B6-1ECB-446F-A93A-52B732C1120E","1D99692C-FCE2-459E-A49C-549DF9ABC068"]
+  "report_tokens": "07BAF7B6-1ECB-446F-A93A-52B732C1120E",
+
   // Use mode or mean to obtain modal age, when there is no mode
   // within the age reading
   "ma_method": "Mode",

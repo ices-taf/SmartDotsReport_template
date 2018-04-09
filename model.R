@@ -63,9 +63,13 @@ list[std_dat_ex, std_all_ex] <- std_ages(get_ages(ad_wide_ex))
 # TABLES 1 GE - complete data overview ########################################
 
 # Complete data overview including stats per sample
-list[table1_data, sum_stat, sum_readings] <- data_ov(ad_wide, ad_long)
+list[table1_data, sum_stat, sum_readings] <- data_ov(ad_wide, ad_long,
+                                                     event_id = config$event_ids,
+                                                     report_token = config$report_tokens)
 list[table1_data_ex, sum_stat_ex, sum_readings_ex] <- data_ov(ad_wide_ex,
-                                                              ad_long_ex)
+                                                              ad_long_ex,
+                                                              event_id = config$event_ids,
+                                                              report_token = config$report_tokens)
 
 # TABLES 2 GE - modal age statistics per reader ###############################
 
@@ -146,7 +150,8 @@ list_of_obj <-
     "ae_mat_ex", "areas", "bias_tab", "bias_tab_ex", "compl_sample", "compl_sample_ex",
     "cv_all", "cv_all_ex", "cv_mo_tab", "cv_mo_tab_ex",
     "cv_tab", "cv_tab_ex", "dif_tab", "dif_tab_co", "dif_tab_co_ex", "dif_tab_ex",
-    "max_age", "max_age_ex", "max_modal", "max_modal_ex", "mean_dat", "mean_dat_ex",
+    "max_age", "max_age_ex",
+    "ma_range", "max_modal", "max_modal_ex", "mean_dat", "mean_dat_ex",
     "mla_num", "mla_num_ex", "mla_tab", "mla_tab_ex", "num_mo", "num_mo_comp",
     "num_mo_comp_ex", "num_mo_ex", "num_read", "num_read_comp", "num_read_comp_ex",
     "num_read_ex",
