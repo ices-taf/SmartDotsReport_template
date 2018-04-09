@@ -35,7 +35,7 @@ for (file in dir("model", pattern = "*.rData")) {
 
 # render report and copy to report folder
 report_filename <- paste0(config$report_name, ".docx")
-render("report.Rmd",
+render("report-full.Rmd",
        params = list(report_title = config$report_title),
        output_file = report_filename,
        encoding = "UTF-8")
