@@ -47,6 +47,7 @@ max_age <- max(ad_long$age, na.rm = TRUE)
 max_modal <- max(ad_long$modal_age, na.rm = TRUE)
 max_age_ex <- max(ad_long_ex$age, na.rm = TRUE)
 max_modal_ex <- max(ad_long_ex$modal_age, na.rm = TRUE)
+ma_range <- range(ad_long$modal_age, na.rm = TRUE)
 
 # TABLES 6 GE - Mean and standard deviation ####################################
 
