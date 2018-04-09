@@ -7,6 +7,7 @@
 library(icesTAF)
 library(rmarkdown)
 library(jsonlite)
+library(knitr)
 
 
 # make report directory
@@ -40,5 +41,13 @@ render("report-full.Rmd",
        output_file = report_filename,
        encoding = "UTF-8")
 cp(report_filename, "report", move = TRUE)
+
+# render summary and copy to report folder
+summary_filename <- paste0(config$summary_name, ".docx")
+render("report-summary.Rmd",
+       params = list(summary_title = config$summary_title),
+       output_file = summary_filename,
+       encoding = "UTF-8")
+cp(summary_filename, "report", move = TRUE)
 
 # finally copy to sharepoint?

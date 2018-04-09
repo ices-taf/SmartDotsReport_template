@@ -1,0 +1,259 @@
+---
+output:
+  word_document:
+    fig_caption: true
+    fig_height: 10
+    fig_width: 10
+    reference_docx: model/summaryTemplate.docx
+    toc: FALSE
+params:
+  summary_title: ""
+  data_subset: "all"
+---
+
+```{r introduction, include = FALSE}
+
+# INTRODUCTION ################################################################
+
+# This markdown documents and integrated scripts analyse biological
+# age readings.
+# The output is a .docx template that includes
+# the results of the analysis and should be used as a standard for
+# reporting of age reading comparisons.
+
+```
+
+```{r chunk_setup, include=FALSE}
+
+# CHUNK SETUPS #################################################################
+
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE,
+                      message=FALSE, results = 'asis', dpi=400)
+
+
+print_option <- TRUE
+```
+
+
+```{r pander_settings, include = FALSE}
+
+# PANDER OPTIONS ##############################################################
+
+panderOptions('table.split.table', Inf)
+panderOptions('keep.trailing.zeros', TRUE)
+panderOptions('table.alignment.default', "center")
+panderOptions('knitr.auto.asis', FALSE)
+
+# from extrafont
+# font_import(pattern=c("Cali"))
+# loadfonts(device="win")
+```
+
+---
+title: `r params$summary_title`
+---
+
+# Executive summary
+
+
+# Overview of samples and advanced readers
+
+
+\br
+
+```{r sample_overview}
+
+# Table caption
+set.caption(paste('**Table X:** Overview of samples used for the xxx exchange. The modal age range for all samples is ', ma_range[1], "-", ma_range[2], '.', sep=""))
+
+# Output table
+pander(style_table0(sample_dat_ov), style = "simple")
+
+```
+
+\br
+
+```{r participants_overview}
+
+# PARTICIPATANTS OVERVIEW #####################################################
+
+# Table caption
+set.caption('**Table X:** Overview of advanced readers.')
+
+# Output table
+#row.names(part_tab) <- NULL
+pander(style_table0(part_tab[part_tab$Expertise!="Beginner",c("Reader code", "Expertise")]), missing = "-")
+
+```
+
+
+<!-- ## Advanced readers -->
+
+<!-- **All samples included**  -->
+
+# Results overview
+
+## CV table
+
+```{r cv_ex}
+
+# CV TABLE - Advanced readers #################################################
+
+# Table caption
+set.caption('**Table X:** Coefficient of Variation (CV) table presents the
+             CV per modal age and advanced reader, the CV of all advanced
+             readers combined per modal age and a weighted mean of the CV
+             per reader.')
+
+# Output table
+pander(style_table1(cv_tab_ex), missing = "-")
+
+```
+
+## PA table
+
+```{r percentage_agreement_ex}
+
+# PERCENTAGE AGREEMENT TABLE - Advanced readers ###############################
+
+# Table caption
+set.caption('**Table X:** Percentage agreement (PA) table represents the PA per
+             modal age and reader, advanced the PA of all advanced readers
+             combined per modal age and a weighted mean of the PA per reader.')
+
+# Output table
+pander(style_table1(pa_tab_ex), missing = "-")
+
+```
+
+## Relative bias table
+
+```{r rb_ex,results='asis'}
+
+# RELATIVE BIAS TABLE - Advanced readers ######################################
+
+# Table caption
+set.caption('**Table X:** Relative bias table represents the relative bias per
+             modal age and advanced reader, the relative bias of all
+             advanced readers combined per modal age and a weighted mean of
+             the relative bias per reader.')
+
+# Output table
+pander(style_table1(rb_tab_ex), missing = "-")
+
+```
+
+## Bias plot
+
+```{r bias_plots_exp, fig.width = 5, fig.height = 4, fig.cap = cap_in}
+
+# BIAS PLOT - Advanced readers ################################################
+
+# Table caption
+cap_in <- '**Figure X:** Age bias plot for advanced readers.'
+
+# Output table
+plot_bias_all(ad_long_ex, max_age, max_modal)
+
+```
+
+\br
+
+
+## Growth analysis
+
+```{r growth_analysis_exp, fig.width = 8, fig.height = 6, fig.cap = cap_in}
+
+# GROWTH ANALYSIS - Advanced readers ##########################################
+
+# Table caption
+cap_in <- '**Figure X:** Plot of average distance from the centre to the winter
+           rings for advanced readers. The boxes represent the median, upper and
+           lower box boundaries of the interquartile range, whiskers represent
+           the minimum and maximum values and the dots represent the outliers.'
+
+# Output table
+plot_growth(dist[dist$reader %in% ad_long_ex$reader[ad_long_ex$expertise!="Beginner"],], compl_sample, part_tab2, "Expert")
+
+```
+
+
+
+```{r by_stock_ex_title, eval = print_option}
+
+# If reports are made by preparation method, leave out this chunk
+if (params$data_subset != "stock") {
+
+  # Section title
+  asis_output("# Results by stock")
+}
+```
+
+## Age error matrix
+
+```{r age_error_matrix_ex, results='asis'}
+
+# AEM AREA - Advanced readers #################################################
+
+# Loop through each area and output AEM for that area
+for (i in unique(stocks)) {
+
+  # Table caption
+  cap_i <- paste0("**Table X:** Age error matrix (AEM) for stock ",i,".")
+
+  set.caption(cap_i)
+  pander(style_table3(ae_mat_stock[[i]]), missing = "-")
+
+}
+
+```
+
+## Age readings
+
+```{r ar_by_stock_ex, eval = print_option}
+
+# If reports are made by preparation method, leave out this chunk
+if (params$data_subset != "stock") {
+
+  # NUMBER OF AGE READINGS PER STOCK - Advanced readers #########################
+    # cat("## Age readings")
+
+  # Table caption
+  set.caption('**Table X:** Number of age readings per stock for advanced readers.')
+
+  # Output table
+  pander(style_table1(num_st2_comp_ex), missing = "-")
+}
+```
+
+## Coefficient of Variation
+
+```{r cv_by_stock_ex, eval = print_option}
+if (params$data_subset != "stock") {
+  # Section title
+  # cat("## CV")  #  #############################################
+
+  # Table caption
+  set.caption('**Table X:** CV per stock.')
+
+  # Output table
+  pander(style_table2(cv_st2_tab_ex), missing = "-")
+}
+```
+
+## Percentage Agreement
+
+```{r pa_by_stock_ex, eval = print_option}
+if (params$data_subset != "stock") {
+# Section title
+  # asis_("## PA PER STOCK - Advanced readers")  #    #  #############################################
+
+  # Table caption
+  set.caption('**Table X:** Percentage Agreement per stock.')
+
+  # Output table
+  pander(style_table2(pa_st2_tab_ex), missing = "-")
+}
+```
+
+#Conclusion

@@ -13,8 +13,9 @@ mkdir("model")
 # load configuration
 config <- read_json("config.json", simplifyVector = TRUE)
 
-# download the report template
+# download the report and summary templates
 download.file(url = config$report_template, "model/reportTemplate.docx", quiet = TRUE, mode = "wb")
+download.file(url = config$summary_template, "model/summaryTemplate.docx", quiet = TRUE, mode = "wb")
 
 # load utilities
 source("utilities_model.R")
@@ -134,6 +135,11 @@ compl_sample_ex <- ad_wide_ex[complete.cases(get_ages(ad_wide_ex)), "sample"]
 list[dif_tab_co, dif_tab] <- rel_dist(ad_long, num_read)
 list[dif_tab_co_ex, dif_tab_ex] <- rel_dist(ad_long_ex, num_read_ex)
 
+# Age error matrix per stock (AEM)
+stocks <- unique(ad_long_ex$stock)
+list[ae_mat_stock, areas_stock] <- age_er_matrix_stock(ad_long_ex)
+
+
 # write (almost) everything out
 list_of_obj <-
   c("ac_tab", "ac_tab_ex", "ad_long", "ad_long_ex", "ad_wide", "ad_wide_ex",
@@ -148,6 +154,7 @@ list_of_obj <-
     "pa_tab", "pa_tab_ex", "part_tab", "part_tab2", "rb_all",
     "rb_all_ex", "rb_mo_tab", "rb_mo_tab_ex", "rb_tab",
     "rb_tab_ex", "sample_dat_ov", "std_all", "std_all_ex", "std_dat", "std_dat_ex",
+    "stocks", "ae_mat_stock", "areas_stock",
     "sum_readings", "sum_readings_ex", "sum_stat", "sum_stat_ex", "table1_data",
     "table1_data_ex")
 

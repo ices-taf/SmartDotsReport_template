@@ -592,6 +592,46 @@ age_er_matrix <- function(dat_in){
 }
 
 
+age_er_matrix_stock <- function(dat_in){
+
+  # Pre-set list to add AEMs for each ices area
+  list_aem <-list()
+
+  stocks <- unique(dat_in$stock)
+  for (i in stocks) {
+
+  # Relative contribution of each age per modal age (long format)
+  calc_rel_age <- ddply(dat_in[complete.cases(dat_in$age) &
+                                 dat_in$stock==i,],
+                        .(modal_age, age), summarize,
+                        age_per_modal = sum(!is.na(age)))   %>%
+                  merge(., ddply(., .(modal_age), summarize,
+                        tot_per_modal = sum(age_per_modal) ) ) %>%
+                  mutate(rel_age = age_per_modal/tot_per_modal)
+
+  # Matrix on relative contributions of each age per modal age (wide format)
+  ages_err1 <-  spread(calc_rel_age[c("age", "modal_age", "rel_age")],
+                       age, rel_age) %>% setup_nice2(., "modal_age-age")
+
+  # Transpose matrix such that each column sum to 1
+  ages_trans <- setNames(as.data.frame(t(ages_err1[, -1])),
+                         unlist(ages_err1[, 1])) %>%
+                cbind("modal_age" = row.names(.), .)
+
+
+  # Last corrections and add data frame to list
+  ages_trans$modal_age <- as.integer(as.character(ages_trans$modal_age))
+  ages_trans2 <- setup_nice2(ages_trans, "modal_age-age") %>%
+                 mutate(modal_age = paste("Age", modal_age))
+  names(ages_trans2)[names(ages_trans2) %in% c("modal_age")] <- c("Modal age")
+  list_aem[[i]] <- ages_trans2
+
+  }
+
+  return(list(list_aem, areas))
+
+}
+
 
 
 # number of modal ages per strata/month #######################################
