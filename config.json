@@ -14,11 +14,11 @@
 
   // Report output title
   "report_title": "Report of Otolith Exchange Analysis for Sprat in Area 3A",
-  "report_name": "smartdots_exchange_analysis_09042018",
+  "report_name": "smartdots_exchange_analysis_event_74",
 
   // summary output title
   "summary_title": "Summary of Otolith Exchange Analysis for Sprat in Area 3A",
-  "summary_name": "smartdots_exchange_analysis_summary_09042018",
+  "summary_name": "smartdots_exchange_analysis_summary_event_74",
 
   // Smartdote event IDs
   //"event_ids": [74, 77],
