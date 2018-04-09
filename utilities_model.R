@@ -101,7 +101,7 @@ sample_ov <- function(dat_in){
 # Additionally APE is also added to the output (not part of GE table 1)
 #  data_ov(ad_wide, ad_long)
 #  dat_in <- ad_wide; dat_in2 <- ad_long
-data_ov <- function(dat_in, dat_in2) {
+data_ov <- function(dat_in, dat_in2, report_token = "") {
 
   # Select only columns of age readings
   readings <- get_ages(dat_in)
@@ -145,9 +145,18 @@ data_ov <- function(dat_in, dat_in2) {
                    c("Sample", "Length (mm)", "Sex", date_name,"ICES area",
                      "Modal age", "PA %", "CV %", "APE %")
 
+  # form hyper link for tables
+  link_template <-
+    sprintf("[%s](http://smartdots.ices.dk/viewImage?tblEventID=%i&SmartImageID=%s&token=%s)",
+            "%1$i", 77, "%1$i", report_token)
+  samples <- strsplit(dat_out2$Sample, "-")
   dat_out2$Sample <-
-    sprintf("[%1$i](https://smartdots.ices.dk/manage/viewDetailsImage?tblEventID=74&SmartImageID=%1$i)",
-            dat_out2$Sample)
+    sapply(samples,
+           function(i)
+             paste(
+               sprintf(link_template, as.numeric(i)),
+               collapse = "-")
+    )
 
   return(list(dat_out2, sum_stat, dat_sum_out))
 
