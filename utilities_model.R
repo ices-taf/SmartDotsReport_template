@@ -936,10 +936,10 @@ get_wm <- function(data, nr, val = "n", cor = TRUE) {
 get_rank <- function(data, nr, char, cor = TRUE){
 
   if (cor == TRUE) {
-    w_mean <- get_wm(data, nr, "n")[[1]] # Get weighted mean values
+    w_mean <- get_wm(data,., nr, "n")[[1]] # Get weighted mean values
     as.character(rank(char*abs(w_mean[-length(w_mean)]), ties.method = "min"))
   } else {
-    w_mean <- get_wm(data, nr,"n", FALSE) # Get weighted mean values
+    w_mean <- get_wm(data,., nr,"n", FALSE) # Get weighted mean values
     as.character(rank(abs(w_mean[-length(w_mean)]), ties.method = "min"))
   }
 
@@ -993,7 +993,8 @@ setup_nice2 <- function(dat_in, key_in){
     key_in <- "modal_age"
   }
 
-  setDT(dat_in, key = key_in) %>% .[CJ(0:max)]
+  clean_dat <- setDT(dat_in, key = key_in) %>%
+    .[CJ(0:max)]
 }
 
 
