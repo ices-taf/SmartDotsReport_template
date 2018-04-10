@@ -189,7 +189,7 @@ number_readings <- function(dat_in){
 
   # Calculate number of readings per reader grouped by modal age and add total
   # number of readings per modal age
-  max <- max(dat_un$modal_age, na.rm = T)
+  max <- max(dat_un$modal_age, na.rm = TRUE)
   num_read <- as.data.frame.matrix(table(dat_un$modal_age, dat_un$reader)) %>%
               setup_nice(.,max) %>% mutate(total = rowSums(.[, -1]))
 
