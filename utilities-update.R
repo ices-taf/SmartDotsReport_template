@@ -1,4 +1,15 @@
 
+# install package pacman if necessary, to use function p_load
+if (!require("pacman")){
+  install.packages("pacman")
+  library(pacman)
+}
+
+# p_load loads and, if necessary, installs missing packages
+p_load(ggplot2, reshape, plyr, dplyr, data.table, RVAideMemoire, tidyr, knitr,
+       pander, scales, gsubfn, ggpubr, kableExtra, tibble, pipeR, stringr,
+       extrafont)
+
 ##     Exchange analysis for SmartDots
 ##     Version 1.0 2017
 ##     get_functions.R
