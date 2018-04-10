@@ -91,8 +91,8 @@ ad_long_ex <- add_modalage(ad[ad$expertise == "Advanced", ], config$ma_method)
 
 # Create wide data with one row per sample.
 # Reader will be used as new column headings for the age readings.
-var_in <- c("FishID", "sample", "length", "sex", "catch_date", "ices_area",
-             "year", "qtr","month","reader", "age", "cv", "modal_age")
+var_in <- c("FishID", "sample", "length", "sex", "catch_date", "ices_area", "stock",
+             "year", "qtr","month", "prep_method", "reader", "age", "cv", "modal_age")
 
 ad_wide <- spread(ad_long[var_in], key = reader, value = age)
 ad_wide_ex <- spread(ad_long_ex[var_in], key = reader, value = age)

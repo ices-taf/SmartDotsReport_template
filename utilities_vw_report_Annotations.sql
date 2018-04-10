@@ -13,12 +13,14 @@ SELECT
   FishWeight as weight,
   xMat.Code as maturity,
   xSex.Code as sex,
+  xPrepMethod.Description as prep_method,
+  xStock.Code as stock,
   tblAnnotations.SmartUser as reader_name,
   tblAnnotations.SmartUser as reader_lastname,
   Number as reader_number,
   ExpertiseLevel as expertise,
   xCountry.Description as country,
-  NULL as institution,
+  NULL as institute,
   upper(xCountry.Code) as iso_code,
   'R' + FORMAT(Number, '00') + ' ' + upper(xCountry.Code) as reader,
   tblAnnotations.tblAnnotationID as AnnotationID,
@@ -65,5 +67,13 @@ left join
   tblCode as xCountry
 on
   xCountry.tblCodeID = tblDoYouHaveAccess.tblCodeID_Country
+left join
+  tblCode as xPrepMethod
+on
+  xPrepMethod.tblCodeID = tblSamples.tblCodeID_PreparationMethod
+left join
+  tblCode as xStock
+on
+  xStock.tblCodeID = tblSamples.tblCodeID_StockCode
 where
   tblEventParticipants.Number is not null
