@@ -366,7 +366,8 @@ get_perc_agree <- function(dat_in, n_read){
   pa[pa=="NA %"] <- NA
   names(pa)[names(pa) %in% c("modal_age")] <- c("Modal age")
 
-  list(pa, cbind("modal_age" = 0:max_age, "pa" = n_agree2$all))
+     return(list(pa, cbind("modal_age" = 0:max, "pa" = n_agree2$all)))
+
 }
 
 
@@ -393,9 +394,8 @@ get_rel_bias <- function(mean_dat, n_read){
   rel <- cbind(modal_age = 0:max, rel)
 
   # Combine with weighted mean and rank
-  wm <- get_wm(rel_n, n_read, "n", FALSE)
-  wm[] <- sprintf("%0.2f %%", unlist(wm) * 100)
-
+  wm <- formatC(round(get_wm(rel_n, ., n_read,"n",FALSE), 2),
+                format = 'f', digits = 2)
   # Combine
   rel_out <- rbind(rel,
                    c("Weighted Mean", wm))
@@ -405,10 +405,11 @@ get_rel_bias <- function(mean_dat, n_read){
                                  "all" = rel_n$all))
 
   # Minor cleaning
-  rel_out[rel_out=="NA %"] <- NA
+  rel_out[rel_out==" NA"] <- NA
   names(rel_out)[names(rel_out) %in% "modal_age"] <- "Modal age"
 
-  list(rel_out, rel_num)
+  return(list(rel_out, rel_num))
+
 }
 
 
@@ -416,8 +417,6 @@ get_rel_bias <- function(mean_dat, n_read){
 
 # Combine ranking from CV, PA and relative bias tables
 # Overall rank is found based on ranking values in the three tables
-# rank_tab <- get_overall_rank(rbind(cv_tab, pa_tab, rb_tab))
-# dat_in <- rbind(cv_tab, pa_tab, rb_tab)
 get_overall_rank <- function(dat_in){
 
   # Renaming and get rows with ranking values and only reader columns
@@ -701,8 +700,7 @@ number_strata <- function(dat_in, var){
 # cv of modal age per month/strata ############################################
 
 # Calculate CV per month, area, stock...
-# cv_strata(ad_wide, num_st, config$strata)
-# dat_in <- ad_wide; num <- num_st; var <- config$strata
+
 cv_strata <- function(dat_in, num, var){
 
   # Select data and re-name months
@@ -751,8 +749,7 @@ cv_strata <- function(dat_in, num, var){
 # Percentage agreement per month/strata #######################################
 
 # Percentage agreement per strata/month
-# pa_strata(ad_long, num_mo, "month")
-# n_read <- num_mo; var <- "month"; dat_in <- ad_long
+
 pa_strata <- function(dat_in, n_read, var){
 
   # Re-naming month
@@ -850,7 +847,6 @@ rb_strata <- function(dat_in, n_read, var){
         setDT %>% setup_nice2(., "modal_age")
   rb_mon$mean_bias <- mb$mean_bias
 
-
   # Weighted mean
   wm <- paste(round(colSums(rb_mon[, -1]*n_read, na.rm = TRUE)/
                 colSums(n_read, na.rm = TRUE), 2), "%")
@@ -870,8 +866,6 @@ rb_strata <- function(dat_in, n_read, var){
   return(rel_out)
 
 }
-
-
 
 
 # Table of differences per modal ages #########################################
@@ -910,7 +904,6 @@ rel_dist <- function(dat_in, num_r){
 }
 
 
-
 # Weighted mean ###############################################################
 
 # Weighted mean
@@ -918,27 +911,32 @@ rel_dist <- function(dat_in, num_r){
 # Calculate and output weighted mean of input data weighted on sumber of
 # age readings per modal age and reader
 # Outputting also a version of wm with added % sign to the results if needed
-# get_wm(cv, n_read, "y")
-# data <- cv; nr <- n_read; val <- "y"
-get_wm <- function(data, nr, val = "n", cor = TRUE) {
+
+get_wm <- function(data, dat_in, nr, val = "n", cor = TRUE){
 
   # Calcaulte weighted means
-  wm <- colSums(data * nr, na.rm = TRUE) / colSums(nr, na.rm = TRUE)
+  wm <- colSums(data*nr, na.rm = TRUE)/
+    colSums(nr, na.rm = TRUE)
 
-  if (cor) {
+  if (cor == TRUE) {
+
     # Total value
     if (val == "y") {
-      wm["all"] <- mean(as.numeric(data$cv), na.rm = TRUE)
+      wm["all"] <- meanNA(as.numeric(dat_in$cv))
     }
 
     # Adding percentage sign to results
-    wm_out <- wm
-    wm_out[] <- sprintf("%.1f %%", round(wm, 1))
+    wm_out <- as.data.frame(lapply(wm, function(x)
+      paste(round2(x), "%")))
+    names(wm_out) = gsub(pattern = "\\.", replacement = " ", names(wm_out))
 
     return(list(wm, wm_out))
+
   } else {
     return(wm)
+
   }
+
 }
 
 
