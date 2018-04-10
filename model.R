@@ -90,6 +90,11 @@ list[pa_tab_ex, pa_all_ex] <- get_perc_agree(ad_long_ex, num_read_ex)
 list[rb_tab, rb_all] <- get_rel_bias(mean_dat,num_read)
 list[rb_tab_ex, rb_all_ex] <- get_rel_bias(mean_dat_ex, num_read_ex)
 
+# Overall rank
+#rank_tab <- get_overall_rank(rbind(cv_tab, pa_tab, rb_tab))
+#rank_tab_ex <- get_overall_rank(rbind(cv_tab_ex, pa_tab_ex, rb_tab_ex))
+
+
 # TABLES 3 GE - age statistics per reader #####################################
 
 # Age composition
