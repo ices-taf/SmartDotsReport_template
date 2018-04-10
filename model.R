@@ -35,9 +35,7 @@ ad_wide_ex <- read.taf("data/ad_wide_ex.csv")
 part_tab <- reader_info(ad_long)
 part_tab2 <- part_tab
 
-colnames(part_tab) <- c("Reader code", "Institution", "Country", "Expertise")
-part_tab <- part_tab[order(part_tab$`Reader code`),]
-rownames(part_tab) <- NULL
+colnames(part_tab) <- c("Reader code", "Institute", "Country", "Expertise")
 
 # Sample overview
 list[sample_dat_ov, ma_range] <- sample_ov(ad_wide)
