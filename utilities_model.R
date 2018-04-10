@@ -841,19 +841,19 @@ rb_strata <- function(dat_in, n_read, var){
   rb_mon$mean_bias <- mb$mean_bias
 
   # Weighted mean
-  wm <- paste(round(colSums(rb_mon[, -1]*n_read, na.rm = TRUE)/
-                colSums(n_read, na.rm = TRUE), 2), "%")
-
-  # Add percentage sign to results
-  rb_mon2 <- round2(rb_mon[,-1])
-  rb_mon2[] <- paste(unlist(rb_mon2), "%")
-
-  # Combined agreement table
-  rel_out <- cbind("Modal age" = c(c(0:max(rb_mon$modal_age, na.rm = TRUE)), "Weighted Mean"),
-                       rbind(rb_mon2, wm))
-  rel_out[rel_out == "NA %" | rel_out == "NaN %"] <- NA
+  wm <- round(colSums(rb_mon[, -1]*n_read, na.rm = TRUE)/
+                colSums(n_read, na.rm = TRUE), 2)
+  # Combined result
+  rel_out <- cbind("Modal age" = c(0:max(rb_mon$modal_age, na.rm=T),
+                   "Weighted Mean"),
+                   as.data.frame(lapply(rbind(rb_mon[, -1], wm),
+                      function(x) formatC(x, format = 'f', digits = 2)),
+                      stringsAsFactors = F))
 
   # Corrections
+  rel_out[rel_out == "NaN" | rel_out == " NA"  ] <- NA
+
+  colnames(rel_out) <- c("Modal age", colnames(rb_mon)[-1])
   names(rel_out)[names(rel_out) %in% c("mean_bias")] <- "Mean bias"
 
   return(rel_out)
