@@ -301,11 +301,11 @@ plot_growth <- function(dist, compl, part,exp) {
 
   p_all <-
     ggplot(gro_dat3,
-           aes(x = factor(winterring), y = distance, col = Reader))
+           aes(x = factor(winterring + 1), y = distance, col = Reader))
   p <-
     p_all +
     geom_boxplot(lwd = 0.2, cex = 0.7) +
-    xlab("Winter ring") +
+    xlab("Annulus") +
     ylab("Distance from center (mm)")+
     theme_bw() +
     theme(axis.text = element_text(size = 12),
