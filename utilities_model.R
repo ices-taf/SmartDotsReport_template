@@ -204,9 +204,8 @@ number_readings <- function(dat_in) {
 # and standard deviation of the ages.
 # Total values for all readers and all modal ages are also calculated.
 # Readers are ranked from lowest to highest cv.
-#get_cv(mean_dat, std_dat, num_read, ad_wide)
-# n_read <- num_read; dat_in <- ad_wide
-get_cv <- function(mean_dat, std_dat, n_read, dat_in) {
+# n_read <- num_read; dat_inad_wide
+get_cv <- function(mean_dat, std_dat, n_read, dat_in){
 
   # CV, (ratio std/mean)
   cv <- cbind(modal_age = std_dat$modal_age,
@@ -216,29 +215,30 @@ get_cv <- function(mean_dat, std_dat, n_read, dat_in) {
   cv$modal_age <- NULL
 
   # Add overall CV from all individual ages
-  all_cv <-
-    dat_in %>%
-    dplyr::group_by(modal_age) %>%
-    dplyr::summarize(all = meanNA(as.numeric(cv)) ) %>%
-    setup_nice2(., "modal_age")
-  all_cv[all_cv$modal_age == 0, "all"] <- NA
+  all_cv <- dat_in %>% dplyr::group_by(modal_age) %>%
+            dplyr::summarize(all = meanNA(as.numeric(cv)) ) %>%
+            setup_nice2(., "modal_age")
+  all_cv[all_cv$modal_age==0,"all"] <- NA
+  cv$all <-  all_cv$all
 
-  cv$all <- all_cv$all
 
   cv0 <- as.data.frame(cv)
   cv0[is.nan(cv0)] <- NA
 
-  cv0[] <- Map(paste3, round2(cv0), "%", sep = " ")
+  cv0[] <- Map(paste3, round2(cv0),"%",sep=" ")
 
   # Add weighted mean
-  cv2 <- rbind(cv0, get_wm(cv, n_read, "n")[[2]])
+  wm <- get_wm(cv, dat_in, n_read, "y")[[2]]
+  names(wm) <- names(cv0)
+  cv2 <- rbind(cv0, wm)
 
   cv2[cv2 == "%"] <- NA
   cv2[cv2 == "NaN %"] <- NA
 
   # Add modal age and rank
-  max <- max(dat_in$modal_age, na.rm = T)
+  max <- max(dat_in$modal_age, na.rm = TRUE)
   cv_out <- cbind("modal_age" = c(c(0:max), "Weighted Mean"), cv2)
+
   names(cv_out)[names(cv_out) %in% "modal_age"] <- "Modal age"
 
   return(list(cv_out,cbind("modal_age" = 0:max, "cv" = cv$all)))
