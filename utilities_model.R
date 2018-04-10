@@ -458,7 +458,7 @@ age_compo <- function(dat_in){
 
 # Mean Length at Age ##########################################################
 
-mean_len_age <- function(dat_in, ac, max_age){
+mean_len_age <- function(dat_in, ac){
 
   # Fish mean length per age and reader
   mean_len_num  <- dat_in %>% group_by(age, reader) %>%
@@ -661,16 +661,7 @@ age_er_matrix_stock <- function(dat_in){
 
 }
 
-
-
 # number of modal ages per strata/month #######################################
-
-# Empty data frame with months
-df_month <- cbind(data.frame(matrix(ncol=1,nrow=0)),
-                  data.frame(matrix(ncol=12,nrow=0)))
-colnames(df_month) <- c("modal_age", month.abb[c(1:12)])
-
-
 
 # Number of samples per month/strata and modal age
 
@@ -741,13 +732,17 @@ cv_strata <- function(dat_in, num, var){
   # Weighted mean per month/strata and corrections
   wm <- paste(round2(colSums(num_mon2[,-1]*num, na.rm = TRUE)/
                        colSums(num, na.rm = TRUE)), "%")
-  num_mon3 <- round2(num_mon2[,-1])
-  num_mon3[] <- paste(unlist(num_mon3), "%")
+  num_mon3 <- as.data.frame(lapply(num_mon2[,-1],
+                                   function(x) paste(round2(x), "%")),
+                            stringsAsFactors = FALSE)
 
   # Combine all
   num_mon_out <- cbind("Modal age" = c(c(0:max(dat_un$modal_age, na.rm=T)),
                                        "Weighted Mean"), rbind(num_mon3, wm))
   num_mon_out[num_mon_out == "NaN %" | num_mon_out == "NA %"] <- NA
+
+  colnames(num_mon_out) <- c("Modal age", colnames(num_mon2)[-1])
+
 
   return(num_mon_out)
 }
@@ -768,8 +763,8 @@ pa_strata <- function(dat_in, n_read, var){
   }
 
   # Number of agreements per modal age and strata
-  n_agree <- dat_un[dat_un$age == dat_un$modal_age,] %>% as.data.frame
-  max <- max(dat_un$modal_age, na.rm = TRUE)
+  n_agree <- setDT(dat_un)[age == modal_age,] %>% as.data.frame()
+  max <- max(dat_un$modal_age,na.rm=T)
   n_agree2 <- as.data.frame.matrix(unlist(table(
                       n_agree[, "modal_age"], n_agree[, var]))) %>%
               setup_nice(.,max)
@@ -802,15 +797,19 @@ pa_strata <- function(dat_in, n_read, var){
   wm <- paste(round2(colSums(agree_mon[, -1]*n_read, na.rm = TRUE)/
                        colSums(n_read, na.rm = TRUE)), "%")
   # Add percentage sign to results
-  agree_mon2 <- round2(agree_mon[,-1])
-  agree_mon2[] <- paste(unlist(agree_mon2), "%")
+  agree_mon2 <- as.data.frame(lapply(agree_mon[, -1],
+                       function(x) paste(round2(x), "%")),
+                stringsAsFactors = FALSE)
 
   # Combined agreement table
   agree_mon_out <- cbind("Modal age" = c(c(0:max), "Weighted Mean"),
                        rbind(agree_mon2, wm))
   agree_mon_out[agree_mon_out == "NA %" | agree_mon_out == "NaN %"] <- NA
 
-  agree_mon_out
+  colnames(agree_mon_out) <- c("Modal age", colnames(agree_mon)[-1])
+
+  return(agree_mon_out)
+
  }
 
 
