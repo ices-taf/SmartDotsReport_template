@@ -13,6 +13,10 @@ library(scales)
 library(tibble)
 
 
+##     Exchange analysis for SmartDots
+##     Version 1.0 2017
+##     get_functions.R
+
 # Defining functions for use in the analysis ##################################
 
 # TEXT EXPLAINING THE SCRIPT AND THE ANALYSIS.....
@@ -128,7 +132,7 @@ data_ov <- function(dat_in, dat_in2, event_id, report_token) {
 
   # Combine data in correct order
 
-  sample_vars <- select(dat_in, c(FishID, sample, length, sex, catch_date, ices_area))
+  sample_vars <- select(dat_in, c(FishID, sample, length, sex, catch_date, ices_area, stock))
 
   dat_out <- as.data.frame(cbind(sample_vars,
                                  select(readings, -modal_age),
@@ -155,10 +159,11 @@ data_ov <- function(dat_in, dat_in2, event_id, report_token) {
   date_name <- "Catch date"
 
   names(dat_out2)[names(dat_out2) %in%
-                   c("sample", "length", "sex", date_vals, "ices_area",
+                   c("sample", "length", "sex", date_vals, "ices_area", "stock",
                      "modal_age", "perc_agree",'cv', 'ape')] <-
                    c("Sample", "Length (mm)", "Sex", date_name,"ICES area",
-                     "Modal age", "PA %", "CV %", "APE %")
+                     "ICES stock", "Modal age", "PA %", "CV %", "APE %")
+
 
   # form hyper link for tables
   link_template <-
