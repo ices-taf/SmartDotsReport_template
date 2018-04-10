@@ -952,8 +952,8 @@ get_rank <- function(data, nr, char, cor = TRUE){
 # from data in wide format
 get_ages <- function(dat_in){
 
-   dat_out <- dplyr::select(dat_in, -c(FishID, sample, length, sex, catch_date, year,
-                                       qtr, month, ices_area, cv))
+   cols <- which(names(dat_in) == "modal_age"):ncol(dat_in)
+   dat_out <- dplyr::select(dat_in, cols)
   return(dat_out)
 }
 
