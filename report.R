@@ -14,8 +14,8 @@ library(knitr)
 mkdir("report")
 
 # source utilities
-source("utilities_report.R")
-source("utilities.R")
+source("utilities-update.R")
+source("utilities-patched.R")
 
 # load configuration data
 config <- read_json("config.json", simplifyVector = TRUE)
