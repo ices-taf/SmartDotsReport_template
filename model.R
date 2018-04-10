@@ -100,8 +100,8 @@ ac_tab <- age_compo(ad_long)
 ac_tab_ex <- age_compo(ad_long_ex)
 
 # Mean length at age
-list[mla_tab,mla_num] <- mean_len_age(ad_long, ac_tab, max_age)
-list[mla_tab_ex,mla_num_ex] <- mean_len_age(ad_long_ex, ac_tab_ex, max_age)
+list[mla_tab,mla_num] <- mean_len_age(ad_long, ac_tab)
+list[mla_tab_ex,mla_num_ex] <- mean_len_age(ad_long_ex, ac_tab_ex)
 
 # Inter reader bias test
 bias_tab <- bias_test(get_ages(ad_wide))
