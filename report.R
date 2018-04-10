@@ -34,6 +34,15 @@ for (file in dir("model", pattern = "*.rData")) {
   load(paste0("model/", file))
 }
 
+# render summary and copy to report folder
+summary_filename <- paste0(config$summary_name, ".docx")
+render("report-summary.Rmd",
+       params = list(summary_title = config$summary_title),
+       output_file = summary_filename,
+       encoding = "UTF-8")
+cp(summary_filename, "report", move = TRUE)
+
+
 # render report and copy to report folder
 report_filename <- paste0(config$report_name, ".docx")
 render("report-full.Rmd",
@@ -42,12 +51,5 @@ render("report-full.Rmd",
        encoding = "UTF-8")
 cp(report_filename, "report", move = TRUE)
 
-# render summary and copy to report folder
-summary_filename <- paste0(config$summary_name, ".docx")
-render("report-summary.Rmd",
-       params = list(summary_title = config$summary_title),
-       output_file = summary_filename,
-       encoding = "UTF-8")
-cp(summary_filename, "report", move = TRUE)
 
 # finally copy to sharepoint?
