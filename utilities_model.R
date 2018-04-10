@@ -45,7 +45,7 @@ library(tibble)
 #                   each reader and modal age
 # age_er_matrix   : Relative contributions of ages for each modal age
 # style_table0-3  : help function, 4 functions that change the style of output
-# number_stata    : number of otolith per strata/month
+# number_strata   : number of otolith per strata/month
 # cv_strata       : cv per strata/month
 # pa_strata       : percentage agreement per strata/month
 # rb_strata       : relative buas per strata/month
@@ -110,9 +110,6 @@ sample_ov <- function(dat_in){
 }
 
 
-}
-
-
 
 # Table 1 #####################################################################
 
@@ -121,6 +118,7 @@ sample_ov <- function(dat_in){
 #  data_ov(ad_wide, ad_long)
 #  dat_in <- ad_wide; dat_in2 <- ad_long
 data_ov <- function(dat_in, dat_in2, event_id, report_token) {
+
 
   # Select only columns of age readings
   readings <- get_ages(dat_in)
@@ -335,7 +333,6 @@ std_ages <- function(dat_in){
 # dat_in <- ad_long; n_read <- num_read
 get_perc_agree <- function(dat_in, n_read){
 
-  # Get data with agreement between reading and modal age and
   # create table with number of agreements per reader
   n_agree <- as.data.table(dat_in)[age == modal_age,]
   max_age <- max(dat_in$modal_age, na.rm = TRUE)
@@ -343,16 +340,7 @@ get_perc_agree <- function(dat_in, n_read){
   n_agree2 <-
     table(n_agree$modal_age, factor(n_agree$reader, levels = sort(unique(dat_in$reader)))) %>%
     as.data.frame.matrix %>%
-    setup_nice(., max_age) %>%
-    select(-modal_age)
   n_agree2 <- n_agree2 / select(as.data.table(n_read), -total) * 100
-
-  # overall agreement per modal age
-  n_agree2$all <-
-    as.data.table(table(n_agree$modal_age)) %>%
-    setup_nice(., max_age) %>%
-    dplyr::select(-modal_age) / n_read$total * 100
-    n_agree2[is.nan(n_agree2)] <- NA
 
   # Add % sign to cells
   new_PA <- as.data.frame(n_agree2)
