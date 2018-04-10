@@ -985,10 +985,10 @@ setup_nice1 <- function(dat_in, key_in,max){
 setup_nice2 <- function(dat_in, key_in){
 
   if (key_in == "modal_age") {
-    max <- max(dat_in$modal_age, na.rm = TRUE)
-  } else if (key_in == "age") {
-    max <- max(dat_in$age, na.rm = TRUE)
-  } else if (key_in == "modal_age-age") {
+    max <- max(dat_in$modal_age, na.rm=T)
+  } else if (key_in == "age"){
+    max <- max(dat_in$age, na.rm=T)
+  } else if (key_in == "modal_age-age"){
     max <- as.numeric(colnames(dat_in)[ncol(dat_in)])
     key_in <- "modal_age"
   }
