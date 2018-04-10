@@ -112,6 +112,12 @@ bias_tab_ex <- bias_test(get_ages(ad_wide_ex))
 
 # TABLES 4 GE - Statistics per month ##########################################
 
+# Empty data frame with months
+df_month <- cbind(data.frame(matrix(ncol=1,nrow=0)),
+                  data.frame(matrix(ncol=12,nrow=0)))
+colnames(df_month) <- c("modal_age", month.abb[c(1:12)])
+
+
 # Number readings per month
 list[num_mo, num_mo_comp] <- number_strata(ad_wide, "month")
 list[num_mo_ex, num_mo_comp_ex] <- number_strata(ad_wide_ex, "month")
@@ -128,6 +134,64 @@ pa_mo_tab_ex <- pa_strata(ad_long_ex, num_mo_ex, "month")
 rb_mo_tab <- rb_strata(ad_long, num_mo, "month")
 rb_mo_tab_ex <- rb_strata(ad_long_ex, num_mo_ex, "month")
 
+
+
+# TABLES 5 GE - Statistisc per strata #########################################
+
+## Strata = ICES AREA
+
+# Number readings per strata = ICES area
+list[num_st, num_st_comp] <- number_strata(ad_wide, config$strata)
+list[num_st_ex, num_st_comp_ex] <- number_strata(ad_wide_ex, config$strata)
+
+# CV per strata = ICES area
+cv_st_tab <- cv_strata(ad_wide, num_st, config$strata)
+cv_st_tab_ex <- cv_strata(ad_wide_ex, num_st_ex, config$strata)
+
+# PA per strata = ICES area
+pa_st_tab <- pa_strata(ad_long, num_st, config$strata)
+pa_st_tab_ex <- pa_strata(ad_long_ex, num_st_ex, config$strata)
+
+# Relative bias per strata = ICES area
+rb_st_tab <- rb_strata(ad_long, num_st, config$strata)
+rb_st_tab_ex <- rb_strata(ad_long_ex, num_st_ex, config$strata)
+
+## Strata = STOCK
+
+# Number readings per strata = ICES stock
+list[num_st2, num_st2_comp] <- number_strata(ad_wide, config$strata2)
+list[num_st2_ex, num_st2_comp_ex] <- number_strata(ad_wide_ex, config$strata2)
+
+# CV per strata = ICES stock
+cv_st2_tab <- cv_strata(ad_wide, num_st2, config$strata2)
+cv_st2_tab_ex <- cv_strata(ad_wide_ex, num_st2_ex, config$strata2)
+
+# PA per strata = ICES stock
+pa_st2_tab <- pa_strata(ad_long, num_st2, config$strata2)
+pa_st2_tab_ex <- pa_strata(ad_long_ex, num_st2_ex, config$strata2)
+
+# Relative bias per strata = ICES stock
+rb_st2_tab <- rb_strata(ad_long, num_st2, config$strata2)
+rb_st2_tab_ex <- rb_strata(ad_long_ex, num_st2_ex, config$strata2)
+
+
+## Strata = Preparatio method
+
+# Number readings per strata = ICES stock
+list[num_st3, num_st3_comp] <- number_strata(ad_wide, config$strata3)
+list[num_st3_ex, num_st3_comp_ex] <- number_strata(ad_wide_ex, config$strata3)
+
+# CV per strata = ICES stock
+cv_st3_tab <- cv_strata(ad_wide, num_st3, config$strata3)
+cv_st3_tab_ex <- cv_strata(ad_wide_ex, num_st3_ex, config$strata3)
+
+# PA per strata = ICES stock
+pa_st3_tab <- pa_strata(ad_long, num_st3, config$strata3)
+pa_st3_tab_ex <- pa_strata(ad_long_ex, num_st3_ex, config$strata3)
+
+# Relative bias per strata = ICES stock
+rb_st3_tab <- rb_strata(ad_long, num_st3, config$strata3)
+rb_st3_tab_ex <- rb_strata(ad_long_ex, num_st3_ex, config$strata3)
 
 # Age error matrix ############################################################
 
