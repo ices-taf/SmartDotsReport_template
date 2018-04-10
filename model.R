@@ -18,9 +18,8 @@ download.file(url = config$report_template, "model/reportTemplate.docx", quiet =
 download.file(url = config$summary_template, "model/summaryTemplate.docx", quiet = TRUE, mode = "wb")
 
 # load utilities
-source("utilities_model.R")
-source("utilities.R")
-
+source("utilities-update.R")
+source("utilities-patched.R")
 
 
 # read input data
@@ -215,14 +214,25 @@ list[ae_mat_stock, areas_stock] <- age_er_matrix_stock(ad_long_ex)
 list_of_obj <-
   c("ac_tab", "ac_tab_ex", "ad_long", "ad_long_ex", "ad_wide", "ad_wide_ex",
     "ae_mat_ex", "areas", "bias_tab", "bias_tab_ex", "compl_sample", "compl_sample_ex",
-    "cv_all", "cv_all_ex", "cv_mo_tab", "cv_mo_tab_ex",
+    "cv_all", "cv_all_ex",
+    "cv_mo_tab", "cv_mo_tab_ex",
+    "cv_st_tab", "cv_st_tab_ex",
+    "cv_st2_tab", "cv_st2_tab_ex",
+    "cv_st3_tab", "cv_st3_tab_ex",
     "cv_tab", "cv_tab_ex", "dif_tab", "dif_tab_co", "dif_tab_co_ex", "dif_tab_ex",
     "max_age", "max_age_ex",
     "ma_range", "max_modal", "max_modal_ex", "mean_dat", "mean_dat_ex",
-    "mla_num", "mla_num_ex", "mla_tab", "mla_tab_ex", "num_mo", "num_mo_comp",
-    "num_mo_comp_ex", "num_mo_ex", "num_read", "num_read_comp", "num_read_comp_ex",
-    "num_read_ex",
-    "pa_all", "pa_all_ex", "pa_mo_tab", "pa_mo_tab_ex",
+    "mla_num", "mla_num_ex", "mla_tab", "mla_tab_ex",
+    "num_mo", "num_mo_comp", "num_mo_comp_ex", "num_mo_ex",
+    "num_read", "num_read_comp", "num_read_comp_ex", "num_read_ex",
+    "num_st", "num_st_comp", "num_st_comp_ex", "num_st_ex",
+    "num_st2", "num_st2_comp", "num_st2_comp_ex", "num_st2_ex",
+    "num_st3", "num_st3_comp", "num_st3_comp_ex", "num_st3_ex",
+    "pa_all", "pa_all_ex",
+    "pa_mo_tab", "pa_mo_tab_ex",
+    "pa_st_tab", "pa_st_tab_ex",
+    "pa_st2_tab", "pa_st2_tab_ex",
+    "pa_st3_tab", "pa_st3_tab_ex",
     "pa_tab", "pa_tab_ex", "part_tab", "part_tab2", "rb_all",
     "rb_all_ex", "rb_mo_tab", "rb_mo_tab_ex", "rb_tab",
     "rb_tab_ex", "sample_dat_ov", "std_all", "std_all_ex", "std_dat", "std_dat_ex",
