@@ -962,13 +962,14 @@ get_ages <- function(dat_in){
 
 # Different setups to order data from 0:n either by age or modal age
 
-setup_nice <- function(dat_in, max) {
-  dat_in %>%
-    setDT(., keep.rownames = TRUE) %>%
-    setnames(., 1, "modal_age") %>%
-    mutate(modal_age=as.integer(modal_age)) %>%
-    setDT(key = "modal_age") %>%
-    .[CJ(0:max),]
+setup_nice <- function(dat_in, max){
+
+  clean_dat <- setDT(dat_in, keep.rownames = TRUE) %>%
+               setnames(., 1, "modal_age") %>%
+               mutate(modal_age=as.integer(modal_age)) %>%
+               setDT(key = "modal_age") %>%
+               .[CJ(0:max),]
+
 }
 
 setup_nice1 <- function(dat_in, key_in,max){
