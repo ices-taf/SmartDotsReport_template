@@ -115,8 +115,6 @@ sample_ov <- function(dat_in){
 
 # Creates Table 1 in GE with sample info, age readings, modal age, CV and PA
 # Additionally APE is also added to the output (not part of GE table 1)
-#  data_ov(ad_wide, ad_long)
-#  dat_in <- ad_wide; dat_in2 <- ad_long
 data_ov <- function(dat_in, dat_in2, event_id, report_token) {
 
 
@@ -289,7 +287,8 @@ mean_ages <- function(dat_in){
 
   # Reorganize and add overall mean column
   ma_out <- mean_ages %>% setup_nice2(., "modal_age") %>%
-            mutate(all = rowMeans(.[, -1], na.rm = TRUE))
+            mutate(all = rowMeans(.[, -1])) %>%
+            setDT
 
   ma_out[is.nan(ma_out)] <- NA
   ma_out %>% as.data.table
@@ -333,26 +332,32 @@ std_ages <- function(dat_in){
 # dat_in <- ad_long; n_read <- num_read
 get_perc_agree <- function(dat_in, n_read){
 
-  # create table with number of agreements per reader
-  n_agree <- as.data.table(dat_in)[age == modal_age,]
-  max_age <- max(dat_in$modal_age, na.rm = TRUE)
+    # Get data with agreement between reading and modal age and
+    # create table with number of agreements per reader
+    n_agree <- setDT(dat_in)[age == modal_age,]
+    max <- max(dat_in$modal_age,na.rm=T)
+    n_agree2 <- as.data.frame.matrix(unlist(table(n_agree$modal_age,
+                                                  n_agree$reader))) %>%
+                setup_nice(.,max) %>% select(-modal_age)/
+                                       select(n_read, -total)*100
 
-  n_agree2 <-
-    table(n_agree$modal_age, factor(n_agree$reader, levels = sort(unique(dat_in$reader)))) %>%
-    as.data.frame.matrix %>%
-  n_agree2 <- n_agree2 / select(as.data.table(n_read), -total) * 100
+    # overall agreement per modal age
+    n_agree2$all <- as.data.table(table(n_agree$modal_age)) %>%
+                    setup_nice(.,max) %>%
+                    dplyr::select(-modal_age)/n_read$total*100
 
-  # Add % sign to cells
-  new_PA <- as.data.frame(n_agree2)
-  new_PA[] <- sprintf("%0.0f %%", round2(unlist(new_PA)))
+    # Add % sign to cells
+    new_PA <- as.data.frame(lapply(n_agree2, function(x)
+                              paste(round2(x), "%")), stringsAsFactors = FALSE)
+    names(new_PA) = gsub(pattern = "\\.", replacement = " ", names(new_PA))
 
-  # Combined agreement table
-  pa <-  cbind("modal_age" = c(0:max_age, "Weighted Mean"),
-        rbind(new_PA, get_wm(n_agree2, n_read)[[2]] ) )
+    # Combined agreement table
+     pa <-  cbind("modal_age" = c(0:max, "Weighted Mean"),
+            rbind(new_PA, get_wm(n_agree2, ., n_read)[[2]] ) )
 
-  # Minor cleaning up..
-  pa[pa=="NA %"] <- NA
-  names(pa)[names(pa) %in% c("modal_age")] <- c("Modal age")
+     # Minor cleaning up..
+     pa[pa=="NA %"] <- NA
+     names(pa)[names(pa) %in% c("modal_age")] <- c("Modal age")
 
      return(list(pa, cbind("modal_age" = 0:max, "pa" = n_agree2$all)))
 
