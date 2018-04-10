@@ -59,12 +59,16 @@ library(tibble)
 
 # The function takes the input data (ad_long) and outputs a table of
 # reader information on all participating readers
-reader_info <- function(data) {
+reader_info <- function(data){
 
   # Keep unique readers
-  reader_data <- unique(data[,c("reader", "institution",
+  reader_data <- unique(data[,c("reader", "institute",
                                 "country", "expertise")])
-  return(reader_data)
+
+  reader_data_out <- reader_data[with(reader_data, order(reader)), ]
+
+  row.names(reader_data_out) <- 1:nrow(reader_data_out)
+  return(reader_data_out)
 }
 
 
