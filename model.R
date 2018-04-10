@@ -40,14 +40,13 @@ part_tab <- part_tab[order(part_tab$`Reader code`),]
 rownames(part_tab) <- NULL
 
 # Sample overview
-sample_dat_ov <- sample_ov(ad_wide)
+list[sample_dat_ov, ma_range] <- sample_ov(ad_wide)
 
 # Max values need for output tables
 max_age <- max(ad_long$age, na.rm = TRUE)
 max_modal <- max(ad_long$modal_age, na.rm = TRUE)
 max_age_ex <- max(ad_long_ex$age, na.rm = TRUE)
 max_modal_ex <- max(ad_long_ex$modal_age, na.rm = TRUE)
-ma_range <- range(ad_long$modal_age, na.rm = TRUE)
 
 # TABLES 6 GE - Mean and standard deviation ####################################
 
