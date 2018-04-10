@@ -186,7 +186,7 @@ plot_growth(dist[dist$reader %in% ad_long_ex$reader[ad_long_ex$expertise!="Begin
 if (params$data_subset != "stock") {
 
   # Section title
-  asis_output("# Results by month")
+  asis_output("# Results by stock")
 }
 ```
 
@@ -223,7 +223,7 @@ if (params$data_subset != "stock") {
   set.caption('**Table X:** Number of age readings per stock for advanced readers.')
 
   # Output table
-  pander(style_table1(num_mo_comp_ex), missing = "-")
+  pander(style_table1(num_st2_comp_ex), missing = "-")
 }
 ```
 
@@ -238,7 +238,7 @@ if (params$data_subset != "stock") {
   set.caption('**Table X:** CV per stock.')
 
   # Output table
-  pander(style_table2(cv_mo_tab_ex), missing = "-")
+  pander(style_table2(cv_st2_tab_ex), missing = "-")
 }
 ```
 
@@ -253,7 +253,7 @@ if (params$data_subset != "stock") {
   set.caption('**Table X:** Percentage Agreement per stock.')
 
   # Output table
-  pander(style_table2(pa_mo_tab_ex), missing = "-")
+  pander(style_table2(pa_st2_tab_ex), missing = "-")
 }
 ```
 
