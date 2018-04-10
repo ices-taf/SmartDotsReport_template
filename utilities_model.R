@@ -82,19 +82,30 @@ sample_ov <- function(dat_in){
   ov1 <- ddply(dat_in, .(ices_area, year, qtr), summarise,
                min_len = 5*round(min(length, na.rm = TRUE)/5),
                max_len = 5*round(max(length, na.rm = TRUE)/5),
-               num = sum(!is.na(sample)))
+               num = sum(!is.na(sample)),
+               min_ma = min(modal_age, na.rm=T),
+               max_ma = max(modal_age, na.rm=T))
 
   # Determine length range
   ov1$range <- ifelse(ov1$min_len != ov1$max_len,
                       paste0(ov1$min_len,"-",ov1$max_len, " mm"),
                       paste0(ov1$max_len, " mm"))
+  ov1$range_ma <- ifelse(ov1$min_ma != ov1$max_ma,
+                      paste0(ov1$min_ma,"-",ov1$max_ma),
+                      paste0(ov1$max_ma))
 
   # Selecting and renaming variables for output
-  ov2 <- ov1[, c("ices_area", "year", "qtr", "range", "num")]
+  ov2 <- ov1[, c("ices_area", "year", "qtr", "num", "range_ma", "range")]
   colnames(ov2) <- c("ICES area", "Year", "Quarter",
-                     "Length range", "Number of samples")
+                     "Number of samples", "Modal age range", "Length range")
 
-  return(ov2)
+  ma_range <- data.frame(min_ma = min(dat_in$modal_age, na.rm = T),
+                         max_ma = max(dat_in$modal_age, na.rm = T))
+
+  return(list(ov2, ma_range))
+}
+
+
 }
 
 
@@ -134,9 +145,9 @@ data_ov <- function(dat_in, dat_in2, event_id, report_token) {
                                     "Total number NOT read"), dat_sum)
 
   # Summary information on the CV and PA
-  sum_stat <- data.frame("Mean PA %" = mean(dat_out2$perc_agree, na.rm = TRUE),
-                         "Mean CV %" = mean(dat_out2$cv, na.rm = TRUE),
-                         "Mean APE %" = mean(dat_out2$ape, na.rm = TRUE))
+  sum_stat <- data.frame("Mean PA %" = round2(meanNA(dat_out2$perc_agree)),
+                         "Mean CV %" = round2(meanNA(dat_out2$cv)),
+                         "Mean APE %" = round2(meanNA(dat_out2$ape)))
   colnames(sum_stat) <- c("Mean PA %", "Mean CV %", "Mean APE %")
 
   # Renaming selected columns
@@ -170,14 +181,14 @@ data_ov <- function(dat_in, dat_in2, event_id, report_token) {
 # number of age readings ######################################################
 
 # Number of age readings per reader per modal age
-number_readings <- function(dat_in) {
+number_readings <- function(dat_in){
 
   # Remove rows with no age readings
   dat_un <- dat_in[!is.na(dat_in$age), ]
 
   # Calculate number of readings per reader grouped by modal age and add total
   # number of readings per modal age
-  max <- max(dat_un$modal_age, na.rm = TRUE)
+  max <- max(dat_un$modal_age, na.rm = T)
   num_read <- as.data.frame.matrix(table(dat_un$modal_age, dat_un$reader)) %>%
               setup_nice(.,max) %>% mutate(total = rowSums(.[, -1]))
 
@@ -249,7 +260,7 @@ get_cv <- function(mean_dat, std_dat, n_read, dat_in){
 
 # The APE is a measure of preduction accuracy that for each sample considers
 # the difference between each age reading and the mean age of the sample
-get_ape <- function(dat_in) {
+get_ape <- function(dat_in){
 
   # Calculate APE per sample
   ape <- dat_in %>% filter(modal_age != 0) %>%
