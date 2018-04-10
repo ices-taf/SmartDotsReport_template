@@ -38,8 +38,7 @@ style_table1 <- function(tab) {
   names(tab) <- capFirst(names(tab))
   names(tab) <- pandoc.strong.return(names(tab))
   emphasize.strong.cols(ncol(tab))
-  emphasize.strong.rows((nrow(tab) - 1))
-  emphasize.italics.rows(nrow(tab))
+  emphasize.strong.rows(nrow(tab))
 
   return(tab)
 }
