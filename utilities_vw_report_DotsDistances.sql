@@ -7,7 +7,6 @@ SELECT
   tblAnnotations.tblAnnotationID as AnnotationID,
   tblSamples.FishID,
   Number,
-  tblAnnotations.SmartUser as smartUser,
   DotIndex as mark,
   ((X-X1) * cos(-theta) - (Y-Y1) * sin(-theta)) / Scale as distance,
   (X-X1) * cos(-theta) - (Y-Y1) * sin(-theta) as pixelDistance,

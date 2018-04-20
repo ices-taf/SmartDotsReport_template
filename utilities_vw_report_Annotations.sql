@@ -15,8 +15,6 @@ SELECT
   xSex.Code as sex,
   xPrepMethod.Description as prep_method,
   xStock.Code as stock,
-  tblAnnotations.SmartUser as reader_name,
-  tblAnnotations.SmartUser as reader_lastname,
   Number as reader_number,
   ExpertiseLevel as expertise,
   xCountry.Description as country,
