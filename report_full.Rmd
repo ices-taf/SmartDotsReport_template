@@ -4,7 +4,7 @@ output:
     fig_caption: true
     fig_height: 10
     fig_width: 10
-    reference_docx: model/reportTemplate.docx
+    reference_docx: begin/initial/reportTemplate.docx
     toc: true
     keep_md: true
 params:

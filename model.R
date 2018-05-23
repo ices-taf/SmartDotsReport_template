@@ -13,9 +13,6 @@ mkdir("model")
 # load configuration
 config <- read_json("config.json", simplifyVector = TRUE)
 
-# download the report and summary templates
-download.file(url = config$report_template, "model/reportTemplate.docx", quiet = TRUE, mode = "wb")
-download.file(url = config$summary_template, "model/summaryTemplate.docx", quiet = TRUE, mode = "wb")
 
 # load utilities
 source("utilities-update.R")

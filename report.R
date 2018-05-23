@@ -14,8 +14,8 @@ library(knitr)
 mkdir("report")
 
 # source utilities
-source("utilities-update.R")
-source("utilities-patched.R")
+source("utilities_update.R")
+source("utilities_patched.R")
 
 # load configuration data
 config <- read_json("config.json", simplifyVector = TRUE)
@@ -36,7 +36,7 @@ for (file in dir("model", pattern = "*.rData")) {
 
 # render summary and copy to report folder
 summary_filename <- paste0(config$summary_name, ".docx")
-render("report-summary.Rmd",
+render("report_summary.Rmd",
        params = list(summary_title = config$summary_title),
        output_file = summary_filename,
        encoding = "UTF-8")
@@ -45,7 +45,7 @@ cp(summary_filename, "report", move = TRUE)
 
 # render report and copy to report folder
 report_filename <- paste0(config$report_name, ".docx")
-render("report-full.Rmd",
+render("report_full.Rmd",
        params = list(report_title = config$report_title),
        output_file = report_filename,
        encoding = "UTF-8")
