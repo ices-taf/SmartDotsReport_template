@@ -37,6 +37,8 @@ vignettes/*.pdf
 *.Rproj
 
 # TAF model folder
+begin/*
+!begin/initial/
 /data/
 /model/
 /report/
