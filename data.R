@@ -7,7 +7,6 @@
 
 library(icesTAF)
 library(jsonlite)
-library(RODBC)
 library(tidyr)
 
 # create data directory
@@ -21,44 +20,10 @@ source("utilities.R")
 # load configuration
 config <- read_json("config.json", simplifyVector = TRUE)
 
-# get data from database -------------------------------
+# get data from begin folder  -------------------------------
 
-# DB settings
-dbConnection <- 'Driver={SQL Server};Server=SQL06;Database=SmartDots;Trusted_Connection=yes'
-
-# create filter for events
-filter <- paste(sprintf("EventID = %i", config$event_ids), collapse = " or ")
-
-# update view
-msg("updating annotate view")
-conn <- odbcDriverConnect(connection = dbConnection)
-sqlq <- paste(readLines("utilities_vw_report_Annotations.sql"), collapse = "\n")
-ret <- sqlQuery(conn, sqlq)
-odbcClose(conn)
-if (length(ret)) msg(ret)
-
-# data: one row per set of dots
-msg("downloading annotations for ... ", filter)
-sqlq <- sprintf(paste("select * FROM vw_report_Annotations where %s"), filter)
-conn <- odbcDriverConnect(connection = dbConnection)
-ad <- sqlQuery(conn, sqlq)
-odbcClose(conn)
-
-
-# update view
-msg("updating dots distances view")
-conn <- odbcDriverConnect(connection = dbConnection)
-sqlq <- paste(readLines("utilities_vw_report_DotsDistances.sql"), collapse = "\n")
-ret <- sqlQuery(conn, sqlq)
-odbcClose(conn)
-if (length(ret)) msg(ret)
-
-# dist: one row per dot
-msg("downloading dots for ... ", filter)
-sqlq <- sprintf(paste("select * FROM vw_report_DotsDistances where %s"), filter)
-conn <- odbcDriverConnect(connection = dbConnection)
-dist <- sqlQuery(conn, sqlq)
-odbcClose(conn)
+ad <- read.taf("begin/data.csv")
+dist <- read.taf("begin/dist.csv")
 
 # quick hacks -------------------------------
 
@@ -115,7 +80,7 @@ names(webgr) <- c("IMAGE", 1:length(readers))
 head(webgr)
 
 
-# write out input data tables
+# write out input data tables for use later
 write.taf(dist, "data/dist.csv")
 write.taf(ad, "data/data.csv")
 write.taf(ad_long, "data/ad_long.csv")
