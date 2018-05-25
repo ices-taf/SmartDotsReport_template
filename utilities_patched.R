@@ -219,3 +219,7 @@ plot_growth <- function(dist, compl, part,exp) {
   p
 }
 
+
+get_ages <- function(dat) {
+  dat[grep("modal_age", names(dat)):ncol(dat)]
+}
