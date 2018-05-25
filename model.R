@@ -15,8 +15,8 @@ config <- read_json("config.json", simplifyVector = TRUE)
 
 
 # load utilities
-source("utilities-update.R")
-source("utilities-patched.R")
+source("utilities_update.R")
+source("utilities_patched.R")
 
 
 # read input data
@@ -230,7 +230,7 @@ list_of_obj <-
     "pa_st_tab", "pa_st_tab_ex",
     "pa_st2_tab", "pa_st2_tab_ex",
     "pa_st3_tab", "pa_st3_tab_ex",
-    "pa_tab", "pa_tab_ex", "part_tab", "part_tab2", "rb_all",
+    "pa_tab", "pa_tab_ex", "part_tab", "part_tab2", "rb_all", "rb_st_tab", "rb_st_tab_ex",
     "rb_all_ex", "rb_mo_tab", "rb_mo_tab_ex", "rb_tab",
     "rb_tab_ex", "sample_dat_ov", "std_all", "std_all_ex", "std_dat", "std_dat_ex",
     "stocks", "ae_mat_stock", "areas_stock",
