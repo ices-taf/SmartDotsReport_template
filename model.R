@@ -27,11 +27,18 @@ ad_wide_ex <- read.taf("data/ad_wide_ex.csv")
 
 # Participants and data overview ##############################################
 
-# Participants
-part_tab <- reader_info(ad_long)
-part_tab2 <- part_tab
+# Participants table
+reader_data <-
+  ad_long %>%
+  select(reader, country, expertise) %>%
+  unique %>%
+  arrange(reader) %>%
+  rename(`Reader code` = reader,
+         Country = country,
+         Expertise = expertise)
 
-colnames(part_tab) <- c("Reader code", "Institute", "Country", "Expertise")
+write.taf(reader_data, dir = "model")
+
 
 # Sample overview
 list[sample_dat_ov, ma_range] <- sample_ov(ad_wide)
