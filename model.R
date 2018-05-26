@@ -41,7 +41,46 @@ write.taf(reader_data, dir = "model")
 
 
 # Sample overview
-list[sample_dat_ov, ma_range] <- sample_ov(ad_wide)
+sample_data_overview <-
+  ad_wide %>%
+    group_by(ices_area, year, qtr) %>%
+    summarise(
+      min_len = 5*round(min(length, na.rm = TRUE)/5),
+      max_len = 5*round(max(length, na.rm = TRUE)/5),
+      num = sum(!is.na(sample)),
+      min_ma = min(modal_age, na.rm = TRUE),
+      max_ma = max(modal_age, na.rm = TRUE)
+    ) %>%
+    # Determine length range
+    mutate(
+      range = ifelse(min_len != max_len,
+                     paste0(min_len, "-", max_len, " mm"),
+                     paste0(max_len, " mm")),
+      range_ma = ifelse(min_ma != max_ma,
+                      paste0(min_ma, "-", max_ma),
+                      paste0(max_ma))
+    ) %>%
+  select(ices_area, year, qtr, num, range_ma, range) %>%
+  rename(
+    `ICES area` = ices_area,
+    Year = year,
+    Quarter = qtr,
+    `Number of samples` = num,
+    `Modal age range` = range_ma,
+    `Length range` = range
+  ) %>%
+  as.data.frame
+
+write.taf(sample_data_overview, dir = "model")
+
+# model age range
+modal_age_range <-
+  data.frame(min_ma = min(ad_wide$modal_age, na.rm = TRUE),
+             max_ma = max(ad_wide$modal_age, na.rm = TRUE))
+
+write.taf(modal_age_range, dir = "model")
+
+
 
 # Max values need for output tables
 max_age <- max(ad_long$age, na.rm = TRUE)
