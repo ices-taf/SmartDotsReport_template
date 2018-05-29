@@ -1,5 +1,12 @@
 
-library(plyr)
+#Rounding
+Mode <- function(x) {
+  as.numeric(names(sort(table(x), decreasing = TRUE)[1]))
+}
+
+cv <- function (x) {
+  sd(x, na.rm = TRUE) / mean(x, na.rm = TRUE) * 100
+}
 
 # Determine modal age and CV ##################################################
 
@@ -11,37 +18,35 @@ library(plyr)
 # WHich method to use is set in the ma_method variable.
 # If the modal age is 0 the CV is set to 0 as well.
 
-add_modalage <- function(dat, ma_method) {
+add_modalage <- function(ad, ma_method) {
 
-  # Determine modal age and calculate cv depending on ma_method
-  if (ma_method == "Mean") {
-    ma_cv <-
-      ddply(dat[!is.na(dat$age),], .(sample),
-            function(x) {
-              data.frame(cv = round2(sd(x$age, na.rm = TRUE)/(mean(x$age, na.rm = TRUE))*100),
-                         modal_age = ifelse(
-                                       length(which(table(x$age) == max(table(x$age)))) < 2,
-                                          Mode(x$age),
-                                          round2(mean(x$age, na.rm = TRUE)))
-                      )
-            })
-  } else if (ma_method == "Mode") {
-    ma_cv <-
-      ddply(dat[!is.na(dat$age),], .(sample),
-            function(x) {
-              data.frame(cv = round2(sd(x$age, na.rm = TRUE)/(mean(x$age, na.rm = TRUE))*100),
-                         modal_age = ifelse(
-                                       !is.null(Mode(x$age)),
-                                         Mode(x$age),
-                                         round2(mean(x$age, na.rm = TRUE)))
-                      )
-            })
-  }
+  # ages by fish
+  out <-
+    ad %>%
+    select(FishID, reader, age) %>%
+    spread(key = reader, value = age)
 
-  # If modal as is NA or 0 then CV is set to NA
-  ma_cv$cv[is.na(ma_cv$modal_age) | ma_cv$modal_age == 0] <- NA
+  ages <- out %>% select(-FishID)
+
+  # Determine modal age depending on ma_method
+  out$modal_age <-
+    if (ma_method == "Mean") {
+      stop ("mean not implemented yet")
+    } else if (ma_method == "Mode") {
+      apply(ages, 1,
+            function(x) {
+              if (!is.null(Mode(x))) {
+                Mode(x)
+              } else {
+                trunc(mean(x, na.rm = TRUE) + 0.5)
+              }
+            })
+    }
+
+  # calculate CV
+  out$cv <- apply(ages, 1, cv)
+  out$cv[is.na(out$modal_age) | out$modal_age == 0] <- NA
 
   # merge CV and modal age to data
-  dplyr::right_join(dat, ma_cv, by = "sample")
+  right_join(ad, out, by = "FishID")
 }
-
