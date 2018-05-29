@@ -7,15 +7,14 @@
 
 library(icesTAF)
 library(jsonlite)
+library(dplyr)
 library(tidyr)
 
 # create data directory
 mkdir("data")
 
 # get utility functions
-# I think this should be a smartdotsReport package...
 source("utilities_data.R")
-source("utilities.R")
 
 # load configuration
 config <- read_json("config.json", simplifyVector = TRUE)
@@ -49,18 +48,10 @@ ad <-
   })
 
 
-
 # Calculate modal ages and cv of modal age
 ad_long <- add_modalage(ad, config$ma_method)
 ad_long_ex <- add_modalage(ad[ad$expertise == "Advanced", ], config$ma_method)
 
-# Create wide data with one row per sample.
-# Reader will be used as new column headings for the age readings.
-var_in <- c("FishID", "sample", "length", "sex", "catch_date", "ices_area", "stock",
-             "year", "qtr","month", "prep_method", "reader", "age", "cv", "modal_age")
-
-ad_wide <- spread(ad_long[var_in], key = reader, value = age)
-ad_wide_ex <- spread(ad_long_ex[var_in], key = reader, value = age)
 
 # prepare data in wbgr output format
 # IMAGE,1,2,3,4,5,6,7,8,9,10,11,12,13
@@ -69,7 +60,7 @@ ad_wide_ex <- spread(ad_long_ex[var_in], key = reader, value = age)
 # 6698256.jpg,1,1,1,1,1,-,2,1,-,2,-,1,-
 # 6698257.jpg,3,3,3,3,2,1,3,3,-,3,-,3,-
 readers <- sort(unique(ad$reader))
-webgr <- ad_wide[c("sample", readers)]
+webgr <- spread(ad_long[c("sample", "reader", "age")], key = reader, value = age)
 webgr[] <- paste(unlist(webgr))
 webgr[webgr == "NA"] <- "-"
 webgr <-
@@ -85,6 +76,4 @@ write.taf(dist, "data/dist.csv")
 write.taf(ad, "data/data.csv")
 write.taf(ad_long, "data/ad_long.csv")
 write.taf(ad_long_ex, "data/ad_long_ex.csv")
-write.taf(ad_wide, "data/ad_wide.csv")
-write.taf(ad_wide_ex, "data/ad_wide_ex.csv")
 write.taf(webgr, "data/WebGR_ages_all.csv")
