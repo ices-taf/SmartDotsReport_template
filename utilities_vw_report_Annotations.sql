@@ -3,6 +3,7 @@ AS
 SELECT
   tblEvent.tblEventID as EventID,
   tblEvent.NameOfEvent as event_name,
+  sampleID,
   tblSmartImage.tblSmartImageID as sample,
   tblAnnotations.tblSampleID,
   xArea.Code as ices_area,
