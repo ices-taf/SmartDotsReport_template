@@ -9,13 +9,15 @@ library(rmarkdown)
 library(jsonlite)
 library(knitr)
 
+library(ggplot2)
+library(scales)
+
 
 # make report directory
 mkdir("report")
 
 # source utilities
-source("utilities_update.R")
-source("utilities_patched.R")
+source("utilities_report.R")
 
 # load configuration data
 config <- read_json("config.json", simplifyVector = TRUE)
