@@ -94,6 +94,25 @@ cv_table <- function(ad_long, by = "reader") {
   format_table(cv_tab, fmt = "%.0f %%", extra_rows = "Weighted Mean")
 }
 
+
+ape_table <- function(ad_long, by = "reader") {
+
+  ape_tab <-
+    tapply(ad_long$age, list(ad_long$modal_age, ad_long[[by]]), ape) %>%
+      unclass %>%
+      as.data.frame %>%
+      mutate(all = tapply(ad_long$age, list(ad_long$modal_age), ape) %>% unclass %>% unname)
+  ape_tab[modal_age_range == 0,] <- NA
+
+  # Add weighted mean
+  num_read <- numbers_read(ad_long, by)
+  ape_tab <- rbind(ape_tab,
+                  colSums(ape_tab * num_read, na.rm = TRUE) / colSums(num_read, na.rm = TRUE))
+
+  # produce formatted version
+  format_table(ape_tab, fmt = "%.0f %%", extra_rows = "Weighted Mean")
+}
+
 pa_table <- function(ad_long, by = "reader") {
 
   pa_tab <-

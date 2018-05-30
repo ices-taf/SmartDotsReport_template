@@ -74,6 +74,14 @@ for (group in c("all", "ex")) {
   )
   write.taf(vname("cv_tab"), dir = "model")
 
+  # APE table
+  assign(
+    vname("ape_tab"),
+    ape_table(ad_long, by = "reader")
+  )
+  write.taf(vname("ape_tab"), dir = "model")
+
+
   # Percent agreement between age readings and modal age.
   assign(
     vname("pa_tab"),
