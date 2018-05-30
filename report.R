@@ -54,7 +54,8 @@ cp(summary_filename, "report", move = TRUE)
 # render report and copy to report folder
 report_filename <- paste0(config$report_name, ".docx")
 render("report_full.Rmd",
-       params = list(report_title = config$report_title),
+       params = list(report_title = config$report_title,
+                     strata = config$strata),
        output_file = report_filename,
        encoding = "UTF-8")
 cp(report_filename, "report", move = TRUE)

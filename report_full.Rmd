@@ -9,7 +9,7 @@ output:
     keep_md: true
 params:
   report_title: ""
-  strata: "prep_method"
+  strata: NULL
 ---
 
 ```{r introduction, include = FALSE}
