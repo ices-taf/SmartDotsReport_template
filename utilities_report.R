@@ -1,5 +1,8 @@
 
 
+vname <- function(name, group = "ex") paste(name, group, sep = "_")
+vsname <- function(name, stratum, group = "ex") paste(name, stratum, group, sep = "_")
+
 # Style output tables #########################################################
 
 # These four functions are used to change the style of the output tables.
@@ -119,7 +122,7 @@ plot_growth <- function(dist, ad_long, strata = NULL) {
       Annulus = factor(mark),
       Reader = factor(reader)
     ) %>%
-    left_join(ad_long) %>%
+    left_join(ad_long) %>%  # add by here
 #    filter(FishID == "Npout_056") %>%
     select(Annulus, cum_distance, prep_method, Reader) %>%
     ggplot(aes(x = Annulus, y = cum_distance, col = Reader)) +
