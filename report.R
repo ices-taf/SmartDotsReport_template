@@ -9,9 +9,10 @@ library(rmarkdown)
 library(jsonlite)
 library(knitr)
 
+library(pander)
 library(ggplot2)
 library(scales)
-
+library(dplyr)
 
 # make report directory
 mkdir("report")
@@ -24,6 +25,8 @@ config <- read_json("config.json", simplifyVector = TRUE)
 
 # load data for report
 dist <- read.taf("data/dist.csv")
+ad_long <- read.taf("data/ad_long.csv")
+ad_long_ex <- read.taf("data/ad_long_ex.csv")
 
 # get csv files
 for (file in dir("model", pattern = "*.csv")) {
@@ -32,14 +35,17 @@ for (file in dir("model", pattern = "*.csv")) {
   )
 }
 # now rdata files
-for (file in dir("model", pattern = "*.rData")) {
-  load(paste0("model/", file))
+for (file in dir("model", pattern = "*.rds")) {
+  assign(tools::file_path_sans_ext(file),
+         readRDS(paste0("model/", file))
+  )
 }
 
 # render summary and copy to report folder
 summary_filename <- paste0(config$summary_name, ".docx")
 render("report_summary.Rmd",
-       params = list(summary_title = config$summary_title),
+       params = list(summary_title = config$summary_title,
+                     strata = config$strata),
        output_file = summary_filename,
        encoding = "UTF-8")
 cp(summary_filename, "report", move = TRUE)
