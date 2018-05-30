@@ -25,9 +25,6 @@
   "ma_method": "Mode",
 
   // Choose strata
-  "strata": ["prep_method"],
-
-  // Data subset - Can be: all, ices_area, stock or prep_method
-  "data_subset": "all"
-
+  "strata": ["prep_method"]
+  //"strata": null
 }
