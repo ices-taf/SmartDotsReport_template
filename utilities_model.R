@@ -1,6 +1,6 @@
 
 Mode <- function(x) {
-  sort(unique(x))[which.max(tabulate(x))]
+  as.numeric(names(sort(table(x), decreasing = TRUE)[1]))
 }
 
 ape <- function(x) {
@@ -207,12 +207,12 @@ mean_length_table <- function(ad_long, by = "reader") {
 }
 
 
-data_overview_table <- function(ad_long, report_token) {
+data_overview_table <- function(ad_long, report_token, by = "stock") {
 
   # Select only columns of age readings
   ad_wide <-
     ad_long %>%
-    select(FishID, EventID, length, sex, catch_date, ices_area, stock, reader, age) %>%
+    select(FishID, length, sex, catch_date, ices_area, reader, age) %>%
     spread(key = reader, value = age)
 
   # Calculate, modeal age, percentage agreement, cv, and ape
@@ -220,25 +220,30 @@ data_overview_table <- function(ad_long, report_token) {
     ad_wide %>%
     select(matches("R[0-9][0-9]*"))
 
-  ad_wide$modal_age <- apply(readings, 1, Mode)
-  ad_wide$perc_agree <- rowMeans(readings == ad_wide$modal_age, na.rm = TRUE)*100
-  ad_wide$cv <- apply(readings, 1, cv)
-  ad_wide$ape <- apply(readings, 1, ape)
+  ad_wide$`Modal age` <- apply(readings, 1, Mode)
+  ad_wide$`PA %` <- round(rowMeans(readings == ad_wide$`Modal age`, na.rm = TRUE)*100)
+  ad_wide$`CV %` <- round(apply(readings, 1, cv))
+  ad_wide$`APE %` <- round(apply(readings, 1, ape))
+  ad_wide <- rename(ad_wide, `ICES area` = ices_area, `Catch date` = catch_date)
 
-  # form hyper link for tables
-  #link_template <-
-  #  sprintf("[%s](http://smartdots.ices.dk/viewImage?tblEventID=%i&SmartImageID=%s&token=%s)",
-  #          "%s", event_id, "%i", report_token)
-  #samples <- strsplit(paste(dat_out2$`Smart Image ID`), "-")
-  #dat_out2$`Fish ID` <-
-  #  sapply(1:length(samples),
-  #         function(i)
-  #           paste(
-  #             sprintf(link_template, "test", as.numeric(samples[i])),
-  #             collapse = "-")
-  #  )
+  ad_wide$`CV %`[is.nan(ad_wide$`CV %`)] <- NA
+  ad_wide$`APE %`[is.nan(ad_wide$`APE %`)] <- NA
 
-  ad_wide
+  # add hyper link for tables
+  ad_long %>%
+    group_by(FishID, EventID) %>%
+    summarise(
+      `Image ID` = sprintf("[%s](http://smartdots.ices.dk/viewImage?tblEventID=%i&SmartImageID=%s&token=%s)",
+                         sample, EventID, sample, report_token) %>%
+                unique %>%
+                paste(collapse = "-")
+    ) %>%
+    right_join(ad_wide, by = "FishID") %>%
+    rename(
+      `Fish ID` = FishID,
+      `Event ID` = EventID
+    ) %>%
+    as.data.frame
 }
 
 
