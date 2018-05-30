@@ -26,14 +26,11 @@ params:
 ```
 
 ```{r chunk_setup, include=FALSE}
-
 # CHUNK SETUPS #################################################################
 
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE,
                       message=FALSE, results = 'asis', dpi=400)
 
-
-print_option <- TRUE
 ```
 
 
@@ -65,7 +62,7 @@ title: `r params$summary_title`
 
 ```{r sample_overview}
 
-modal_age_range <- range(ad_long$modal_age, na.rm = TRUE)
+modal_age_range <- range(ad_long_all$modal_age, na.rm = TRUE)
 # Table caption
 set.caption(paste('**Table X:** Overview of samples used for the xxx exchange. The modal age range for all samples is ', modal_age_range[1], "-", modal_age_range[2], '.', sep=""))
 
@@ -190,7 +187,7 @@ cap_in <- '**Figure X:** Plot of average distance from the centre to the winter
            the minimum and maximum values and the dots represent the outliers.'
 
 # Output table
-plot_growth(dist, ad_long, strata = config$strata)
+plot_growth(dist, ad_long_all, strata = params$strata)
 ```
 
 
