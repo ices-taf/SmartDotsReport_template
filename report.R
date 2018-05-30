@@ -25,7 +25,7 @@ config <- read_json("config.json", simplifyVector = TRUE)
 
 # load data for report
 dist <- read.taf("data/dist.csv")
-ad_long <- read.taf("data/ad_long.csv")
+ad_long_all <- read.taf("data/ad_long.csv")
 ad_long_ex <- read.taf("data/ad_long_ex.csv")
 
 # get csv files
