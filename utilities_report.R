@@ -3,6 +3,10 @@
 vname <- function(name, group = "ex") paste(name, group, sep = "_")
 vsname <- function(name, stratum, group = "ex") paste(name, stratum, group, sep = "_")
 
+cv <- function (x) {
+  sd(x, na.rm = TRUE) / mean(x, na.rm = TRUE) * 100
+}
+
 # Style output tables #########################################################
 
 # These four functions are used to change the style of the output tables.
@@ -113,7 +117,7 @@ plot_growth <- function(dist, ad_long, strata = NULL) {
   p <-
     dist %>%
     arrange(reader, AnnotationID, mark) %>%
-    filter(mark > 0, distance > 0) %>%
+    filter(mark > 0, distance > 0, reader %in% unique(ad_long$reader)) %>%
     group_by(reader, AnnotationID) %>%
     mutate(cum_distance = cumsum(distance)) %>%
     ungroup %>%
