@@ -299,7 +299,7 @@ cap_in <- '**Table X:** Plot of average distance from the centre to the winter
            minimum and maximum values and the dots represent the outliers.'
 
 # Output figure
-plot_growth(dist, ad_long_all, params$strata)
+plot_growth(dist, ad_long_all, "prep_method")
 ```
 
 
@@ -506,7 +506,7 @@ cap_in <- '**Figure X:** Plot of average distacne from the centre to the winter
            the minimum and maximum values and the dots represent the outliers.'
 
 # Output table
-plot_growth(dist, ad_long_ex, params$strata)
+plot_growth(dist, ad_long_ex, "prep_method")
 
 ```
 

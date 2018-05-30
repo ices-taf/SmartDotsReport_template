@@ -187,7 +187,7 @@ cap_in <- '**Figure X:** Plot of average distance from the centre to the winter
            the minimum and maximum values and the dots represent the outliers.'
 
 # Output table
-plot_growth(dist, ad_long_all, strata = params$strata)
+plot_growth(dist, ad_long_all, strata = "prep_method")
 ```
 
 
@@ -244,7 +244,6 @@ set.caption(paste0('**Table X:** Number of age readings per ', stratum, ' for ad
 
 # Output table
 pander(style_table1(get(vsname("num_read_tab", stratum))), missing = "-")
-
 ```
 
 ```{r cv_title, eval = print_strata()}
