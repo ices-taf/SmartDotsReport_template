@@ -114,6 +114,10 @@ plot_growth <- function(dist, ad_long, strata = NULL) {
   #  gro_dat3 <- gro_dat1
   #}
 
+  if (prod(dim(do.call(table, ad_long[strata]))) == 1) {
+    strata <- NULL
+  }
+
   p <-
     dist %>%
     arrange(reader, AnnotationID, mark) %>%
