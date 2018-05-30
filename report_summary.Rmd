@@ -9,7 +9,7 @@ output:
     keep_md: true
 params:
   summary_title: ""
-  data_subset: "all"
+  strata: NULL
 ---
 
 
@@ -65,11 +65,12 @@ title: `r params$summary_title`
 
 ```{r sample_overview}
 
+modal_age_range <- range(ad_long$modal_age, na.rm = TRUE)
 # Table caption
-set.caption(paste('**Table X:** Overview of samples used for the xxx exchange. The modal age range for all samples is ', ma_range[1], "-", ma_range[2], '.', sep=""))
+set.caption(paste('**Table X:** Overview of samples used for the xxx exchange. The modal age range for all samples is ', modal_age_range[1], "-", modal_age_range[2], '.', sep=""))
 
 # Output table
-pander(style_table0(sample_dat_ov), style = "simple")
+pander(style_table0(sample_data_overview), style = "simple")
 
 ```
 
@@ -83,9 +84,7 @@ pander(style_table0(sample_dat_ov), style = "simple")
 set.caption('**Table X:** Overview of advanced readers.')
 
 # Output table
-#row.names(part_tab) <- NULL
-pander(style_table0(part_tab[part_tab$Expertise!="Beginner",c("Reader code", "Expertise")]), missing = "-")
-
+pander(style_table0(filter(reader_data, Expertise != "Basic")))
 ```
 
 
@@ -94,6 +93,23 @@ pander(style_table0(part_tab[part_tab$Expertise!="Beginner",c("Reader code", "Ex
 <!-- **All samples included**  -->
 
 # Results overview
+
+
+## Age readings
+
+```{r num_read_ex}
+
+# Age readings TABLE - Advanced readers #################################################
+
+# Table caption
+set.caption('**Table X:** Age reading table presents the
+             number of readings made per expert reader for each modal age.')
+
+# Output table
+pander(style_table1(num_read_tab_ex), missing = "-")
+
+```
+
 
 ## CV table
 
@@ -141,7 +157,7 @@ set.caption('**Table X:** Relative bias table represents the relative bias per
              the relative bias per reader.')
 
 # Output table
-pander(style_table1(rb_tab_ex), missing = "-")
+pander(style_table1(rel_bias_tab_ex), missing = "-")
 
 ```
 
@@ -165,7 +181,6 @@ plot_bias_all(ad_long_ex, max_age, max_modal)
 ## Growth analysis
 
 ```{r growth_analysis_exp, fig.width = 8, fig.height = 6, fig.cap = cap_in}
-
 # GROWTH ANALYSIS - Advanced readers ##########################################
 
 # Table caption
@@ -175,87 +190,180 @@ cap_in <- '**Figure X:** Plot of average distance from the centre to the winter
            the minimum and maximum values and the dots represent the outliers.'
 
 # Output table
-plot_growth(dist[dist$reader %in% ad_long_ex$reader[ad_long_ex$expertise!="Beginner"],], compl_sample, part_tab2, "Expert")
-
+plot_growth(dist, ad_long, strata = config$strata)
 ```
 
 
-
-```{r by_stock_ex_title, eval = print_option}
-
-# If reports are made by preparation method, leave out this chunk
-if (params$data_subset != "stock") {
-
-  # Section title
-  asis_output("# Results by stock")
-}
-```
-
-## Age error matrix
+## Age error matrices
 
 ```{r age_error_matrix_ex, results='asis'}
 
 # AEM AREA - Advanced readers #################################################
 
 # Loop through each area and output AEM for that area
-for (i in unique(stocks)) {
+for (i in names(ae_mat_ex)) {
 
   # Table caption
-  cap_i <- paste0("**Table X:** Age error matrix (AEM) for stock ",i,".")
+  cap_i <- paste0("**Table X:** Age error matrix (AEM) for ", i,".")
 
   set.caption(cap_i)
-  pander(style_table3(ae_mat_stock[[i]]), missing = "-")
+  pander(style_table3(ae_mat_ex[[i]]), missing = "-")
 
 }
 
 ```
 
-## Age readings
 
-```{r ar_by_stock_ex, eval = print_option}
-
-# If reports are made by preparation method, leave out this chunk
-if (params$data_subset != "stock") {
-
-  # NUMBER OF AGE READINGS PER STOCK - Advanced readers #########################
-    # cat("## Age readings")
-
-  # Table caption
-  set.caption('**Table X:** Number of age readings per stock for advanced readers.')
-
-  # Output table
-  pander(style_table1(num_st2_comp_ex), missing = "-")
-}
+```{r set_strata}
+# initialise strata loop
+istrata <- 0
+print_strata <- function() length(params$strata) >= istrata
 ```
 
-## Coefficient of Variation
+<!-- first strata -->
 
-```{r cv_by_stock_ex, eval = print_option}
-if (params$data_subset != "stock") {
-  # Section title
-  # cat("## CV")  #  #############################################
-
-  # Table caption
-  set.caption('**Table X:** CV per stock.')
-
-  # Output table
-  pander(style_table2(cv_st2_tab_ex), missing = "-")
-}
+```{r strata_plus_one}
+# second strata
+istrata <- istrata + 1
 ```
 
-## Percentage Agreement
-
-```{r pa_by_stock_ex, eval = print_option}
-if (params$data_subset != "stock") {
+```{r strata_title, eval = print_strata()}
+stratum <- params$strata[istrata]
 # Section title
-  # asis_("## PA PER STOCK - Advanced readers")  #    #  #############################################
-
-  # Table caption
-  set.caption('**Table X:** Percentage Agreement per stock.')
-
-  # Output table
-  pander(style_table2(pa_st2_tab_ex), missing = "-")
-}
+asis_output(paste("# Results by", stratum))
 ```
+
+
+```{r ar_title, eval = print_strata()}
+#  title
+asis_output(paste("## Age readings by", stratum))
+```
+
+```{r ar_by, eval = print_strata()}
+# NUMBER OF AGE READINGS PER STOCK - Advanced readers #########################
+
+# Table caption
+set.caption(paste0('**Table X:** Number of age readings per ', stratum, ' for advanced readers.'))
+
+# Output table
+pander(style_table1(get(vsname("num_read_tab", stratum))), missing = "-")
+
+```
+
+```{r cv_title, eval = print_strata()}
+#  title
+asis_output(paste("## Coefficient of Variation by", stratum))
+```
+
+
+```{r cv_by, eval = print_strata()}
+
+# Table caption
+set.caption(paste0('**Table X:** CV per ', stratum, '.'))
+
+# Output table
+pander(style_table2(get(vsname("cv_tab", stratum))), missing = "-")
+
+```
+
+```{r pa_title, eval = print_strata()}
+#  title
+asis_output(paste("## Percentage Agreement by", stratum))
+```
+
+
+```{r pa_by, eval = print_strata()}
+# Section title
+#asis_("## PA PER STOCK - Advanced readers")  #    #  #############################################
+
+# Table caption
+set.caption(paste0('**Table X:** Percentage Agreement per ', stratum, '.'))
+
+# Output table
+pander(style_table2(get(vsname("pa_tab", stratum))), missing = "-")
+
+```
+
+
+<!-- second strata -->
+
+```{r ref.label='strata_plus_one'}
+```
+
+```{r ref.label='strata_title', eval = print_strata()}
+```
+
+```{r ref.label='ar_title', eval = print_strata()}
+```
+
+```{r ref.label='ar_by', eval = print_strata()}
+```
+
+```{r ref.label='cv_title', eval = print_strata()}
+```
+
+```{r ref.label='cv_by', eval = print_strata()}
+```
+
+```{r ref.label='pa_title', eval = print_strata()}
+```
+
+```{r ref.label='pa_by', eval = print_strata()}
+```
+
+
+<!-- third strata -->
+
+```{r ref.label='strata_plus_one'}
+```
+
+```{r ref.label='strata_title', eval = print_strata()}
+```
+
+```{r ref.label='ar_title', eval = print_strata()}
+```
+
+```{r ref.label='ar_by', eval = print_strata()}
+```
+
+```{r ref.label='cv_title', eval = print_strata()}
+```
+
+```{r ref.label='cv_by', eval = print_strata()}
+```
+
+```{r ref.label='pa_title', eval = print_strata()}
+```
+
+```{r ref.label='pa_by', eval = print_strata()}
+```
+
+
+<!-- fourth strata -->
+
+```{r ref.label='strata_plus_one'}
+```
+
+```{r ref.label='strata_title', eval = print_strata()}
+```
+
+```{r ref.label='ar_title', eval = print_strata()}
+```
+
+```{r ref.label='ar_by', eval = print_strata()}
+```
+
+```{r ref.label='cv_title', eval = print_strata()}
+```
+
+```{r ref.label='cv_by', eval = print_strata()}
+```
+
+```{r ref.label='pa_title', eval = print_strata()}
+```
+
+```{r ref.label='pa_by', eval = print_strata()}
+```
+
 
 #Conclusion
