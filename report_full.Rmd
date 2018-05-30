@@ -9,6 +9,7 @@ output:
     keep_md: true
 params:
   report_title: ""
+  strata: "prep_method"
 ---
 
 ```{r introduction, include = FALSE}
@@ -24,12 +25,10 @@ params:
 ```
 
 ```{r chunk_setup, include=FALSE}
-
 # CHUNK SETUPS #################################################################
 
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, 
                       message=FALSE, results = 'asis', dpi=400)
-
 ```
 
 ```{r pander_settings, include = FALSE}
@@ -156,7 +155,7 @@ This data is used to establish growth curves for each fish and for each reader.
 set.caption('**Table X:** Overview of samples used for the xxx exchange.')
 
 # Output table
-pander(style_table0(sample_dat_ov), style = "simple")
+pander(style_table0(sample_data_overview), style = "simple")
 
 ```
 
@@ -170,7 +169,7 @@ pander(style_table0(sample_dat_ov), style = "simple")
 set.caption('**Table X:** Reader overview.')
 
 # Output table
-pander(style_table0(part_tab[,c("Reader code", "Expertise")]), missing = "-")
+pander(style_table0(reader_data), missing = "-")
 
 ```
 
@@ -186,8 +185,8 @@ Those writing the report put TEXT here describing the results.
 <!-- PA, CV and APE text --> 
 
 The overall percentage agreement based on modal ages for all readers 
-is `r round(sum_stat[2],1)`%, with an overall CV of `r round(sum_stat[1],1)`%.
-The APE is `r round(sum_stat[3],1)`%.
+is `r round(summary_statistics[2],1)`%, with an overall CV of `r round(summary_statistics[1],1)`%.
+The APE is `r round(summary_statistics[3],1)`%.
 
 ```{r cv_table}
 
@@ -200,7 +199,7 @@ set.caption('**Table X:** Coefficient of Variation (CV) table presents the CV
              A rank is also assigned to each reader.')
 
 # Output table
-pander(style_table1(cv_tab), missing = "-")
+pander(style_table1(cv_tab_all), missing = "-")
 
 ```
 
@@ -221,7 +220,7 @@ set.caption('**Table X:** Percentage agreement (PA) table represents the PA per
              A rank is also assgned to each reader.')
 
 # Output table
-pander(style_table1(pa_tab[,c(1:ncol(pa_tab))]), missing="-")
+pander(style_table1(pa_tab_all), missing="-")
 
 ```
 
@@ -242,12 +241,11 @@ set.caption('**Table X:** Relative bias table represents the relative bias per
              A rank is also assigned to each reader.')
 
 # Output table
-pander(style_table1(rb_tab), missing = "-")
+pander(style_table1(rel_bias_tab_all), missing = "-")
 
 ```
 
 ```{r bias_plots_all, fig.width = 5, fig.height = 4, fig.cap = cap_in}
-
 # BIAS PLOTS - All readers ####################################################
 
 # Figure Caption
@@ -259,8 +257,7 @@ cap_in <- '**Figure X:**: Age bias plot for all readers. Mean age
            estimated mean age and modal age.'
 
 # Output figure 
-plot_bias_all(ad_long, max_age, max_modal)
-
+plot_bias_all(ad_long_all)
 ```
 
 <!-- Inter reader bias text -->
@@ -282,7 +279,7 @@ set.caption('**Table X:** Inter reader bias test. The Inter-reader bias test
              (0.01<p<0.05), * * = certainty of bias (p<0.01) ')
 
 # Output table
-pander(style_table3(bias_tab), missing = ".", style = "simple")
+pander(style_table3(bias_tab_all), missing = ".", style = "simple")
 
 ```
 
@@ -297,109 +294,138 @@ cap_in <- '**Table X:** Plot of average distance from the centre to the winter
            minimum and maximum values and the dots represent the outliers.'
 
 # Output figure
-plot_growth(dist, compl_sample, part_tab2, "All")
-
+plot_growth(dist, ad_long_all, params$strata)
 ```
 
-**Results by area (or stock?)** 
 
-```{r num_strata}
 
-# NUMEBR OF AGE READINGS PER STRATA - All readers #################################
+```{r set_strata_all}
+# initialise strata loop
+istrata <- 0
+group <- "all"
+print_strata <- function() length(params$strata) >= istrata
+```
+
+<!-- first strata -->
+
+```{r strata_plus_one}
+# second strata
+istrata <- istrata + 1
+```
+
+```{r strata_title, eval = print_strata()}
+stratum <- params$strata[istrata]
+# Section title
+asis_output(paste0("**Results by ", stratum, "**"))
+```
+
+
+```{r ar_by, eval = print_strata()}
+# NUMBER OF AGE READINGS PER STOCK - Advanced readers #########################
 
 # Table caption
-set.caption('**Table X:** Number of age readings per strata. (area or stock?)')
+set.caption(paste0('**Table X:** Number of age readings per ', stratum, ' for all readers.'))
 
 # Output table
-pander(style_table1(num_st_comp), missing = "-")
-
+pander(style_table1(get(vsname("num_read_tab", stratum, group))), missing = "-")
 ```
 
-```{r cv_strata}
 
-# CV PER STRATA - All readers #################################################
+```{r cv_by, eval = print_strata()}
 
 # Table caption
-set.caption('**Table X:** CV per strata. (area or stock?)')
+set.caption(paste0('**Table X:** CV per ', stratum, '.'))
 
 # Output table
-pander(style_table2(cv_st_tab), missing = "-")
-
+pander(style_table2(get(vsname("cv_tab", stratum, group))), missing = "-")
 ```
 
-```{r pa_strata}
 
-# PA PER STRATA - All readers #################################################
+```{r pa_by, eval = print_strata()}
+# Section title
 
 # Table caption
-set.caption('**Table X:** Percentage Agreement per strata. (area or stock?)')
+set.caption(paste0('**Table X:** Percentage Agreement per ', stratum, '.'))
 
 # Output table
-pander(style_table2(pa_st_tab), missing = "-")
-
+pander(style_table2(get(vsname("pa_tab", stratum, group))), missing = "-")
 ```
 
-```{r rb_strata}
-
-# RELATIVE BIAS PER STRATA - All readers ######################################
+```{r rb_by, eval = print_strata()}
+# Section title
 
 # Table caption
-set.caption('**Table X:** Relative Bias per strata. (area or stock?)')
+set.caption(paste0('**Table X:** Relative Bias per ', stratum, '.'))
 
 # Output table
-pander(style_table2(rb_st_tab), missing = "-")
-
+pander(style_table2(get(vsname("rel_bias_tab", stratum, group))), missing = "-")
 ```
 
-**Results by month** 
+<!-- second strata -->
 
-```{r num_month}
-
-# NUMBER OF AGE READINGS PER MONTH - All readers ##################################
-
-# Table caption
-set.caption('**Table X:** Number of age readings per month.')
-
-# Output table
-pander(style_table1(num_mo_comp), missing = "-")
-
+```{r ref.label='strata_plus_one'}
 ```
 
-```{r cv_month}
-
-# CV PER MONTH - All readers ##################################################
-
-# Table caption
-set.caption('**Table X:** CV per month.')
-
-# Output table
-pander(style_table2(cv_mo_tab), missing = "-")
-
+```{r ref.label='strata_title', eval = print_strata()}
 ```
 
-```{r pa_month}
-
-# PA PER MONTH - All readers ##################################################
-
-# Table caption
-set.caption('**Table X:** Percentage agreement per month.')
-
-# Output table
-pander(style_table2(pa_mo_tab), missing = "-")
-
+```{r ref.label='ar_by', eval = print_strata()}
 ```
 
-```{r rb_month}
-
-# RELATIVE BIAS PER MONTH - All readers #######################################
-
-# Table caption
-set.caption('**Table X:** Relative bias per month.')
-
-# Output table
-pander(style_table2(rb_mo_tab), missing = "-")
-
+```{r ref.label='cv_by', eval = print_strata()}
 ```
+
+```{r ref.label='pa_by', eval = print_strata()}
+```
+
+```{r ref.label='rb_by', eval = print_strata()}
+```
+
+
+<!-- third strata -->
+
+```{r ref.label='strata_plus_one'}
+```
+
+```{r ref.label='strata_title', eval = print_strata()}
+```
+
+```{r ref.label='ar_by', eval = print_strata()}
+```
+
+```{r ref.label='cv_by', eval = print_strata()}
+```
+
+```{r ref.label='pa_by', eval = print_strata()}
+```
+
+```{r ref.label='rb_by', eval = print_strata()}
+```
+
+
+<!-- fourth strata -->
+
+```{r ref.label='strata_plus_one'}
+```
+
+```{r ref.label='strata_title', eval = print_strata()}
+```
+
+```{r ref.label='ar_by', eval = print_strata()}
+```
+
+```{r ref.label='cv_by', eval = print_strata()}
+```
+
+```{r ref.label='pa_by', eval = print_strata()}
+```
+
+```{r ref.label='rb_by', eval = print_strata()}
+```
+
+
+
+
 
 ### Advanced readers
 
@@ -447,7 +473,7 @@ set.caption('**Table X:** Relative bias table represents the relative bias per
              each reader.')
 
 # Output table 
-pander(style_table1(rb_tab_ex), missing = "-")
+pander(style_table1(rel_bias_tab_ex), missing = "-")
 
 ```
 
@@ -459,7 +485,7 @@ pander(style_table1(rb_tab_ex), missing = "-")
 cap_in <- '**Figure X:** Age bias plot for advanced readers.'
 
 # Output table
-plot_bias_all(ad_long_ex, max_age, max_modal)
+plot_bias_all(ad_long_ex)
 
 ```
 
@@ -475,59 +501,11 @@ cap_in <- '**Figure X:** Plot of average distacne from the centre to the winter
            the minimum and maximum values and the dots represent the outliers.'
 
 # Output table
-plot_growth(dist, compl_sample, part_tab2, "Expert")
+plot_growth(dist, ad_long_ex, params$strata)
 
 ```
 
-**Results by area (or stock)**
 
-```{r num_strata_ex}
-
-# NUMBER OF AGE READINGS PER STRATA - Advanced readers ############################
-
-# Table caption
-set.caption('**Table X:** Number of age readings per strata for advanced readers.')
-
-# Output table
-pander(style_table1(num_st_comp_ex), missing = "-")
-
-```
-
-```{r cv_strata_ex}
-
-# CV PER STRATA - Advanced readers ############################################
-
-# Table caption
-set.caption('**Table X:** CV per strata.')
-
-# Output table
-pander(style_table2(cv_st_tab_ex), missing = "-")
-
-```
-
-```{r pa_strata_ex}
-
-# PA PER STRATA - Advanced readers ############################################
-
-# Table caption
-set.caption('**Table X:** Percentage Agreement per strata.')
-
-# Output table
-pander(style_table2(pa_st_tab_ex), missing = "-")
-
-```
-
-```{r rb_strata_ex}
-
-# RELATIVE BIAS PER STRATA - Advanced readers #################################
-
-# Table caption
-set.caption('**Table X:** Relative Bias per strata.')
-
-# Output table
-pander(style_table2(rb_st_tab_ex), missing = "-")
-
-```
 
 <!-- Age error matrix text -->
 Age error matrices are calculated per area and only based on the age 
@@ -535,78 +513,53 @@ readings of the advanced readers.
 
 ```{r age_error_matrix_ex, results='asis'}
 
-# AEM STRATA - Advanced readers ############################################
-
-panderOptions('knitr.auto.asis', FALSE)
+# AEM AREA - Advanced readers #################################################
 
 # Loop through each area and output AEM for that area
-for (i in unique(areas)) {
-  
+for (i in names(ae_mat_ex)) {
+
   # Table caption
-  cap_i <- paste0("**Table X:** Age error matrix (AEM) for area ",i,". 
+  cap_i <- paste0("**Table X:** Age error matrix (AEM) for ", i ,". 
                    The AEM shows the proportional distribution 
                    of age readings for each modal age. Age column should sum to
                    one but due to rounding there might be small deviations in 
-                   some cases. Only advanced readers are used. 
+                   some cases.
                    Only advanced readers are used for calculating the AEM.")
-  
+
   set.caption(cap_i)
   pander(style_table3(ae_mat_ex[[i]]), missing = "-")
-    
+
 }
-
 ```
 
-**Results by month**
 
-```{r num_month_ex}
-
-# NUMBER OF AGE READINGS PER MONTH - Advanced readers #########################
-
-# Table caption
-set.caption('**Table X:** Number of age readings per month for 
-             advanced readers.')
-
-# Output table
-pander(style_table1(num_mo_comp_ex), missing = "-")
-
+```{r set_strata_ex}
+# initialise strata loop
+istrata <- 0
+group <- "ex"
+print_strata <- function() length(params$strata) >= istrata
 ```
 
-```{r cv_month_ex}
+<!-- first strata -->
 
-# CV PER MONTH - Advanced readers #############################################
-
-# Table caption
-set.caption('**Table X:** CV per month.')
-
-# Output table
-pander(style_table2(cv_mo_tab_ex), missing = "-")
-
+```{r ref.label='strata_plus_one'}
 ```
 
-```{r pa_month_ex}
-
-# PA PER MONTH - Advanced readers #############################################
-
-# Table caption
-set.caption('**Table X:** Percentage agreement per month.')
-
-# Output table
-pander(style_table2(pa_mo_tab_ex), missing = "-")
-
+```{r ref.label='strata_title', eval = print_strata()}
 ```
 
-```{r rb_month_ex}
-
-# RELATIVE BIAS PER MONTH - Advanced readers ##################################
-
-# Table caption
-set.caption('**Table X:** Relative bias per month.')
-
-# Output table
-pander(style_table2(rb_mo_tab_ex), missing = "-")
-
+```{r ref.label='ar_by', eval = print_strata()}
 ```
+
+```{r ref.label='cv_by', eval = print_strata()}
+```
+
+```{r ref.label='pa_by', eval = print_strata()}
+```
+
+```{r ref.label='rb_by', eval = print_strata()}
+```
+
 
 
 ## Discussion
@@ -635,7 +588,7 @@ pander(style_table2(rb_mo_tab_ex), missing = "-")
 set.caption('**Table X:** Participants list.')
 
 # Output table
-pander(style_table0(part_tab), missing = "-")
+pander(style_table0(reader_data), missing = "-")
 
 ```
 
@@ -654,12 +607,17 @@ pander(style_table0(part_tab), missing = "-")
 set.caption('**Table X:** Summary of statistics; PA (%), CV (%) and APE (%).')
 
 # Output table
-pander(style_table0(sum_stat), missing="")
+pander(style_table0(summary_statistics), missing="")
 
 ```
 
-```{r data_overview_all}
 
+```{r set_annex_all}
+group <- "all"
+```
+
+
+```{r data_overview}
 # DATA OVERVIEW - All readers #################################################
 
 # Table caption
@@ -667,8 +625,7 @@ set.caption('**Table X:** Data overview including modal
              age and statistics per sample.')
 
 # Output table
-pander(style_table0(table1_data), missing="-", style = "simple")
-
+pander(style_table0(get(vname("data_overview_tab", group))), missing="-", style = "simple")
 ```
 
 ```{r num_age_readings}
@@ -681,24 +638,10 @@ set.caption('**Table X:** Number of age readings table gives an overview of
              readings per reader and per modal age are summarized at the end 
              of the table.')
 # Output table
-pander(style_table2(num_read_comp),missing="-")
+pander(style_table2(get(vname("num_read_tab", group))),missing="-")
 
 ```
 
-```{r or, echo = FALSE}
-
-# OVERALL RANKING - All readers ###############################################
-
-# Table caption
-set.caption('**Table X:** Overall ranking of readers combines the ranking
-             valuesof table 2.2, 2.3 and 2.4 and a total rank is assigned based
-             on the individual ranking results of the three tables. ')
-
-# Output table
-emphasize.strong.rows((nrow(rank_tab)))
-pander(style_table0(rank_tab), missing = "-")
-
-```
 
 ```{r ac}
 
@@ -709,7 +652,7 @@ set.caption('**Table X:** Age composition by reader gives a
              summary of number of readings per reader.')
 
 # Output table
-pander(style_table2(ac_tab), missing = "0")
+pander(style_table2(get(vname("age_composition_tab", group))), missing = "0")
 
 ```
 
@@ -725,12 +668,11 @@ set.caption('**Table X:** Mean length at age per reader is calculated per
 # Output table
 panderOptions('round', 1)
 panderOptions('keep.trailing.zeros', TRUE)
-pander(style_table2(mla_tab), missing = "-")
+pander(style_table2(get(vname("mean_length_tab", group))), missing = "-")
 
 ```
 
 ```{r bias_plots, fig.width = 3.5, fig.height = 3, fig.cap = cap_in}
-
 # INDIVIDUAL BIAS PLOTS - All readers #########################################
 
 # Figure caption
@@ -741,13 +683,11 @@ cap_in <- '**Figure X:** Bias plots per reader. The mean age recorded
            (solid line). Relative bias is the age difference between 
            estimated mean age and modal age.'
 
-# Output figure
-plot_bias(ad_long, max_age, max_modal)
-
+# Output figures
+plot_bias(get(vname("ad_long", group)))
 ```
 
 ```{r stat_plot, fig.width = 7, fig.height = 4, fig.cap = cap_in}
-
 # PLOT STATISTICS, STDEV, CV AND PA - All readers #############################
 
 # Figure caption
@@ -758,12 +698,10 @@ cap_in <- '**Figure X:** CV, PA and (STDEV (standard deviation) are
 # the standard deviation (STDEV) are plotted against MODAL age
 
 # Output figure
-plot_stat(std_all, pa_all, cv_all)
-
+plot_stat(get(vname("ad_long", group)))
 ```
 
 ```{r a_dist_plot, fig.width = 7, fig.height = 4, fig.cap = cap_in}
-
 # PLOT AGE DISTRIBUTION - All readers #########################################
 
 # Figure caption
@@ -776,8 +714,7 @@ cap_in <- '**Figure X:** The distribution of the age reading errors in
            distributions are skewed, if relative bias occurs.'
 
 # Output figure
-plot_rdist(dif_tab, unique(ad_long$modal_age))
-
+plot_rdist(get(vname("ad_long", group)))
 ```
 
 ```{r rb_plot, fig.width = 7, fig.height = 4, fig.cap = cap_in}
@@ -789,12 +726,11 @@ cap_in <- '**Figure X:** The relative bias by modal age as estimated
            by all age readers combined.'
 
 # Output figure
-plot_rb_ma(rb_all)
+plot_rb_ma(get(vname("rel_bias_tab", group)))
 
 ```
 
 ```{r mla_plot, fig.width = 7, fig.height = 4, fig.cap = cap_in}
-
 # PLOT AGE DISTRIBUTION - All readers #########################################
 
 # Figure caption
@@ -802,8 +738,7 @@ cap_in <- "**Figure X:** The mean length at age as
            estimated by each age reader."
 
 # Output figure
-plot_mla(mla_num)
-
+plot_mla(get(vname("ad_long", group)))
 ```
 
 
@@ -813,158 +748,32 @@ plot_mla(mla_num)
 
 **Data Overview**
 
-```{r tab1_sum_stat_ex}
-
-# DATA SUMMARY STATISTICS - Advanced readers ##################################
-
-# Figure caption
-set.caption('**Table X:** Summary of statistics; PA (%), CV (%) and APE (%) 
-             based on advanced readers only.') 
-
-# Output figure
-pander(style_table0(sum_stat_ex), missing="")
-
+```{r set_annex_ex}
+group <- "ex"
 ```
 
-```{r data_overview_exp}
-
-# DATA OVERVIEW - Advanced readers ############################################
-
-# Table caption
-set.caption('**Table X:** Data overview including modal age and statistics
-             per sample for advanced readerws only.') 
-
-# Output table
-pander(style_table0(table1_data_ex), missing = "-", style = "simple")
-
-
+```{r ref.label = 'data_overview'}
 ```
 
-```{r num_age_readings_ex}
-
-# NUMEBR OF AGE READINGS - Advanced readers ###################################
-
-# Table caption
-set.caption('**Table X:** Number of age readings table gives an overview of 
-             numberof age readings per advanced reader and modal age. The total 
-             numbers of readings per reader and per modal age are summarized 
-             at the end of the table.')
-
-# Output table
-pander(style_table2(num_read_comp_ex),missing="-")
-
+```{r ref.label = 'num_age_readings'}
 ```
 
-```{r or_ex}
-
-# OVERALL RANKING - Advanced readers ##########################################
-
-# Set caption
-set.caption('**Table X:** Overall ranking of advanced readers.')
-
-# Output table
-emphasize.strong.rows((nrow(rank_tab_ex)))
-pander(style_table0(rank_tab_ex), missing = "-")
-
+```{r ref.label = 'ac, mla'}
 ```
 
-```{r ac_ex}
-
-# AGE COMPOSITION - Advanced readers ##########################################
-
-# Table caption
-set.caption('**Table X:** Age composition by advanced reader.')
-
-# Output table
-pander(style_table2(ac_tab_ex), missing = "0")
-
+```{r ref.label = 'bias_plots', fig.width = 3.5, fig.height = 3, fig.cap = cap_in}
 ```
 
-```{r mla_ex}
-
-# MEAN LENGTH AT AGE - Advanced readers #######################################
-
-# Table caption
-set.caption('**Table X:** Mean length at age by advanced reader.')
-
-# Output table
-panderOptions('round', 1)
-panderOptions('keep.trailing.zeros', TRUE)
-pander(style_table2(mla_tab_ex), missing = "-")
-
-
+```{r ref.label = 'stat_plot', fig.width = 7, fig.height = 4, fig.cap = cap_in}
 ```
 
-```{r bias_table_ex}
-
-# Table caption
-set.caption('**Table X:** Inter reader bias test for advanced readers.')
-
-# Output table
-pander(style_table3(bias_tab_ex), missing = ".", style = "simple")
-
+```{r ref.label = 'a_dist_plot', fig.width = 7, fig.height = 4, fig.cap = cap_in}
 ```
 
-<!-- Plots -->
-
-```{r bias_plots_ex, fig.width = 3.5, fig.height = 3, fig.cap = cap_in}
-
-# Figure caption
-cap_in <- "**Figure X:** Bias plot for advanced readers"
-
-# Output figure
-plot_bias(ad_long_ex, max_age_ex, max_modal_ex)
-
+```{r ref.label = 'rb_plot', fig.width = 7, fig.height = 4, fig.cap = cap_in}
 ```
 
-```{r stat_plot_ex, fig.width = 7, fig.height = 4, fig.cap = cap_in}
-
-# Figure caption
-cap_in <- '**Figure X:** CV, PA and (STDEV (standard deviation) 
-           are plotted against modal age'
-
-
-# Output figure
-plot_stat(std_all_ex, pa_all_ex, cv_all_ex)
-
-```
-
-```{r a_dist_plot_ex, fig.width = 7, fig.height = 4, fig.cap = cap_in}
-
-# Figure caption
-cap_in <- '**Figure X:** The distribution of the age reading errors in percentage
-           by modal age as observed from the advanced age readers in an age
-           reading comparison to modal age. The achieved precision in age 
-           reading by modal age group is shown by the spread of the age 
-           readings errors. There appears to be no relative bias, if the age
-           reading errors are normally distributed. The distributions are 
-           skewed, if relative bias occurs.'
-
-# Figure output
-plot_rdist(dif_tab_ex,unique(ad_long_ex$modal_age))
-
-```
-
-```{r rb_plot_ex, fig.width = 7, fig.height = 4, fig.cap=cap_in}
-
-# Figure caption
-cap_in <- '**Figure X:** The relative bias by modal age as 
-           estimated by all age readers combined.'
-
-# Output figure
-plot_rb_ma(rb_all_ex)
-
-```
-
-```{r mla_plot_ex, fig.width = 7, fig.height = 4, fig.cap = cap_in}
-
-# Figure caption
-cap_in <- '**Figure X:** The mean length at age as estimated by each age reader
-           only including advanced readers.'
-
-# Output figure
-plot_mla(mla_num_ex)
-
+```{r ref.label = 'mla_plot', fig.width = 7, fig.height = 4, fig.cap = cap_in}
 ```
 
 
