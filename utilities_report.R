@@ -132,7 +132,7 @@ plot_growth <- function(dist, ad_long, strata = NULL) {
     ) %>%
     left_join(ad_long) %>%  # add by here
 #    filter(FishID == "Npout_056") %>%
-    select(Annulus, cum_distance, prep_method, Reader) %>%
+    select_at(c("Annulus", "cum_distance", "prep_method", "Reader", strata)) %>%
     ggplot(aes(x = Annulus, y = cum_distance, col = Reader)) +
       geom_boxplot()
 
