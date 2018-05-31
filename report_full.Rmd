@@ -332,7 +332,7 @@ asis_output(paste0("**Results by ", stratum, "**"))
 set.caption(paste0('**Table X:** Number of age readings per ', stratum, ' for all readers.'))
 
 # Output table
-pander(style_table1(get(vsname("num_read_tab", stratum, group))), missing = "-")
+pander(style_table1(get(vsname("num_read_tab"))), missing = "-")
 ```
 
 
@@ -342,7 +342,7 @@ pander(style_table1(get(vsname("num_read_tab", stratum, group))), missing = "-")
 set.caption(paste0('**Table X:** CV per ', stratum, '.'))
 
 # Output table
-pander(style_table2(get(vsname("cv_tab", stratum, group))), missing = "-")
+pander(style_table2(get(vsname("cv_tab"))), missing = "-")
 ```
 
 
@@ -353,7 +353,7 @@ pander(style_table2(get(vsname("cv_tab", stratum, group))), missing = "-")
 set.caption(paste0('**Table X:** Percentage Agreement per ', stratum, '.'))
 
 # Output table
-pander(style_table2(get(vsname("pa_tab", stratum, group))), missing = "-")
+pander(style_table2(get(vsname("pa_tab"))), missing = "-")
 ```
 
 ```{r rb_by, eval = print_strata()}
@@ -363,7 +363,7 @@ pander(style_table2(get(vsname("pa_tab", stratum, group))), missing = "-")
 set.caption(paste0('**Table X:** Relative Bias per ', stratum, '.'))
 
 # Output table
-pander(style_table2(get(vsname("rel_bias_tab", stratum, group))), missing = "-")
+pander(style_table2(get(vsname("rel_bias_tab"))), missing = "-")
 ```
 
 <!-- second strata -->
@@ -630,7 +630,7 @@ set.caption('**Table X:** Data overview including modal
              age and statistics per sample.')
 
 # Output table
-pander(style_table0(get(vname("data_overview_tab", group))), missing="-", style = "simple")
+pander(style_table0(get(vname("data_overview_tab"))), missing="-", style = "simple")
 ```
 
 ```{r num_age_readings}
@@ -643,7 +643,7 @@ set.caption('**Table X:** Number of age readings table gives an overview of
              readings per reader and per modal age are summarized at the end 
              of the table.')
 # Output table
-pander(style_table2(get(vname("num_read_tab", group))),missing="-")
+pander(style_table2(get(vname("num_read_tab"))),missing="-")
 
 ```
 
@@ -657,7 +657,7 @@ set.caption('**Table X:** Age composition by reader gives a
              summary of number of readings per reader.')
 
 # Output table
-pander(style_table2(get(vname("age_composition_tab", group))), missing = "0")
+pander(style_table2(get(vname("age_composition_tab"))), missing = "0")
 
 ```
 
@@ -673,7 +673,7 @@ set.caption('**Table X:** Mean length at age per reader is calculated per
 # Output table
 panderOptions('round', 1)
 panderOptions('keep.trailing.zeros', TRUE)
-pander(style_table2(get(vname("mean_length_tab", group))), missing = "-")
+pander(style_table2(get(vname("mean_length_tab"))), missing = "-")
 
 ```
 
@@ -689,7 +689,7 @@ cap_in <- '**Figure X:** Bias plots per reader. The mean age recorded
            estimated mean age and modal age.'
 
 # Output figures
-plot_bias(get(vname("ad_long", group)))
+plot_bias(get(vname("ad_long")))
 ```
 
 ```{r stat_plot, fig.width = 7, fig.height = 4, fig.cap = cap_in}
@@ -703,7 +703,7 @@ cap_in <- '**Figure X:** CV, PA and (STDEV (standard deviation) are
 # the standard deviation (STDEV) are plotted against MODAL age
 
 # Output figure
-plot_stat(get(vname("ad_long", group)))
+plot_stat(get(vname("ad_long")))
 ```
 
 ```{r a_dist_plot, fig.width = 7, fig.height = 4, fig.cap = cap_in}
@@ -719,7 +719,7 @@ cap_in <- '**Figure X:** The distribution of the age reading errors in
            distributions are skewed, if relative bias occurs.'
 
 # Output figure
-plot_rdist(get(vname("ad_long", group)))
+plot_rdist(get(vname("ad_long")))
 ```
 
 ```{r rb_plot, fig.width = 7, fig.height = 4, fig.cap = cap_in}
@@ -731,7 +731,7 @@ cap_in <- '**Figure X:** The relative bias by modal age as estimated
            by all age readers combined.'
 
 # Output figure
-plot_rb_ma(get(vname("rel_bias_tab", group)))
+plot_rb_ma(get(vname("rel_bias_tab")))
 
 ```
 
@@ -743,7 +743,7 @@ cap_in <- "**Figure X:** The mean length at age as
            estimated by each age reader."
 
 # Output figure
-plot_mla(get(vname("ad_long", group)))
+plot_mla(get(vname("ad_long")))
 ```
 
 

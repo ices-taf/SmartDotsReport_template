@@ -43,6 +43,8 @@ panderOptions('keep.trailing.zeros', TRUE)
 panderOptions('table.alignment.default', "center")
 panderOptions('knitr.auto.asis', FALSE)
 
+group <- "ex"
+
 # from extrafont
 # font_import(pattern=c("Cali"))
 # loadfonts(device="win")
@@ -243,7 +245,7 @@ asis_output(paste("## Age readings by", stratum))
 set.caption(paste0('**Table X:** Number of age readings per ', stratum, ' for advanced readers.'))
 
 # Output table
-pander(style_table1(get(vsname("num_read_tab", stratum))), missing = "-")
+pander(style_table1(get(vsname("num_read_tab"))), missing = "-")
 ```
 
 ```{r cv_title, eval = print_strata()}
@@ -258,7 +260,7 @@ asis_output(paste("## Coefficient of Variation by", stratum))
 set.caption(paste0('**Table X:** CV per ', stratum, '.'))
 
 # Output table
-pander(style_table2(get(vsname("cv_tab", stratum))), missing = "-")
+pander(style_table2(get(vsname("cv_tab"))), missing = "-")
 
 ```
 
@@ -276,7 +278,7 @@ asis_output(paste("## Percentage Agreement by", stratum))
 set.caption(paste0('**Table X:** Percentage Agreement per ', stratum, '.'))
 
 # Output table
-pander(style_table2(get(vsname("pa_tab", stratum))), missing = "-")
+pander(style_table2(get(vsname("pa_tab"))), missing = "-")
 
 ```
 

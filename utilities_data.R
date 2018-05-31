@@ -1,12 +1,5 @@
 
-#Rounding
-Mode <- function(x) {
-  as.numeric(names(sort(table(x), decreasing = TRUE)[1]))
-}
 
-cv <- function (x) {
-  sd(x, na.rm = TRUE) / mean(x, na.rm = TRUE) * 100
-}
 
 # Determine modal age and CV ##################################################
 

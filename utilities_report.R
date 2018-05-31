@@ -1,12 +1,5 @@
 
 
-vname <- function(name, group = "ex") paste(name, group, sep = "_")
-vsname <- function(name, stratum, group = "ex") paste(name, stratum, group, sep = "_")
-
-cv <- function (x) {
-  sd(x, na.rm = TRUE) / mean(x, na.rm = TRUE) * 100
-}
-
 # Style output tables #########################################################
 
 # These four functions are used to change the style of the output tables.

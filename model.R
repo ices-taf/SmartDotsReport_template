@@ -9,7 +9,6 @@ library(jsonlite)
 library(plyr) # age error matrix
 library(dplyr)
 library(tidyr)
-library(RVAideMemoire) # cv
 library(tibble) # bias_test
 
 library(ggplot2)
@@ -22,6 +21,7 @@ mkdir("model")
 config <- read_json("config.json", simplifyVector = TRUE)
 
 # load utilities
+source("utilities.R")
 source("utilities_model.R")
 
 # read input data
@@ -55,7 +55,6 @@ write.taf(reader_data, dir = "model")
 
 for (group in c("all", "ex")) {
 # group <- "all"
-  vname <- function(name) paste(name, group, sep = "_")
 
   # get the appropriate dataset
   ad_long <- get(vname("ad_long"))
@@ -113,7 +112,6 @@ for (group in c("all", "ex")) {
   # loop over strata - 4 tables per strata
   # stratum = "prep_method"
   for (stratum in config$strata) {
-    vsname <- function(name) paste(name, stratum, group, sep = "_")
 
     # Calculate number of readings per reader grouped by modal age and add total
     assign(vsname("num_read_tab"),

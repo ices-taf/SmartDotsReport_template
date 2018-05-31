@@ -1,15 +1,4 @@
 
-Mode <- function(x) {
-  as.numeric(names(sort(table(x), decreasing = TRUE)[1]))
-}
-
-ape <- function(x) {
-  100 * mean(abs((x - mean(x, na.rm = TRUE)) / mean(x, na.rm = TRUE)), na.rm = TRUE)
-}
-
-capFirst <- function(s) {
-    paste(toupper(substring(s, 1, 1)), substring(s, 2), sep = "")
-}
 
 format_table <- function(tab, fmt = "%i", extra_rows = "Total", age_range = modal_age_range) {
   tab[] <- lapply(tab, function(x) ifelse(is.na(x), "-", sprintf(fmt, x)))
