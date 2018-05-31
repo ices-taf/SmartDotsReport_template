@@ -7,11 +7,19 @@ Mode <- function(x) {
 }
 
 ape <- function(x) {
-  100 * mean(abs((x - mean(x, na.rm = TRUE)) / mean(x, na.rm = TRUE)), na.rm = TRUE)
+  if (Mode(x) == 0) {
+    NA
+  } else {
+    100 * mean(abs((x - mean(x, na.rm = TRUE)) / mean(x, na.rm = TRUE)), na.rm = TRUE)
+  }
 }
 
 cv <- function (x) {
-  sd(x, na.rm = TRUE) / mean(x, na.rm = TRUE) * 100
+  if (Mode(x) == 0) {
+    NA
+  } else {
+    sd(x, na.rm = TRUE) / mean(x, na.rm = TRUE) * 100
+  }
 }
 
 capFirst <- function(s) {
