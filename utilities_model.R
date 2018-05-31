@@ -77,7 +77,7 @@ cv_table <- function(ad_long, by = "reader") {
   # Add weighted mean
   num_read <- numbers_read(ad_long, by)
   cv_tab <- rbind(cv_tab,
-                  colSums(cv_tab * num_read, na.rm = TRUE) / colSums(num_read, na.rm = TRUE))
+                  colSums(cv_tab * num_read, na.rm = TRUE) / colSums(num_read * !is.na(cv_tab), na.rm = TRUE))
 
   # produce formatted version
   format_table(cv_tab, fmt = "%.0f %%", extra_rows = "Weighted Mean")
@@ -96,7 +96,7 @@ ape_table <- function(ad_long, by = "reader") {
   # Add weighted mean
   num_read <- numbers_read(ad_long, by)
   ape_tab <- rbind(ape_tab,
-                  colSums(ape_tab * num_read, na.rm = TRUE) / colSums(num_read, na.rm = TRUE))
+                  colSums(ape_tab * num_read, na.rm = TRUE) / colSums(num_read * !is.na(ape_tab), na.rm = TRUE))
 
   # produce formatted version
   format_table(ape_tab, fmt = "%.0f %%", extra_rows = "Weighted Mean")
@@ -122,7 +122,7 @@ pa_table <- function(ad_long, by = "reader") {
 
   # Add weighted mean
   pa_tab <- rbind(pa_tab,
-                  colSums(pa_tab * num_read, na.rm = TRUE) / colSums(num_read, na.rm = TRUE))
+                  colSums(pa_tab * num_read, na.rm = TRUE) / colSums(num_read * !is.na(pa_tab), na.rm = TRUE))
 
   # produce formatted version
   format_table(pa_tab, fmt = "%.0f %%", extra_rows = "Weighted Mean")
@@ -146,7 +146,7 @@ rel_bias_table <- function(ad_long, by = "reader") {
   num_read <- numbers_read(ad_long, by)
   rel_bias_tab <-
     rbind(rel_bias_tab,
-          colSums(rel_bias_tab * num_read, na.rm = TRUE) / colSums(num_read, na.rm = TRUE))
+          colSums(rel_bias_tab * num_read, na.rm = TRUE) / colSums(num_read * !is.na(rel_bias_tab), na.rm = TRUE))
 
   # produce formatted version
   format_table(rel_bias_tab, fmt = "%.2f", extra_rows = "Weighted Mean")
