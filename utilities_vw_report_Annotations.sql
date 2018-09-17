@@ -23,7 +23,8 @@ SELECT
   upper(xCountry.Code) as iso_code,
   'R' + FORMAT(Number, '00') + ' ' + upper(xCountry.Code) as reader,
   tblAnnotations.tblAnnotationID as AnnotationID,
-  tblSamples.FishID
+  tblSamples.FishID,
+  IsApproved
 FROM
   tblAnnotations
 left join

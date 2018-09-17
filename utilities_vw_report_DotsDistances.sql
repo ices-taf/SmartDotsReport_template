@@ -12,7 +12,8 @@ SELECT
   (X-X1) * cos(-theta) - (Y-Y1) * sin(-theta) as pixelDistance,
   Scale as pixelsPerMillimeter,
   xArea.Code as ices_area,
-  'R' + FORMAT(Number, '00') + ' ' + upper(xCountry.Code) as reader
+  'R' + FORMAT(Number, '00') + ' ' + upper(xCountry.Code) as reader,
+  IsApproved
 FROM
   tblDots
 left join
