@@ -20,7 +20,7 @@ left join
    from
      tblLines
    where
-     abs(Y2 - Y1) > 0 and abs(X2 - X1) > 0) as xLines
+     abs(Y2 - Y1) > 0 or abs(X2 - X1) > 0) as xLines
 on
   tblDots.tblAnnotationID = xLines.tblAnnotationID
 left join
