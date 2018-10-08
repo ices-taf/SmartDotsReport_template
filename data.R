@@ -27,6 +27,12 @@ dist <- read.taf("begin/dist.csv")
 
 # quick hacks -------------------------------
 
+# keep only approved annotations
+if (config$onlyApproved) {
+  ad <- ad[ad$IsApproved == TRUE, ]
+  dist <- dist[dist$IsApproved == TRUE, ]
+}
+
 # convert reader expertise
 ad$expertise <- c("Basic", "Advanced")[ad$expertise + 1]
 
