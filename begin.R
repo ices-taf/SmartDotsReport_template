@@ -21,15 +21,15 @@ config <- read_json("config.json", simplifyVector = TRUE)
 dbConnection <- 'Driver={SQL Server};Server=SQL06;Database=SmartDots;Trusted_Connection=yes'
 
 # data: one row per set of dots
-msg("downloading annotations for ... ", filter)
-sqlq <- sprintf(paste("select * FROM vw_report_Annotations where %s"), filter)
+msg("downloading annotations for event id ... ", config$event_id)
+sqlq <- sprintf("select * FROM vw_report_Annotations where EventID = %s", config$event_id)
 conn <- odbcDriverConnect(connection = dbConnection)
 ad <- sqlQuery(conn, sqlq)
 odbcClose(conn)
 
 # dist: one row per dot
-msg("downloading dots for ... ", filter)
-sqlq <- sprintf(paste("select * FROM vw_report_DotsDistances where %s"), filter)
+msg("downloading dots for event id... ", config$event_id)
+sqlq <- sprintf("select * FROM vw_report_DotsDistances where EventID = %s", config$event_id)
 conn <- odbcDriverConnect(connection = dbConnection)
 dist <- sqlQuery(conn, sqlq)
 odbcClose(conn)
