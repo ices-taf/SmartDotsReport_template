@@ -14,6 +14,7 @@ library(tidyr)
 mkdir("data")
 
 # get utility functions
+source("utilities.R")
 source("utilities_data.R")
 
 # load configuration
