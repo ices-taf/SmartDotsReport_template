@@ -26,14 +26,6 @@ dist <- read.taf("begin/dist.csv")
 
 # quick hacks -------------------------------
 
-# use pixel distance if no scale
-dist$distance[is.na(dist$distance)] <- dist$pixelDistance[is.na(dist$distance)]
-
-# remove annotations on (and very near) the centre
-dist <- dist[dist$pixelDistance > 2,]
-# adjust ages in age data
-ad$age <- unname(table(factor(dist$AnnotationID, levels = ad$AnnotationID))[paste(ad$AnnotationID)])
-
 # convert reader expertise
 ad$expertise <- c("Basic", "Advanced")[ad$expertise + 1]
 
