@@ -1,30 +1,5 @@
-// SmartDots workshop report congiguration file
 {
-
-  // Analysis specific arguments:
-  // ----------------------------
-
-  // Report output title
-  "report_title": "Report of Otolith Exchange Analysis for Sprat in Area 3A",
-  "report_name": "smartdots_exchange_analysis_event_74",
-
-  // summary output title
-  "summary_title": "Summary of Otolith Exchange Analysis for Sprat in Area 3A",
-  "summary_name": "smartdots_exchange_analysis_summary_event_74",
-
-  // Smartdote event IDs
-  //"event_ids": [74, 77],
   "event_ids": 74,
-
-  // report tokens
-  //"report_tokens": ["07BAF7B6-1ECB-446F-A93A-52B732C1120E","1D99692C-FCE2-459E-A49C-549DF9ABC068"]
-  "report_tokens": "07BAF7B6-1ECB-446F-A93A-52B732C1120E",
-
-  // Use mode or mean to obtain modal age, when there is no mode
-  // within the age reading
   "ma_method": "Mode",
-
-  // Choose strata
-  "strata": ["prep_method"]
-  //"strata": null
+  "strata": ["strata"]
 }
