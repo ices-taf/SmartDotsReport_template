@@ -32,6 +32,9 @@ ad_long_ex <- read.taf("data/ad_long_ex.csv")
 # model age range
 modal_age_range <-  with(ad_long_all, min(modal_age, na.rm = TRUE):max(modal_age, na.rm = TRUE))
 
+# set strata to NULL is all are NA
+if (all(is.na(ad_long_all[[config$strata]]))) config$strata <- NULL
+
 # Overview of samples and readers ##############################################
 
 # Sample overview
