@@ -31,6 +31,9 @@ dist <- read.taf("data/dist.csv")
 ad_long_all <- read.taf("data/ad_long.csv")
 ad_long_ex <- read.taf("data/ad_long_ex.csv")
 
+# set strata to NULL is all are NA
+if (all(is.na(ad_long_all[[config$strata]]))) config$strata <- NULL
+
 # get csv files
 for (file in dir("model", pattern = "*.csv")) {
   assign(gsub(".csv", "", file),
