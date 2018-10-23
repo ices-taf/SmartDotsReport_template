@@ -4,7 +4,7 @@ output:
     fig_caption: true
     fig_height: 10
     fig_width: 10
-    reference_docx: begin/initial/reportTemplate.docx
+    reference_docx: bootstrap/initial/reportTemplate.docx
     toc: true
     keep_md: true
 params:
@@ -27,7 +27,7 @@ params:
 ```{r chunk_setup, include=FALSE}
 # CHUNK SETUPS #################################################################
 
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, 
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE,
                       message=FALSE, results = 'asis', dpi=400)
 ```
 
@@ -56,29 +56,29 @@ The agenda can be found in Annex 1 and the list of participants in Annex 2.
 
 # Introduction
 
-This part should include a background to the species, the workshop/exchange 
+This part should include a background to the species, the workshop/exchange
 and what to expect to read about in the report.
 
 
 # Methods
 
-This report contains statistical analyses and comparisons of age readings 
+This report contains statistical analyses and comparisons of age readings
 in the form of tables and graphical plots.
 
 First, an overview of participating age readers and the samples are presented.
 
-Before each table or plot there is a short explanation of it. This text is 
-thought as a help to understand the tables/plot and can just be deleted in 
-the final output report. The document can be edited just like any other 
-.docx file. New text can be added, additional pictures can be included and 
-the tables edited. If some tables which are presently in the annexes need to 
-be moved to the body of the report this is also possible. Only the plots 
+Before each table or plot there is a short explanation of it. This text is
+thought as a help to understand the tables/plot and can just be deleted in
+the final output report. The document can be edited just like any other
+.docx file. New text can be added, additional pictures can be included and
+the tables edited. If some tables which are presently in the annexes need to
+be moved to the body of the report this is also possible. Only the plots
 cannot be changed.
 
-In the first part of analysis are presented the tables and plots from the 
-Guus Eltink Excel sheet 'Age Reading Comparisons' **(Eltink, A.T.G.W. 2000)**. 
-The order and numbering of tables and plots are the same as in the excel sheet. 
-Tables 6.1 - 6.4 from the 'Age Reading Comparisons' sheet are not outputted 
+In the first part of analysis are presented the tables and plots from the
+Guus Eltink Excel sheet 'Age Reading Comparisons' **(Eltink, A.T.G.W. 2000)**.
+The order and numbering of tables and plots are the same as in the excel sheet.
+Tables 6.1 - 6.4 from the 'Age Reading Comparisons' sheet are not outputted
 since these are merely used to do calculations for the other tables.
 
 
@@ -90,15 +90,15 @@ In here will go some text and an equation.
 **Co-efficient of Variation (CV)**
 
 The table presents the cv per modal age and reader. The cv's are calculated
-as the ratio between the standard deviation (σ) and mean value (μ) per 
+as the ratio between the standard deviation (σ) and mean value (μ) per
 reader and modal age:
 
 $$CV = { \frac{ {\sigma}} {\mu} } \cdot {100 \%} $$
 
 To the table is also added the CV of all readers combined per modal age and
-a weighted mean of the CV per reader. Finally a rank value is added per 
-reader, where the reader with the lowest weighted mean is assigned with 
-a rank and so forth (in the situation of ties between two weighted means 
+a weighted mean of the CV per reader. Finally a rank value is added per
+reader, where the reader with the lowest weighted mean is assigned with
+a rank and so forth (in the situation of ties between two weighted means
 will every tied element be assigned to the lowest rank. This is the procedure
 for all ties methods when assigning ranks).
 
@@ -122,9 +122,9 @@ of all readings from 1 to $n$.
 
 **Age error matricx (AEM)**
 
-Age error matrices (AEM) were produced following procedures outlined 
+Age error matrices (AEM) were produced following procedures outlined
 by WKSABCAL (2014) where the matrix shows the proportion of each modal
-age mis-aged as other ages. The sum of each row is 1, which equals 100%. 
+age mis-aged as other ages. The sum of each row is 1, which equals 100%.
 The age data was analysed twice, the first time all readers were included
 and the second time only the “advanced” readers were included. If a reader
 is “advanced” then they are considered well trained and they provide ages
@@ -136,7 +136,7 @@ the stock assessment in that specific area.
 **Otolith Growth Analysis**
 
 SmartDots provides a measure of distance between the annotations made by
-the readers and thus provides a measure of growth increment width. 
+the readers and thus provides a measure of growth increment width.
 This data is used to establish growth curves for each fish and for each reader.
 
 
@@ -174,23 +174,23 @@ pander(style_table0(reader_data), missing = "-")
 ```
 
 
-## Results 
+## Results
 
 ### All readers
 
-**All samples included** 
+**All samples included**
 
 Those writing the report put TEXT here describing the results.
 
-<!-- PA, CV and APE text --> 
+<!-- PA, CV and APE text -->
 ```{r summary_statistics}
-summary_statistics <- 
-  c(CV  = cv_tab_all[nrow(cv_tab_all), "all"], 
+summary_statistics <-
+  c(CV  = cv_tab_all[nrow(cv_tab_all), "all"],
     PA  = pa_tab_all[nrow(pa_tab_all), "all"],
     APE = ape_tab_all[nrow(ape_tab_all), "all"])
 ```
 
-The weighted average percentage agreement based on modal ages for all readers 
+The weighted average percentage agreement based on modal ages for all readers
 is `r summary_statistics[2]`, with the weighted average CV of `r summary_statistics[1]` and APE of `r summary_statistics[3]`.
 
 ```{r cv_table}
@@ -199,8 +199,8 @@ is `r summary_statistics[2]`, with the weighted average CV of `r summary_statist
 
 # Table caption
 set.caption('**Table X:** Coefficient of Variation (CV) table presents the CV
-             per modal age and reader, the CV of all readers combined per modal 
-             age and a weighted mean of the CV per reader. 
+             per modal age and reader, the CV of all readers combined per modal
+             age and a weighted mean of the CV per reader.
              A rank is also assigned to each reader.')
 
 # Output table
@@ -209,9 +209,9 @@ pander(style_table1(cv_tab_all), missing = "-")
 ```
 
 <!-- PA text -->
-The percentage agreement per reader per modal age tells how large part of the 
-readings that are equal to the modal age. The weighted mean including at the 
-bottom of the table is weighted according to number of age readings. 
+The percentage agreement per reader per modal age tells how large part of the
+readings that are equal to the modal age. The weighted mean including at the
+bottom of the table is weighted according to number of age readings.
 A rank is also assigned to each reader.
 
 ```{r percentage_agreement}
@@ -230,9 +230,9 @@ pander(style_table1(pa_tab_all), missing="-")
 ```
 
 <!-- Relative bias text -->
-The relative bias is the difference between the mean age (per modal age per 
-reader) and modal age. As for the previous tables, a combined bias for all 
-readers and weighted means are calculated and finally a rank is assigned 
+The relative bias is the difference between the mean age (per modal age per
+reader) and modal age. As for the previous tables, a combined bias for all
+readers and weighted means are calculated and finally a rank is assigned
 to each reader.
 
 ```{r rb}
@@ -240,7 +240,7 @@ to each reader.
 # RELATIVE BIAS TABLE - All readers ###########################################
 
 # Table caption
-set.caption('**Table X:** Relative bias table represents the relative bias per 
+set.caption('**Table X:** Relative bias table represents the relative bias per
              modal age per reader, the relative bias of all readers combined
              per modal age and a weighted mean of the relative bias per reader.
              A rank is also assigned to each reader.')
@@ -254,21 +254,21 @@ pander(style_table1(rel_bias_tab_all), missing = "-")
 # BIAS PLOTS - All readers ####################################################
 
 # Figure Caption
-cap_in <- '**Figure X:**: Age bias plot for all readers. Mean age 
-           recorded +/- 2 stdev of each reader and all readers combined are 
-           plotted against modal age. The estimated man age corresponds to 
-           modal age, if the estimated mean age is on the 1:1 equilibrium 
-           line (solid line). Relative bias is the age difference between 
+cap_in <- '**Figure X:**: Age bias plot for all readers. Mean age
+           recorded +/- 2 stdev of each reader and all readers combined are
+           plotted against modal age. The estimated man age corresponds to
+           modal age, if the estimated mean age is on the 1:1 equilibrium
+           line (solid line). Relative bias is the age difference between
            estimated mean age and modal age.'
 
-# Output figure 
+# Output figure
 plot_bias_all(ad_long_all)
 ```
 
 <!-- Inter reader bias text -->
 For each pair that is being compared, the differences between the readings
 per image are found and the frequency of each occurring difference is obtained.
-A rank value is calculated for the positive and the negative differences 
+A rank value is calculated for the positive and the negative differences
 (R+ and R- in the Guus Eltink sheet). The value with the smallest rank is then
 used to calculate a z-value that determines the level of bias (not clear from
 Guus Eltink sheet how the equations are defined..).
@@ -279,8 +279,8 @@ Guus Eltink sheet how the equations are defined..).
 
 # Table caption
 set.caption('**Table X:** Inter reader bias test. The Inter-reader bias test
-             gives probability of bias between readers and with modal age. 
-             - = no sign of bias (p>0.05), * = possibility of bias 
+             gives probability of bias between readers and with modal age.
+             - = no sign of bias (p>0.05), * = possibility of bias
              (0.01<p<0.05), * * = certainty of bias (p<0.01) ')
 
 # Output table
@@ -434,7 +434,7 @@ pander(style_table2(get(vsname("rel_bias_tab"))), missing = "-")
 
 ### Advanced readers
 
-**All samples included** 
+**All samples included**
 
 ```{r cv_ex}
 
@@ -458,7 +458,7 @@ pander(style_table1(cv_tab_ex), missing = "-")
 # Table caption
 set.caption('**Table X:** Percentage agreement (PA) table represents the PA per
              modal age and reader, advanced the PA of all advanced readers
-             combined per modal age and a weighted mean of the PA per reader. 
+             combined per modal age and a weighted mean of the PA per reader.
              A rank is also assgned to each reader.')
 
 # Output table
@@ -474,10 +474,10 @@ pander(style_table1(pa_tab_ex), missing = "-")
 set.caption('**Table X:** Relative bias table represents the relative bias per
              modal age and advanced reader, the relative bias of all
              advanced readers combined per modal age and a weighted mean of
-             the relative bias per reader. A rank is also assigned to 
+             the relative bias per reader. A rank is also assigned to
              each reader.')
 
-# Output table 
+# Output table
 pander(style_table1(rel_bias_tab_ex), missing = "-")
 
 ```
@@ -513,7 +513,7 @@ plot_growth(dist, ad_long_ex, "prep_method")
 
 
 <!-- Age error matrix text -->
-Age error matrices are calculated per area and only based on the age 
+Age error matrices are calculated per area and only based on the age
 readings of the advanced readers.
 
 ```{r age_error_matrix_ex, results='asis'}
@@ -524,10 +524,10 @@ readings of the advanced readers.
 for (i in names(ae_mat_ex)) {
 
   # Table caption
-  cap_i <- paste0("**Table X:** Age error matrix (AEM) for ", i ,". 
-                   The AEM shows the proportional distribution 
+  cap_i <- paste0("**Table X:** Age error matrix (AEM) for ", i ,".
+                   The AEM shows the proportional distribution
                    of age readings for each modal age. Age column should sum to
-                   one but due to rounding there might be small deviations in 
+                   one but due to rounding there might be small deviations in
                    some cases.
                    Only advanced readers are used for calculating the AEM.")
 
@@ -626,7 +626,7 @@ group <- "all"
 # DATA OVERVIEW - All readers #################################################
 
 # Table caption
-set.caption('**Table X:** Data overview including modal 
+set.caption('**Table X:** Data overview including modal
              age and statistics per sample.')
 
 # Output table
@@ -638,9 +638,9 @@ pander(style_table0(get(vname("data_overview_tab"))), missing="-", style = "simp
 # NUMBER OF AGE READINGS - All readers ########################################
 
 # Table caption
-set.caption('**Table X:** Number of age readings table gives an overview of 
-             number of readings per reader and modal age. The total numbers of 
-             readings per reader and per modal age are summarized at the end 
+set.caption('**Table X:** Number of age readings table gives an overview of
+             number of readings per reader and modal age. The total numbers of
+             readings per reader and per modal age are summarized at the end
              of the table.')
 # Output table
 pander(style_table2(get(vname("num_read_tab"))),missing="-")
@@ -653,7 +653,7 @@ pander(style_table2(get(vname("num_read_tab"))),missing="-")
 # AGE COMPOSITION - All readers ###############################################
 
 # Table caption
-set.caption('**Table X:** Age composition by reader gives a 
+set.caption('**Table X:** Age composition by reader gives a
              summary of number of readings per reader.')
 
 # Output table
@@ -666,8 +666,8 @@ pander(style_table2(get(vname("age_composition_tab"))), missing = "0")
 # MEAN LENGTH AT AGE - All readers ############################################
 
 # Table caption
-set.caption('**Table X:** Mean length at age per reader is calculated per 
-             reader and age (not modal age) and for all readers combined per 
+set.caption('**Table X:** Mean length at age per reader is calculated per
+             reader and age (not modal age) and for all readers combined per
              age. A weighted mean is also given.')
 
 # Output table
@@ -681,11 +681,11 @@ pander(style_table2(get(vname("mean_length_tab"))), missing = "-")
 # INDIVIDUAL BIAS PLOTS - All readers #########################################
 
 # Figure caption
-cap_in <- '**Figure X:** Bias plots per reader. The mean age recorded 
+cap_in <- '**Figure X:** Bias plots per reader. The mean age recorded
            +/- 2stdevof each age reader and all readers combined are plotted
-           against the modal age. The estimated mean age corresponds to modal 
-           age, if the estimated mean age is on the 1:1 equilibrium line 
-           (solid line). Relative bias is the age difference between 
+           against the modal age. The estimated mean age corresponds to modal
+           age, if the estimated mean age is on the 1:1 equilibrium line
+           (solid line). Relative bias is the age difference between
            estimated mean age and modal age.'
 
 # Output figures
@@ -696,10 +696,10 @@ plot_bias(get(vname("ad_long")))
 # PLOT STATISTICS, STDEV, CV AND PA - All readers #############################
 
 # Figure caption
-cap_in <- '**Figure X:** CV, PA and (STDEV (standard deviation) are 
+cap_in <- '**Figure X:** CV, PA and (STDEV (standard deviation) are
            plotted against modal age'
 
-# The coefficient of variation (CV%), percent agreement and 
+# The coefficient of variation (CV%), percent agreement and
 # the standard deviation (STDEV) are plotted against MODAL age
 
 # Output figure
@@ -710,12 +710,12 @@ plot_stat(get(vname("ad_long")))
 # PLOT AGE DISTRIBUTION - All readers #########################################
 
 # Figure caption
-cap_in <- '**Figure X:** The distribution of the age reading errors in 
-           percentage by modal age as observed from the whole group of age 
-           readers in an age reading comparison to modal age. The achieved 
-           precision in age reading by MODAL age group is shown by the spread 
-           of the age readings errors. There appears to be no relative bias, 
-           if the age reading errors are normally distributed. The 
+cap_in <- '**Figure X:** The distribution of the age reading errors in
+           percentage by modal age as observed from the whole group of age
+           readers in an age reading comparison to modal age. The achieved
+           precision in age reading by MODAL age group is shown by the spread
+           of the age readings errors. There appears to be no relative bias,
+           if the age reading errors are normally distributed. The
            distributions are skewed, if relative bias occurs.'
 
 # Output figure
@@ -727,7 +727,7 @@ plot_rdist(get(vname("ad_long")))
 # RELATIEV BIAS - All readers #################################################
 
 # Figure caption
-cap_in <- '**Figure X:** The relative bias by modal age as estimated 
+cap_in <- '**Figure X:** The relative bias by modal age as estimated
            by all age readers combined.'
 
 # Output figure
@@ -739,7 +739,7 @@ plot_rb_ma(get(vname("rel_bias_tab")))
 # PLOT AGE DISTRIBUTION - All readers #########################################
 
 # Figure caption
-cap_in <- "**Figure X:** The mean length at age as 
+cap_in <- "**Figure X:** The mean length at age as
            estimated by each age reader."
 
 # Output figure
@@ -749,7 +749,7 @@ plot_mla(get(vname("ad_long")))
 
 ## Results Advanced readers
 
-**All samples included** 
+**All samples included**
 
 **Data Overview**
 
