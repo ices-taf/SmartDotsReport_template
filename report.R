@@ -18,6 +18,7 @@ library(dplyr)
 mkdir("report")
 
 # source utilities
+source("utilities.R")
 source("utilities_report.R")
 
 # load configuration data

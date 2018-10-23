@@ -6,7 +6,7 @@ output:
     fig_width: 10
     reference_docx: bootstrap/initial/summaryTemplate.docx
     toc: false
-    keep_md: true
+    keep_md: false
 params:
   summary_title: ""
   strata: NULL

@@ -6,7 +6,7 @@ output:
     fig_width: 10
     reference_docx: bootstrap/initial/reportTemplate.docx
     toc: true
-    keep_md: true
+    keep_md: false
 params:
   report_title: ""
   strata: NULL
