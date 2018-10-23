@@ -14,6 +14,7 @@ library(tidyr)
 mkdir("data")
 
 # get utility functions
+source("utilities.R")
 source("utilities_data.R")
 
 # load configuration
@@ -25,6 +26,12 @@ ad <- read.taf("begin/data.csv")
 dist <- read.taf("begin/dist.csv")
 
 # quick hacks -------------------------------
+
+# keep only approved annotations
+if (config$onlyApproved) {
+  ad <- ad[ad$IsApproved == TRUE, ]
+  dist <- dist[dist$IsApproved == TRUE, ]
+}
 
 # convert reader expertise
 ad$expertise <- c("Basic", "Advanced")[ad$expertise + 1]

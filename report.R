@@ -23,10 +23,16 @@ source("utilities_report.R")
 # load configuration data
 config <- read_json("config.json", simplifyVector = TRUE)
 
+# set pandoc directory
+Sys.setenv(RSTUDIO_PANDOC = config$pandocdir)
+
 # load data for report
 dist <- read.taf("data/dist.csv")
 ad_long_all <- read.taf("data/ad_long.csv")
 ad_long_ex <- read.taf("data/ad_long_ex.csv")
+
+# set strata to NULL is all are NA
+if (all(is.na(ad_long_all[[config$strata]]))) config$strata <- NULL
 
 # get csv files
 for (file in dir("model", pattern = "*.csv")) {
@@ -50,7 +56,6 @@ render("report_summary.Rmd",
        encoding = "UTF-8")
 cp(summary_filename, "report", move = TRUE)
 
-
 # render report and copy to report folder
 report_filename <- paste0(config$report_name, ".docx")
 render("report_full.Rmd",
@@ -59,6 +64,3 @@ render("report_full.Rmd",
        output_file = report_filename,
        encoding = "UTF-8")
 cp(report_filename, "report", move = TRUE)
-
-
-# finally copy to sharepoint?
