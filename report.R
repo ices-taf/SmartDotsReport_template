@@ -13,7 +13,7 @@ library(pander)
 library(ggplot2)
 library(scales)
 library(dplyr)
-requires(Hmisc)"
+requires(Hmisc)
 
 # make report directory
 mkdir("report")
