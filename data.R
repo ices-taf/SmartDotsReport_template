@@ -9,6 +9,7 @@ library(icesTAF)
 library(jsonlite)
 library(dplyr)
 library(tidyr)
+require(lubridate)
 
 # create data directory
 mkdir("data")
