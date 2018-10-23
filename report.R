@@ -23,9 +23,6 @@ source("utilities_report.R")
 # load configuration data
 config <- read_json("config.json", simplifyVector = TRUE)
 
-# set pandoc directory
-Sys.setenv(RSTUDIO_PANDOC = config$pandocdir)
-
 # load data for report
 dist <- read.taf("data/dist.csv")
 ad_long_all <- read.taf("data/ad_long.csv")
