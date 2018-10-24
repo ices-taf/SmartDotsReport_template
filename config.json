@@ -1,5 +1,12 @@
 {
   "event_id": null,
   "ma_method": "Mode",
-  "strata": ["strata"]
+  "strata": [
+    "strata"
+  ],
+  "onlyApproved": true,
+  "summary_name": "summary",
+  "summary_title": "summary",
+  "report_name": "report",
+  "report_title": "report"
 }
