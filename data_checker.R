@@ -16,7 +16,7 @@ dist <- read.taf("bootstrap/dist.csv")
 # some messages to the user ------
 
 frmt_vector <- function(x) {
-  paste(paste(names(x), ":", x), collapse = ", ")
+  paste(paste0(names(x), "- ", x), collapse = ", ")
 }
 
 check_ad <- function(ad, what = "ad") {
@@ -24,7 +24,6 @@ check_ad <- function(ad, what = "ad") {
     list(
       c("Summary of ", what),
       c("number of annotations: ", nrow(ad)),
-      c("approved: ", sum(ad$IsApproved), ", unapproved: ", sum(!ad$IsApproved)),
       c("samples with no area: ", sum(ad$ices_area == "")),
       c("prep_method: ", frmt_vector(table(ad$prep_method)))
     )
@@ -55,7 +54,6 @@ check_dist <- function(dist, what = "dist") {
   checks <-
     list(
       c("Summary of dist (", nrow(dist), " dots in total):"),
-      c("approved: ", sum(dist$IsApproved), ", unapproved: ", sum(!dist$IsApproved)),
       c("dots with no area: ", sum(dist$ices_area == "")),
       c("dots with distance: ", sum(is.na(dist$pixelsPerMillimeter)))
     )
