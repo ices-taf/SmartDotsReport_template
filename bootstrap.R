@@ -59,6 +59,8 @@ dist <- dist[dist$pixelDistance > 2,]
 # adjust ages in age data from removing dots close to centre
 ad$age <- unname(table(factor(dist$AnnotationID, levels = ad$AnnotationID))[paste(ad$AnnotationID)])
 
+# adjust area
+ad$ices_area[ad$ices_area == ""] <- "unnamed"
 
 # end hacks  !!!
 
