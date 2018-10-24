@@ -2,6 +2,7 @@
 
 library(icesTAF)
 library(jsonlite)
+library(dplyr)
 
 # load configuration
 config <- read_json("config.json", simplifyVector = TRUE)
