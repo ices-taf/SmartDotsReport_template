@@ -117,6 +117,7 @@ for (group in c("all", "ex")) {
 
   # loop over strata - 4 tables per strata
   # stratum = "prep_method"
+  if (is.null(config$strata)) config$strata <- numeric()
   for (stratum in config$strata) {
 
     # Calculate number of readings per reader grouped by modal age and add total
