@@ -39,8 +39,7 @@ library(tidyr)
 
  multiple_annotations <-
     ad %>%
-    group_by(FishID, reader) %>%
-    count() %>%
+    count(FishID, reader) %>%
     filter(n > 1) %>%
     rename(annotations = n)
 
@@ -49,15 +48,6 @@ library(tidyr)
    drop <- seq_along(iage)[-which.max(iage)]
    ad <- ad[-which(ad$FishID == multiple_annotations$FishID[i] & ad$reader == multiple_annotations$reader[i])[drop],]
  }
-
-# remove dots from dropped annotations
-dist <- dist[dist$AnnotationID %in% ad$AnnotationID,]
-
-# remove annotations on (and very near) the centre
-dist <- dist[dist$pixelDistance > 2,]
-
-# adjust ages in age data from removing dots close to centre
-ad$age <- unname(table(factor(dist$AnnotationID, levels = ad$AnnotationID))[paste(ad$AnnotationID)])
 
 # adjust area
 ad$ices_area[ad$ices_area == ""] <- "unnamed"
