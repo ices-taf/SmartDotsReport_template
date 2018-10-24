@@ -9,24 +9,22 @@ library(icesTAF)
 library(jsonlite)
 
 # create data directory
-mkdir("bootstrap")
+mkdir("bootstrap/downloads")
 
 # load configuration
 config <- read_json("config.json", simplifyVector = TRUE)
 
 # get data from api --------
-msg("downloading annotations for event id ... ", config$event_id)
-ad <-
-  read.csv(
-    paste0("http://localhost:1234/api/smartDots/Annotations/", config$event_id),
-    stringsAsFactors = FALSE)
+zipfile <- "bootstrap/downloads/smartdots_data.zip"
+download.file(paste0("https://smartdots.ices.dk/download/DownloadEvent.ashx?tblEventID=", config$event_id),
+              zipfile,  mode = "wb")
+files <- unzip(zipfile, list = TRUE)$Name
+files <- files[grep("*.csv", files)]
+unzip(zipfile, files = files, exdir = "bootstrap/downloads")
 
-msg("downloading dots for event id... ", config$event_id)
-dist <-
-  read.csv(
-    paste0("http://localhost:1234/api/smartDots/DotsDistances/", config$event_id),
-    stringsAsFactors = FALSE)
-
+# read in and write out again
+dist <- read.csv(paste0("bootstrap/downloads/", files[grep("DotsDistances",  files)]), stringsAsFactors = FALSE)
+ad <- read.csv(paste0("bootstrap/downloads/", files[grep("Annotations",  files)]), stringsAsFactors = FALSE)
 
 # write out 'bootstrap' data tables
 write.taf(dist, "bootstrap/dist.csv")
