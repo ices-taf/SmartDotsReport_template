@@ -17,6 +17,24 @@ frmt_vector <- function(x) {
   paste(paste(names(x), ":", x), collapse = ", ")
 }
 
+check_ad <- function(ad, what = "ad") {
+  checks <-
+    list(
+      c("Summary of ", what, " (", nrow(ad), " annotations in total):"),
+      c("approved: ", sum(ad$IsApproved == "True"), ", unapproved: ", sum(ad$IsApproved == "False")),
+      c("samples with no area: ", sum(ad$ices_area == "")),
+      c("prep_method: ", frmt_vector(table(ad$prep_method)))
+    )
+
+  check_text <- paste(sapply(checks, paste, collapse = ""), collapse = "\n\t     * ")
+  msg(check_text)
+}
+
+check_ad(ad)
+
+check_ad(ad[ad$IsApproved == "True",], "ad (only approved)")
+
+
 msg("Summary of ad (", nrow(ad), " annotations in total):\n",
     "\t\t approved: ", sum(ad$IsApproved == "True"), ", unapproved: ", sum(ad$IsApproved == "False"), "\n",
     "\t\t samples with no area: ", sum(ad$ices_area == ""), "\n",
