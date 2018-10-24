@@ -28,22 +28,42 @@ check_ad <- function(ad, what = "ad") {
 
   check_text <- paste(sapply(checks, paste, collapse = ""), collapse = "\n\t     * ")
   msg(check_text)
+
+  # other checks
+  multiple_annotations <-
+    ad %>%
+    group_by(FishID, reader) %>%
+    count() %>%
+    filter(n > 1) %>%
+    rename(annotations = n)
+  if (nrow(multiple_annotations) > 0) {
+    txt <- paste(capture.output(print(multiple_annotations)), collapse = "\n")
+    msg("Some readers have multiple annotations:\n", txt)
+  }
+
 }
 
+check_dist <- function(dist, what = "dist") {
+  checks <-
+    list(
+      c("Summary of dist (", nrow(dist), " dots in total):"),
+      c("approved: ", sum(dist$IsApproved == "True"), ", unapproved: ", sum(dist$IsApproved == "False")),
+      c("dots with no area: ", sum(dist$ices_area == "")),
+      c("dots with distance: ", sum(is.na(dist$pixelsPerMillimeter)))
+    )
+
+  check_text <- paste(sapply(checks, paste, collapse = ""), collapse = "\n\t     * ")
+  msg(check_text)
+}
+
+
+msg("Checking data for Event: ", config$event_id)
+
 check_ad(ad)
-
 check_ad(ad[ad$IsApproved == "True",], "ad (only approved)")
-
-
-msg("Summary of ad (", nrow(ad), " annotations in total):\n",
-    "\t\t approved: ", sum(ad$IsApproved == "True"), ", unapproved: ", sum(ad$IsApproved == "False"), "\n",
-    "\t\t samples with no area: ", sum(ad$ices_area == ""), "\n",
-    "\t\t prep_method: ", frmt_vector(table(ad$prep_method)), "\n")
-
-msg("Summary of dist (", nrow(dist), " dots in total):\n",
-    "\t\t approved: ", sum(dist$IsApproved == "True"), ", unapproved: ", sum(dist$IsApproved == "False"), "\n",
-    "\t\t dots with no area: ", sum(dist$ices_area == ""), "\n",
-    "\t\t dots with distance: ", sum(is.na(dist$pixelsPerMillimeter)), "\n")
+check_dist(dist)
+check_dist(dist[dist$IsApproved == "True",], "dist (only approved)")
 
 
 
+# done
