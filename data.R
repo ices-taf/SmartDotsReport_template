@@ -5,9 +5,8 @@ library(icesTAF)
 # create data directory
 mkdir("data")
 
-source("data_checker.R")
-
-source("data_processing.R")
+sourceTAF("data_checker.R")
+sourceTAF("data_processing.R")
 
 # done
 
