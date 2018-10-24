@@ -55,7 +55,7 @@ check_dist <- function(dist, what = "dist") {
   checks <-
     list(
       c("Summary of dist (", nrow(dist), " dots in total):"),
-      c("approved: ", sum(dist$IsApproved == "True"), ", unapproved: ", sum(dist$IsApproved == "False")),
+      c("approved: ", sum(dist$IsApproved), ", unapproved: ", sum(!dist$IsApproved)),
       c("dots with no area: ", sum(dist$ices_area == "")),
       c("dots with distance: ", sum(is.na(dist$pixelsPerMillimeter)))
     )
@@ -68,9 +68,9 @@ check_dist <- function(dist, what = "dist") {
 msg("Checking data for Event: ", config$event_id)
 
 #check_ad(ad)
-check_ad(ad[ad$IsApproved == "True",], "approved annotations (sets of dots)")
+check_ad(ad[ad$IsApproved,], "approved annotations (sets of dots)")
 #check_dist(dist)
-check_dist(dist[dist$IsApproved == "True",], "approved dots")
+check_dist(dist[dist$IsApproved,], "approved dots")
 
 
 # done
