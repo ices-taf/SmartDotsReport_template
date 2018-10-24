@@ -62,6 +62,8 @@ for (group in c("all", "ex")) {
 
   # get the appropriate dataset
   ad_long <- get(vname("ad_long"))
+  ad_long$modal_age <- factor(ad_long$modal_age, levels = modal_age_range)
+  ad_long$reader <- factor(ad_long$reader)
 
   # number read table
   assign(
