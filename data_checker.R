@@ -24,7 +24,7 @@ check_ad <- function(ad, what = "ad") {
     list(
       c("Summary of ", what),
       c("number of annotations: ", nrow(ad)),
-      c("approved: ", sum(ad$IsApproved == "True"), ", unapproved: ", sum(ad$IsApproved == "False")),
+      c("approved: ", sum(ad$IsApproved), ", unapproved: ", sum(!ad$IsApproved)),
       c("samples with no area: ", sum(ad$ices_area == "")),
       c("prep_method: ", frmt_vector(table(ad$prep_method)))
     )
@@ -67,11 +67,10 @@ check_dist <- function(dist, what = "dist") {
 
 msg("Checking data for Event: ", config$event_id)
 
-check_ad(ad)
-check_ad(ad[ad$IsApproved == "True",], "ad (only approved)")
-check_dist(dist)
-check_dist(dist[dist$IsApproved == "True",], "dist (only approved)")
-
+#check_ad(ad)
+check_ad(ad[ad$IsApproved == "True",], "approved annotations (sets of dots)")
+#check_dist(dist)
+check_dist(dist[dist$IsApproved == "True",], "approved dots")
 
 
 # done

@@ -26,6 +26,10 @@ unzip(zipfile, files = files, exdir = "bootstrap/downloads")
 dist <- read.csv(paste0("bootstrap/downloads/", files[grep("DotsDistances",  files)]), stringsAsFactors = FALSE)
 ad <- read.csv(paste0("bootstrap/downloads/", files[grep("Annotations",  files)]), stringsAsFactors = FALSE)
 
+# convert True and False to true and false
+ad$IsApproved <- ad$IsApproved == "True"
+dist$IsApproved <- dist$IsApproved == "True"
+
 # write out 'bootstrap' data tables
 write.taf(dist, "bootstrap/dist.csv")
 write.taf(ad, "bootstrap/data.csv")
