@@ -34,6 +34,9 @@ dist$IsApproved <- dist$IsApproved == "True"
 
 # hacks!!!!
 
+library(dplyr)
+library(tidyr)
+
 # remove annotations on (and very near) the centre
 dist <- dist[dist$pixelDistance > 2,]
 
