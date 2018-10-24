@@ -22,14 +22,14 @@ frmt_vector <- function(x) {
 check_ad <- function(ad, what = "ad") {
   checks <-
     list(
-      c("Summary of ", what, " (", nrow(ad), " annotations in total):"),
+      c("Summary of ", what),
+      c("number of annotations: ", nrow(ad)),
       c("approved: ", sum(ad$IsApproved == "True"), ", unapproved: ", sum(ad$IsApproved == "False")),
       c("samples with no area: ", sum(ad$ices_area == "")),
       c("prep_method: ", frmt_vector(table(ad$prep_method)))
     )
 
-  check_text <- paste(sapply(checks, paste, collapse = ""), collapse = "\n\t     * ")
-  msg(check_text)
+  check_text <- paste(sapply(checks, paste, collapse = ""), collapse = "\n * ")
 
   # other checks
   multiple_annotations <-
@@ -40,9 +40,15 @@ check_ad <- function(ad, what = "ad") {
     rename(annotations = n)
   if (nrow(multiple_annotations) > 0) {
     txt <- paste(capture.output(print(multiple_annotations)), collapse = "\n")
-    msg("Some readers have multiple annotations:\n", txt)
+    check_text <-
+      paste0(check_text,
+             "\n\n*****************\n",
+               "**** Warning ****\n",
+               "*****************\n",
+             "Some readers have multiple annotations:\n",
+             txt)
   }
-
+  msg(check_text, "\n")
 }
 
 check_dist <- function(dist, what = "dist") {
@@ -55,7 +61,7 @@ check_dist <- function(dist, what = "dist") {
     )
 
   check_text <- paste(sapply(checks, paste, collapse = ""), collapse = "\n\t     * ")
-  msg(check_text)
+  msg(check_text, "\n")
 }
 
 
