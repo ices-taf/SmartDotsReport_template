@@ -30,31 +30,6 @@ ad <- read.csv(paste0("bootstrap/downloads/", files[grep("Annotations",  files)]
 ad$IsApproved <- ad$IsApproved == "True"
 dist$IsApproved <- dist$IsApproved == "True"
 
-
-
-# hacks!!!!
-
-library(dplyr)
-library(tidyr)
-
- multiple_annotations <-
-    ad %>%
-    count(FishID, reader) %>%
-    filter(n > 1) %>%
-    rename(annotations = n)
-
- for (i in seq_along(multiple_annotations$annotations)) {
-   iage <- ad$age[which(ad$FishID == multiple_annotations$FishID[i] & ad$reader == multiple_annotations$reader[i])]
-   drop <- seq_along(iage)[-which.max(iage)]
-   ad <- ad[-which(ad$FishID == multiple_annotations$FishID[i] & ad$reader == multiple_annotations$reader[i])[drop],]
- }
-
-# adjust area
-ad$ices_area[ad$ices_area == ""] <- "unnamed"
-
-# end hacks  !!!
-
-
 # write out 'bootstrap' data tables
 write.taf(dist, "bootstrap/dist.csv")
 write.taf(ad, "bootstrap/data.csv")
