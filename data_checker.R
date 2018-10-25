@@ -33,7 +33,7 @@ check_ad <- function(ad, what = "ad") {
   # other checks
   multiple_annotations <-
     ad %>%
-    group_by(FishID, reader) %>%
+    group_by(event_name, ices_area, FishID, reader) %>%
     count() %>%
     filter(n > 1) %>%
     rename(annotations = n)
@@ -66,9 +66,9 @@ check_dist <- function(dist, what = "dist") {
 msg("Checking data for Event: ", config$event_id)
 
 #check_ad(ad)
-check_ad(ad[ad$IsApproved,], "approved annotations (sets of dots)")
+check_ad(ad[ad$IsApproved == 1,], "approved annotations (sets of dots)")
 #check_dist(dist)
-check_dist(dist[dist$IsApproved,], "approved dots")
+check_dist(dist[dist$IsApproved == 1,], "approved dots")
 
 
 # done
