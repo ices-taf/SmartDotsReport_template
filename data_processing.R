@@ -31,7 +31,11 @@ dist <- read.taf("bootstrap/dist.csv")
 # keep only approved annotations
 if (config$onlyApproved) {
   ad <- ad[as.numeric(ad$IsApproved) == 1, ]
-  dist <- dist[as.numeric(dist$IsApproved) == 1, ]
+  if (is.character(dist$IsApproved)) {
+    dist <- dist[tolower(dist$IsApproved) == "true", ]
+  } else {
+    dist <- dist[as.numeric(dist$IsApproved) == 1, ]
+  }
 }
 
 # convert reader expertise
