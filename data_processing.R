@@ -30,8 +30,8 @@ dist <- read.taf("bootstrap/dist.csv")
 
 # keep only approved annotations
 if (config$onlyApproved) {
-  ad <- ad[ad$IsApproved == TRUE, ]
-  dist <- dist[dist$IsApproved == TRUE, ]
+  ad <- ad[as.numeric(ad$IsApproved) == 1, ]
+  dist <- dist[as.numeric(dist$IsApproved) == 1, ]
 }
 
 # convert reader expertise
@@ -45,6 +45,8 @@ ad <-
     month = lubridate::month(catch_date)
   })
 
+# if area is missing add "missing"
+ad$ices_area[ad$ices_area == ""] <- "missing"
 
 # Calculate modal ages and cv of modal age
 ad_long <- add_modalage(ad, config$ma_method)
