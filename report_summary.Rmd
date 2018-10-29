@@ -184,14 +184,14 @@ plot_bias_all(ad_long_ex, max_age, max_modal)
 
 # Table caption
 cap_in <- '**Figure X:** Plot of average distance from the centre to the winter
-           rings for advanced readers. The boxes represent the median, upper and
-           lower box boundaries of the interquartile range, whiskers represent
-           the minimum and maximum values and the dots represent the outliers.'
+           rings for advanced readers by preparation method. The boxes represent 
+           the median, upper and lower box boundaries of the interquartile range,
+           whiskers represent the minimum and maximum values and the dots represent 
+           the outliers.'
 
 # Output table
 plot_growth(dist, ad_long_all, strata = "prep_method")
 ```
-
 
 ## Age error matrices
 
@@ -236,6 +236,21 @@ asis_output(paste("# Results by", stratum))
 ```{r ar_title, eval = print_strata()}
 #  title
 asis_output(paste("## Age readings by", stratum))
+```
+
+```{r growth_analysis_exp_by, fig.width = 8, fig.height = 6, fig.cap = cap_in, eval = print_strata()}
+# GROWTH ANALYSIS - Advanced readers ##########################################
+
+# Table caption
+cap_in <- '**Figure X:** Plot of average distance from the centre to the winter
+           rings for advanced readers by %s. The boxes represent 
+           the median, upper and lower box boundaries of the interquartile range,
+           whiskers represent the minimum and maximum values and the dots represent 
+           the outliers.'
+cap_in <- sprintf(cap_in, params$strata[istrata])
+
+# Output table
+plot_growth(dist, ad_long_all, strata = params$strata[istrata])
 ```
 
 ```{r ar_by, eval = print_strata()}
@@ -294,6 +309,9 @@ pander(style_table2(get(vsname("pa_tab"))), missing = "-")
 ```{r ref.label='ar_title', eval = print_strata()}
 ```
 
+```{r ref.label='growth_analysis_exp_by', eval = print_strata()}
+```
+
 ```{r ref.label='ar_by', eval = print_strata()}
 ```
 
@@ -321,6 +339,9 @@ pander(style_table2(get(vsname("pa_tab"))), missing = "-")
 ```{r ref.label='ar_title', eval = print_strata()}
 ```
 
+```{r ref.label='growth_analysis_exp_by', eval = print_strata()}
+```
+
 ```{r ref.label='ar_by', eval = print_strata()}
 ```
 
@@ -346,6 +367,9 @@ pander(style_table2(get(vsname("pa_tab"))), missing = "-")
 ```
 
 ```{r ref.label='ar_title', eval = print_strata()}
+```
+
+```{r ref.label='growth_analysis_exp_by', eval = print_strata()}
 ```
 
 ```{r ref.label='ar_by', eval = print_strata()}

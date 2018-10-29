@@ -293,15 +293,16 @@ pander(style_table3(bias_tab_all), missing = ".", style = "simple")
 # GROWTH ANALYSIS - All readers ###############################################
 
 # Figure caption
-cap_in <- '**Table X:** Plot of average distance from the centre to the winter
-           rings for all readers. The boxes represent the mean, upper and lower
-           box boundaries of the interquartile range, whiskers represent the
-           minimum and maximum values and the dots represent the outliers.'
+cap_in <- '**Figure X:** Plot of average distance from the centre to the winter
+           rings for advanced readers by preparation method. The boxes represent 
+           the median, upper and lower box boundaries of the interquartile range,
+           whiskers represent the minimum and maximum values and the dots represent 
+           the outliers.'
+
 
 # Output figure
 plot_growth(dist, ad_long_all, "prep_method")
 ```
-
 
 
 ```{r set_strata_all}
@@ -335,6 +336,21 @@ set.caption(paste0('**Table X:** Number of age readings per ', stratum, ' for al
 pander(style_table1(get(vsname("num_read_tab"))), missing = "-")
 ```
 
+
+```{r growth_analysis_exp_by, fig.width = 8, fig.height = 6, fig.cap = cap_in, eval = print_strata()}
+# GROWTH ANALYSIS - Advanced readers ##########################################
+
+# Table caption
+cap_in <- '**Figure X:** Plot of average distance from the centre to the winter
+           rings for advanced readers by %s. The boxes represent 
+           the median, upper and lower box boundaries of the interquartile range,
+           whiskers represent the minimum and maximum values and the dots represent 
+           the outliers.'
+cap_in <- sprintf(cap_in, params$strata[istrata])
+
+# Output table
+plot_growth(dist, ad_long_all, strata = params$strata[istrata])
+```
 
 ```{r cv_by, eval = print_strata()}
 
@@ -374,6 +390,9 @@ pander(style_table2(get(vsname("rel_bias_tab"))), missing = "-")
 ```{r ref.label='strata_title', eval = print_strata()}
 ```
 
+```{r ref.label='growth_analysis_exp_by', eval = print_strata()}
+```
+
 ```{r ref.label='ar_by', eval = print_strata()}
 ```
 
@@ -395,6 +414,9 @@ pander(style_table2(get(vsname("rel_bias_tab"))), missing = "-")
 ```{r ref.label='strata_title', eval = print_strata()}
 ```
 
+```{r ref.label='growth_analysis_exp_by', eval = print_strata()}
+```
+
 ```{r ref.label='ar_by', eval = print_strata()}
 ```
 
@@ -414,6 +436,9 @@ pander(style_table2(get(vsname("rel_bias_tab"))), missing = "-")
 ```
 
 ```{r ref.label='strata_title', eval = print_strata()}
+```
+
+```{r ref.label='growth_analysis_exp_by', eval = print_strata()}
 ```
 
 ```{r ref.label='ar_by', eval = print_strata()}
