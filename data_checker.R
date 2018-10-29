@@ -25,6 +25,7 @@ check_ad <- function(ad, what = "ad") {
       c("Summary of ", what),
       c("number of annotations: ", nrow(ad)),
       c("samples with no area: ", sum(ad$ices_area == "")),
+      c("samples with no stock: ", sum(ad$stock == "")),
       c("prep_method: ", frmt_vector(table(ad$prep_method)))
     )
 
