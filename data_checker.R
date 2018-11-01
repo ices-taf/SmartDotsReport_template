@@ -34,20 +34,31 @@ check_ad <- function(ad, what = "ad") {
   # other checks
   multiple_annotations <-
     ad %>%
-    group_by(event_name, ices_area, FishID, reader) %>%
+    group_by(EventID, event_name, ices_area, SampleID, sample, FishID, reader) %>%
     count() %>%
     filter(n > 1) %>%
     rename(annotations = n)
   if (nrow(multiple_annotations) > 0) {
     txt <- paste(capture.output(print(multiple_annotations)), collapse = "\n")
+    image_urls <-
+      sprintf(
+        "https://smartdots.ices.dk/manage/viewDetailsImage?tblEventID=%i&SmartImageID=%i",
+        multiple_annotations$EventID,
+        multiple_annotations$sample)
+
     check_text <-
       paste0(check_text,
              "\n\n*****************\n",
                "**** Warning ****\n",
-               "*****************\n",
-             "Some readers have multiple annotations:\n",
-             txt)
+               "*****************\n\n",
+             "Some readers have multiple annotations:\n\n",
+             txt,
+             "\n\nSee annotated images here:\n\t",
+             paste(image_urls, collapse = "\n\t")
+      )
+
   }
+
   msg(check_text, "\n")
 }
 
