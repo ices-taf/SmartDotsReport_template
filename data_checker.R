@@ -71,8 +71,8 @@ check_ad <- function(ad, what = "ad") {
              "\n\n*****************\n",
                "**** Warning ****\n",
                "*****************\n\n",
-             "There are no advanced readers!\n",
-             "the report scripts require there to be advanced readers"
+             "** There are no advanced readers!                           **\n",
+             "** the report scripts require there to be advanced readers. **"
       )
 
   }
@@ -92,6 +92,19 @@ check_dist <- function(dist, what = "dist") {
 
   check_text <- paste(sapply(checks, paste, collapse = ""), collapse = "\n * ")
   msg(check_text, "\n")
+
+  if (sum(!is.na(dist$pixelsPerMillimeter)) == 0) {
+    check_text <-
+      paste0("\n\n*****************\n",
+               "**** Warning ****\n",
+               "*****************\n\n",
+             "** None of the images have a resolution!                       **\n",
+             "** It is not possible to determine the distances between dots. **"
+     )
+    msg(check_text, "\n")
+  }
+
+
 }
 
 
