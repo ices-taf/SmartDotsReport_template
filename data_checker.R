@@ -18,7 +18,9 @@ dist <- read.taf("bootstrap/dist.csv")
 # some messages to the user ------
 
 frmt_vector <- function(x) {
-  paste(paste0(names(x), ": ", x), collapse = ", ")
+  namesx <- names(x)
+  namesx[namesx == ""] <- "<missing>"
+  paste(paste0(namesx, ": ", x), collapse = ", ")
 }
 
 check_ad <- function(ad, what = "ad") {
