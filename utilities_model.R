@@ -153,7 +153,7 @@ rel_bias_table <- function(ad_long, by = "reader") {
 }
 
 
-age_composition <- function(ad_log, by = "reader") {
+age_composition <- function(ad_long, by = "reader") {
 # Number of otoliths read per reader and age
   ad_long %>%
     with(., table(age, .[[by]])) %>%
@@ -162,8 +162,9 @@ age_composition <- function(ad_log, by = "reader") {
 }
 
 
-age_composition_table <- function(ad_log, by = "reader") {
-# Number of otoliths read per reader and age
+age_composition_table <- function(ad_long, by = "reader") {
+  if (nrow(ad_long) == 0) return(data.frame("Modal age" = numeric(0)))
+  # Number of otoliths read per reader and age
   ad_long %>%
     age_composition(by = by)  %>%
     rbind(colSums(., na.rm = TRUE)) %>%
@@ -173,6 +174,7 @@ age_composition_table <- function(ad_log, by = "reader") {
 
 
 mean_length_table <- function(ad_long, by = "reader") {
+  if (nrow(ad_long) == 0) return(data.frame("Modal age" = numeric(0)))
   # Fish mean length per age and reader
   mean_length_tab <-
     ad_long %>%

@@ -7,6 +7,9 @@ Mode <- function(x) {
 }
 
 ape <- function(x) {
+  if (length(x) == 0) {
+    return(numeric(0))
+  }
   if (Mode(x) == 0) {
     NA
   } else {
@@ -15,6 +18,9 @@ ape <- function(x) {
 }
 
 cv <- function (x) {
+  if (length(x) == 0) {
+    return(numeric(0))
+  }
   if (Mode(x) == 0) {
     NA
   } else {
