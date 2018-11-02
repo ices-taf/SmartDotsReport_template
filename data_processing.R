@@ -37,9 +37,9 @@ if (config$onlyApproved) {
 # add date columns
 ad <-
   within(ad, {
-    year = lubridate::year(parse_date_time(catch_date), '%d/%m/%Y %H:%M:%S')
-    qtr = lubridate::quarter(parse_date_time(catch_date), '%d/%m/%Y %H:%M:%S')
-    month = lubridate::month(parse_date_time(catch_date), '%d/%m/%Y %H:%M:%S')
+    year = lubridate::year(parse_date_time(catch_date, '%d/%m/%Y %H:%M:%S'))
+    qtr = lubridate::quarter(parse_date_time(catch_date, '%d/%m/%Y %H:%M:%S'))
+    month = lubridate::month(parse_date_time(catch_date, '%d/%m/%Y %H:%M:%S'))
   })
 
 # if variables are missing add "missing"
