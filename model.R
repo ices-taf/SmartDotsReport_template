@@ -176,7 +176,7 @@ for (group in c("all", "ex")) {
   # Age error matrix (AEM) only for advanced readers
   assign(
     vname("ae_mat"),
-    age_er_matrix(ad_long, by = c("ices_area", "stock"))
+    age_er_matrix(ad_long, by = config$strata)
   )
 
   # todo - do a better job of this...

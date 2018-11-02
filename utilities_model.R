@@ -358,6 +358,10 @@ age_er_matrix <- function(ad_long, by = NULL) {
     as.data.frame %>%
     # split into several data.frames?
     by(apply(.[by], 1, paste, collapse = ", "), identity) %>%
-    unclass %>%
-    (function(x) {attr(x, "call") <- NULL; x})
+      unclass %>%
+      (function(x) {
+        attr(x, "call") <- NULL
+        rownames(x) <- NULL
+        x
+      })
 }
