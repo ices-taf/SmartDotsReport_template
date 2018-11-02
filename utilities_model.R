@@ -357,11 +357,10 @@ age_er_matrix <- function(ad_long, by = NULL) {
     rename(`Modal age` = age) %>%
     as.data.frame %>%
     # split into several data.frames?
-    by(apply(.[by], 1, paste, collapse = ", "), identity) %>%
+    by(apply(.[by], 1, paste, collapse = ", "), function(x) {rownames(x) <- NULL; x}) %>%
       unclass %>%
       (function(x) {
         attr(x, "call") <- NULL
-        rownames(x) <- NULL
         x
       })
 }
