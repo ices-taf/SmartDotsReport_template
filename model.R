@@ -32,7 +32,7 @@ ad_long_ex <- read.taf("data/ad_long_ex.csv")
 # model age range
 modal_age_range <-  with(ad_long_all, min(modal_age, na.rm = TRUE):max(modal_age, na.rm = TRUE))
 
-# set strata to NULL is all are NA
+# set strata to NULL if all are NA
 if (all(is.na(ad_long_all[[config$strata]]))) config$strata <- NULL
 
 # Overview of samples and readers ##############################################
@@ -106,9 +106,13 @@ for (group in c("all", "ex")) {
   assign(
     vname("bias_tab"),
     {
-      x <- bias_test(ad_long)
-      x[is.na(x)] <- "-"
-      x
+      if (nrow(ad_long)) {
+        x <- bias_test(ad_long)
+        x[is.na(x)] <- "-"
+        x
+      } else {
+        data.frame(Comparison = character(0))
+      }
     }
   )
   write.taf(vname("bias_tab"), dir = "model")
@@ -174,6 +178,7 @@ for (group in c("all", "ex")) {
     vname("ae_mat"),
     age_er_matrix(ad_long, by = c("ices_area", "stock"))
   )
+
   # todo - do a better job of this...
   saveRDS(get(vname("ae_mat")),
           file = file.path("model", paste0(vname("ae_mat"), ".rds")))
