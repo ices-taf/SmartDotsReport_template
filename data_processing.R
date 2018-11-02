@@ -46,7 +46,9 @@ ad <-
   })
 
 # if area is missing add "missing"
-ad$ices_area[ad$ices_area == ""] <- "missing"
+ad$ices_area[is.na(ad$ices_area) |ad$ices_area == ""] <- "missing"
+ad$stock[is.na(ad$stock) | ad$stock == ""] <- "missing"
+ad$prep_method[is.na(ad$prep_method) | ad$prep_method == ""] <- "missing"
 
 # Calculate modal ages and cv of modal age
 ad_long <- add_modalage(ad, config$ma_method)
