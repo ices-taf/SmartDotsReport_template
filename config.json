@@ -8,5 +8,6 @@
   "summary_name": "summary",
   "summary_title": "summary",
   "report_name": "report",
-  "report_title": "report"
+  "report_title": "report",
+  "report_tokens": "token_goes_here"
 }
