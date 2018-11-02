@@ -200,10 +200,12 @@ plot_growth(dist, ad_long_all, strata = "prep_method")
 # AEM AREA - Advanced readers #################################################
 
 # Loop through each area and output AEM for that area
-for (i in names(ae_mat_ex)) {
-
+for (i in seq_along(ae_mat_ex)) {
+  # name of strata
+  strata_name <- names(ae_mat_ex)[i]
+  
   # Table caption
-  cap_i <- paste0("**Table X:** Age error matrix (AEM) for ", i,".")
+  cap_i <- paste0("**Table X:** Age error matrix (AEM) for ", strata_name,".")
 
   set.caption(cap_i)
   pander(style_table3(ae_mat_ex[[i]]), missing = "-")
