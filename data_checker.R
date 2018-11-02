@@ -29,7 +29,8 @@ check_ad <- function(ad, what = "ad") {
       c("samples with missing area: ", sum(ad$ices_area == "")),
       c("samples with missing stock: ", sum(is.na(ad$stock) | ad$stock == "")),
       c("samples with missing prep_method: ", sum(is.na(ad$prep_method) | ad$prep_method == "")),
-      c("prep_method names: ", frmt_vector(table(ad$prep_method)))
+      c("prep_method names: ", frmt_vector(table(ad$prep_method))),
+      c("Advanced reader annotations: ", sum(ad$expertise))
     )
 
   check_text <- paste(sapply(checks, paste, collapse = ""), collapse = "\n * ")
@@ -37,10 +38,10 @@ check_ad <- function(ad, what = "ad") {
   # other checks
   multiple_annotations <-
     ad %>%
-    group_by(EventID, event_name, ices_area, SampleID, sample, FishID, reader) %>%
-    count() %>%
-    filter(n > 1) %>%
-    rename(annotations = n)
+    dplyr::group_by(EventID, event_name, ices_area, SampleID, sample, FishID, reader) %>%
+    dplyr::count() %>%
+    dplyr::filter(n > 1) %>%
+    dplyr::rename(annotations = n)
 
   if (nrow(multiple_annotations) > 0) {
     txt <- paste(capture.output(print(multiple_annotations)), collapse = "\n")
@@ -62,6 +63,20 @@ check_ad <- function(ad, what = "ad") {
       )
 
   }
+
+
+  if (sum(ad$expertise) == 0) {
+    check_text <-
+      paste0(check_text,
+             "\n\n*****************\n",
+               "**** Warning ****\n",
+               "*****************\n\n",
+             "There are no advanced readers!\n",
+             "the report scripts require there to be advanced readers"
+      )
+
+  }
+
 
   msg(check_text, "\n")
 }
@@ -90,7 +105,7 @@ if (config$onlyApproved == FALSE) {
 
 msg("Checking approved data for Event: ", config$event_id)
 
-check_ad(ad[ad$IsApproved == 1,], "approved annotations (sets of dots)")
+check_ad(ad, "approved annotations (sets of dots)")
 check_dist(dist[dist$IsApproved == 1,], "approved dots")
 
 # done
