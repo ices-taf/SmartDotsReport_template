@@ -34,9 +34,6 @@ if (config$onlyApproved) {
   dist <- dist[dist$IsApproved == 1, ]
 }
 
-# convert reader expertise
-ad$expertise <- c("Basic", "Advanced")[ad$expertise + 1]
-
 # add date columns
 ad <-
   within(ad, {
@@ -45,10 +42,19 @@ ad <-
     month = lubridate::month(catch_date)
   })
 
-# if area is missing add "missing"
+# if variables are missing add "missing"
 ad$ices_area[is.na(ad$ices_area) |ad$ices_area == ""] <- "missing"
 ad$stock[is.na(ad$stock) | ad$stock == ""] <- "missing"
 ad$prep_method[is.na(ad$prep_method) | ad$prep_method == ""] <- "missing"
+
+# if no advanced readers! make them all advanced
+if (all(ad$expertise == 0)) {
+  msg("NOTE: all readers were Basic - all have been converted to Advanced")
+  ad$expertise[] <- 1
+}
+
+# convert reader expertise
+ad$expertise <- c("Basic", "Advanced")[ad$expertise + 1]
 
 # Calculate modal ages and cv of modal age
 ad_long <- add_modalage(ad, config$ma_method)
