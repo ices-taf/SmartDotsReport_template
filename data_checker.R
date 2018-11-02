@@ -13,10 +13,12 @@ config <- read_json("config.json", simplifyVector = TRUE)
 ad <- read.taf("bootstrap/data.csv")
 dist <- read.taf("bootstrap/dist.csv")
 
+# tag some feilds as missing?
+
 # some messages to the user ------
 
 frmt_vector <- function(x) {
-  paste(paste0(names(x), "- ", x), collapse = ", ")
+  paste(paste0(names(x), ": ", x), collapse = ", ")
 }
 
 check_ad <- function(ad, what = "ad") {
@@ -24,9 +26,10 @@ check_ad <- function(ad, what = "ad") {
     list(
       c("Summary of ", what),
       c("number of annotations: ", nrow(ad)),
-      c("samples with no area: ", sum(ad$ices_area == "")),
-      c("samples with no stock: ", sum(ad$stock == "")),
-      c("prep_method: ", frmt_vector(table(ad$prep_method)))
+      c("samples with missing area: ", sum(ad$ices_area == "")),
+      c("samples with missing stock: ", sum(is.na(ad$stock) | ad$stock == "")),
+      c("samples with missing prep_method: ", sum(is.na(ad$prep_method) | ad$prep_method == "")),
+      c("prep_method names: ", frmt_vector(table(ad$prep_method)))
     )
 
   check_text <- paste(sapply(checks, paste, collapse = ""), collapse = "\n * ")
@@ -38,6 +41,7 @@ check_ad <- function(ad, what = "ad") {
     count() %>%
     filter(n > 1) %>%
     rename(annotations = n)
+
   if (nrow(multiple_annotations) > 0) {
     txt <- paste(capture.output(print(multiple_annotations)), collapse = "\n")
     image_urls <-
@@ -65,22 +69,28 @@ check_ad <- function(ad, what = "ad") {
 check_dist <- function(dist, what = "dist") {
   checks <-
     list(
-      c("Summary of dist (", nrow(dist), " dots in total):"),
-      c("dots with no area: ", sum(dist$ices_area == "")),
-      c("dots with distance: ", sum(is.na(dist$pixelsPerMillimeter)))
+      c("Summary of ", what),
+      c("number of dots: ", nrow(dist)),
+      c("dots with missing area: ", sum(dist$ices_area == "")),
+      c("dots with missing distance: ", sum(is.na(dist$pixelsPerMillimeter)))
     )
 
-  check_text <- paste(sapply(checks, paste, collapse = ""), collapse = "\n\t     * ")
+  check_text <- paste(sapply(checks, paste, collapse = ""), collapse = "\n * ")
   msg(check_text, "\n")
 }
 
 
-msg("Checking data for Event: ", config$event_id)
+if (config$onlyApproved == FALSE) {
+  # check all data
+  msg("Checking ALL data for Event: ", config$event_id)
 
-#check_ad(ad)
+  check_ad(ad, "ALL (approved and unapproved) annotations (sets of dots)")
+  check_dist(dist, "ALL (approved and unapproved) dots")
+}
+
+msg("Checking approved data for Event: ", config$event_id)
+
 check_ad(ad[ad$IsApproved == 1,], "approved annotations (sets of dots)")
-#check_dist(dist)
 check_dist(dist[dist$IsApproved == 1,], "approved dots")
-
 
 # done
