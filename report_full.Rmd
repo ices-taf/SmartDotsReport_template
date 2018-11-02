@@ -546,10 +546,12 @@ readings of the advanced readers.
 # AEM AREA - Advanced readers #################################################
 
 # Loop through each area and output AEM for that area
-for (i in names(ae_mat_ex)) {
-
+for (i in seq_along(ae_mat_ex)) {
+  # name
+  strata_name <- names(ae_mat_ex)[i]
+  
   # Table caption
-  cap_i <- paste0("**Table X:** Age error matrix (AEM) for ", i ,".
+  cap_i <- paste0("**Table X:** Age error matrix (AEM) for ", strata_name ,".
                    The AEM shows the proportional distribution
                    of age readings for each modal age. Age column should sum to
                    one but due to rounding there might be small deviations in
