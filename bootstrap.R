@@ -26,6 +26,9 @@ unzip(zipfile, files = files, exdir = "bootstrap/downloads")
 dist <- read.csv(paste0("bootstrap/downloads/", files[grep("DotsDistances",  files)]), stringsAsFactors = FALSE)
 ad <- read.csv(paste0("bootstrap/downloads/", files[grep("Annotations",  files)]), stringsAsFactors = FALSE)
 
+# drop comments feild
+ad <- ad[,names(ad) != "Comment"]
+
 # write out 'bootstrap' data tables
 write.taf(dist, "bootstrap/dist.csv", quote = TRUE)
 write.taf(ad, "bootstrap/data.csv", quote = TRUE)
