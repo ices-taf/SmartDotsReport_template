@@ -27,5 +27,5 @@ dist <- read.csv(paste0("bootstrap/downloads/", files[grep("DotsDistances",  fil
 ad <- read.csv(paste0("bootstrap/downloads/", files[grep("Annotations",  files)]), stringsAsFactors = FALSE)
 
 # write out 'bootstrap' data tables
-write.taf(dist, "bootstrap/dist.csv")
-write.taf(ad, "bootstrap/data.csv")
+write.taf(dist, "bootstrap/dist.csv", quote = TRUE)
+write.taf(ad, "bootstrap/data.csv", quote = TRUE)
