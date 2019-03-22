@@ -80,8 +80,8 @@ head(webgr)
 
 
 # write out input data tables for use later
-write.taf(dist, "data/dist.csv")
-write.taf(ad, "data/data.csv")
-write.taf(ad_long, "data/ad_long.csv")
-write.taf(ad_long_ex, "data/ad_long_ex.csv")
-write.taf(webgr, "data/WebGR_ages_all.csv")
+write.taf(dist, "data/dist.csv", quote = TRUE)
+write.taf(ad, "data/data.csv", quote = TRUE)
+write.taf(ad_long, "data/ad_long.csv", quote = TRUE)
+write.taf(ad_long_ex, "data/ad_long_ex.csv", quote = TRUE)
+write.taf(webgr, "data/WebGR_ages_all.csv", quote = TRUE)
