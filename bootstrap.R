@@ -9,26 +9,26 @@ library(icesTAF)
 library(jsonlite)
 
 # create data directory
-mkdir("bootstrap/downloads")
+mkdir("bootstrap/data")
 
 # load configuration
 config <- read_json("config.json", simplifyVector = TRUE)
 
 # get data from api --------
-zipfile <- "bootstrap/downloads/smartdots_data.zip"
+zipfile <- "bootstrap/data/smartdots_data.zip"
 download.file(paste0("https://smartdots.ices.dk/download/DownloadEvent.ashx?tblEventID=", config$event_id),
               zipfile,  mode = "wb")
 files <- unzip(zipfile, list = TRUE)$Name
 files <- files[grep("*.csv", files)]
-unzip(zipfile, files = files, exdir = "bootstrap/downloads")
+unzip(zipfile, files = files, exdir = "bootstrap/data")
 
 # read in and write out again
-dist <- read.csv(paste0("bootstrap/downloads/", files[grep("DotsDistances",  files)]), stringsAsFactors = FALSE)
-ad <- read.csv(paste0("bootstrap/downloads/", files[grep("Annotations",  files)]), stringsAsFactors = FALSE)
+dist <- read.csv(paste0("bootstrap/data/", files[grep("DotsDistances",  files)]), stringsAsFactors = FALSE)
+ad <- read.csv(paste0("bootstrap/data/", files[grep("Annotations",  files)]), stringsAsFactors = FALSE)
 
 # drop comments feild
 ad <- ad[,names(ad) != "Comment"]
 
 # write out 'bootstrap' data tables
-write.taf(dist, "bootstrap/dist.csv", quote = TRUE)
-write.taf(ad, "bootstrap/data.csv", quote = TRUE)
+write.taf(dist, "bootstrap/data/dist.csv", quote = TRUE)
+write.taf(ad, "bootstrap/data/data.csv", quote = TRUE)

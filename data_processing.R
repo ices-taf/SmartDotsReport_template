@@ -23,8 +23,8 @@ config <- read_json("config.json", simplifyVector = TRUE)
 
 # get data from bootstrap folder  -------------------------------
 
-ad <- read.taf("bootstrap/data.csv")
-dist <- read.taf("bootstrap/dist.csv")
+ad <- read.taf("bootstrap/data/data.csv")
+dist <- read.taf("bootstrap/data/dist.csv")
 
 # prepare data -------------------------------
 
