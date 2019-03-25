@@ -40,7 +40,7 @@ check_ad <- function(ad, what = "ad") {
   # other checks
   multiple_annotations <-
     ad %>%
-    dplyr::group_by(EventID, event_name, ices_area, SampleID, sample, FishID, reader) %>%
+    dplyr::group_by(EventID, event_name, ices_area, sample, FishID, reader) %>%
     dplyr::count() %>%
     dplyr::filter(n > 1) %>%
     dplyr::rename(annotations = n)
