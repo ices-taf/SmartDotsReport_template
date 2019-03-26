@@ -43,9 +43,13 @@ ad <-
   })
 
 # if variables are missing add "missing"
-ad$ices_area[is.na(ad$ices_area) |ad$ices_area == ""] <- "missing"
+ad$ices_area[is.na(ad$ices_area) | ad$ices_area == ""] <- "missing"
 ad$stock[is.na(ad$stock) | ad$stock == ""] <- "missing"
 ad$prep_method[is.na(ad$prep_method) | ad$prep_method == ""] <- "missing"
+
+# if variables are missing add "missing"
+dist$ices_area[is.na(dist$ices_area) | dist$ices_area == ""] <- "missing"
+
 
 # if no advanced readers! make them all advanced
 if (all(ad$expertise == 0)) {
