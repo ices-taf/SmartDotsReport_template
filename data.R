@@ -2,9 +2,6 @@
 
 library(icesTAF)
 
-# source bootstrap!
-source("bootstrap.R")
-
 # create data directory
 mkdir("data")
 
