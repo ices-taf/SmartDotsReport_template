@@ -1,13 +1,13 @@
 {
-  "event_id": 200,
+  "event_id": 217,
   "ma_method": "Mode",
   "strata": [
     null
   ],
   "onlyApproved": true,
-  "summary_name": "SmartDots_Summary_Event_200",
-  "summary_title": "SmartDots Summary for event 200",
-  "report_name": "SmartDots_Report_Event_200",
-  "report_title": "SmartDots Report for event 200",
+  "summary_name": "SmartDots_Summary_Event_159",
+  "summary_title": "SmartDots Summary for event 159",
+  "report_name": "SmartDots_Report_Event_159",
+  "report_title": "SmartDots Report for event 159",
   "report_tokens": "token_goes_here"
 }
