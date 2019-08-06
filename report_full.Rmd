@@ -4,7 +4,7 @@ output:
     fig_caption: true
     fig_height: 10
     fig_width: 10
-    reference_docx: bootstrap/initial/reportTemplate.docx
+    reference_docx: bootstrap/data/reportTemplate.docx
     toc: true
     keep_md: false
 params:
