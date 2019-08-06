@@ -19,12 +19,12 @@ source("utilities.R")
 source("utilities_data.R")
 
 # load configuration
-config <- read_json("config.json", simplifyVector = TRUE)
+config <- read_json("bootstrap/data/config.json", simplifyVector = TRUE)
 
 # get data from bootstrap folder  -------------------------------
 
-ad <- read.taf("bootstrap/data/data.csv")
-dist <- read.taf("bootstrap/data/dist.csv")
+ad <- read.taf("bootstrap/data/smartdots_db/data.csv")
+dist <- read.taf("bootstrap/data/smartdots_db/dist.csv")
 
 # prepare data -------------------------------
 

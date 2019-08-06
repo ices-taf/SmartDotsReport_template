@@ -23,7 +23,7 @@ source("utilities.R")
 source("utilities_report.R")
 
 # load configuration data
-config <- read_json("config.json", simplifyVector = TRUE)
+config <- read_json("bootstrap/data/config.json", simplifyVector = TRUE)
 
 # load data for report
 dist <- read.taf("data/dist.csv")
