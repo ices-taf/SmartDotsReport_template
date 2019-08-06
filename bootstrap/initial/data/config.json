@@ -1,0 +1,13 @@
+{
+  "event_id": 200,
+  "ma_method": "Mode",
+  "strata": [
+    null
+  ],
+  "onlyApproved": true,
+  "summary_name": "SmartDots_Summary_Event_200",
+  "summary_title": "SmartDots Summary for event 200",
+  "report_name": "SmartDots_Report_Event_200",
+  "report_title": "SmartDots Report for event 200",
+  "report_tokens": "token_goes_here"
+}
