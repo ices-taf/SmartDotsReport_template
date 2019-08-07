@@ -258,6 +258,7 @@ bias_test <- function(ad_long) {
     select(modal_age, matches("R[0-9][0-9] *"))
 
   dat_un <- ages
+  dat_un$modal_age <- as.numeric(as.character(dat_un$modal_age))
 
   # For each pair of readers (and each reader compared to th modal age of
   # the sample) and each image get reading difference
@@ -268,9 +269,9 @@ bias_test <- function(ad_long) {
 
   #Prepare inter reader bias table
   int_bias <- data.frame(matrix(NA, nrow = length(dat_un),
-                                 ncol = length(dat_un) -1))
-  colnames(int_bias) <- colnames(dat_un[, -1])
-  rownames(int_bias) <- c(colnames(dat_un[, -1]), "modal_age")
+                                 ncol = length(dat_un) - 1))
+  colnames(int_bias) <- colnames(dat_un)[-1]
+  rownames(int_bias) <- c(colnames(dat_un)[-1], "modal_age")
 
   #Loop through each pair
   for (i in 1:ncol(diffs)) {

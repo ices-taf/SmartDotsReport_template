@@ -30,7 +30,8 @@ ad_long_all <- read.taf("data/ad_long.csv")
 ad_long_ex <- read.taf("data/ad_long_ex.csv")
 
 # model age range
-modal_age_range <-  with(ad_long_all, min(modal_age, na.rm = TRUE):max(modal_age, na.rm = TRUE))
+modal_age_range_all <-  with(ad_long_all, min(modal_age, na.rm = TRUE):max(modal_age, na.rm = TRUE))
+modal_age_range_ex <-  with(ad_long_ex, min(modal_age, na.rm = TRUE):max(modal_age, na.rm = TRUE))
 
 # set strata to NULL if all are NA
 if (all(is.na(ad_long_all[[config$strata]]))) config$strata <- NULL
@@ -58,10 +59,13 @@ write.taf(reader_data, dir = "model")
 # repeat for all and for experts only
 
 for (group in c("all", "ex")) {
-# group <- "all"
+ #group <- "all"
+ #group <- "ex"
 
   # get the appropriate dataset
   ad_long <- get(vname("ad_long"))
+  modal_age_range <- get(vname("modal_age_range"))
+
   ad_long$modal_age <- factor(ad_long$modal_age, levels = modal_age_range)
   ad_long$reader <- factor(ad_long$reader)
 
@@ -85,7 +89,6 @@ for (group in c("all", "ex")) {
     ape_table(ad_long, by = "reader")
   )
   write.taf(vname("ape_tab"), dir = "model")
-
 
   # Percent agreement between age readings and modal age.
   assign(

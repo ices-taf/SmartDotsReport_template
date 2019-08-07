@@ -346,10 +346,10 @@ cap_in <- '**Figure X:** Plot of average distance from the centre to the winter
            the median, upper and lower box boundaries of the interquartile range,
            whiskers represent the minimum and maximum values and the dots represent 
            the outliers.'
-cap_in <- sprintf(cap_in, params$strata[istrata])
+cap_in <- sprintf(cap_in, stratum)
 
 # Output table
-plot_growth(dist, ad_long_all, strata = params$strata[istrata])
+plot_growth(dist, ad_long_all, strata = stratum)
 ```
 
 ```{r cv_by, eval = print_strata()}
