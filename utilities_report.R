@@ -204,7 +204,7 @@ plot_stat <- function(ad_long) {
       )
 
   # Limit to use for axis
-  std_lim <- ceiling(max(dat_in$sd, na.rm = T))
+  std_lim <- pmax(ceiling(max(dat_in$sd, na.rm = T)), 1)
 
   p <-
     dat_in %>%
