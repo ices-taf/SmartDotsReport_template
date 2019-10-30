@@ -1,6 +1,6 @@
 
 vname <- function(name) paste(name, group, sep = "_")
-vsname <- function(name) paste(name, stratum, group, sep = "_")
+vsname <- function(name) paste(name, "strata", group, sep = "_")
 
 Mode <- function(x) {
   as.numeric(names(sort(table(x), decreasing = TRUE)[1]))
