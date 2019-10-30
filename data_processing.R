@@ -59,6 +59,14 @@ if (all(ad$expertise == 0)) {
 # convert reader expertise
 ad$expertise <- c("Basic", "Advanced")[ad$expertise + 1]
 
+# if strata is missing, add "all"
+# has strata been set?
+if (all(is.na(ad$strata))) {
+  msg("NOTE: strata column not assigned - setting strata to 'all'")
+  ad$strata <- "all"
+  dist$strata <- "all"
+}
+
 # Calculate modal ages and cv of modal age
 ad_long <- add_modalage(ad, config$ma_method)
 ad_long_ex <- add_modalage(ad[ad$expertise == "Advanced", ], config$ma_method)

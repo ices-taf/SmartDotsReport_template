@@ -322,7 +322,7 @@ bias_test <- function(ad_long) {
   # Last corrections..
   #int_bias2[is.na(int_bias2)] <- ""
   row.names(int_bias2)[nrow(int_bias2)] <- "Modal age"
-  int_bias3 <- as.data.frame(int_bias2)
+  int_bias3 <- as.data.frame(int_bias2, stringsAsFactors = FALSE)
   int_bias3 <- rownames_to_column(int_bias3, var="Comparison")
 
   return(int_bias3)

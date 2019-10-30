@@ -30,9 +30,6 @@ dist <- read.taf("data/dist.csv")
 ad_long_all <- read.taf("data/ad_long.csv")
 ad_long_ex <- read.taf("data/ad_long_ex.csv")
 
-# set strata to NULL is all are NA
-if (all(is.na(ad_long_all[[config$strata]]))) config$strata <- NULL
-
 # get csv files
 for (file in dir("model", pattern = "*.csv")) {
   assign(gsub(".csv", "", file),
@@ -50,7 +47,7 @@ for (file in dir("model", pattern = "*.rds")) {
 summary_filename <- paste0(config$summary_name, ".docx")
 render("report_summary.Rmd",
        params = list(summary_title = config$summary_title,
-                     strata = config$strata),
+                     strata = "strata"),
        output_file = summary_filename,
        encoding = "UTF-8")
 cp(summary_filename, "report", move = TRUE)
@@ -59,7 +56,7 @@ cp(summary_filename, "report", move = TRUE)
 report_filename <- paste0(config$report_name, ".docx")
 render("report_full.Rmd",
        params = list(report_title = config$report_title,
-                     strata = config$strata),
+                     strata = "strata"),
        output_file = report_filename,
        encoding = "UTF-8")
 cp(report_filename, "report", move = TRUE)

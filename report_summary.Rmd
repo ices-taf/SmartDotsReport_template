@@ -9,7 +9,7 @@ output:
     keep_md: false
 params:
   summary_title: ""
-  strata: NULL
+  strata: "strata"
 ---
 
 
