@@ -50,7 +50,6 @@ ad$prep_method[is.na(ad$prep_method) | ad$prep_method == ""] <- "missing"
 # if variables are missing add "missing"
 dist$ices_area[is.na(dist$ices_area) | dist$ices_area == ""] <- "missing"
 
-
 # if no advanced readers! make them all advanced
 if (all(ad$expertise == 0)) {
   msg("NOTE: all readers were Basic - all have been converted to Advanced")

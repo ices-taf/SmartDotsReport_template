@@ -76,9 +76,7 @@ check_ad <- function(ad, what = "ad") {
              "** There are no advanced readers!                           **\n",
              "** the report scripts require there to be advanced readers. **"
       )
-
   }
-
 
   msg(check_text, "\n")
 }

@@ -6,6 +6,7 @@ Mode <- function(x) {
   as.numeric(names(sort(table(x), decreasing = TRUE)[1]))
 }
 
+# average percentage error
 ape <- function(x) {
   if (length(x) == 0) {
     return(numeric(0))
@@ -17,6 +18,7 @@ ape <- function(x) {
   }
 }
 
+# coefficient of variation
 cv <- function (x) {
   if (length(x) == 0) {
     return(numeric(0))
@@ -28,7 +30,7 @@ cv <- function (x) {
   }
 }
 
+# capitalise first letter of word
 capFirst <- function(s) {
     paste(toupper(substring(s, 1, 1)), substring(s, 2), sep = "")
 }
-
