@@ -49,11 +49,10 @@ names(sample_data_overview) <-
 
 
 
-
+# counts how many fish did a reader read at each modal age.
 numbers_read <- function(data, by = "reader") {
   table(data$modal_age, data[[by]]) %>%
-  unclass %>%
-  as.data.frame %>%
+  as.data.frame.matrix() %>%
   mutate(total = unname(rowSums(.)))
 }
 
