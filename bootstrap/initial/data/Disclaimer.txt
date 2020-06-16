@@ -1,0 +1,50 @@
+DATA DISCLAIMER
+
+1. IMPORTANT
+Thank you for downloading data from the International Council for the Exploration of the Sea (ICES). 
+By downloading data from the ICES website and sub-domains [ices.dk] you are agreeing to the terms and conditions of use as described in this document and any documents referred to in this text.
+Please read this before using the downloaded data, as this file contains specific information about the use of the data provided, limitations, and known issues. This file contains contact information regarding the origins of the data (where supplied) as well as how to cite these data in a publication or a data product. 
+
+2. CONTACT INFORMATION
+For feedback or queries about this data download, contact ICES at:
+Email: accessions@ices.dk
+Tel.:	+45 3338 6700
+Find more information at:
+Web:	https://www.ices.dk/data/Pages/default.aspx 
+
+3. DATA SPECIFIC INFORMATION
+The SmartDots platform facilitates image based age reading and maturity staging events for calibration and training purposes. A set of software tools supports the organiser in managing all images and data of the event, and the participants in annotating their age or maturity determinations during the event. All registered data are available in the connected reporting environment.
+Downloadable ZIP bundles come in two forms; the requested data file in CSV format with all data included in one file, where rows are used as record separators and commas as field separators plus the data disclaimer and/or an email with event report and summary report in .doc format to be edited plus the log file. 
+The users are urged to treat the data with caution. If the user has any queries on the validity of the data or the conclusions to be drawn they should contact the event organiser. For direct feedback and or issues related to the functioning of the platform, please use the SmartDots feedback page at https://smartdots.ices.dk/Userfeedback
+The development of SmartDots within ICES is guided by the Working Group on SmartDots Governance (WGSMART) in close cooperation with the Working Group on Biological Parameters (WGBIOP).
+The SmartDots software is an open source solution originally developed by ILVO (Flanders Research Institute for Agriculture, Fisheries and Food). ICES developed the SmartDots Web Interface, WebAPI and database. The R- scripts for the reporting module were written at DTU Aqua (National Institute of Aquatic Resources) and further developed under WGSMART.  All source code is publicly accessible and under the terms of a General Public License (https://github.com/ices-eg/SmartDots/blob/master/LICENSE ).
+
+4. TERMS OF USE: DATA 
+ICES makes data available to users in an open, timely and easy way, but ICES remains dependent on data contributions.
+•	Correct and appropriate data interpretation is solely the responsibility of data users.
+•	Data Users must not expressly or otherwise imply ICES substantiation of their work, results, conclusions and/or recommendations.
+•	Data sources must be duly acknowledged.
+•	Data Users must respect any and all restrictions on the use or reproduction of data such as restrictions on use for commercial purposes.
+•	Data Users are obliged to inform ICES of any suspected problems in the data.
+•	Data Users are encouraged to inform ICES of possible sources of other relevant data.
+ The full ICES data policy and terms of use can be viewed at:
+ https://ices.dk/data/guidelines-and-policy/Pages/ICES-data-policy.aspx.  
+Data held at ICES are used for various assessments and working group purposes. The data guidelines and procedures for these can be viewed at: 
+https://ices.dk/data/guidelines-and-policy/Pages/default.aspx 
+
+5. TERMS OF USE: SOFTWARE 
+Software is available for use from the ICES website that is provided as an aid for data users to work with, analyse and convert data: 
+https://ices.dk/data/tools/Pages/Software.aspx 
+The downloading and use of any software from https://www.ices.dk/  grants you only a limited, nonexclusive license for use solely by you for your own personal use and not for republication, distribution, assignment, sublicense, sale or other use. No part of any content, coding or documentation may be reproduced in any form or incorporated into any information retrieval system without the express permission of ICES or the third party that provided the software on https://www.ices.dk/ 
+The downloading and installation of software from https://www.ices.dk/ is at your own risk. ICES undertakes every effort to ensure software is compatible with the latest windows operating system, or other systems as defined in specific readme or a software documentation file. ICES accepts no responsibility for the correct functioning and operation of software downloaded from https://www.ices.dk/ , nor any incidental, special or consequential damages associated with downloading and installing software provided by ICES.
+
+
+6. DATA CITATION
+Data sources should be acknowledged by a citation. Detailed information and examples of citations can be found in ICES Data Policy: https://ices.dk/data/guidelines-and-policy/Pages/ICES-data-policy.aspx.
+A minimum requirement citation would include the following:
+“ICES SmartDots dataset 2020 ICES, Copenhagen”  
+
+
+7. METADATA
+Further details about the dataset and related services can be found at the metadata catalogue:
+https://gis.ices.dk/geonetwork/srv/eng/catalog.search#/metadata/327bd628-bf74-43d4-8425-11733e2df265 

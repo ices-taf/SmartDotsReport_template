@@ -60,3 +60,7 @@ render("report_full.Rmd",
        output_file = report_filename,
        encoding = "UTF-8")
 cp(report_filename, "report", move = TRUE)
+
+
+# copy disclaimer into report folder
+cp("bootstrap/data/Disclaimer.txt", "report")
