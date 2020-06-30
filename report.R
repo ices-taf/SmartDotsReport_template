@@ -64,3 +64,6 @@ cp(report_filename, "report", move = TRUE)
 
 # copy disclaimer into report folder
 cp("bootstrap/data/Disclaimer.txt", "report")
+
+# copy config.json to report folder
+cp("bootstrap/data/config.json", "report")
