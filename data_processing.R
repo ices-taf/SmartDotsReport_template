@@ -10,6 +10,7 @@ library(jsonlite)
 library(dplyr)
 library(tidyr)
 require(lubridate)
+library(plyr)
 
 # create data directory
 mkdir("data")
@@ -59,18 +60,32 @@ if (all(ad$expertise == 0)) {
 # convert reader expertise
 ad$expertise <- c("Basic", "Advanced")[ad$expertise + 1]
 
-# if strata is missing, add "all"
-# has strata been set?
-if (all(is.na(ad$strata))) {
-  msg("NOTE: strata column not assigned - setting strata to 'all'")
-  ad$strata <- "all"
-  dist$strata <- "all"
-}
+# Assign weight to the readers based in their ranking-experience
+# Add different weight columns to data
+weight <- length(unique(ad$reader_number)):1
+reader_number <- sort(unique(ad$reader_number))
+reader <-
+  data.frame(
+    reader_number = reader_number,
+    weight_I = weight,
+    weight_II = 1 / (1 + log(sort(weight, decreasing = F) + 0.0000000001))
+  )
+ad <- merge(ad, reader, by.x="reader_number", by.y="reader_number", all.x = T)
 
 # Calculate modal ages and cv of modal age
-ad_long <- add_modalage(ad, config$ma_method)
-ad_long_ex <- add_modalage(ad[ad$expertise == "Advanced", ], config$ma_method)
+ad_long <- ad %>%
+  add_modal_trad(config$ma_method) %>%
+  add_modal_linearweight(config$ma_method) %>%
+  add_modal_negexpweight(config$ma_method)
 
+ad_long_ex <- ad[ad$expertise == "Advanced", ] %>%
+  add_modal_trad(config$ma_method) %>%
+  add_modal_linearweight(config$ma_method) %>%
+  add_modal_negexpweight(config$ma_method)
+
+# Choose the final mode (traditional, readers linear weight or negative exponential linear weight) based in the existence of multimodality or not.
+ad_long <- select_mode(ad_long, config$ma_method)
+ad_long_ex <- select_mode(ad_long_ex, config$ma_method)
 
 # prepare data in wbgr output format
 # IMAGE,1,2,3,4,5,6,7,8,9,10,11,12,13
@@ -79,7 +94,7 @@ ad_long_ex <- add_modalage(ad[ad$expertise == "Advanced", ], config$ma_method)
 # 6698256.jpg,1,1,1,1,1,-,2,1,-,2,-,1,-
 # 6698257.jpg,3,3,3,3,2,1,3,3,-,3,-,3,-
 readers <- sort(unique(ad$reader))
-webgr <- spread(ad_long[c("sample", "reader", "age")], key = reader, value = age)
+webgr <- spread(ad[c("sample", "reader", "age")], key = reader, value = age)
 webgr[] <- paste(unlist(webgr))
 webgr[webgr == "NA"] <- "-"
 webgr <-

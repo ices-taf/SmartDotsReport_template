@@ -6,7 +6,7 @@
 
 library(icesTAF)
 library(jsonlite)
-unloadNamespace('tidyr')
+unloadNamespace("tidyr")
 unloadNamespace("dplyr")
 library(plyr) # age error matrix
 library(dplyr)
@@ -34,21 +34,17 @@ ad_long_ex <- read.taf("data/ad_long_ex.csv")
 modal_age_range_all <-  with(ad_long_all, min(modal_age, na.rm = TRUE):max(modal_age, na.rm = TRUE))
 modal_age_range_ex <-  with(ad_long_ex, min(modal_age, na.rm = TRUE):max(modal_age, na.rm = TRUE))
 
+# set strata to NULL if all are NA
+if (all(is.na(ad_long_all[[config$strata]]))) config$strata <- NULL
+
 # Overview of samples and readers ##############################################
 
 # Sample overview
-sample_data_overview <- sample_data_overview_table(ad_long_all, "strata")
+sample_data_overview <- sample_data_overview_table(ad_long_all, config$strata)
 write.taf(sample_data_overview, dir = "model")
 
 # Participants table
-reader_data <-
-  ad_long_all %>%
-  select(reader, expertise) %>%
-  unique %>%
-  arrange(reader) %>%
-  rename(`Reader code` = reader,
-         Expertise = expertise)
-
+reader_data <- reader_data_table(ad_long_all, strata = config$strata)
 write.taf(reader_data, dir = "model")
 
 
@@ -73,6 +69,32 @@ for (group in c("all", "ex")) {
     num_read_table(ad_long, by = "reader")
   )
   write.taf(vname("num_read_tab"), dir = "model")
+
+  # Calculate the number of cases with multiple modes when the traditional method is used, the linear weight or the negative exponential weighting.
+  assign(
+    vname("multimode_cases_tab_traditional"),
+    multimode_cases_table_traditional(ad_long)
+  )
+  write.taf(vname("multimode_cases_tab_traditional"), dir = "model")
+
+  assign(
+    vname("multimode_cases_tab_linear"),
+    multimode_cases_table_linear(ad_long)
+  )
+  write.taf(vname("multimode_cases_tab_linear"), dir = "model")
+
+  assign(
+    vname("multimode_cases_tab_negexp"),
+    multimode_cases_table_negexp(ad_long)
+  )
+  write.taf(vname("multimode_cases_tab_negexp"), dir = "model")
+
+  assign(
+    vname("multimode_cases_tab_multistage"),
+    multimode_cases_table_multistage(ad_long)
+  )
+  write.taf(vname("multimode_cases_tab_multistage"), dir = "model")
+
 
   # CV table
   assign(
@@ -120,31 +142,36 @@ for (group in c("all", "ex")) {
 
   # Results by strata ##############################################
 
-  # run strata tables - 4 tables per strata
+  # loop over strata - 4 tables per strata
+  # stratum = "prep_method"
+  if (is.null(config$strata)) config$strata <- numeric()
+  for (stratum in config$strata) {
 
-  # Calculate number of readings per reader grouped by modal age and add total
-  assign(vsname("num_read_tab"),
-    num_read_table(ad_long, by = "strata")
-  )
-  write.taf(vsname("num_read_tab"), dir = "model")
+    # Calculate number of readings per reader grouped by modal age and add total
+    assign(vsname("num_read_tab"),
+      num_read_table(ad_long, by = stratum)
+    )
+    write.taf(vsname("num_read_tab"), dir = "model")
 
-  # CV table
-  assign(vsname("cv_tab"),
-    cv_table(ad_long, by = "strata")
-  )
-  write.taf(vsname("cv_tab"), dir = "model")
+    # CV table
+    assign(vsname("cv_tab"),
+      cv_table(ad_long, by = stratum)
+    )
+    write.taf(vsname("cv_tab"), dir = "model")
 
-  # Percent agreement between age readings and modal age.
-  assign(vsname("pa_tab"),
-    pa_table(ad_long, by = "strata")
-  )
-  write.taf(vsname("pa_tab"), dir = "model")
+    # Percent agreement between age readings and modal age.
+    assign(vsname("pa_tab"),
+      pa_table(ad_long, by = stratum)
+    )
+    write.taf(vsname("pa_tab"), dir = "model")
 
-  # Relative bias
-  assign(vsname("rel_bias_tab"),
-    rel_bias_table(ad_long, by = "strata")
-  )
-  write.taf(vsname("rel_bias_tab"), dir = "model")
+    # Relative bias
+    assign(vsname("rel_bias_tab"),
+      rel_bias_table(ad_long, by = stratum)
+    )
+    write.taf(vsname("rel_bias_tab"), dir = "model")
+
+  }
 
   ## Annex tables
 
@@ -172,7 +199,7 @@ for (group in c("all", "ex")) {
   # Age error matrix (AEM) only for advanced readers
   assign(
     vname("ae_mat"),
-    age_er_matrix(ad_long, by = "strata")
+    age_er_matrix(ad_long, by = config$strata)
   )
 
   # todo - do a better job of this...

@@ -9,7 +9,7 @@ output:
     keep_md: false
 params:
   report_title: ""
-  strata: "strata"
+  strata: NULL
 ---
 
 ```{r introduction, include = FALSE}
@@ -81,10 +81,21 @@ The order and numbering of tables and plots are the same as in the excel sheet.
 Tables 6.1 - 6.4 from the 'Age Reading Comparisons' sheet are not outputted
 since these are merely used to do calculations for the other tables.
 
+**Modal age: a multistage approach to define the modal age by sampled fish**
+
+When summarizing the output and reporting the results of the exchange events developed within the SmarDots framework, the modal age (the most common age decided by the age readers for every fish sample) is the most relevant measurement. It is a key statistic by itself, that indicates the most likely age of each sampled fish. But it is also fundamental for the estimation of some other relevant statistics to assess the performance of the techniques assessed in the exchange event, like the Percentage Agreement (PA), or input for stock assessments like the Age Error Matrix (AEM) (see below). However, the traditional way of calculating the mode (each reader has the same weight=1)  the mode is taken as the lowest age of the multiple modal ages. This way renders multiple cases (fish samples) with multiple modal ages (i.e. different ages got the same highest number of readers). Accordingly, this imply a wrong perception of the age by fish individual and introduction of bias in the calculation of the PA and AEM. As a solution, in this report a multistage approach to select the modal age is used. This multistage approach was based in the different weight given to the age readers based in their experience. Two different weight scores scales were assigned, a weight score decreasing linearly with the experience and another decreasing with a negative exponential shape. The modal age by fish individual is decided following the next approach:
+    1) If there is a single mode estimated with the "traditional" approach (equal weight for all readers) this value is used as the mode, if not
+    2) Adding up, by age, the linear weighting score for all the readers that decided each age for that fish. Select as the modal age the age with the highest added score. If there are still multiple ages with the same score:
+    3) Adding up, by age, the negative exponential weighting score for all the readers that decided each age for that fish. Select as the modal age the age with the highest added score.
+
+During the WGBIOP 2019 meeting it was found that the combination of the modes decided using these three methods (so called "multistage approach"), allows assigning a single modal age to each fish individual.
+
 
 **Pecentage Agreement**
 
-In here will go some text and an equation.
+The percentage agreement per reader per modal age tells how large is the part of readings that are equal to the modal age. The percentage agreement is estimated by modal age and reader as the proportion (as percentage) of times that the lectures of that reader agreed with the resulting modal age.This percentage is estimated as the number of times that  a reader agreed with the modal age divided by the total number of otoliths read by a reader for each modal age.
+
+$$PA = { \frac{ {number \,of \,readings \,that \,agree \,with \,modal \,age}} {total \,number \,of \,readings \,by \,modal \,age} } \cdot {100 \%} $$
 
 
 **Co-efficient of Variation (CV)**
@@ -96,18 +107,14 @@ reader and modal age:
 $$CV = { \frac{ {\sigma}} {\mu} } \cdot {100 \%} $$
 
 To the table is also added the CV of all readers combined per modal age and
-a weighted mean of the CV per reader. Finally a rank value is added per
-reader, where the reader with the lowest weighted mean is assigned with
-a rank and so forth (in the situation of ties between two weighted means
-will every tied element be assigned to the lowest rank. This is the procedure
-for all ties methods when assigning ranks).
+a weighted mean of the CV per reader.
 
 
 **Average Percentage Error (APE)**
 
 APE was calculated based on the method outlined by Beamish & Fournier (1981).
-This method is not independent of fish age and thus provides a better estimate
-of precision. As the calculations of both CV and APE pose problems if the mean
+This method is dependent of fish age and thus provides a better estimate
+of precision than percentage agreement. As the calculations of both CV and APE pose problems if the mean
 age is close to 0, all observations for which modal age was 0 were omitted
 from the CV and APE calculations.
 
@@ -120,7 +127,7 @@ where $a_i$ is the age reading of reader $i$ and ${\bar{a}}$ is the mean
 of all readings from 1 to $n$.
 
 
-**Age error matricx (AEM)**
+**Age error matrix (AEM)**
 
 Age error matrices (AEM) were produced following procedures outlined
 by WKSABCAL (2014) where the matrix shows the proportion of each modal
@@ -137,14 +144,14 @@ the stock assessment in that specific area.
 
 SmartDots provides a measure of distance between the annotations made by
 the readers and thus provides a measure of growth increment width.
-This data is used to establish growth curves for each fish and for each reader.
+This data is used to establish growth curves for each otolith (fish) and for each reader.
 
 
 
-# Analysis of age calibration exercise (ToR?)
+## Analysis of age calibration exercise (ToR?)
 
 
-## Overview of samples and readers
+# Overview of samples and readers
 
 
 \br
@@ -180,18 +187,44 @@ pander(style_table0(reader_data), missing = "-")
 
 **All samples included**
 
-Those writing the report put TEXT here describing the results.
+Those writing the report put TEXT here describing the results
 
-<!-- PA, CV and APE text -->
-```{r summary_statistics}
-summary_statistics <-
-  c(CV  = cv_tab_all[nrow(cv_tab_all), "all"],
-    PA  = pa_tab_all[nrow(pa_tab_all), "all"],
-    APE = ape_tab_all[nrow(ape_tab_all), "all"])
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM) text -->
+```{r summary_multiple_modes_all}
+summary_multiple_modes_all <-
+    c(NSample  = length(unique(ad_long_all$SampleID)),
+    PercMM_traditional=unique(ifelse(multimode_cases_tab_traditional_all$NModes_trad=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_traditional_all)/length(unique(ad_long_all$SampleID)))*100, digits=0),"%"))),
+    PercMM_linear_weight=unique(ifelse(multimode_cases_tab_linear_all$NModes_linear=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_linear_all)/length(unique(ad_long_all$SampleID)))*100, digits=0),"%"))),
+    PercMM_negexp_weight=unique(ifelse(multimode_cases_tab_negexp_all$NModes_negexp=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_negexpweight_all)/length(unique(ad_long_all$SampleID)))*100, digits=0),"%"))),
+    PercMM_multistage=unique(ifelse(multimode_cases_tab_multistage_all$NModes_multistage=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_multistage_all)/length(unique(ad_long_all$SampleID)))*100, digits=0),"%"))))
+
+# Table caption
+set.caption('**Table X:** Total number of samples (NSample) and percentage of cases (fish samples) with multiple modes depending on the approach to weight the experience of the reader which will be considered when defining the fish age mode. PercMM_traditional shows the percentage of the total samples for which multiple modes are obtained when all the readers are equally weighted. PercMM_linear_weight shows the percentage of the total samples for which multiple modes are obtained when the weight assigned to the different readers decreases linearly with the experience, while in the PercMM_negexp the weight applied decreases with a negative exponential shape with the experience. The PercMM_multistage shows the percentage of multiple mode cases when a combination of the different methodologies is used, as explained in the material and methods section')
+
+# Output table
+pander(style_table0(summary_multiple_modes_all), missing="")
+
 ```
 
-The weighted average percentage agreement based on modal ages for all readers
-is `r summary_statistics[2]`, with the weighted average CV of `r summary_statistics[1]` and APE of `r summary_statistics[3]`.
+
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM), PA, CV and APE text -->
+```{r summary_statistics_all}
+summary_statistics_all <-
+    c(NSample  = length(unique(ad_long_all$SampleID)),
+    CV  = cv_tab_all[nrow(cv_tab_all), "all"],
+    PA  = pa_tab_all[nrow(pa_tab_all), "total"],
+    APE = ape_tab_all[nrow(ape_tab_all), "all"])
+
+# Table caption
+set.caption('**Table X:** Summary of statistics; Total number of samples (NSample), coefficient of variance (CV), percentage of agreement (PA) and average percentage error (APE) for all ages and readers')
+
+# Output table
+pander(style_table0(summary_statistics_all), missing="")
+
+```
+
+In this exchange event, `r summary_statistics_all[1]` otolith fish individuals were aged. Of those, `r summary_multiple_modes_all[2]`when the traditional approach (all readers equally weighted) is used to define the mode. The percentage of multiple mode cases is reduced to `r summary_multiple_modes_all[5]`. The complete list of cases with multiple modes is presented in table X in the annex 3 section, where the ageing from each of the readers participating in the exchange event is presented. When all the otolith samples are considered (both single and multimodal cases) the weighted average percentage agreement based on modal ages for all readers is `r summary_statistics_all[3]`, with the weighted average CV of `r summary_statistics_all[2]` and APE of `r summary_statistics_all[4]`.
 
 ```{r cv_table}
 
@@ -200,8 +233,7 @@ is `r summary_statistics[2]`, with the weighted average CV of `r summary_statist
 # Table caption
 set.caption('**Table X:** Coefficient of Variation (CV) table presents the CV
              per modal age and reader, the CV of all readers combined per modal
-             age and a weighted mean of the CV per reader.
-             A rank is also assigned to each reader.')
+             age and a weighted mean of the CV per reader')
 
 # Output table
 pander(style_table1(cv_tab_all), missing = "-")
@@ -212,7 +244,6 @@ pander(style_table1(cv_tab_all), missing = "-")
 The percentage agreement per reader per modal age tells how large part of the
 readings that are equal to the modal age. The weighted mean including at the
 bottom of the table is weighted according to number of age readings.
-A rank is also assigned to each reader.
 
 ```{r percentage_agreement}
 
@@ -221,19 +252,34 @@ A rank is also assigned to each reader.
 # Table caption
 set.caption('**Table X:** Percentage agreement (PA) table represents the PA per
              modal age and reader, the PA of all readers combined per modal
-             age and a weighted mean of the PA per reader.
-             A rank is also assgned to each reader.')
+             age and a weighted mean of the PA per reader.')
 
 # Output table
 pander(style_table1(pa_tab_all), missing="-")
 
 ```
 
+
+
+```{r average_percentage_error_all}
+
+# AVERAGE PERCENTAGE ERROR TABLE - Advanced readers ###############################
+
+# Table caption
+set.caption('**Table X:** Average Percentage Error (APE) table represents the APE per
+             modal age and reader, the APE of all advanced readers
+             combined per modal age and a weighted mean of the APE per reader.')
+
+# Output table
+pander(style_table1(pa_tab_all), missing = "-")
+
+```
+
+
 <!-- Relative bias text -->
 The relative bias is the difference between the mean age (per modal age per
 reader) and modal age. As for the previous tables, a combined bias for all
-readers and weighted means are calculated and finally a rank is assigned
-to each reader.
+readers and weighted means are calculated.
 
 ```{r rb}
 
@@ -242,8 +288,7 @@ to each reader.
 # Table caption
 set.caption('**Table X:** Relative bias table represents the relative bias per
              modal age per reader, the relative bias of all readers combined
-             per modal age and a weighted mean of the relative bias per reader.
-             A rank is also assigned to each reader.')
+             per modal age and a weighted mean of the relative bias per reader.')
 
 # Output table
 pander(style_table1(rel_bias_tab_all), missing = "-")
@@ -256,7 +301,7 @@ pander(style_table1(rel_bias_tab_all), missing = "-")
 # Figure Caption
 cap_in <- '**Figure X:**: Age bias plot for all readers. Mean age
            recorded +/- 2 stdev of each reader and all readers combined are
-           plotted against modal age. The estimated man age corresponds to
+           plotted against modal age. The estimated mean age corresponds to
            modal age, if the estimated mean age is on the 1:1 equilibrium
            line (solid line). Relative bias is the age difference between
            estimated mean age and modal age.'
@@ -265,13 +310,7 @@ cap_in <- '**Figure X:**: Age bias plot for all readers. Mean age
 plot_bias_all(ad_long_all)
 ```
 
-<!-- Inter reader bias text -->
-For each pair that is being compared, the differences between the readings
-per image are found and the frequency of each occurring difference is obtained.
-A rank value is calculated for the positive and the negative differences
-(R+ and R- in the Guus Eltink sheet). The value with the smallest rank is then
-used to calculate a z-value that determines the level of bias (not clear from
-Guus Eltink sheet how the equations are defined..).
+
 
 ```{r bias_table}
 
@@ -294,9 +333,9 @@ pander(style_table3(bias_tab_all), missing = ".", style = "simple")
 
 # Figure caption
 cap_in <- '**Figure X:** Plot of average distance from the centre to the winter
-           rings for advanced readers by preparation method. The boxes represent 
+           rings for advanced readers by preparation method. The boxes represent
            the median, upper and lower box boundaries of the interquartile range,
-           whiskers represent the minimum and maximum values and the dots represent 
+           whiskers represent the minimum and maximum values and the dots represent
            the outliers.'
 
 
@@ -342,9 +381,9 @@ pander(style_table1(get(vsname("num_read_tab"))), missing = "-")
 
 # Table caption
 cap_in <- '**Figure X:** Plot of average distance from the centre to the winter
-           rings for advanced readers by %s. The boxes represent 
+           rings for advanced readers by %s. The boxes represent
            the median, upper and lower box boundaries of the interquartile range,
-           whiskers represent the minimum and maximum values and the dots represent 
+           whiskers represent the minimum and maximum values and the dots represent
            the outliers.'
 cap_in <- sprintf(cap_in, stratum)
 
@@ -461,6 +500,44 @@ pander(style_table2(get(vsname("rel_bias_tab"))), missing = "-")
 
 **All samples included**
 
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM) text -->
+```{r summary_multiple_modes_ex}
+summary_multiple_modes_ex <-
+    c(NSample  = length(unique(ad_long_ex$SampleID)),
+    PercMM_traditional=unique(ifelse(multimode_cases_tab_traditional_ex$NModes_trad=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_traditional_ex)/length(unique(ad_long_ex$SampleID)))*100, digits=0),"%"))),
+    PercMM_linear_weight=unique(ifelse(multimode_cases_tab_linear_ex$NModes_linear=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_linear_ex)/length(unique(ad_long_ex$SampleID)))*100, digits=0),"%"))),
+    PercMM_negexp_weight=unique(ifelse(multimode_cases_tab_negexp_ex$NModes_negexp=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_negexpweight_ex)/length(unique(ad_long_ex$SampleID)))*100, digits=0),"%"))),
+    PercMM_multistage=unique(ifelse(multimode_cases_tab_multistage_ex$NModes_multistage=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_multistage_ex)/length(unique(ad_long_ex$SampleID)))*100, digits=0),"%"))))
+
+# Table caption
+set.caption('**Table X:** Summary of statistics; Total number of samples (NSample), a percentage of cases (fish samples) with multiple modes depending on the approach to weight the experience of the reader which will be considered when defining the fish age mode. PercMM_traditional shows the percentage of the total samples for which multiple modes are obtained when all the readers are equally weighted. PercMM_linear_weight shows the percentage of the total samples for which multiple modes are obtained when the weight assigned to the different readers decreases linearly with the experience, while in the PercMM_negexp the weight applied decreases with a negative exponential shape with the experience. The PercMM_multistage shows the percentage of multiple mode cases when a combination of the different methodologies is used, as explained in the material and methods section')
+
+# Output table
+pander(style_table0(summary_multiple_modes_ex), missing="")
+
+```
+
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM), PA, CV and APE text -->
+```{r summary_statistics_ex}
+summary_statistics_ex <-
+    c(NSample  = length(unique(ad_long_all$SampleID)),
+    CV  = cv_tab_all[nrow(cv_tab_all), "all"],
+    PA  = pa_tab_all[nrow(pa_tab_all), "total"],
+    APE = ape_tab_all[nrow(ape_tab_all), "all"])
+
+# Table caption
+set.caption('**Table X:** Summary of statistics; Total number of samples (NSample), coefficient of variance (CV), percentage of agreement (PA) and average percentage error (APE) for all ages and readers')
+
+# Output table
+pander(style_table0(summary_statistics_ex), missing="")
+
+```
+
+
+In this exchange event, `r summary_statistics_ex[1]` otolith fish individuals were aged. Of those, `r summary_multiple_modes_ex[2]`when the traditional approach (all readers equally weighted) is used to define the mode. The percentage of multiple mode cases is reduced to `r summary_multiple_modes_ex[5]`. The complete list of cases with multiple modes is presented in table X in the annex 3 section, where the ageing from each of the readers participating in the exchange event is presented. When all the otolith samples are considered (both single and multimodal cases) the weighted average percentage agreement based on modal ages for all readers is `r summary_statistics_ex[3]`, with the weighted average CV of `r summary_statistics_ex[2]` and APE of `r summary_statistics_ex[4]`.
+
+
 ```{r cv_ex}
 
 # CV TABLE - Advanced readers #################################################
@@ -469,7 +546,7 @@ pander(style_table2(get(vsname("rel_bias_tab"))), missing = "-")
 set.caption('**Table X:** Coefficient of Variation (CV) table presents the
              CV per modal age and advanced reader, the CV of all advanced
              readers combined per modal age and a weighted mean of the CV
-             per reader. A rank is also assigned to each reader.')
+             per reader.')
 
 # Output table
 pander(style_table1(cv_tab_ex), missing = "-")
@@ -483,13 +560,30 @@ pander(style_table1(cv_tab_ex), missing = "-")
 # Table caption
 set.caption('**Table X:** Percentage agreement (PA) table represents the PA per
              modal age and reader, advanced the PA of all advanced readers
-             combined per modal age and a weighted mean of the PA per reader.
-             A rank is also assgned to each reader.')
+             combined per modal age and a weighted mean of the PA per reader.')
 
 # Output table
 pander(style_table1(pa_tab_ex), missing = "-")
 
 ```
+
+
+
+```{r average_percentage_error_ex}
+
+# AVERAGE PERCENTAGE ERROR TABLE - Advanced readers ###############################
+
+# Table caption
+set.caption('**Table X:** Average Percentage Error (APE) table represents the APE per
+             modal age and reader, the APE of all advanced readers
+             combined per modal age and a weighted mean of the APE per reader.')
+
+# Output table
+pander(style_table1(pa_tab_ex), missing = "-")
+
+```
+
+
 
 ```{r rb_ex,results='asis'}
 
@@ -499,8 +593,7 @@ pander(style_table1(pa_tab_ex), missing = "-")
 set.caption('**Table X:** Relative bias table represents the relative bias per
              modal age and advanced reader, the relative bias of all
              advanced readers combined per modal age and a weighted mean of
-             the relative bias per reader. A rank is also assigned to
-             each reader.')
+             the relative bias per reader.')
 
 # Output table
 pander(style_table1(rel_bias_tab_ex), missing = "-")
@@ -512,7 +605,7 @@ pander(style_table1(rel_bias_tab_ex), missing = "-")
 # BIAS PLOT - Advanced readers ################################################
 
 # Table caption
-cap_in <- '**Figure X:** Age bias plot for advanced readers.'
+cap_in <- '**Figure X:** Age bias plot for advanced readers. Mean age recorded +/- 2 stdev of each reader and all readers combined are plotted against modal age. The estimated mean age corresponds to modal age, if the estimated mean age is on the 1:1 equilibrium line (solid line). Relative bias is the age difference between estimated mean age and modal age.'
 
 # Output table
 plot_bias_all(ad_long_ex)
@@ -549,7 +642,7 @@ readings of the advanced readers.
 for (i in seq_along(ae_mat_ex)) {
   # name
   strata_name <- names(ae_mat_ex)[i]
-  
+
   # Table caption
   cap_i <- paste0("**Table X:** Age error matrix (AEM) for ", strata_name ,".
                    The AEM shows the proportional distribution
@@ -605,6 +698,14 @@ print_strata <- function() length(params$strata) >= istrata
 
 # References
 
+Beamish R. J. and Fournier D. A. (1981) A method for comparing the precision of a set of age determination. Canadian Journal of Fisheries and Aquatic Sciences, 38, 982–983
+
+GUIDELINES AND TOOLS FOR AGE READING. Eltink, A.T.G.W., Newton A.W., Morgado C., Santamaria M.T.G and Modin J. (2000) Guidelines and tools for age Reading. (PDF document version 1.0 October 2000) Internet: http://www.efan.no
+
+Eltink, A.T.G.W. (2000) Age reading comparisons. (MS Excel workbook version 1.0 October 2000) Internet: http://www.efan.no
+
+ICES (2014) Report of the Workshop on Statistical Analysis of Biological Calibration Studies (WKSABCAL). ICES CM 2014/ACOM: 35
+
 
 <!------------------------------ ANNEX --------------------------------------->
 
@@ -631,7 +732,7 @@ pander(style_table0(reader_data), missing = "-")
 
 **Data Overview**
 
-```{r tab1_sum_stat}
+```{r tab_sum_stat_all}
 
 # DATA SUMMARY STATISTICS - All readers #######################################
 
@@ -639,7 +740,7 @@ pander(style_table0(reader_data), missing = "-")
 set.caption('**Table X:** Summary of statistics; PA (%), CV (%) and APE (%).')
 
 # Output table
-pander(style_table0(summary_statistics), missing="")
+pander(style_table0(summary_statistics_all), missing="")
 
 ```
 
@@ -708,12 +809,7 @@ pander(style_table2(get(vname("mean_length_tab"))), missing = "-")
 # INDIVIDUAL BIAS PLOTS - All readers #########################################
 
 # Figure caption
-cap_in <- '**Figure X:** Bias plots per reader. The mean age recorded
-           +/- 2stdevof each age reader and all readers combined are plotted
-           against the modal age. The estimated mean age corresponds to modal
-           age, if the estimated mean age is on the 1:1 equilibrium line
-           (solid line). Relative bias is the age difference between
-           estimated mean age and modal age.'
+cap_in <- 'Figure xx: Age bias plot for each individual reader. Mean age recorded +/- 2 stdev of each reader and all readers combined are plotted against modal age. The estimated mean age corresponds to modal age, if the estimated mean age is on the 1:1 equilibrium line (solid line). Relative bias is the age difference between estimated mean age and modal age.'
 
 # Output figures
 plot_bias(get(vname("ad_long")))
@@ -779,6 +875,19 @@ plot_mla(get(vname("ad_long")))
 **All samples included**
 
 **Data Overview**
+
+```{r tab_sum_stat_ex}
+
+# DATA SUMMARY STATISTICS - Experienced readers #######################################
+
+# Table caption
+set.caption('**Table X:** Summary of statistics; PA (%), CV (%) and APE (%).')
+
+# Output table
+pander(style_table0(summary_statistics_ex), missing="")
+
+```
+
 
 ```{r set_annex_ex}
 group <- "ex"

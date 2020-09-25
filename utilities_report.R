@@ -193,18 +193,21 @@ plot_bias <- function(ad_long) {
 # Plot overall std, CA and PA per modal age in same plot
 plot_stat <- function(ad_long) {
 
+  max_modal <- max(ad_long$modal_age, na.rm = TRUE)
+  max_age <- max(ad_long$age, na.rm = TRUE)
+
   # Combine the three data sets
   dat_in <-
     ad_long %>%
       group_by(modal_age) %>%
       summarise(
-        cv = cv(age),
+        cv = cv_II(age),
         pa = mean(age == modal_age, na.rm = TRUE) * 100,
         sd = sd(age, na.rm = TRUE)
       )
 
   # Limit to use for axis
-  std_lim <- pmax(ceiling(max(dat_in$sd, na.rm = T)), 1)
+  std_lim <- ceiling(max(dat_in$sd, na.rm = T))
 
   p <-
     dat_in %>%
@@ -223,6 +226,8 @@ plot_stat <- function(ad_long) {
     geom_line(aes(x = modal_age, y = pa*std_lim/100, colour = "pa")) +
     geom_point(aes(x = modal_age, y = pa*std_lim/100, colour = "pa",
                   shape = "pa"), size = 3) +
+    scale_x_continuous(breaks = seq(0, max_modal, 1),
+                       limits = c(0, max_modal), oob = rescale_none) +
     # Make left side y-axis
     scale_y_continuous(name = expression("Standard deviation (years)"),
                       limits = c(0, std_lim))  +
@@ -277,6 +282,7 @@ plot_rb_ma <- function(rel_bias_tab) {
     filter(`Modal age` != "Weighted Mean" & !is.na(all)) %>%
     select(`Modal age`, all) %>%
     rename(modal_age = `Modal age`) %>%
+    mutate(modal_age=as.numeric(modal_age)) %>%
     ggplot(aes(x = modal_age, y = all, group = 1)) +
       geom_point(size = 2, colour = "#80B1D3") +
       geom_line(colour = "#80B1D3") +
