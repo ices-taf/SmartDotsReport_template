@@ -6,7 +6,7 @@ library(dplyr)
 library(tidyr)
 
 # load configuration
-config <- read_json("bootstrap/data/config.json", simplifyVector = TRUE)
+config <- read_json(taf.data.path("config", "config.json"), simplifyVector = TRUE)
 
 # get data from bootstrap folder  -------------------------------
 

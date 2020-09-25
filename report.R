@@ -23,7 +23,7 @@ source("utilities.R")
 source("utilities_report.R")
 
 # load configuration data
-config <- read_json("bootstrap/data/config.json", simplifyVector = TRUE)
+config <- read_json(taf.data.path("config", "config.json"), simplifyVector = TRUE)
 
 # load data for report
 dist <- read.taf("data/dist.csv")
@@ -66,7 +66,7 @@ cp(report_filename, "report", move = TRUE)
 
 
 # copy disclaimer into report folder
-cp("bootstrap/data/Disclaimer.txt", "report")
+cp(taf.data.path("Disclaimer", "Disclaimer.txt"), "report")
 
 # copy config.json to report folder
-cp("bootstrap/data/config.json", "report")
+cp(taf.data.path("config", "config.json"), "report")

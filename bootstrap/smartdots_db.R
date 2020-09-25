@@ -1,4 +1,11 @@
-## Preprocess data, write TAF data tables
+#' Script to download data from a SmartDots event
+#'
+#' @name smartdots_db
+#' @format csv files
+#' @tafOriginator WGSMART
+#' @tafYear 2020
+#' @tafAccess Public
+#' @tafSource script
 
 ## Before:
 ## After: report_template.docx, dist.csv,
@@ -8,9 +15,8 @@
 library(icesTAF)
 library(jsonlite)
 
-
 # load configuration
-config <- read_json("../config.json", simplifyVector = TRUE)
+config <- read_json(taf.data.path("config", "config.json"), simplifyVector = TRUE)
 
 # get data from api --------
 zipfile <- "smartdots_data.zip"
