@@ -82,29 +82,29 @@ multimode_cases_table_traditional<- function(ad_long) {
   MM_tab=tapply(ad_long$NModes_trad,ad_long$FishID,max) %>% unclass %>% as.data.frame
   colnames(MM_tab)=c("NModes_trad")
   MM_tab$FishID=rownames(MM_tab)
-  
+
   MM_tab=MM_tab[MM_tab$NModes_trad>1,]
   if(dim(MM_tab)[1]==0) {MM_tab=data.frame(FishID="none", NModes_trad="zero")}
   return(MM_tab)
 }
 
 multimode_cases_table_linear <- function(ad_long, by = "reader") {
-  
+
   MM_tab=tapply(ad_long$NModes_linear,ad_long$FishID,max) %>% unclass %>% as.data.frame
   colnames(MM_tab)=c("NModes_linear")
   MM_tab$FishID=rownames(MM_tab)
-  
+
   MM_tab=MM_tab[MM_tab$NModes_linear>1,]
   if(dim(MM_tab)[1]==0) {MM_tab=data.frame(FishID="none", NModes_linear="zero")}
   return(MM_tab)
 }
 
 multimode_cases_table_negexp <- function(ad_long, by = "reader") {
-  
+
   MM_tab=tapply(ad_long$NModes_negexp,ad_long$FishID,max) %>% unclass %>% as.data.frame
   colnames(MM_tab)=c("NModes_negexp")
   MM_tab$FishID=rownames(MM_tab)
-  
+
   MM_tab=MM_tab[MM_tab$NModes_negexp>1,]
   if(dim(MM_tab)[1]==0) {MM_tab=data.frame(FishID="none", NModes_negexp="zero")}
   return(MM_tab)
@@ -112,11 +112,11 @@ multimode_cases_table_negexp <- function(ad_long, by = "reader") {
 
 # in the case of the multistage approach, the number of multiple mode cases will be the same than the negative exponential weighting approach.
 multimode_cases_table_multistage <- function(ad_long, by = "reader") {
-  
+
   MM_tab=tapply(ad_long$NModes_negexp,ad_long$FishID,max) %>% unclass %>% as.data.frame
   colnames(MM_tab)=c("NModes_multistage")
   MM_tab$FishID=rownames(MM_tab)
-  
+
   MM_tab=MM_tab[MM_tab$NModes_multistage>1,]
   if(dim(MM_tab)[1]==0) {MM_tab=data.frame(FishID="none", NModes_multistage="zero")}
   return(MM_tab)
@@ -183,7 +183,7 @@ pa_table <- function(ad_long, by = "reader") {
   temp=as.data.frame(matrix(data=0,nrow=dim(pa_tab)[1],ncol=length(diff), dimnames = list(c(1:dim(pa_tab)[1]), diff)))
   pa_tab=cbind(pa_tab,temp)
   pa_tab=pa_tab[ , order(names(pa_tab))]
-  
+
   # overall agreement per modal age
   pa_tab <- pa_tab / num_read * 100
 

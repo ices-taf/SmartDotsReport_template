@@ -11,19 +11,19 @@
 # If the modal age is 0 the CV is set to 0 as well.
 
 add_modal_trad <- function(ad, ma_method) {
-  
+
   # ages by fish
   out <-
     ad %>%
     select(FishID, reader, age) %>%
     ddply(.(FishID,age), dplyr::summarize, count=length(reader)) %>%
     spread(key = age, value = count)
-  
+
   out[is.na(out)]=0
-  
+
   ages <- out %>% select(-FishID)
-  
-  
+
+
   # Determine modal age depending on ma_method
   out$modal_trad <-
     if (ma_method == "Mean") {
@@ -38,8 +38,8 @@ add_modal_trad <- function(ad, ma_method) {
               }
             })
     }
-  
-  
+
+
   countcases=vector(length=dim(out)[1])
   for(e in 1:dim(out)[1])
   {
@@ -48,13 +48,13 @@ add_modal_trad <- function(ad, ma_method) {
     max=max(df)
     countcases[e]=length(df[which(df==max)])
   }
-  
+
   out$NModes_trad=countcases
-  
+
   # calculate CV
   out$cv <- apply(ages, 1, cv_I)
   out$cv[is.na(out$modal_age) | out$modal_age == 0] <- NA
-  
+
   # merge CV and modal age to data
   right_join(ad, out, by = "FishID")
 }
@@ -62,18 +62,18 @@ add_modal_trad <- function(ad, ma_method) {
 
 
 add_modal_linearweight <- function(ad, ma_method) {
-  
+
   # ages by fish
   out <-
     ad %>%
     select(FishID, weight_I, age) %>%
     ddply(.(FishID,age), dplyr::summarize, readerweight=sum(weight_I)) %>%
     spread(key = age, value = readerweight)
-  
+
   out[is.na(out)]=0
-  
+
   ages <- out %>% select(-FishID)
-  
+
   # Determine modal age stage depending on ma_method
   out$modal_linearweight <-
     if (ma_method == "Mean") {
@@ -88,8 +88,8 @@ add_modal_linearweight <- function(ad, ma_method) {
               }
             })
     }
-  
-  
+
+
   countcases=vector(length=dim(out)[1])
   for(e in 1:dim(out)[1])
   {
@@ -98,9 +98,9 @@ add_modal_linearweight <- function(ad, ma_method) {
     max=max(df)
     countcases[e]=length(df[which(df==max)])
   }
-  
+
   out$NModes_linear=countcases
-  
+
   # merge CV and modal age to data
   right_join(ad, out, by = "FishID")
 }
@@ -109,18 +109,18 @@ add_modal_linearweight <- function(ad, ma_method) {
 
 
 add_modal_negexpweight <- function(ad, ma_method) {
-  
+
   # ages by fish
   out <-
     ad %>%
     select(FishID, weight_II, age) %>%
     ddply(.(FishID,age), dplyr::summarize, readerweight=sum(weight_II)) %>%
     spread(key = age, value = readerweight)
-  
+
   out[is.na(out)]=0
-  
+
   ages <- out %>% select(-FishID)
-  
+
   # Determine modal age stage depending on ma_method
   out$modal_negexpweight <-
     if (ma_method == "Mean") {
@@ -135,8 +135,8 @@ add_modal_negexpweight <- function(ad, ma_method) {
               }
             })
     }
-  
-  
+
+
   countcases=vector(length=dim(out)[1])
   for(e in 1:dim(out)[1])
   {
@@ -145,9 +145,9 @@ add_modal_negexpweight <- function(ad, ma_method) {
     max=max(df)
     countcases[e]=length(df[which(df==max)])
   }
-  
+
   out$NModes_negexp=countcases
-  
+
   # merge CV and modal age to data
   right_join(ad, out, by = "FishID")
 }
@@ -156,11 +156,11 @@ add_modal_negexpweight <- function(ad, ma_method) {
 
 
 select_mode=function(ad, ma_method){
-  
+
   dat = ad %>%
     select(FishID, modal_trad, NModes_trad, modal_linearweight, NModes_linear, modal_negexpweight, NModes_negexp) %>%
     distinct()
-  
+
   dat$modal_age <-
     if (ma_method == "Mean") {
       stop ("mean not implemented yet")
@@ -174,11 +174,9 @@ select_mode=function(ad, ma_method){
               }
             })
     }
-  
-  dat= dat %>% select(FishID, modal_age)  
-  
+
+  dat= dat %>% select(FishID, modal_age)
+
   right_join(ad, dat, by = "FishID")
-  
+
 }
-
-
