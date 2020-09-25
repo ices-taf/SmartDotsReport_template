@@ -9,7 +9,7 @@ output:
     keep_md: false
 params:
   summary_title: ""
-  strata: "strata"
+  strata: NULL
 ---
 
 
@@ -80,10 +80,10 @@ pander(style_table0(sample_data_overview), style = "simple")
 # PARTICIPATANTS OVERVIEW #####################################################
 
 # Table caption
-set.caption('**Table X:** Overview of advanced readers.')
+set.caption('**Table X:** Overview of readers.')
 
 # Output table
-pander(style_table0(filter(reader_data, Expertise != "Basic")))
+pander(style_table0(filter(reader_data, Expertise!="Basic")))
 ```
 
 
@@ -93,6 +93,24 @@ pander(style_table0(filter(reader_data, Expertise != "Basic")))
 
 # Results overview
 
+## Multimodal cases
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM) text -->
+```{r summary_multiple_modes}
+summary_multiple_modes <-
+    c(NSample  = length(unique(ad_long_ex$SampleID)),
+    PercMM_traditional=unique(ifelse(multimode_cases_tab_traditional_ex$NModes_trad=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_traditional_ex)/length(unique(ad_long_ex$SampleID)))*100, digits=0),"%"))),
+    PercMM_linear_weight=unique(ifelse(multimode_cases_tab_linear_ex$NModes_linear=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_linear_ex)/length(unique(ad_long_ex$SampleID)))*100, digits=0),"%"))),
+    PercMM_negexp_weight=unique(ifelse(multimode_cases_tab_negexp_ex$NModes_negexp=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_negexpweight_ex)/length(unique(ad_long_ex$SampleID)))*100, digits=0),"%"))),
+    PercMM_multistage=unique(ifelse(multimode_cases_tab_multistage_ex$NModes_multistage=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_multistage_ex)/length(unique(ad_long_ex$SampleID)))*100, digits=0),"%"))))
+
+# Table caption
+set.caption('**Table X:** Summary of statistics; Total number of samples (NSample), a percentage of cases (fish samples) with multiple modes depending on the approach to weight the experience of the reader which will be considered when defining the fish age mode. PercMM_traditional shows the percentage of the total samples for which multiple modes are obtained when all the readers are equally weighted. PercMM_linear_weight shows the percentage of the total samples for which multiple modes are obtained when the weight assigned to the different readers decreases linearly with the experience, while in the PercMM_negexp the weight applied decreases with a negative exponential shape with the experience. The PercMM_multistage shows the percentage of multiple mode cases when a combination of the different methodologies is used, as explained in the material and methods section')
+
+# Output table
+pander(style_table0(summary_multiple_modes), missing="")
+
+```
 
 ## Age readings
 
@@ -135,13 +153,32 @@ pander(style_table1(cv_tab_ex), missing = "-")
 
 # Table caption
 set.caption('**Table X:** Percentage agreement (PA) table represents the PA per
-             modal age and reader, advanced the PA of all advanced readers
+             modal age and reader, the PA of all advanced readers
              combined per modal age and a weighted mean of the PA per reader.')
+
+# Output table
+pander(style_table1(ape_tab_ex), missing = "-")
+
+```
+
+
+## APE table
+
+```{r average_percentage_error_ex}
+
+# AVERAGE PERCENTAGE ERROR TABLE - Advanced readers ###############################
+
+# Table caption
+set.caption('**Table X:** Average Percentage Error (APE) table represents the APE per
+             modal age and reader, the APE of all advanced readers
+             combined per modal age and a weighted mean of the APE per reader.')
 
 # Output table
 pander(style_table1(pa_tab_ex), missing = "-")
 
 ```
+
+
 
 ## Relative bias table
 
@@ -184,10 +221,10 @@ plot_bias_all(ad_long_ex, max_age, max_modal)
 
 # Table caption
 cap_in <- '**Figure X:** Plot of average distance from the centre to the winter
-           rings for advanced readers by preparation method. The boxes represent 
+           rings for advanced readers by preparation method. The boxes represent
            the median, upper and lower box boundaries of the interquartile range,
-           whiskers extend no further than 1.5 * IQR (where IQR is the inter-quartile 
-           range) from the box boundary. Data beyond the end of the whiskers are 
+           whiskers extend no further than 1.5 * IQR (where IQR is the inter-quartile
+           range) from the box boundary. Data beyond the end of the whiskers are
            represent outlers and are plotted individually.'
 
 # Output table
@@ -204,7 +241,7 @@ plot_growth(dist, ad_long_all, strata = "prep_method")
 for (i in seq_along(ae_mat_ex)) {
   # name of strata
   strata_name <- names(ae_mat_ex)[i]
-  
+
   # Table caption
   cap_i <- paste0("**Table X:** Age error matrix (AEM) for ", strata_name,".")
 
@@ -246,9 +283,9 @@ asis_output(paste("## Age readings by", stratum))
 
 # Table caption
 cap_in <- '**Figure X:** Plot of average distance from the centre to the winter
-           rings for advanced readers by %s. The boxes represent 
+           rings for advanced readers by %s. The boxes represent
            the median, upper and lower box boundaries of the interquartile range,
-           whiskers represent the minimum and maximum values and the dots represent 
+           whiskers represent the minimum and maximum values and the dots represent
            the outliers.'
 cap_in <- sprintf(cap_in, stratum)
 

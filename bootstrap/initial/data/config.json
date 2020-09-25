@@ -1,11 +1,1 @@
-{
-  "event_id": 225,
-  "ma_method": "Mode",
-  "strata": "strata",
-  "onlyApproved": true,
-  "summary_name": "SmartDots_Summary",
-  "summary_title": "SmartDots Summary",
-  "report_name": "SmartDots_Report",
-  "report_title": "SmartDots Report",
-  "report_tokens": "token_goes_here"
-}
+{"event_id":"200","ma_method":"Mode","strata":[null],"onlyApproved":true,"summary_name":"SmartDots_Summary_Event_200","summary_title":"SmartDots Summary for event 200","report_name":"SmartDots_Report_Event_200","report_title":"SmartDots Report for event 200","report_tokens":"tokens goes here"}

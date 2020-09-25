@@ -6,4 +6,3 @@ This template is used to create reports from smartdots events.  The settings for
 library(icesTAF)
 sourceAll()
 ```
-
