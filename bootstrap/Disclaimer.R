@@ -7,6 +7,10 @@
 #' @tafAccess Public
 #' @tafSource script
 
+ghurl <- "https://raw.githubusercontent.com"
+repo <- "ices-tools-prod/disclaimers"
+branch <- "master"
+
 download(
   paste(
     ghurl,
