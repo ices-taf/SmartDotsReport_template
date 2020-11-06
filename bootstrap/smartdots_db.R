@@ -20,7 +20,15 @@ config <- read_json(taf.data.path("config", "config.json"), simplifyVector = TRU
 
 # get data from api --------
 zipfile <- "smartdots_data.zip"
-download.file(paste0("https://smartdots.ices.dk/download/DownloadEvent.ashx?tblEventID=", config$event_id),
+
+url <-
+  paste0(
+    "https://smartdots.ices.dk/download/DownloadEvent.ashx?",
+    "Token=", config$token,
+    "&tblEventID=", config$event_id
+  )
+
+download.file(url,
               zipfile,  mode = "wb")
 files <- unzip(zipfile, list = TRUE)$Name
 files <- files[grep("*.csv", files)]
