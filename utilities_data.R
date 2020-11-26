@@ -15,13 +15,13 @@ add_modal_trad <- function(ad, ma_method) {
   # ages by fish
   out <-
     ad %>%
-    select(FishID, reader, age) %>%
-    ddply(.(FishID,age), dplyr::summarize, count=length(reader)) %>%
+    select(fishId, reader, age) %>%
+    ddply(.(fishId,age), dplyr::summarize, count=length(reader)) %>%
     spread(key = age, value = count)
 
   out[is.na(out)]=0
 
-  ages <- out %>% select(-FishID)
+  ages <- out %>% select(-fishId)
 
 
   # Determine modal age depending on ma_method
@@ -56,7 +56,7 @@ add_modal_trad <- function(ad, ma_method) {
   out$cv[is.na(out$modal_age) | out$modal_age == 0] <- NA
 
   # merge CV and modal age to data
-  right_join(ad, out, by = "FishID")
+  right_join(ad, out, by = "fishId")
 }
 
 
@@ -66,13 +66,13 @@ add_modal_linearweight <- function(ad, ma_method) {
   # ages by fish
   out <-
     ad %>%
-    select(FishID, weight_I, age) %>%
-    ddply(.(FishID,age), dplyr::summarize, readerweight=sum(weight_I)) %>%
+    select(fishId, weight_I, age) %>%
+    ddply(.(fishId,age), dplyr::summarize, readerweight=sum(weight_I)) %>%
     spread(key = age, value = readerweight)
 
   out[is.na(out)]=0
 
-  ages <- out %>% select(-FishID)
+  ages <- out %>% select(-fishId)
 
   # Determine modal age stage depending on ma_method
   out$modal_linearweight <-
@@ -102,7 +102,7 @@ add_modal_linearweight <- function(ad, ma_method) {
   out$NModes_linear=countcases
 
   # merge CV and modal age to data
-  right_join(ad, out, by = "FishID")
+  right_join(ad, out, by = "fishId")
 }
 
 
@@ -113,13 +113,13 @@ add_modal_negexpweight <- function(ad, ma_method) {
   # ages by fish
   out <-
     ad %>%
-    select(FishID, weight_II, age) %>%
-    ddply(.(FishID,age), dplyr::summarize, readerweight=sum(weight_II)) %>%
+    select(fishId, weight_II, age) %>%
+    ddply(.(fishId,age), dplyr::summarize, readerweight=sum(weight_II)) %>%
     spread(key = age, value = readerweight)
 
   out[is.na(out)]=0
 
-  ages <- out %>% select(-FishID)
+  ages <- out %>% select(-fishId)
 
   # Determine modal age stage depending on ma_method
   out$modal_negexpweight <-
@@ -149,7 +149,7 @@ add_modal_negexpweight <- function(ad, ma_method) {
   out$NModes_negexp=countcases
 
   # merge CV and modal age to data
-  right_join(ad, out, by = "FishID")
+  right_join(ad, out, by = "fishId")
 }
 
 
@@ -158,7 +158,7 @@ add_modal_negexpweight <- function(ad, ma_method) {
 select_mode=function(ad, ma_method){
 
   dat = ad %>%
-    select(FishID, modal_trad, NModes_trad, modal_linearweight, NModes_linear, modal_negexpweight, NModes_negexp) %>%
+    select(fishId, modal_trad, NModes_trad, modal_linearweight, NModes_linear, modal_negexpweight, NModes_negexp) %>%
     distinct()
 
   dat$modal_age <-
@@ -175,8 +175,8 @@ select_mode=function(ad, ma_method){
             })
     }
 
-  dat= dat %>% select(FishID, modal_age)
+  dat= dat %>% select(fishId, modal_age)
 
-  right_join(ad, dat, by = "FishID")
+  right_join(ad, dat, by = "fishId")
 
 }

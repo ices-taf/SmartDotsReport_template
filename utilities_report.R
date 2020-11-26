@@ -113,19 +113,19 @@ plot_growth <- function(dist, ad_long, strata = NULL) {
 
   p <-
     dist %>%
-    arrange(reader, AnnotationID, mark) %>%
+    arrange(reader, annotationId, mark) %>%
     filter(mark > 0, distance > 0, reader %in% unique(ad_long$reader)) %>%
-    group_by(reader, AnnotationID) %>%
+    group_by(reader, annotationId) %>%
     mutate(cum_distance = cumsum(distance)) %>%
     ungroup %>%
-#    select(AnnotationID, mark, distance, cum_distance, reader) %>%
+#    select(annotationId, mark, distance, cum_distance, reader) %>%
     mutate(
       Annulus = factor(mark),
       Reader = factor(reader)
     ) %>%
     left_join(ad_long) %>%  # add by here
-#    filter(FishID == "Npout_056") %>%
-    select_at(c("Annulus", "cum_distance", "prep_method", "Reader", strata)) %>%
+#    filter(fishId == "Npout_056") %>%
+    select_at(c("Annulus", "cum_distance", "prep_Method", "Reader", strata)) %>%
     ggplot(aes(x = Annulus, y = cum_distance, col = Reader)) +
       geom_boxplot()
 

@@ -14,36 +14,32 @@
 
 library(icesTAF)
 library(jsonlite)
+taf.library(icesConnect)
+library(httr)
 
 # load configuration
 config <- read_json(taf.data.path("config", "config.json"), simplifyVector = TRUE)
 
 # get data from api --------
-zipfile <- "smartdots_data.zip"
-
-url <-
-  paste0(
-    "https://smartdots.ices.dk/download/DownloadEvent.ashx?",
-    "Token=", config$token,
-    "&tblEventID=", config$event_id
+data <-
+  httr::content(
+    icesConnect::ices_get_jwt(
+      paste0("https://smartdots.ices.dk/API/getReportAnnotations/", config$event_id)
+    ),
+    simplifyVector = TRUE
   )
 
-download.file(url,
-              zipfile,  mode = "wb")
-files <- unzip(zipfile, list = TRUE)$Name
-files <- files[grep("*.csv", files)]
-unzip(zipfile, files = files, exdir = ".")
-
-# read in and write out again
-dist <- read.csv(files[grep("DotsDistances",  files)], stringsAsFactors = FALSE)
-ad <- read.csv(files[grep("Annotations",  files)], stringsAsFactors = FALSE)
-
-# delete downloaded data
-unlink(files)
+dist <-
+  httr::content(
+    icesConnect::ices_get_jwt(
+      paste0("https://smartdots.ices.dk/API/getReportDotsDistances/", config$event_id)
+    ),
+    simplifyVector = TRUE
+  )
 
 # drop comments feild
-ad <- ad[,names(ad) != "Comment"]
+ad <- ad[, names(ad) != "comment"]
 
 # write out 'bootstrap' data tables
-write.taf(dist, "dist.csv", quote = TRUE)
-write.taf(ad, "data.csv", quote = TRUE)
+write.taf(dist, quote = TRUE)
+write.taf(data, quote = TRUE)

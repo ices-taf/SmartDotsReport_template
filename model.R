@@ -143,7 +143,7 @@ for (group in c("all", "ex")) {
   # Results by strata ##############################################
 
   # loop over strata - 4 tables per strata
-  # stratum = "prep_method"
+  # stratum = "prep_Method"
   if (is.null(config$strata)) config$strata <- numeric()
   for (stratum in config$strata) {
 

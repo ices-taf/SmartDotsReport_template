@@ -7,10 +7,10 @@
 
 library(icesTAF)
 library(jsonlite)
+library(plyr)
 library(dplyr)
 library(tidyr)
 require(lubridate)
-library(plyr)
 
 # create data directory
 mkdir("data")
@@ -24,32 +24,32 @@ config <- read_json(taf.data.path("config", "config.json"), simplifyVector = TRU
 
 # get data from bootstrap folder  -------------------------------
 
-ad <- read.taf("bootstrap/data/smartdots_db/data.csv")
-dist <- read.taf("bootstrap/data/smartdots_db/dist.csv")
+ad <- read.taf(taf.data.path("smartdots_db", "data.csv"))
+dist <- read.taf(taf.data.path("smartdots_db", "dist.csv"))
 
 # prepare data -------------------------------
 
 # keep only approved annotations
 if (config$onlyApproved) {
-  ad <- ad[ad$IsApproved == 1, ]
-  dist <- dist[dist$IsApproved == 1, ]
+  ad <- ad[ad$isApproved == 1, ]
+  dist <- dist[dist$isApproved == 1, ]
 }
 
 # add date columns
 ad <-
   within(ad, {
-    year = lubridate::year(parse_date_time(catch_date, '%d/%m/%Y %H:%M:%S'))
-    qtr = lubridate::quarter(parse_date_time(catch_date, '%d/%m/%Y %H:%M:%S'))
-    month = lubridate::month(parse_date_time(catch_date, '%d/%m/%Y %H:%M:%S'))
+    year = lubridate::year(parse_date_time(catch_Date, "YmdHMS"))
+    qtr = lubridate::quarter(parse_date_time(catch_Date, "YmdHMS"))
+    month = lubridate::month(parse_date_time(catch_Date, "YmdHMS"))
   })
 
 # if variables are missing add "missing"
-ad$ices_area[is.na(ad$ices_area) | ad$ices_area == ""] <- "missing"
+ad$ices_Area[is.na(ad$ices_Area) | ad$ices_Area == ""] <- "missing"
 ad$stock[is.na(ad$stock) | ad$stock == ""] <- "missing"
-ad$prep_method[is.na(ad$prep_method) | ad$prep_method == ""] <- "missing"
+ad$prep_Method[is.na(ad$prep_Method) | ad$prep_Method == ""] <- "missing"
 
 # if variables are missing add "missing"
-dist$ices_area[is.na(dist$ices_area) | dist$ices_area == ""] <- "missing"
+dist$ices_Area[is.na(dist$ices_Area) | dist$ices_Area == ""] <- "missing"
 
 # if no advanced readers! make them all advanced
 if (all(ad$expertise == 0)) {
@@ -62,15 +62,15 @@ ad$expertise <- c("Basic", "Advanced")[ad$expertise + 1]
 
 # Assign weight to the readers based in their ranking-experience
 # Add different weight columns to data
-weight <- length(unique(ad$reader_number)):1
-reader_number <- sort(unique(ad$reader_number))
+weight <- length(unique(ad$reader_Number)):1
+reader_Number <- sort(unique(ad$reader_Number))
 reader <-
   data.frame(
-    reader_number = reader_number,
+    reader_Number = reader_Number,
     weight_I = weight,
     weight_II = 1 / (1 + log(sort(weight, decreasing = F) + 0.0000000001))
   )
-ad <- merge(ad, reader, by.x="reader_number", by.y="reader_number", all.x = T)
+ad <- merge(ad, reader, by.x="reader_Number", by.y="reader_Number", all.x = T)
 
 # Calculate modal ages and cv of modal age
 ad_long <- ad %>%
@@ -106,8 +106,8 @@ head(webgr)
 
 
 # write out input data tables for use later
-write.taf(dist, "data/dist.csv", quote = TRUE)
+write.taf(dist, dir = "data", quote = TRUE)
 write.taf(ad, "data/data.csv", quote = TRUE)
-write.taf(ad_long, "data/ad_long.csv", quote = TRUE)
-write.taf(ad_long_ex, "data/ad_long_ex.csv", quote = TRUE)
+write.taf(ad_long, dir = "data", quote = TRUE)
+write.taf(ad_long_ex, dir = "data", quote = TRUE)
 write.taf(webgr, "data/WebGR_ages_all.csv", quote = TRUE)

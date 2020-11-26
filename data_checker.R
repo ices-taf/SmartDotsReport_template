@@ -10,8 +10,8 @@ config <- read_json(taf.data.path("config", "config.json"), simplifyVector = TRU
 
 # get data from bootstrap folder  -------------------------------
 
-ad <- read.taf("bootstrap/data/smartdots_db/data.csv")
-dist <- read.taf("bootstrap/data/smartdots_db/dist.csv")
+ad <- read.taf(taf.data.path("smartdots_db", "data.csv"))
+dist <- read.taf(taf.data.path("smartdots_db", "dist.csv"))
 
 # tag some feilds as missing?
 
@@ -28,10 +28,10 @@ check_ad <- function(ad, what = "ad") {
     list(
       c("Summary of ", what),
       c("number of annotations: ", nrow(ad)),
-      c("samples with missing area: ", sum(ad$ices_area == "")),
+      c("samples with missing area: ", sum(ad$ices_Area == "")),
       c("samples with missing stock: ", sum(is.na(ad$stock) | ad$stock == "")),
-      c("samples with missing prep_method: ", sum(is.na(ad$prep_method) | ad$prep_method == "")),
-      c("prep_method names: ", frmt_vector(table(ad$prep_method))),
+      c("samples with missing prep_Method: ", sum(is.na(ad$prep_Method) | ad$prep_Method == "")),
+      c("prep_Method names: ", frmt_vector(table(ad$prep_Method))),
       c("Advanced reader annotations: ", sum(ad$expertise))
     )
 
@@ -40,7 +40,7 @@ check_ad <- function(ad, what = "ad") {
   # other checks
   multiple_annotations <-
     ad %>%
-    dplyr::group_by(EventID, event_name, ices_area, sample, FishID, reader) %>%
+    dplyr::group_by(eventId, event_name, ices_Area, sample, fishId, reader) %>%
     dplyr::count() %>%
     dplyr::filter(n > 1) %>%
     dplyr::rename(annotations = n)
@@ -49,8 +49,8 @@ check_ad <- function(ad, what = "ad") {
     txt <- paste(capture.output(print(multiple_annotations)), collapse = "\n")
     image_urls <-
       sprintf(
-        "https://smartdots.ices.dk/manage/viewDetailsImage?tblEventID=%i&SmartImageID=%i",
-        multiple_annotations$EventID,
+        "https://smartdots.ices.dk/manage/viewDetailsImage?tbleventId=%i&SmartImageID=%i",
+        multiple_annotations$eventId,
         multiple_annotations$sample)
 
     check_text <-
@@ -86,7 +86,7 @@ check_dist <- function(dist, what = "dist") {
     list(
       c("Summary of ", what),
       c("number of dots: ", nrow(dist)),
-      c("dots with missing area: ", sum(dist$ices_area == "")),
+      c("dots with missing area: ", sum(dist$ices_Area == "")),
       c("dots with missing distance: ", sum(is.na(dist$pixelsPerMillimeter)))
     )
 
@@ -119,6 +119,6 @@ if (config$onlyApproved == FALSE) {
 msg("Checking approved data for Event: ", config$event_id)
 
 check_ad(ad, "approved annotations (sets of dots)")
-check_dist(dist[dist$IsApproved == 1,], "approved dots")
+check_dist(dist[dist$isApproved == 1,], "approved dots")
 
 # done
