@@ -1,0 +1,63 @@
+---
+output:
+  word_document:
+    reference_docx: bootstrap/initial/data/reportTemplate.docx
+    toc: true
+    keep_md: false
+params:
+  report_title: ""
+  error_message_I: ""
+  error_message_II: ""
+  error_message_III: ""
+  error_message_IV: ""
+  error_message_V: ""
+
+---
+
+```{r chunk_setup, include=FALSE}
+# CHUNK SETUPS #################################################################
+
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE,
+                      message=FALSE, results = 'asis', dpi=400)
+```
+
+---
+title: `r params$report_title`
+---
+
+# Failure message
+
+
+```{r text_error_I}
+
+asis_output(config$error_message_I)
+
+```
+
+```{r text_error_II}
+
+asis_output(config$error_message_II)
+
+```
+
+```{r text_error_III}
+
+asis_output(config$error_message_III)
+
+```
+
+
+```{r text_error_IV}
+
+asis_output(config$error_message_IV)
+
+```
+
+
+
+```{r text_error_V}
+
+asis_output(config$error_message_V)
+
+```
+

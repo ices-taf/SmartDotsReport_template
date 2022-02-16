@@ -9,13 +9,13 @@ format_table <- function(tab, fmt = "%i", extra_rows = "Total", age_range = moda
 sample_data_overview_table <- function(ad_long, strata) {
   sample_data_overview <-
     ad_long %>%
-    select_at(unique(c("FishID", "sample", "length", "modal_age", "year", "ices_area", "qtr", strata, "reader", "age"))) %>%
+    select_at(unique(c("FishID", "SampleID", "length", "modal_age", "year", "ices_area", "qtr", strata, "reader", "age"))) %>%
     spread(key = reader, value = age) %>%
     group_by_at(unique(c("year", "ices_area", "qtr", strata))) %>%
     summarise(
       min_len = 5*round(min(length, na.rm = TRUE)/5),
       max_len = 5*round(max(length, na.rm = TRUE)/5),
-      num = sum(!is.na(sample)),
+      num = sum(!is.na(SampleID)),
       min_ma = min(modal_age, na.rm = TRUE),
       max_ma = max(modal_age, na.rm = TRUE)
     ) %>%
@@ -46,13 +46,23 @@ names(sample_data_overview) <-
 }
 
 
+# Participants table
+reader_data_table <- function(ad_long, strata){
+  ad_long %>%
+  select_at(unique(c("reader", "expertise", "reader_number", strata))) %>%
+  unique %>%
+  arrange(reader) %>%
+  rename(`Reader code` = reader,
+         Expertise = expertise,
+         Expertise_rank = reader_number)
+}
 
 
 
-# counts how many fish did a reader read at each modal age.
 numbers_read <- function(data, by = "reader") {
   table(data$modal_age, data[[by]]) %>%
-  as.data.frame.matrix() %>%
+  unclass %>%
+  as.data.frame %>%
   mutate(total = unname(rowSums(.)))
 }
 
@@ -64,23 +74,76 @@ num_read_table <- function(ad_long, by = "reader") {
     format_table
 }
 
+
+
+# Prepare the table with the number of cases with multiple modes depending if the methodology used to define the mode is the traditional mode (no weighting of the readers), using a linear weighting for the readers, a negative exponential weighting or a multistage approach, where a combination of the different approaches is used.
+multimode_cases_table_traditional<- function(ad_long) {
+
+  MM_tab=tapply(ad_long$NModes_trad,ad_long$SampleID,max) %>% unclass %>% as.data.frame
+  colnames(MM_tab)=c("NModes_trad")
+  MM_tab$SampleID=rownames(MM_tab)
+  
+  MM_tab=MM_tab[MM_tab$NModes_trad>1,]
+  if(dim(MM_tab)[1]==0) {MM_tab=data.frame(SampleID="none", NModes_trad="zero")}
+  return(MM_tab)
+}
+
+multimode_cases_table_linear <- function(ad_long, by = "reader") {
+  
+  MM_tab=tapply(ad_long$NModes_linear,ad_long$SampleID,max) %>% unclass %>% as.data.frame
+  colnames(MM_tab)=c("NModes_linear")
+  MM_tab$SampleID=rownames(MM_tab)
+  
+  MM_tab=MM_tab[MM_tab$NModes_linear>1,]
+  if(dim(MM_tab)[1]==0) {MM_tab=data.frame(SampleID="none", NModes_linear="zero")}
+  return(MM_tab)
+}
+
+multimode_cases_table_negexp <- function(ad_long, by = "reader") {
+  
+  MM_tab=tapply(ad_long$NModes_negexp,ad_long$SampleID,max) %>% unclass %>% as.data.frame
+  colnames(MM_tab)=c("NModes_negexp")
+  MM_tab$SampleID=rownames(MM_tab)
+  
+  MM_tab=MM_tab[MM_tab$NModes_negexp>1,]
+  if(dim(MM_tab)[1]==0) {MM_tab=data.frame(SampleID="none", NModes_negexp="zero")}
+  return(MM_tab)
+}
+
+# in the case of the multistage approach, the number of multiple mode cases will be the same than the negative exponential weighting approach.
+multimode_cases_table_multistage <- function(ad_long, by = "reader") {
+  
+  MM_tab=tapply(ad_long$NModes_negexp,ad_long$SampleID,max) %>% unclass %>% as.data.frame
+  colnames(MM_tab)=c("NModes_multistage")
+  MM_tab$SampleID=rownames(MM_tab)
+  
+  MM_tab=MM_tab[MM_tab$NModes_multistage>1,]
+  if(dim(MM_tab)[1]==0) {MM_tab=data.frame(SampleID="none", NModes_multistage="zero")}
+  return(MM_tab)
+}
+
+
 cv_table <- function(ad_long, by = "reader") {
 
   cv_tab <-
-    tapply(ad_long$age, list(ad_long$modal_age, ad_long[[by]]), cv) %>%
+    tapply(ad_long$age, list(ad_long$modal_age, ad_long[[by]]), cv_II) %>%
       unclass %>%
       as.data.frame %>%
-      mutate(all = tapply(ad_long$age, list(ad_long$modal_age), cv) %>% unclass %>% unname)
-  cv_tab[modal_age_range == 0,] <- NA
+      mutate(all = tapply(ad_long$age, list(ad_long$modal_age), cv_II) %>% unclass %>% unname)
+  # ape_tab[modal_age_range == 0,] <- NA
 
   # Add weighted mean
   num_read <- numbers_read(ad_long, by)
   cv_tab <- rbind(cv_tab,
                   colSums(cv_tab * num_read, na.rm = TRUE) / colSums(num_read * !is.na(cv_tab), na.rm = TRUE))
+  
+  # We don´t want to present any CV estimate for modal age 0
+  cv_tab[rownames(cv_tab)=="0",]=NA
 
   # produce formatted version
   format_table(cv_tab, fmt = "%.0f %%", extra_rows = "Weighted Mean")
 }
+
 
 
 ape_table <- function(ad_long, by = "reader") {
@@ -90,16 +153,20 @@ ape_table <- function(ad_long, by = "reader") {
       unclass %>%
       as.data.frame %>%
       mutate(all = tapply(ad_long$age, list(ad_long$modal_age), ape) %>% unclass %>% unname)
-  ape_tab[modal_age_range == 0,] <- NA
+  # ape_tab[modal_age_range == 0,] <- NA
 
   # Add weighted mean
   num_read <- numbers_read(ad_long, by)
   ape_tab <- rbind(ape_tab,
                   colSums(ape_tab * num_read, na.rm = TRUE) / colSums(num_read * !is.na(ape_tab), na.rm = TRUE))
 
+  # We don´t want to present any CV estimate for modal age 0
+  ape_tab[rownames(ape_tab)=="0",]=NA
+  
   # produce formatted version
-  format_table(ape_tab, fmt = "%.0f %%", extra_rows = "Weighted Mean")
+  format_table(ape_tab, fmt = "%.0f %%", extra_rows = "Weighted Mean", age_range = modal_age_range)
 }
+
 
 pa_table <- function(ad_long, by = "reader") {
 
@@ -110,12 +177,19 @@ pa_table <- function(ad_long, by = "reader") {
     unclass %>%
     as.data.frame %>%
     mutate(
-      all = rowSums(.)
+      total = rowSums(.)
     )
 
   # total numbers read
   num_read <- numbers_read(ad_long, by)
 
+  # #It may be that some readers never agreed with the modal age/maturity stage. This would create differences with the dimensions of pa_tab and num_read. Next, this problem is solved by forcing pa_tab to have the same columns than num_read.
+  A=colnames(pa_tab)
+  B=colnames(num_read)
+  diff=c(setdiff(A,B), setdiff(B,A))
+  temp=as.data.frame(matrix(data=0,nrow=dim(pa_tab)[1],ncol=length(diff), dimnames = list(c(1:dim(pa_tab)[1]), diff)))
+  pa_tab=cbind(pa_tab,temp)
+  
   # overall agreement per modal age
   pa_tab <- pa_tab / num_read * 100
 
@@ -139,7 +213,7 @@ rel_bias_table <- function(ad_long, by = "reader") {
       )
 
   # calculate difference per reader: mean age - modal age
-  rel_bias_tab <- rel_bias_tab - modal_age_range
+  rel_bias_tab <- rel_bias_tab - as.numeric(levels(ad_long$modal_age))
 
   # Add weighted mean
   num_read <- numbers_read(ad_long, by)
@@ -164,10 +238,13 @@ age_composition <- function(ad_long, by = "reader") {
 age_composition_table <- function(ad_long, by = "reader") {
   if (nrow(ad_long) == 0) return(data.frame("Modal age" = numeric(0)))
   # Number of otoliths read per reader and age
-  ad_long %>%
-    age_composition(by = by)  %>%
+  tabla <- ad_long %>%
+    age_composition(by = by) %>%
+    mutate(total = unname(rowSums(.)))  %>%
     rbind(colSums(., na.rm = TRUE)) %>%
     format_table(age_range = sort(unique(ad_long$age)))
+  colnames(tabla)[1]="Age"
+  return(tabla)
 }
 
 
@@ -202,36 +279,50 @@ data_overview_table <- function(ad_long, report_token, by = "stock") {
   # Select only columns of age readings
   ad_wide <-
     ad_long %>%
-    select(FishID, length, sex, catch_date, ices_area, reader, age) %>%
+    select(FishID, SampleID, length, sex, catch_date, ices_area, reader, age) %>%
     spread(key = reader, value = age)
 
+  temp <-
+    ad_long %>%
+    select(FishID, modal_age) %>%
+    distinct()
+     
+  
+  dim(temp)
+  dim(ad_wide)
+  ad_wide=merge(ad_wide, temp, by.x="FishID", by.y="FishID")
+  ad_wide$modal_age=as.numeric(as.character(ad_wide$modal_age))
+  dim(ad_wide)
+  
+  
   # Calculate, modeal age, percentage agreement, cv, and ape
   readings <-
     ad_wide %>%
     select(matches("R[0-9][0-9]*"))
 
-  ad_wide$`Modal age` <- apply(readings, 1, Mode)
-  ad_wide$`PA %` <- round(rowMeans(readings == ad_wide$`Modal age`, na.rm = TRUE)*100)
-  ad_wide$`CV %` <- round(apply(readings, 1, cv))
+  # ad_wide$`Modal age` <- apply(readings, 1, Mode_II)
+  ad_wide$`PA %` <- round(rowMeans(readings == ad_wide$`modal_age`, na.rm = TRUE)*100)
+  ad_wide$`CV %` <- round(apply(readings, 1, cv_II))
   ad_wide$`APE %` <- round(apply(readings, 1, ape))
-  ad_wide <- rename(ad_wide, `ICES area` = ices_area, `Catch date` = catch_date)
+  ad_wide <- rename(ad_wide, `ICES area` = ices_area, `Catch date` = catch_date, `Modal age` = modal_age)
 
   ad_wide$`CV %`[is.nan(ad_wide$`CV %`)] <- NA
   ad_wide$`APE %`[is.nan(ad_wide$`APE %`)] <- NA
 
   # add hyper link for tables
   ad_long %>%
-    group_by(FishID, EventID) %>%
+    group_by(FishID, SampleID, EventID) %>%
     summarise(
       `Image ID` = sprintf("[%s](http://smartdots.ices.dk/viewImage?tblEventID=%i&SmartImageID=%s&token=%s)",
                          sample, EventID, sample, report_token) %>%
                 unique %>%
                 paste(collapse = "-")
     ) %>%
-    right_join(ad_wide, by = "FishID") %>%
+    right_join(ad_wide, by = c("FishID", "SampleID")) %>%
     rename(
+      `Event ID` = EventID,
       `Fish ID` = FishID,
-      `Event ID` = EventID
+      `Sample ID` = SampleID
     ) %>%
     as.data.frame
 }
@@ -252,7 +343,7 @@ bias_test <- function(ad_long) {
   # age readings
   ages <-
     ad_long %>%
-    select(FishID, modal_age, reader, age) %>%
+    select(FishID, SampleID, modal_age, reader, age) %>%
     spread(key = reader, value = age) %>%
     select(modal_age, matches("R[0-9][0-9] *"))
 
@@ -319,10 +410,11 @@ bias_test <- function(ad_long) {
 
   }
 
+  int_bias2[is.na(int_bias2)]="-"
   # Last corrections..
   #int_bias2[is.na(int_bias2)] <- ""
   row.names(int_bias2)[nrow(int_bias2)] <- "Modal age"
-  int_bias3 <- as.data.frame(int_bias2, stringsAsFactors = FALSE)
+  int_bias3 <- as.data.frame(int_bias2)
   int_bias3 <- rownames_to_column(int_bias3, var="Comparison")
 
   return(int_bias3)
