@@ -18,12 +18,12 @@ source("utilities.R")
 source("utilities_data.R")
 
 # load configuration
-config <- read_json("bootstrap/initial/data/config.json", simplifyVector = TRUE)
+config <- read_json(taf.data.path("config.json"), simplifyVector = TRUE)
 
 # get data from bootstrap folder  -------------------------------
 
-ad <- read.taf("bootstrap/data.csv")
-dist <- read.taf("bootstrap/dist.csv")
+ad <- read.taf(taf.data.path("db", "data.csv"))
+dist <- read.taf(taf.data.path("db", "dist.csv"))
 
 # prepare data -------------------------------
 
@@ -81,7 +81,7 @@ ad$expertise <- c("Basic", "Advanced")[ad$expertise + 1]
 ## First, assign a reader number that reflects the expertise of the reader
 if(config$mode_definition=="multistage"){
   expdat <- read.taf("bootstrap/expdat.csv")
-  ad <- expertise_weight(ad, expdat)  
+  ad <- expertise_weight(ad, expdat)
 } else {
   # This is the route when config$mode_definition=="standard", i.e. not the "multistage" approach. The weight calculated below does not actually reflect the expertise of the readers, since it is just using the reader number. But, despite of this, the weight  is still calculated to allow the script to continue the normal route. But the Age will only be selected from the standard approach.
   weight=length(sort(unique(ad$reader_number))):1
@@ -89,7 +89,7 @@ if(config$mode_definition=="multistage"){
   reader=data.frame(reader_number=reader_number, weight_I=weight, weight_II=1/(1+log(sort(weight, decreasing=F)+0.0000000001)))
   ad=merge(ad, reader, by.x="reader_number", by.y="reader_number", all.x=T)
 }
-  
+
 # Calculate modal ages and cv of modal age
 ad_long <- ad %>%
   add_modal_trad(config$ma_method) %>%
@@ -129,4 +129,3 @@ write.taf(ad, "data/data.csv", quote = TRUE)
 write.taf(ad_long, "data/ad_long.csv", quote = TRUE)
 write.taf(ad_long_ex, "data/ad_long_ex.csv", quote = TRUE)
 write.taf(webgr, "data/WebGR_ages_all.csv", quote = TRUE)
-
