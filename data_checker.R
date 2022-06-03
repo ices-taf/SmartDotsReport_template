@@ -6,12 +6,12 @@ library(dplyr)
 library(tidyr)
 
 # load configuration
-config <- read_json("./bootstrap/initial/data/config.json", simplifyVector = TRUE)
+config <- read_json(taf.data.path("config.json"), simplifyVector = TRUE)
 
 # get data from bootstrap folder  -------------------------------
 
-ad <- read.taf("./bootstrap/data.csv")
-dist <- read.taf("./bootstrap/dist.csv")
+ad <- read.taf(taf.data.path("db", "data.csv"))
+dist <- read.taf(taf.data.path("db", "dist.csv"))
 
 # tag some feilds as missing?
 
@@ -120,7 +120,7 @@ if (config$onlyApproved == FALSE) {
 
 msg("Checking approved data for Event: ", config$event_id)
 
-check_ad(ad, "approved annotations (sets of dots)")
-check_dist(dist[dist$IsApproved == 1,], "approved dots")
+check_ad(ad[ad$IsApproved == 1, ], "approved annotations (sets of dots)")
+check_dist(dist[dist$IsApproved == 1, ], "approved dots")
 
 # done
