@@ -277,6 +277,7 @@ bias_test <- function(ad_long) {
 
     # Frequency table of the differnces between each reader combination
     data <- data.frame(table(diffs[i]))
+    names(data)[1] <- "Var1"
     data$Var1 <- as.numeric(as.character(data$Var1)) #Difference
     data$Freq <- as.numeric(as.character(data$Freq)) #Frequency of difference
     data2 <- data[data$Var1!=0,]
