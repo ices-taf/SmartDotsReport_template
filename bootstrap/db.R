@@ -23,6 +23,11 @@ if (config$mode_definition == "multistage") {
 
   expdat <- fromJSON(expurl)
 
+  # bug fix
+  msg("WARNING: Manually creating stockCode and iceS_Area feilds! and setting to NA")
+  expdat$stockCode <- NA
+  expdat$iceS_Area <- NA
+
   write.taf(expdat, "expdat.csv", quote = TRUE)
 }
 
