@@ -228,7 +228,7 @@ expertise_weight <- function(ad, expdat) {
 
   # identify missing values, to be used later on during the production of the report, and save the expdat as csv file.
   expdat$iceS_Area[is.na(expdat$iceS_Area) | expdat$iceS_Area == " "] <- "missing"
-  expdat$stockCode[is.na(expdat$stockCode) | ad$stockCode == " "] <- "missing"
+  expdat$stockCode[is.na(expdat$stockCode) | expdat$stockCode == " "] <- "missing"
   expdat$preparation_Method[is.na(expdat$preparation_Method) | expdat$preparation_Method == " "] <- "missing"
   expdat$noYearsCurrent[is.na(expdat$noYearsCurrent) | expdat$noYearsCurrent == " "] <- "missing"
   expdat$meanOtoCurrent[is.na(expdat$meanOtoCurrent) | expdat$meanOtoCurrent == " "] <- "missing"
