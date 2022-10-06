@@ -52,35 +52,41 @@ ad$prep_method[is.na(ad$prep_method) | ad$prep_method == ""] <- "missing"
 dist$ices_area[is.na(dist$ices_area) | dist$ices_area == ""] <- "missing"
 
 # Create the stratification here
-if(is.null(config$strata)) {ad$strata=NA} else {ad$strata=apply(as.data.frame(ad[,config$strata]), 1, function(x) {paste(str_to_title(config$strata), x, sep="_", collapse="_and_")})}
+if (is.null(config$strata)) {
+  ad$strata <- NA
+} else {
+  ad$strata <- apply(as.data.frame(ad[, config$strata]), 1, function(x) {
+    paste(str_to_title(config$strata), x, sep = "_", collapse = "_and_")
+  })
+}
 # The character "-" in the levels of the ad$strata can create problems later on in the code. Here that character is replaced with "_"
-ad$strata=gsub("-", "_",ad$strata)
+ad$strata <- gsub("-", "_", ad$strata)
 
-library(plyr)
-estratos=plyr::ddply(ad, .(SampleID), summarise, strata=unique(strata))
+
+estratos <- plyr::ddply(ad, .(SampleID), summarise, strata=unique(strata))
 dim(dist)
-dist=dist[,!colnames(dist) %in% c("strata")]
-dist=merge(dist, estratos, by.x="SampleID", by.y="SampleID")
+dist <- dist[,!colnames(dist) %in% "strata"]
+dist <- merge(dist, estratos, by.x = "SampleID", by.y = "SampleID")
 dim(dist)
 
 
 # if no advanced readers! make them all advanced
 if (all(ad$expertise == 0)) {
   # Since the AEM is calculated for management purposes, only advanced readers can be used to estimate the AEM. The code above makes all readers automatically as advanced if actually none of them was experienced. This is something that has to be warned in the report, and accordingly the AEM shouldn´t be calculated. The variable warn_AEM below will do this work automatically.
-  config$warn_AEM="no_advance_readers"
+  #config$warn_AEM <- "no_advance_readers"
   msg("NOTE: all readers were Basic - all have been converted to Advanced")
   ad$expertise[] <- 1
-} else {  config$warn_AEM="some_advance_readers"}
-saveconfig <- toJSON(config)
-write(saveconfig, file="./bootstrap/initial/data/config.JSON")
+} else {
+  #config$warn_AEM <- "some_advance_readers"
+}
 
 # convert reader expertise
 ad$expertise <- c("Basic", "Advanced")[ad$expertise + 1]
 
 # Assign weight to the readers based in their ranking-experience
 ## First, assign a reader number that reflects the expertise of the reader
-if(config$mode_definition=="multistage"){
-  expdat <- read.taf("bootstrap/expdat.csv")
+if (config$mode_definition == "multistage") {
+  expdat <- read.taf(taf.data.path("db", "expdat.csv"))
   ad <- expertise_weight(ad, expdat)
 } else {
   # This is the route when config$mode_definition=="standard", i.e. not the "multistage" approach. The weight calculated below does not actually reflect the expertise of the readers, since it is just using the reader number. But, despite of this, the weight  is still calculated to allow the script to continue the normal route. But the Age will only be selected from the standard approach.

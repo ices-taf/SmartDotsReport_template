@@ -1,5 +1,7 @@
 {
-  "event_id": 225,
+  "event_id": 413,
+  "token": "3F482827-282B-46E0-8C58-FBCF6C4B2C55",
+  "mode_definition": ["multistage"],
   "ma_method": "Mode",
   "strata": "strata",
   "onlyApproved": true,
