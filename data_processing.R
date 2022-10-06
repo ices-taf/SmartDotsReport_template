@@ -90,10 +90,15 @@ if (config$mode_definition == "multistage") {
   ad <- expertise_weight(ad, expdat)
 } else {
   # This is the route when config$mode_definition=="standard", i.e. not the "multistage" approach. The weight calculated below does not actually reflect the expertise of the readers, since it is just using the reader number. But, despite of this, the weight  is still calculated to allow the script to continue the normal route. But the Age will only be selected from the standard approach.
-  weight=length(sort(unique(ad$reader_number))):1
-  reader_number=sort(unique(ad$reader_number))
-  reader=data.frame(reader_number=reader_number, weight_I=weight, weight_II=1/(1+log(sort(weight, decreasing=F)+0.0000000001)))
-  ad=merge(ad, reader, by.x="reader_number", by.y="reader_number", all.x=T)
+  weight <- length(sort(unique(ad$reader_number))):1
+  reader_number <- sort(unique(ad$reader_number))
+  reader <-
+    data.frame(
+      reader_number = reader_number, 
+      weight_I = weight, 
+      weight_II = 1 / (1 + log(sort(weight, decreasing = F) + 0.0000000001))
+    )
+  ad <- merge(ad, reader, by.x = "reader_number", by.y = "reader_number", all.x = T)
 }
 
 # Calculate modal ages and cv of modal age
