@@ -6,6 +6,7 @@
 
 library(icesTAF)
 library(jsonlite)
+unloadNamespace("tidyr")
 unloadNamespace("dplyr")
 library(plyr) # age error matrix
 library(dplyr)
@@ -19,7 +20,7 @@ library(scales) # rescale_none
 mkdir("model")
 
 # load configuration
-config <- read_json("bootstrap/initial/data/config.json", simplifyVector = TRUE)
+config <- read_json("bootstrap/data/config.json", simplifyVector = TRUE)
 
 # load utilities
 source("utilities.R")
@@ -30,8 +31,8 @@ ad_long_all <- read.taf("data/ad_long.csv")
 ad_long_ex <- read.taf("data/ad_long_ex.csv")
 
 # model age range
-modal_age_range_all <-  with(ad_long_all, min(modal_age, na.rm = TRUE):max(modal_age, na.rm = TRUE))
-modal_age_range_ex <-  with(ad_long_ex, min(modal_age, na.rm = TRUE):max(modal_age, na.rm = TRUE))
+modal_age_range_all <- with(ad_long_all, min(as.numeric(modal_age), na.rm = TRUE):max(as.numeric(modal_age), na.rm = TRUE))
+modal_age_range_ex <- with(ad_long_ex, min(as.numeric(modal_age), na.rm = TRUE):max(as.numeric(modal_age), na.rm = TRUE))
 
 # set strata to NULL if all are NA
 if (all(is.na(ad_long_all[["strata"]]))) config$strata <- NULL
@@ -319,4 +320,3 @@ for (group in c("all", "ex")) {
   }
   
 }
-
