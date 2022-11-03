@@ -246,7 +246,7 @@ expertise_weight <- function(ad, expdat) {
   expdat <- merge(expdat, rankdata, by = c("stockCode", "preparation_Method", "participantNumber", "iceS_Area"))
 
   # Save the completed expdat as csv
-  write.csv(expdat, paste0(getwd(), "/data/reader_expertise_weighting_data.csv"), row.names = FALSE)
+  write.csv(expdat, "data/reader_expertise_weighting_data.csv", row.names = FALSE)
 
   # Replace the reader_number with the estimated reader ranking, and add the linear and negative exponential weights (weight_I and weight_II)
   colnames(rankdata) <- c("stock", "prep_method", "ices_area", "reader_number", "rank_readers", "weight_I", "weight_II")

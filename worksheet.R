@@ -9,7 +9,7 @@ server.config <-
   list(
     event_id = unbox(413),
     token = unbox("3F482827-282B-46E0-8C58-FBCF6C4B2C55"),
-    mode_definition = "multistage",
+    mode_definition = unbox("multistage"),
     ma_method = unbox("Mode"),
     strata = unbox("strata"),
     onlyApproved = unbox(TRUE),
@@ -29,6 +29,19 @@ cat(
 # step 1: run bootstrap
 
 taf.bootstrap(taf = TRUE)
+
+# run some tests
+
+sourceTAF("data_checker.R")
+
+
+ad
+
+expertise_weight()
+
+
+
+
 
 # step 2: run taf scripts
 
