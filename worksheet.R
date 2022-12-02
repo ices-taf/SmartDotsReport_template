@@ -2,6 +2,13 @@
 library(icesTAF)
 library(jsonlite)
 
+if (FALSE) {
+  # set current WD if required
+  current_dir <- rstudioapi::getActiveDocumentContext()$path
+  setwd(dirname(current_dir))
+  getwd()
+}
+
 # Define some of the arguments in the json file:
 event_number <- 347
 OnlyApproved <- TRUE
