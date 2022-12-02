@@ -6,12 +6,12 @@ library(dplyr)
 library(tidyr)
 
 # load configuration
-config <- read_json("./bootstrap/initial/data/config.json", simplifyVector = TRUE)
+config <- read_json("bootstrap/data/config.json", simplifyVector = TRUE)
 
 # get data from bootstrap folder  -------------------------------
 
-ad <- read.taf("./bootstrap/data.csv", sep=";")
-dist <- read.taf("./bootstrap/dist.csv", sep=";")
+ad <- read.taf("bootstrap/data/smartdots_db/data.csv")
+dist <- read.taf("bootstrap/data/smartdots_db/dist.csv")
 
 # tag some feilds as missing?
 

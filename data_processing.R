@@ -18,12 +18,12 @@ source("utilities.R")
 source("utilities_data.R")
 
 # load configuration
-config <- read_json("bootstrap/initial/data/config.json", simplifyVector = TRUE)
+config <- read_json("bootstrap/data/config.json", simplifyVector = TRUE)
 
 # get data from bootstrap folder  -------------------------------
 
-ad <- read.taf("./bootstrap/data.csv", sep=";")
-dist <- read.taf("./bootstrap/dist.csv", sep=";")
+ad <- read.taf("bootstrap/data/smartdots_db/data.csv")
+dist <- read.taf("bootstrap/data/smartdots_db/dist.csv")
 
 # prepare data -------------------------------
 
@@ -36,12 +36,9 @@ if (config$onlyApproved) {
 # add date columns
 ad <-
   within(ad, {
-    # year = lubridate::year(parse_date_time(catch_date, '%d/%m/%Y %H:%M:%S'))
-    # qtr = lubridate::quarter(parse_date_time(catch_date, '%d/%m/%Y %H:%M:%S'))
-    # month = lubridate::month(parse_date_time(catch_date, '%d/%m/%Y %H:%M:%S'))
-    year = lubridate::year(parse_date_time(catch_date, '%d/%m/%Y %H:%M'))
-    qtr = lubridate::quarter(parse_date_time(catch_date, '%d/%m/%Y %H:%M'))
-    month = lubridate::month(parse_date_time(catch_date, '%d/%m/%Y %H:%M'))
+    year = lubridate::year(parse_date_time(catch_date, '%d/%m/%Y %H:%M:%S'))
+    qtr = lubridate::quarter(parse_date_time(catch_date, '%d/%m/%Y %H:%M:%S'))
+    month = lubridate::month(parse_date_time(catch_date, '%d/%m/%Y %H:%M:%S'))
   })
 
 
@@ -54,13 +51,20 @@ ad$prep_method[is.na(ad$prep_method) | ad$prep_method == ""] <- "missing"
 dist$ices_area[is.na(dist$ices_area) | dist$ices_area == ""] <- "missing"
 
 # Create the stratification here
-if(is.null(config$strata)) {ad$strata=NA} else {ad$strata=apply(as.data.frame(ad[,config$strata]), 1, function(x) {paste(str_to_title(config$strata), x, sep="_", collapse="_and_")})}
+if (is.null(config$strata)) {
+  ad$strata = NA
+} else {
+  ad$strata = apply(as.data.frame(ad[, config$strata]), 1, function(x) {
+    paste(str_to_title(config$strata), x, sep = "_", collapse = "_and_")
+  })
+}
 
-library(plyr)
-estratos=plyr::ddply(ad, .(SampleID), summarise, strata=unique(strata))
+
+
+estratos <- plyr::ddply(ad, .(SampleID), summarise, strata = unique(strata))
 dim(dist)
-dist=dist[,!colnames(dist) %in% c("strata")]
-dist=merge(dist, estratos, by.x="SampleID", by.y="SampleID")
+dist <- dist[,!colnames(dist) %in% c("strata")]
+dist <- merge(dist, estratos, by.x="SampleID", by.y="SampleID")
 dim(dist)
 
 
@@ -74,10 +78,11 @@ if (all(ad$expertise == 0)) {
 ad$expertise <- c("Basic", "Advanced")[ad$expertise + 1]
 
 # Assign weight to the readers based in their ranking-experience
-weight=length(sort(unique(ad$reader_number))):1
-reader_number=sort(unique(ad$reader_number))
-reader=data.frame(reader_number=reader_number, weight_I=weight, weight_II=1/(1+log(sort(weight, decreasing=F)+0.0000000001)))
-ad=merge(ad, reader, by.x="reader_number", by.y="reader_number", all.x=T)
+weight <- length(sort(unique(ad$reader_number))):1
+reader_number <- sort(unique(ad$reader_number))
+reader <- data.frame(reader_number = reader_number, weight_I = weight, weight_II = 1 / (1 + log(sort(weight, decreasing = FALSE) + 0.0000000001)))
+ad <- merge(ad, reader, by.x = "reader_number", by.y = "reader_number", all.x = TRUE)
+
 
 # Calculate modal ages and cv of modal age
 ad_long <- ad %>%
@@ -91,8 +96,8 @@ ad_long_ex <- ad[ad$expertise == "Advanced", ] %>%
   add_modal_negexpweight(config$ma_method)
 
 # Choose the final mode (traditional, readers linear weight or negative exponential linear weight) based in the existence of multimodality or not.
-ad_long=select_mode(ad_long, config$ma_method, config$mode_definition)
-ad_long_ex=select_mode(ad_long_ex, config$ma_method, config$mode_definition)
+ad_long <- select_mode(ad_long, config$ma_method, config$mode_definition)
+ad_long_ex <- select_mode(ad_long_ex, config$ma_method, config$mode_definition)
 
 # prepare data in wbgr output format
 # IMAGE,1,2,3,4,5,6,7,8,9,10,11,12,13
@@ -111,10 +116,9 @@ webgr <-
 names(webgr) <- c("IMAGE", 1:length(readers))
 head(webgr)
 
-
 # write out input data tables for use later
-write.taf(dist, "data/dist.csv", quote = TRUE)
-write.taf(ad, "data/data.csv", quote = TRUE)
-write.taf(ad_long, "data/ad_long.csv", quote = TRUE)
-write.taf(ad_long_ex, "data/ad_long_ex.csv", quote = TRUE)
-write.taf(webgr, "data/WebGR_ages_all.csv", quote = TRUE)
+write.taf(dist, dir = "data", quote = TRUE)
+write.taf(ad, file = "data.csv", dir = "data", quote = TRUE)
+write.taf(ad_long, dir = "data", quote = TRUE)
+write.taf(ad_long_ex, dir = "data", quote = TRUE)
+write.taf(webgr, file = "WebGR_ages_all.csv", dir = "data", quote = TRUE)
