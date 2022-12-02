@@ -7,10 +7,10 @@
 
 library(icesTAF)
 library(jsonlite)
+library(plyr)
 library(dplyr)
 library(tidyr)
-require(lubridate)
-library(plyr)
+library(lubridate)
 library(stringr)
 
 # get utility functions
