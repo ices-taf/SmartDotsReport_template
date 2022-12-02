@@ -15,12 +15,6 @@ library(scales)
 library(dplyr)
 require(Hmisc)
 
-
-current_dir=rstudioapi::getActiveDocumentContext()$path
-setwd(dirname(current_dir))
-getwd()
-
-
 # make report directory
 mkdir("report")
 
@@ -29,7 +23,7 @@ source("utilities.R")
 source("utilities_report.R")
 
 # load configuration data
-config <- read_json("bootstrap/initial/data/config.json", simplifyVector = TRUE)
+config <- read_json("bootstrap/data/config.json", simplifyVector = TRUE)
 
 # load data for report
 dist <- read.taf("data/dist.csv")
@@ -84,3 +78,5 @@ if(is.null(config$strata)) {
 }
 cp(report_filename, "report", move = TRUE)
 
+# move disclaimer to report folder
+cp("bootstrap/data/Disclaimer.txt", "report", move = TRUE)
