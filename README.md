@@ -7,3 +7,10 @@ library(icesTAF)
 sourceAll()
 ```
 
+Order to run:
+
+1) bootstrap/smartdots_db.R
+2) change_reader_number/merge_database_readers_score_smardots_data.R
+3) data.R
+4) model.R
+5) report.R

@@ -1,6 +1,6 @@
 
 vname <- function(name) paste(name, group, sep = "_")
-vsname <- function(name) paste(name, paste(as.vector(strsplit(stratum, " +"))[[1]], collapse="_"), group, sep = "_")
+vsname <- function(name) paste(name, stratum, group, sep = "_")
 
 
 # Two different ways of calculating the Mode are needed, one for weighted mode and the other for other calculations where the meaning of the column is different.

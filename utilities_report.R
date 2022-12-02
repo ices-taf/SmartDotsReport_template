@@ -352,8 +352,3 @@ plot_mla <- function(ad_long) {
   
 }
 
-
-
-### Bubble plot CV, AVE and PA 
-
-

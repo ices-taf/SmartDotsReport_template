@@ -15,6 +15,11 @@ library(tibble) # bias_test
 library(ggplot2)
 library(scales) # rescale_none
 
+
+create_dir=rstudioapi::getActiveDocumentContext()$path
+setwd(dirname(create_dir))
+getwd()
+
 # make model directory
 mkdir("model")
 

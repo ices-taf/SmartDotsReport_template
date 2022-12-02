@@ -10,7 +10,6 @@ output:
 params:
   summary_title: ""
   strata: NULL
-  warn_AEM: ""
 ---
 
 
@@ -116,31 +115,84 @@ pander(style_table0(summary_multiple_modes), missing="")
 
 ```
 
+## Age readings
 
-## Age readings, CV, PA, APE and Relative Bias
+```{r num_read_ex}
 
-```{r all_info_together_ex}
-
-# Age readings, CV, PA, APE and Relative Bias TABLE - Advanced readers #################################################
-
-numread <- num_read_tab_ex[,colnames(num_read_tab_ex) %in% c("Modal age", "total")]
-cvs <- cv_tab_ex[,colnames(cv_tab_ex) %in% c("Modal age", "all")]
-pas <- pa_tab_ex[,colnames(pa_tab_ex) %in% c("Modal age", "total")]
-apes <- ape_tab_ex[,colnames(ape_tab_ex) %in% c("Modal age", "all")]
-relbias <- rel_bias_tab_ex[,colnames(rel_bias_tab_ex) %in% c("Modal age", "all")]
-
-datmerge <- cbind(numread, cvs[,2], pas[,2], apes[,2], relbias[,2])
-datmerge <- plyr::rename(datmerge, replace=c("total"="Num_read", "cvs[, 2]"="CV", "pas[, 2]"="PA", "apes[, 2]"="APE", "relbias[, 2]"="Relat.Bias"))
-datmerge$`Modal age`[length(datmerge$`Modal age`)] <- "Total/Weighted mean"
+# Age readings TABLE - Advanced readers #################################################
 
 # Table caption
-set.caption('**Table X:** The number of age readings, and the mean CV, PA, APE and Relative bias by modal age are presented for all advanced readers combined. The last row shows the total number of readings and the weighted mean CV, PA, APE and relative bias for all modal ages.')
+set.caption('**Table X:** Age reading table shows the
+             number of readings by modal age.')
 
 # Output table
-pander(style_table1(datmerge), missing = "-")
+pander(style_table1(num_read_tab_ex[,colnames(num_read_tab_ex) %in% c("Modal age", "total")]), missing = "-")
 
 ```
 
+
+## CV table
+
+```{r cv_ex}
+
+# CV TABLE - Advanced readers #################################################
+
+# Table caption
+set.caption('**Table X:** Coefficient of Variation (CV) table presents the
+             CV per modal age for all advanced readers combined.')
+
+# Output table
+pander(style_table1(cv_tab_ex[,colnames(cv_tab_ex) %in% c("Modal age", "all")]), missing = "-")
+
+```
+
+## PA table
+
+```{r percentage_agreement_ex}
+
+# PERCENTAGE AGREEMENT TABLE - Advanced readers ###############################
+
+# Table caption
+set.caption('**Table X:** Percentage agreement (PA) table represents the PA per
+             modal age for all advanced readers combined.')
+
+# Output table
+pander(style_table1(pa_tab_ex[,colnames(pa_tab_ex) %in% c("Modal age", "total")]), missing = "-")
+
+```
+
+
+## APE table
+
+```{r average_percentage_error_ex}
+
+# AVERAGE PERCENTAGE ERROR TABLE - Advanced readers ###############################
+
+# Table caption
+set.caption('**Table X:** Average Percentage Error (APE) table represents the APE per
+             modal age for all advanced readers combined.')
+
+# Output table
+pander(style_table1(ape_tab_ex[,colnames(ape_tab_ex) %in% c("Modal age", "all")]), missing = "-")
+
+```
+
+
+
+## Relative bias table
+
+```{r rb_ex,results='asis'}
+
+# RELATIVE BIAS TABLE - Advanced readers ######################################
+
+# Table caption
+set.caption('**Table X:** The relative bias (as the difference between the mean and modal age) per
+             modal age for all advanced readers combined.')
+
+# Output table
+pander(style_table1(rel_bias_tab_ex[,colnames(rel_bias_tab_ex) %in% c("Modal age", "all")]), missing = "-")
+
+```
 
 ## Bias plot
 
@@ -184,12 +236,10 @@ plot_growth(dist, ad_long_all, stratif = "no_stratification")
 
 # General AEM - Advanced readers #################################################
 
-if(params$warn_AEM=="some_advance_readers"){
 # Table caption
   cap_i <- "**Table X:** General Age error matrix (AEM)"
   set.caption(cap_i)
-  panderOptions('round',3)
-  pander(style_table3(ae_mat_ex[[1]]), missing = "-")} else {asis_output("No AEM was produced because there were no advance readers in this exchange event")}
+  pander(style_table3(ae_mat_ex[[1]]), missing = "-")
 
 ```
 
@@ -199,7 +249,6 @@ if(params$warn_AEM=="some_advance_readers"){
 
 # AEM by area - Advanced readers #################################################
 
-if(params$warn_AEM=="some_advance_readers"){
 # Loop through each area and output AEM for that area
 for (i in seq_along(ae_mat_by_area_ex)) {
   # name of strata
@@ -209,9 +258,9 @@ for (i in seq_along(ae_mat_by_area_ex)) {
   cap_i <- paste0("**Table X:** Age error matrix (AEM) for ICES area ", ices_area,".")
 
   set.caption(cap_i)
-  panderOptions('round',3)
   pander(style_table3(ae_mat_by_area_ex[[i]]), missing = "-")
-  }} else {asis_output("No AEM was produced because there were no advance readers in this exchange event")}
+
+}
 
 ```
 
@@ -221,7 +270,6 @@ for (i in seq_along(ae_mat_by_area_ex)) {
 
 # AEM by strata - Advanced readers #################################################
 
-if(params$warn_AEM=="some_advance_readers"){
 # Loop through each area and output AEM for that area
 for (i in seq_along(ae_mat_by_strata_ex)) {
   # name of strata
@@ -233,28 +281,33 @@ for (i in seq_along(ae_mat_by_strata_ex)) {
   cap_i <- paste0("**Table X:** Age error matrix (AEM) for ", apply(tempdat, 1, function(x) {paste(str_to_title(config$strata), x, sep="_", collapse="_and_")}),".")
   
   set.caption(cap_i)
-  panderOptions('round',3)
   pander(style_table3(ae_mat_by_strata_ex[[i]]), missing = "-")
-  }} else {asis_output("No AEM was produced because there were no advance readers in this exchange event")}
 
+}
 
 ```
 
 
 
-## Overall comparison of results by strata
+<!-- Overall comparison of results by strata -->
 
 ```{r set_by_strata_ex}
 # initialise strata loop
 istrata <- 0
 group <- "ex"
-print_strata <- function() length(params$strata) > istrata
+print_strata <- function() length(params$strata) >= istrata
 ```
 
 ```{r ref.label= 'strata_plus_one'}
 
 ```
 
+```{r text_comparison, eval= print_strata()}
+
+asis_output("***Overall comparison of results by strata***")
+
+```  
+  
 ```{r ar_by_strata_ex, eval= print_strata()}
 
 group <- "ex"

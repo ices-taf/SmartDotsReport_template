@@ -10,8 +10,8 @@ config <- read_json("./bootstrap/initial/data/config.json", simplifyVector = TRU
 
 # get data from bootstrap folder  -------------------------------
 
-ad <- read.taf("./bootstrap/data.csv")
-dist <- read.taf("./bootstrap/dist.csv")
+ad <- read.taf("./bootstrap/data.csv", sep=";")
+dist <- read.taf("./bootstrap/dist.csv", sep=";")
 
 # tag some feilds as missing?
 
