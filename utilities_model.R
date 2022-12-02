@@ -137,7 +137,7 @@ cv_table <- function(ad_long, by = "reader") {
   cv_tab <- rbind(cv_tab,
                   colSums(cv_tab * num_read, na.rm = TRUE) / colSums(num_read * !is.na(cv_tab), na.rm = TRUE))
   
-  # We don�t want to present any CV estimate for modal age 0
+  # We don't want to present any CV estimate for modal age 0
   cv_tab[rownames(cv_tab)=="0",]=NA
 
   # produce formatted version
@@ -160,7 +160,7 @@ ape_table <- function(ad_long, by = "reader") {
   ape_tab <- rbind(ape_tab,
                   colSums(ape_tab * num_read, na.rm = TRUE) / colSums(num_read * !is.na(ape_tab), na.rm = TRUE))
 
-  # We don�t want to present any CV estimate for modal age 0
+  # We don't want to present any CV estimate for modal age 0
   ape_tab[rownames(ape_tab)=="0",]=NA
   
   # produce formatted version
