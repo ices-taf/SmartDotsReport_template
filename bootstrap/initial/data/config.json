@@ -1,1 +1,12 @@
-{"event_id":"347","ma_method":"Mode","strata":"stock_component","onlyApproved":true,"summary_name":"SmartDots_Summary_Event_347","summary_title":"SmartDots Summary for event 347","report_name":"SmartDots_Report_Event_347","report_title":"SmartDots Report for event 347","report_tokens":"tokens goes here","mode_definition":"multistage"}
+{
+  "event_id": 347,
+  "ma_method": "Mode",
+  "onlyApproved": true,
+  "summary_name": "SmartDots_Summary_Event_347",
+  "summary_title": "SmartDots Summary for event 347",
+  "report_name": "SmartDots_Report_Event_347",
+  "report_title": "SmartDots Report for event 347",
+  "report_tokens": "tokens goes here",
+  "mode_definition": "multistage",
+  "strata": ["stock_component"]
+}
