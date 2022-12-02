@@ -6,7 +6,8 @@
 
 library(icesTAF)
 library(jsonlite)
-unloadNamespace("dplyr")
+try(unloadNamespace("tidyr"))
+try(unloadNamespace("dplyr"))
 library(plyr) # age error matrix
 library(dplyr)
 library(tidyr)
@@ -15,16 +16,11 @@ library(tibble) # bias_test
 library(ggplot2)
 library(scales) # rescale_none
 
-
-create_dir=rstudioapi::getActiveDocumentContext()$path
-setwd(dirname(create_dir))
-getwd()
-
 # make model directory
 mkdir("model")
 
 # load configuration
-config <- read_json("bootstrap/initial/data/config.json", simplifyVector = TRUE)
+config <- read_json("bootstrap/data/config.json", simplifyVector = TRUE)
 
 # load utilities
 source("utilities.R")
