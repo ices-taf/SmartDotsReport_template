@@ -85,6 +85,7 @@ ad <- merge(ad, reader, by.x = "reader_number", by.y = "reader_number", all.x = 
 
 
 # Calculate modal ages and cv of modal age
+message("perhaps change modal calculation functions to better name columns 0, 1, 2 ...")
 ad_long <- ad %>%
   add_modal_trad(config$ma_method) %>%
   add_modal_linearweight(config$ma_method) %>%
