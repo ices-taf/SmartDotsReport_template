@@ -373,18 +373,25 @@ bias_test <- function(ad_long) {
     data2 <- data[data$Var1!=0,]
 
     # Loop through differences and calculate ranking values according to Guus Eltink
-    # done for both neagtive and positive differences simultaneously
+    # Previous version problematic, added some complexity to handle positives and negatives
+    # Now gives similar results to the Eltink sheet
     if ( nrow(data2) > 0 ){
       for (j in 1:nrow(data2)) {
-        data2$times[j] <- data2$Freq[j]*
-                          (0.5*sum(data2[abs(data2$Var1) ==
-                                         abs(data2$Var1[j]), 2] + 0.5) +
-                           sum(data2[abs(data2$Var1) <
-                                       abs(data2$Var1[j]), 2]))
+        rank1 <- 0.5*sum(data2[abs(data2$Var1) ==
+                                 abs(data2$Var1[j]), 2]) + 0.5
+        if (abs(data2$Var1[j]) == 1){
+          rank2plus <- sum(data2[abs(data2$Var1) <=
+                                   abs(data2$Var1[j]), 2])
+        }else{
+          rank2plus <- sum(data2[abs(data2$Var1) <
+                                   abs(data2$Var1[j]), 2])
+        }
+        data2$times[j] <- rank1+rank2plus
+        
       }
-
-      pos_val <- sum(data2[data2$Var1 > 0, ]$times) #Guus Eltink: "R+"
-      neg_val <- sum(data2[data2$Var1 < 0, ]$times) #Guus Eltink: "R-"
+      
+      pos_val <- crossprod(data2[data2$Var1 > 0, ]$Freq,data2[data2$Var1 > 0, ]$times) #Guus Eltink: "R+"
+      neg_val <- crossprod(data2[data2$Var1 < 0, ]$Freq,data2[data2$Var1 < 0, ]$times) #Guus Eltink: "R-"
       valsN <- sum(data[data$Var1 != 0, 2]) #no. of oberservations with difference
 
       # Naming: reader1:reader2
@@ -410,7 +417,7 @@ bias_test <- function(ad_long) {
 
   }
 
-  int_bias2[is.na(int_bias2)]="-"
+  int_bias2[is.na(int_bias2)]="X"
   # Last corrections..
   #int_bias2[is.na(int_bias2)] <- ""
   row.names(int_bias2)[nrow(int_bias2)] <- "Modal age"

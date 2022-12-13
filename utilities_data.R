@@ -54,7 +54,8 @@ add_modal_trad <- function(ad, ma_method) {
   out$cv <- apply(ages, 1, cv_I)
   out$cv[is.na(out$modal_age) | out$modal_age == 0] <- NA
   
-  # merge CV and modal age to data
+  # merge CV and modal age to data, first add proper column name (should work no matter n age class)
+  out <- out %>% rename_with(.fn=~paste0(.,".trd"), .cols = -c(FishID, modal_trad, NModes_trad, cv))
   right_join(ad, out, by = c("FishID"))
 }
 
@@ -100,6 +101,7 @@ add_modal_linearweight <- function(ad, ma_method) {
   out$NModes_linear=countcases
   
   # merge CV and modal age to data
+  out <- out %>% rename_with(.fn=~paste0(.,".lin"), .cols = -c(FishID, modal_linearweight, NModes_linear))
   right_join(ad, out, by = c("FishID"))
 }
 
@@ -146,6 +148,7 @@ add_modal_negexpweight <- function(ad, ma_method) {
   out$NModes_negexp=countcases
   
   # merge CV and modal age to data
+  out <- out %>% rename_with(.fn=~paste0(.,".neg"), .cols = -c(FishID, modal_negexpweight, NModes_negexp))
   right_join(ad, out, by = c("FishID"))
 }
 
