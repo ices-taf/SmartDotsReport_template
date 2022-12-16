@@ -1,0 +1,3486 @@
+---
+output:
+  word_document:
+    fig_caption: true
+    fig_height: 10
+    fig_width: 10
+    reference_docx: bootstrap/initial/data/reportTemplate.docx
+    toc: true
+    keep_md: false
+params:
+  report_title: ""
+  strata: NULL
+---
+
+```{r introduction, include = FALSE}
+
+# INTRODUCTION ################################################################
+
+# This markdown documents and integrated scripts analyse biological
+# age readings.
+# The output is a .docx template that includes
+# the results of the analysis and should be used as a standard for
+# reporting of age reading comparisons.
+
+```
+
+```{r chunk_setup, include=FALSE}
+# CHUNK SETUPS #################################################################
+
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE,
+                      message=FALSE, results = 'asis', dpi=400)
+```
+
+```{r pander_settings, include = FALSE}
+
+# PANDER OPTIONS ##############################################################
+
+panderOptions('table.split.table', Inf)
+panderOptions('keep.trailing.zeros', TRUE)
+panderOptions('table.alignment.default', "center")
+
+```
+
+---
+title: `r params$report_title`
+---
+
+# Executive summary
+
+# Terms of reference
+
+# Agenda and participant list
+
+The agenda can be found in Annex 1 and the list of participants in Annex 2.
+
+
+# Introduction
+
+This part should include a background to the species, the workshop/exchange
+and what to expect to read about in the report.
+
+
+# Methods
+
+This report contains statistical analyses and comparisons of age readings
+in the form of tables and graphical plots.
+
+First, an overview of participating age readers and the samples are presented.
+
+Before each table or plot there is a short explanation. This text is
+thought as a help to understand the tables/plots and can just be deleted in
+the final output report if deemed unnecessary. The document can be edited just like any other
+.docx file. New text can be added, additional figures and tables can be included and
+the existing tables can be edited. If some tables which are presently in the annexes need to
+be moved to the body of the report this is also possible. Only the plots
+cannot be changed.
+
+The first part of the results section include the tables and plots from the
+Guus Eltink Excel sheet 'Age Reading Comparisons (Eltink, A.T.G.W. 2000).
+The order and numbering of tables and plots are the same as in the excel sheet.
+Tables 6.1 - 6.4 from the 'Age Reading Comparisons' sheet are not outputted
+since these are merely used to do calculations for the other tables.
+
+
+
+```{r text_mode_definition}
+
+if(config$mode_definition=="standard") {
+  asis_output("**Modal age: a standard approach to define the modal age by sampled fish**
+  \
+  In this event, the standard approach to calculate the modal age has been used. When summarizing the output and reporting the results of the exchange events developed within the SmarDots framework, the modal age (the most common age decided by the readers for every fish sample) is the most relevant measurement. It is a key statistic by itself, but it is also fundamental for the estimation of some other relevant statistics to assess the performance of the techniques assessed in the exchange event, like the Percentage Agreement (PA), or input for stock assessments like the Age Error Matrix (AEM) (see below). It is important that with the standard approach to define the modal age by fish individual, the difference in the expertise of the readers is not accounted for, and, in case there are more that one modal age (two or more age categories with the same number of annotations by readers) the mode is decided as the lowest age of all the modal ages. If this standard approach has been selected by the event coordinator, it is specially important checking the table that indicates the percentage of multimodal cases (in the results section) and the table with the fishID and sampleID that obtained multiple modes (included in annex 3). It is important to consider that if the number of cases (FishID or sampleID) with multiple modes is high, this might lead to bias in the calculation of the PA and AEM.")
+  } else {if(config$mode_definition=="multistage"){
+  asis_output("**Modal age: a multistage approach to define the modal age by sampled fish**,
+  \
+  In this event, the multistage approach to calculate the modal age has been used. When summarizing the output and reporting the results of the exchange events developed within the SmarDots framework, the modal age (the most common age decided by the age readers for every fish sample) is the most relevant measurement. It is a key statistic by itself, but it is also fundamental for the estimation of some other relevant statistics to assess the performance of the techniques assessed in the exchange event, like the Percentage Agreement (PA), or input for stock assessments like the Age Error Matrix (AEM) (see below). However, the standard approach of calculating the mode (each reader has the same weight=1)  the mode is taken as the lowest age of the multiple modal ages. This way renders multiple cases (fish samples) with multiple modal ages (i.e. different ages got the same highest number of readers). Accordingly, this imply a wrong perception of the age by fish individual and introduction of bias in the calculation of the PA and AEM. As a solution, in this report a multistage approach to select the modal age is used. This multistage approach is based in the different weight given to the age readers according to their experience. Two different weight scores scales were assigned, a weight score decreasing linearly with the experience and another decreasing with a negative exponential shape. The modal age by fish individual is decided following the next approach:
+  \
+  1.-If there is a single mode estimated with the standard approach (equal weight for all readers) this value is used as the modal age, if not
+  \
+  2.-Adding up, for each age category, the score assigned with the linear weighting for all the readers that decided that age for that fish. Next, the modal age is selected as the age category that obtains the highest score sum. If, despite this approach, there were still multiple ages with the same score (and hence multiple modes), the next step is applied:
+  \
+  3.-Adding up, for each age category, the score assigned with the negative exponential weighting for all the readers that decided that age for that fish. Select as the modal age the age with the highest score sum.
+  \
+   During the WGBIOP 2019 meeting it was found that the combination of the modes decided using these three methods (so called 'multistage approach'), allows assigning a single modal age to each fish individual.
+  \
+   It is important checking the table that indicates the percentage of multimodal cases (in the results section) and the table with the fishID and sampleID that obtained multiple modes (included in annex 3).
+")
+  }
+}
+
+
+asis_output("***Samples split by strata***")
+
+```
+
+
+
+**Pecentage Agreement (PA)**
+
+The percentage agreement per reader per modal age tells how large is the part of readings that are equal to the modal age. The percentage agreement is estimated by modal age and reader as the proportion (as percentage) of times that the lectures of that reader agreed with the resulting modal age.This percentage is estimated as the number of times that  a reader agreed with the modal age divided by the total number of otoliths read by a reader for each modal age.
+
+$$PA = { \frac{ {number \,of \,readings \,that \,agree \,with \,modal \,age}} {total \,number \,of \,readings \,by \,modal \,age} } \cdot {100 \%} $$
+
+
+**Coefficient of Variation (CV)**
+
+The table presents the Coefficient of Variation (CV) per modal age and reader. The CV's are calculated
+as the ratio between the standard deviation (σ) and mean value (μ) per
+reader and modal age:
+
+$$CV = { \frac{ {\sigma}} {\mu} } \cdot {100 \%} $$
+
+To the table is also added the CV of all readers combined per modal age and
+a weighted mean of the CV per reader.
+
+
+**Relative bias**
+
+The relative bias is calculated as the difference between the mean and the modal age. This statistic is presented in first place by modal age and reader, but it is also calculated as an average value by modal age for all readers together (or only advanced readers).
+
+
+**Average Percentage Error (APE)**
+
+The Average Percentage Error (APE) was calculated based on the method outlined by Beamish & Fournier (1981).
+This method is dependent of fish age and thus provides a better estimate
+of precision than percentage agreement. As the calculations of both CV and APE pose problems if the mean
+age is close to 0, all observations for which modal age was 0 were omitted
+from the CV and APE calculations.
+
+The average percentage error is calculated per image as:
+
+
+
+$$APE = { \frac{ {100 \%}} {n} \sum_{i=1}^n |\frac{a_i-\bar{a}}{\bar{a}}| } $$
+where $a_i$ is the age reading of reader $i$ and ${\bar{a}}$ is the mean
+of all readings from 1 to $n$.
+
+
+**Age error matrix (AEM)**
+
+Age error matrices (AEM) were produced following procedures outlined
+by WKSABCAL (2014) where the matrix shows the proportion of each modal
+age mis-aged as other ages. The sum of each row is 1, which equals 100%.
+The age data was analysed twice, the first time all readers were included
+and the second time only the “advanced” readers were included. If a reader
+is “advanced” then they are considered well trained and they provide ages
+for stock assessment or similar purposes.  When the AEM is compiled for
+assessment purposes it uses only those readers who provide age data for
+the stock assessment in that specific area.
+
+
+**Otolith Growth Analysis**
+
+SmartDots provides a measure of distance between the annotations made by
+the readers and thus provides a measure of growth increment width.
+This data is used to establish growth curves for each otolith (fish) and for each reader.
+
+
+
+## Analysis of age calibration exercise (ToR?)
+
+
+# Overview of samples and readers
+
+
+\br
+
+```{r sample_overview}
+
+# Table caption
+set.caption(paste('**Table X:** Overview of samples used for the exchange event number', config$event_id))
+
+# Output table
+pander(style_table0(sample_data_overview), style = "simple")
+
+```
+
+\br
+
+```{r participants_overview}
+
+# PARTICIPATANTS OVERVIEW #####################################################
+
+# Table caption
+set.caption('**Table X:** Reader overview.')
+
+# Output table
+pander(style_table0(reader_data), missing = "-")
+
+```
+
+
+## Results
+
+### All readers
+
+**All samples included**
+
+Those writing the report put TEXT here describing the results
+
+\
+
+*Multimodal cases*
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM) text -->
+```{r summary_multiple_modes_all}
+summary_multiple_modes_all <-
+    c(NSample  = length(unique(ad_long_all$SampleID)),
+    PercMM_traditional=unique(ifelse(multimode_cases_tab_traditional_all$NModes_trad=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_traditional_all)/length(unique(ad_long_all$SampleID)))*100, digits=0),"%"))),
+    PercMM_linear_weight=unique(ifelse(multimode_cases_tab_linear_all$NModes_linear=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_linear_all)/length(unique(ad_long_all$SampleID)))*100, digits=0),"%"))),
+    PercMM_negexp_weight=unique(ifelse(multimode_cases_tab_negexp_all$NModes_negexp=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_negexp_all)/length(unique(ad_long_all$SampleID)))*100, digits=0),"%"))),
+    PercMM_multistage=unique(ifelse(multimode_cases_tab_multistage_all$NModes_multistage=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_multistage_all)/length(unique(ad_long_all$SampleID)))*100, digits=0),"%"))))
+
+# Table caption
+set.caption('**Table X:** Total number of samples (NSample) and percentage of cases (fish samples) with multiple modes depending on the approach to weight the experience of the reader which will be considered when defining the fish age mode. PercMM_traditional shows the percentage of the total samples for which multiple modes are obtained when all the readers are equally weighted. PercMM_linear_weight shows the percentage of the total samples for which multiple modes are obtained when the weight assigned to the different readers decreases linearly with the experience, while in the PercMM_negexp the weight applied decreases with a negative exponential shape with the experience. The PercMM_multistage shows the percentage of multiple mode cases when a combination of the different methodologies is used, as explained in the material and methods section')
+
+# Output table
+pander(style_table0(summary_multiple_modes_all), missing="")
+
+```
+
+\
+
+*Summary statistics*
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM), PA, CV and APE text -->
+```{r summary_statistics_all}
+summary_statistics_all <-
+    c(NSample  = length(unique(ad_long_all$SampleID)),
+    CV  = cv_tab_all[nrow(cv_tab_all), "all"],
+    PA  = pa_tab_all[nrow(pa_tab_all), "total"],
+    APE = ape_tab_all[nrow(ape_tab_all), "all"])
+
+# Table caption
+set.caption('**Table X:** Summary of statistics; Total number of samples (NSample), coefficient of variance (CV), percentage of agreement (PA) and average percentage error (APE) for all ages and readers')
+
+# Output table
+pander(style_table0(summary_statistics_all), missing="")
+
+```
+
+In this exchange event, `r summary_statistics_all[1]` otolith fish individuals were aged. Of those, `r summary_multiple_modes_all[2]`when the traditional approach (all readers equally weighted) is used to define the mode. The percentage of multiple mode cases is reduced to `r summary_multiple_modes_all[5]`. The complete list of cases with multiple modes is presented in table X in the annex 3 section, where the ageing from each of the readers participating in the exchange event is presented. When all the otolith samples are considered (both single and multimodal cases) the weighted average percentage agreement based on modal ages for all readers is `r summary_statistics_all[3]`, with the weighted average CV of `r summary_statistics_all[2]` and APE of `r summary_statistics_all[4]`.
+
+\
+
+*Coefficient of Variation (CV)*
+
+```{r cv_table}
+
+# CV TABLE - All readers #####################################################
+data=cv_tab_all
+nstagers=length(unique(reader_data$'Reader code'))
+ncols=dim(data[,!colnames(data) %in% c("all")])[2]
+basicols=ncols-nstagers
+
+Z=8
+nfig=ceiling((dim(data)[2]-basicols)/Z)
+N=min(Z,ncols)
+for(i in 1:nfig)
+{
+  if(i==1){
+    # Table caption
+    set.caption('**Table X:** Coefficient of Variation (CV) table presents the CV
+             per modal age and reader, the CV of all readers combined per modal
+             age and a weighted mean of the CV per reader')
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+  } else { if(i<nfig){
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+    } else {
+      selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):dim(data)[2])]
+      pander(style_table1(selec), missing = "-")
+    }
+  }
+}
+
+```
+
+
+
+
+\
+
+*Percentage of Agreement (PA)*
+
+<!-- PA text -->
+The percentage agreement per reader per modal age tells how large part of the
+readings that are equal to the modal age. The weighted mean including at the
+bottom of the table is weighted according to number of age readings.
+
+```{r percentage_agreement}
+
+# PERCENTAGE AGREEMENT TABLE - All readers ####################################
+data=pa_tab_all
+nstagers=length(unique(reader_data$'Reader code'))
+ncols=dim(data[,!colnames(data) %in% c("total")])[2]
+basicols=ncols-nstagers
+
+Z=8
+nfig=ceiling((dim(data)[2]-basicols)/Z)
+N=min(Z,ncols)
+for(i in 1:nfig)
+{
+  if(i==1){
+    # Table caption
+    set.caption('**Table X:** Percentage agreement (PA) table represents the PA per
+             modal age and reader, the PA of all readers combined per modal
+             age and a weighted mean of the PA per reader.')
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+  } else { if(i<nfig){
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+    } else {
+      selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):dim(data)[2])]
+      pander(style_table1(selec), missing = "-")
+    }
+  }
+}
+
+```
+
+\
+
+*Average Percentage Error (APE)*
+
+```{r average_percentage_error_all}
+
+# AVERAGE PERCENTAGE ERROR TABLE - Advanced readers ###############################
+data=ape_tab_all
+nstagers=length(unique(reader_data$'Reader code'))
+ncols=dim(data[,!colnames(data) %in% c("all")])[2]
+basicols=ncols-nstagers
+
+Z=8
+nfig=ceiling((dim(data)[2]-basicols)/Z)
+N=min(Z,ncols)
+for(i in 1:nfig)
+{
+  if(i==1){
+    # Table caption
+    set.caption('**Table X:** Average Percentage Error (APE) table represents the APE per
+             modal age and reader, the APE of all advanced readers
+             combined per modal age and a weighted mean of the APE per reader.')
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+  } else { if(i<nfig){
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+    } else {
+      selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):dim(data)[2])]
+      pander(style_table1(selec), missing = "-")
+    }
+  }
+}
+
+```
+
+\
+
+*Relative bias*
+
+<!-- Relative bias text -->
+The relative bias is the difference between the mean age (per modal age per
+reader) and modal age. As for the previous tables, a combined bias for all
+readers and weighted means are calculated.
+
+```{r rb}
+
+# RELATIVE BIAS TABLE - All readers ###########################################
+data=rel_bias_tab_all
+nstagers=length(unique(reader_data$'Reader code'))
+ncols=dim(data[,!colnames(data) %in% c("all")])[2]
+basicols=ncols-nstagers
+
+Z=8
+nfig=ceiling((dim(data)[2]-basicols)/Z)
+N=min(Z,ncols)
+for(i in 1:nfig)
+{
+  if(i==1){
+    # Table caption
+    set.caption('**Table X:** The relative bias (as the difference between the mean and modal age) per
+             modal age and reader is presented, as well as the weighted mean relative bias per reader and the relative bias per modal age for all
+             readers combined.')
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+  } else { if(i<nfig){
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+    } else {
+      selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):dim(data)[2])]
+      pander(style_table1(selec), missing = "-")
+    }
+  }
+}
+
+
+```
+
+```{r bias_plots_all, fig.width = 5, fig.height = 4, fig.cap = cap_in}
+# BIAS PLOTS - All readers ####################################################
+
+# Figure Caption
+cap_in <- '**Figure X:**: Age bias plot for all readers. Mean age
+           recorded +/- 2 stdev of each reader and all readers combined are
+           plotted against modal age. The estimated mean age corresponds to
+           modal age, if the estimated mean age is on the 1:1 equilibrium
+           line (solid line). Relative bias is the age difference between
+           estimated mean age and modal age.'
+
+# Output figure
+plot_bias_all(ad_long_all, sel_readers="All readers")
+```
+
+\
+
+*Inter-reader bias test*
+
+```{r bias_table}
+
+# INTER READER BIAS TEST - All readers ########################################
+
+# Table caption
+set.caption('**Table X:** Inter reader bias test. The Inter-reader bias test
+             gives probability of bias between readers and with modal age.
+             - = no sign of bias (p>0.05), * = possibility of bias
+             (0.01<p<0.05), * * = certainty of bias (p<0.01) ')
+
+# Output table
+pander(style_table3(bias_tab_all), missing = ".", style = "simple")
+
+```
+
+\
+
+*Growth analysis*
+
+```{r growth_analysis, fig.width = 8, fig.height = 4, fig.cap = cap_in}
+
+# GROWTH ANALYSIS - All readers ###############################################
+
+# Figure caption
+cap_in <- '**Figure X:** Plot of average distance from the centre to the winter
+           rings for all readers. The boxes represent 
+           the median, upper and lower box boundaries of the interquartile range,
+           whiskers represent the minimum and maximum values and the dots represent 
+           the outliers.'
+
+
+# Output figure
+
+plot_growth(dist, ad_long_all, stratif="no_stratification")
+```
+
+
+<!--------------------------------------------->
+<!--------- Start with stratification --------->
+<!--------------------------------------------->
+```{r set_strata_all}
+# initialise strata loop
+istrata <- 0
+group <- "all"
+print_strata <- function() length(params$strata) >= istrata
+```
+
+<!-- first strata -->
+
+```{r strata_plus_one}
+istrata <- istrata + 1
+```
+
+
+\newpage
+
+```{r conditional_text_Ia, eval= print_strata()}
+
+asis_output("***Samples split by strata***")
+
+```
+
+```{r results_by_strata_and_reader_title, eval = print_strata()}
+stratum <- params$strata[istrata]
+# Section title
+asis_output(paste0("**Comparison results by reader on strata: ", stratum, "**"))
+```
+
+
+<!-- Select data by strata -->
+```{r select_data_by_strata, eval = print_strata()}
+
+ad_long_all_by_strata=ad_long_all[ad_long_all[["strata"]]==stratum,]
+
+```
+
+```{r conditional_text_heading_section_I, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM) text -->
+```{r summary_multiple_modes_all_by_strata, eval = print_strata()}
+summary_multiple_modes_all <-
+    c(NSample  = length(unique(ad_long_all_by_strata$SampleID)),
+    PercMM_traditional=unique(ifelse(eval(parse(text=paste0(vsname("multimode_cases_tab_traditional"),"$NModes_trad")))=="zero", paste(0,"%"), paste(round((nrow(eval(parse(text=vsname("multimode_cases_tab_traditional"))))/length(unique(ad_long_all_by_strata$SampleID)))*100, digits=0),"%"))),
+    PercMM_linear_weight=unique(ifelse(eval(parse(text=paste0(vsname("multimode_cases_tab_linear"),"$NModes_linear")))=="zero", paste(0,"%"), paste(round((nrow(eval(parse(text=vsname("multimode_cases_tab_linear"))))/length(unique(ad_long_all$SampleID)))*100, digits=0),"%"))),
+    PercMM_negexp_weight=unique(ifelse(eval(parse(text=paste0(vsname("multimode_cases_tab_negexp"),"$NModes_negexp")))=="zero", paste(0,"%"), paste(round((nrow(eval(parse(text=vsname("multimode_cases_tab_negexp"))))/length(unique(ad_long_all$SampleID)))*100, digits=0),"%"))),
+    PercMM_multistage=unique(ifelse(eval(parse(text=paste0(vsname("multimode_cases_tab_multistage"),"$NModes_multistage")))=="zero", paste(0,"%"), paste(round((nrow(eval(parse(text=vsname("multimode_cases_tab_multistage"))))/length(unique(ad_long_all$SampleID)))*100, digits=0),"%"))))
+
+# Table caption
+set.caption(paste('**Table X:** Strata', unique(ad_long_all[["strata"]])[istrata], '.Total number of samples (NSample) and percentage of cases (fish samples) with multiple modes depending on the approach to weight the experience of the reader which will be considered when defining the fish age mode. PercMM_traditional shows the percentage of the total samples for which multiple modes are obtained when all the readers are equally weighted. PercMM_linear_weight shows the percentage of the total samples for which multiple modes are obtained when the weight assigned to the different readers decreases linearly with the experience, while in the PercMM_negexp the weight applied decreases with a negative exponential shape with the experience. The PercMM_multistage shows the percentage of multiple mode cases when a combination of the different methodologies is used, as explained in the material and methods section'))
+# Output table
+pander(style_table0(summary_multiple_modes_all), missing="")
+
+```
+
+\
+
+```{r conditional_text_heading_section_II, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM), PA, CV and APE text -->
+```{r summary_statistics_all_by_strata, eval = print_strata()}
+summary_statistics_all <-
+    c(NSample  = length(unique(ad_long_all_by_strata$SampleID)),
+    CV  = eval(parse(text=vsname("cv_tab")))[nrow(eval(parse(text=vsname("cv_tab")))), "all"],
+    PA  = eval(parse(text=vsname("pa_tab")))[nrow(eval(parse(text=vsname("pa_tab")))), "total"],
+    APE = eval(parse(text=vsname("ape_tab")))[nrow(eval(parse(text=vsname("ape_tab")))), "all"])
+
+# Table caption
+set.caption(paste('**Table X:** Strata', stratum, '.Summary of statistics; Total number of samples (NSample), coefficient of variance (CV), percentage of agreement (PA) and average percentage error (APE) for all ages and readers'))
+
+# Output table
+pander(style_table0(summary_statistics_all), missing="")
+
+
+```
+
+```{r conditional_text_I, eval= print_strata()}
+
+asis_output(paste0("In this exchange event ", summary_statistics_all[1], " otolith fish individuals were aged. Of those, ", summary_multiple_modes_all[2], "when the traditional approach (all readers equally weighted) is used to define the mode. The percentage of multiple mode cases is reduced to ", summary_multiple_modes_all[5], ". The complete list of cases with multiple modes is presented in table X in the annex 3 section, where the ageing from each of the readers participating in the exchange event is presented. When all the otolith samples are considered (both single and multimodal cases) the weighted average percentage agreement based on modal ages for all readers is ", summary_statistics_all[3], ", with the weighted average CV of ", summary_statistics_all[2], " and APE of ",  summary_statistics_all[4], "."))
+
+```  
+
+\
+
+```{r conditional_text_heading_section_III, eval= print_strata()}
+```
+
+```{r cv_table_by_strata, eval = print_strata()}
+
+# CV TABLE - All readers ######################################################
+data=eval(parse(text=vsname("cv_tab")))
+nstagers=length(unique(reader_data$'Reader code'))
+ncols=dim(data[,!colnames(data) %in% c("all")])[2]
+basicols=ncols-nstagers
+
+Z=8
+nfig=ceiling((dim(data)[2]-basicols)/Z)
+N=min(Z,ncols)
+for(i in 1:nfig)
+{
+  if(i==1){
+    # Table caption
+    set.caption(paste('**Table X:** Strata', stratum, '.Coefficient of Variation (CV) table presents the CV
+             per modal age and reader, the CV of all readers combined per modal
+             age and a weighted mean of the CV per reader'))
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+  } else { if(i<nfig){
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+    } else {
+      selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):dim(data)[2])]
+      pander(style_table1(selec), missing = "-")
+    }
+  }
+}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_IV, eval= print_strata()}
+```
+
+```{r conditional_text_II, eval= print_strata()}
+
+# <!-- PA text -->
+asis_output("The percentage agreement per reader per modal age tells how large part of the
+readings that are equal to the modal age. The weighted mean including at the
+bottom of the table is weighted according to number of age readings.")
+
+
+```
+
+```{r percentage_agreement_by_strata, eval = print_strata()}
+
+# PERCENTAGE AGREEMENT TABLE - All readers ####################################
+data=eval(parse(text=vsname("pa_tab")))
+nstagers=length(unique(reader_data$'Reader code'))
+ncols=dim(data[,!colnames(data) %in% c("total")])[2]
+basicols=ncols-nstagers
+
+Z=8
+nfig=ceiling((dim(data)[2]-basicols)/Z)
+N=min(Z,ncols)
+for(i in 1:nfig)
+{
+  if(i==1){
+    # Table caption
+    set.caption(paste('**Table X:** Strata', stratum, '.Percentage agreement (PA) table represents the PA per
+             modal age and reader, the PA of all readers combined per modal
+             age and a weighted mean of the PA per reader.'))
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+  } else { if(i<nfig){
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+    } else {
+      selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):dim(data)[2])]
+      pander(style_table1(selec), missing = "-")
+    }
+  }
+}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_V, eval= print_strata()}
+```
+
+```{r average_percentage_error_all_by_strata, eval = print_strata()}
+
+# AVERAGE PERCENTAGE ERROR TABLE - Advanced readers ###############################
+data=eval(parse(text=vsname("ape_tab")))
+nstagers=length(unique(reader_data$'Reader code'))
+ncols=dim(data[,!colnames(data) %in% c("all")])[2]
+basicols=ncols-nstagers
+
+Z=8
+nfig=ceiling((dim(data)[2]-basicols)/Z)
+N=min(Z,ncols)
+for(i in 1:nfig)
+{
+  if(i==1){
+    # Table caption
+    set.caption(paste('**Table X:** Strata', stratum, '.Average Percentage Error (APE) table represents the APE per
+             modal age and reader, the APE of all advanced readers
+             combined per modal age and a weighted mean of the APE per reader.'))
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+  } else { if(i<nfig){
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+    } else {
+      selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):dim(data)[2])]
+      pander(style_table1(selec), missing = "-")
+    }
+  }
+}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VI, eval= print_strata()}
+```
+
+```{r conditional_text_III, eval= print_strata()}
+
+# <!-- Relative bias text -->
+asis_output("The relative bias is the difference between the mean age (per modal age per
+reader) and modal age. As for the previous tables, a combined bias for all
+readers and weighted means are calculated.")
+
+
+```
+
+```{r rb_by_strata, eval = print_strata()}
+
+# RELATIVE BIAS TABLE - All readers ###########################################
+data=eval(parse(text=vsname("rel_bias_tab")))
+nstagers=length(unique(reader_data$'Reader code'))
+ncols=dim(data[,!colnames(data) %in% c("all")])[2]
+basicols=ncols-nstagers
+
+Z=8
+nfig=ceiling((dim(data)[2]-basicols)/Z)
+N=min(Z,ncols)
+for(i in 1:nfig)
+{
+  if(i==1){
+    # Table caption
+    set.caption(paste('**Table X:** Strata', stratum, '. The relative bias (as the difference between the mean and modal age) per
+             modal age and reader is presented, as well as the weighted mean relative bias per reader and the relative bias per modal age for all
+             readers combined.'))
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+  } else { if(i<nfig){
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+    } else {
+      selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):dim(data)[2])]
+      pander(style_table1(selec), missing = "-")
+    }
+  }
+}
+
+
+```
+
+```{r bias_plots_all_by_strata, fig.width = 5, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+# BIAS PLOTS - All readers by strata ####################################################
+
+# Figure Caption
+cap_in <- paste('**Figure X:** Strata', stratum, '.Age bias plot for all readers. Mean age recorded +/- 2 stdev of each reader and all readers combined are plotted against modal age. The estimated mean age corresponds to modal age, if the estimated mean age is on the 1:1 equilibrium line (solid line). Relative bias is the age difference between estimated mean age and modal age.')
+
+# Output figure
+plot_bias_all(ad_long_all_by_strata, sel_readers="All readers")
+```
+
+\
+
+```{r conditional_text_heading_section_VII, eval= print_strata()}
+```
+
+```{r bias_table_by_strata, eval = print_strata()}
+
+# INTER READER BIAS TEST - All readers ########################################
+
+# Table caption
+set.caption(paste('**Table X:** Strata', stratum, '.Inter reader bias test. The Inter-reader bias test
+             gives probability of bias between readers and with modal age.
+             - = no sign of bias (p>0.05), * = possibility of bias
+             (0.01<p<0.05), * * = certainty of bias (p<0.01) '))
+
+# Output table
+pander(style_table3(bias_tab_all), missing = ".", style = "simple")
+
+```
+
+\
+
+```{r conditional_text_heading_section_VIII, eval= print_strata()}
+```
+
+```{r growth_analysis_by_strata, fig.width = 8, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+# GROWTH ANALYSIS - All readers ###############################################
+
+# Figure caption
+cap_in <- paste('**Figure X:** Strata', stratum, '.Plot of average distance from the centre to the winter rings for all readers. The boxes represent the median, upper and lower box boundaries of the interquartile range, whiskers represent the minimum and maximum values and the dots represent the outliers.')
+
+
+# Output figure
+
+plot_growth(dist, ad_long_all_by_strata, stratif=stratum)
+```
+
+
+
+<!-- second strata -->
+
+```{r ref.label= 'strata_plus_one'}
+
+```
+
+\
+
+```{r ref.label= 'results_by_strata_and_reader_title', eval = print_strata()}
+
+```
+
+<!-- Select data by strata -->
+```{r ref.label= 'select_data_by_strata', eval = print_strata()}
+
+
+```
+
+```{r conditional_text_heading_section_I, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM) text -->
+```{r ref.label= 'summary_multiple_modes_all_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_II, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM), PA, CV and APE text -->
+```{r ref.label= 'summary_statistics_all_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_III, eval= print_strata()}
+```
+
+```{r ref.label= 'cv_table_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_IV, eval= print_strata()}
+```
+
+```{r ref.label= 'percentage_agreement_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_V, eval= print_strata()}
+```
+
+```{r ref.label= 'average_percentage_error_all_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VI, eval= print_strata()}
+```
+
+```{r ref.label= 'rb_by_strata', eval = print_strata()}
+
+
+```
+
+```{r ref.label= 'bias_plots_all_by_strata', fig.width = 5, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VII, eval= print_strata()}
+```
+
+```{r ref.label= 'bias_table_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VIII, eval= print_strata()}
+```
+
+```{r ref.label= 'growth_analysis_by_strata', fig.width = 8, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+
+<!-- third strata -->
+
+```{r ref.label= 'strata_plus_one'}
+
+```
+
+\
+
+```{r ref.label= 'results_by_strata_and_reader_title', eval = print_strata()}
+
+```
+
+<!-- Select data by strata -->
+```{r ref.label= 'select_data_by_strata', eval = print_strata()}
+
+
+```
+
+
+```{r conditional_text_heading_section_I, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM) text -->
+```{r ref.label= 'summary_multiple_modes_all_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_II, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM), PA, CV and APE text -->
+```{r ref.label= 'summary_statistics_all_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_III, eval= print_strata()}
+```
+
+```{r ref.label= 'cv_table_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_IV, eval= print_strata()}
+```
+
+```{r ref.label= 'percentage_agreement_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_V, eval= print_strata()}
+```
+
+```{r ref.label= 'average_percentage_error_all_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VI, eval= print_strata()}
+```
+
+```{r ref.label= 'rb_by_strata', eval = print_strata()}
+
+
+```
+
+```{r ref.label= 'bias_plots_all_by_strata', fig.width = 5, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VII, eval= print_strata()}
+```
+
+```{r ref.label= 'bias_table_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VIII, eval= print_strata()}
+```
+
+```{r ref.label= 'growth_analysis_by_strata', fig.width = 8, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+
+<!-- forth strata -->
+
+```{r ref.label= 'strata_plus_one'}
+
+```
+
+\
+
+```{r ref.label= 'results_by_strata_and_reader_title', eval = print_strata()}
+
+```
+
+<!-- Select data by strata -->
+```{r ref.label= 'select_data_by_strata', eval = print_strata()}
+
+
+```
+
+
+```{r conditional_text_heading_section_I, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM) text -->
+```{r ref.label= 'summary_multiple_modes_all_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_II, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM), PA, CV and APE text -->
+```{r ref.label= 'summary_statistics_all_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_III, eval= print_strata()}
+```
+
+```{r ref.label= 'cv_table_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_IV, eval= print_strata()}
+```
+
+```{r ref.label= 'percentage_agreement_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_V, eval= print_strata()}
+```
+
+```{r ref.label= 'average_percentage_error_all_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VI, eval= print_strata()}
+```
+
+```{r ref.label= 'rb_by_strata', eval = print_strata()}
+
+
+```
+
+```{r ref.label= 'bias_plots_all_by_strata', fig.width = 5, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VII, eval= print_strata()}
+```
+
+```{r ref.label= 'bias_table_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VIII, eval= print_strata()}
+```
+
+```{r ref.label= 'growth_analysis_by_strata', fig.width = 8, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+
+<!-- fifth strata -->
+
+```{r ref.label= 'strata_plus_one'}
+
+```
+
+\
+
+```{r ref.label= 'results_by_strata_and_reader_title', eval = print_strata()}
+
+```
+
+<!-- Select data by strata -->
+```{r ref.label= 'select_data_by_strata', eval = print_strata()}
+
+
+```
+
+
+```{r conditional_text_heading_section_I, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM) text -->
+```{r ref.label= 'summary_multiple_modes_all_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_II, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM), PA, CV and APE text -->
+```{r ref.label= 'summary_statistics_all_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_III, eval= print_strata()}
+```
+
+```{r ref.label= 'cv_table_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_IV, eval= print_strata()}
+```
+
+```{r ref.label= 'percentage_agreement_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_V, eval= print_strata()}
+```
+
+```{r ref.label= 'average_percentage_error_all_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VI, eval= print_strata()}
+```
+
+```{r ref.label= 'rb_by_strata', eval = print_strata()}
+
+
+```
+
+```{r ref.label= 'bias_plots_all_by_strata', fig.width = 5, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VII, eval= print_strata()}
+```
+
+```{r ref.label= 'bias_table_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VIII, eval= print_strata()}
+```
+
+```{r ref.label= 'growth_analysis_by_strata', fig.width = 8, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+
+<!-- sixth strata -->
+
+```{r ref.label= 'strata_plus_one'}
+
+```
+
+\
+
+```{r ref.label= 'results_by_strata_and_reader_title', eval = print_strata()}
+
+```
+
+<!-- Select data by strata -->
+```{r ref.label= 'select_data_by_strata', eval = print_strata()}
+
+
+```
+
+
+```{r conditional_text_heading_section_I, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM) text -->
+```{r ref.label= 'summary_multiple_modes_all_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_II, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM), PA, CV and APE text -->
+```{r ref.label= 'summary_statistics_all_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_III, eval= print_strata()}
+```
+
+```{r ref.label= 'cv_table_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_IV, eval= print_strata()}
+```
+
+```{r ref.label= 'percentage_agreement_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_V, eval= print_strata()}
+```
+
+```{r ref.label= 'average_percentage_error_all_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VI, eval= print_strata()}
+```
+
+```{r ref.label= 'rb_by_strata', eval = print_strata()}
+
+
+```
+
+```{r ref.label= 'bias_plots_all_by_strata', fig.width = 5, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VII, eval= print_strata()}
+```
+
+```{r ref.label= 'bias_table_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VIII, eval= print_strata()}
+```
+
+```{r ref.label= 'growth_analysis_by_strata', fig.width = 8, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+
+<!-- seventh strata -->
+
+```{r ref.label= 'strata_plus_one'}
+
+```
+
+\
+
+```{r ref.label= 'results_by_strata_and_reader_title', eval = print_strata()}
+
+```
+
+<!-- Select data by strata -->
+```{r ref.label= 'select_data_by_strata', eval = print_strata()}
+
+
+```
+
+
+```{r conditional_text_heading_section_I, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM) text -->
+```{r ref.label= 'summary_multiple_modes_all_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_II, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM), PA, CV and APE text -->
+```{r ref.label= 'summary_statistics_all_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_III, eval= print_strata()}
+```
+
+```{r ref.label= 'cv_table_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_IV, eval= print_strata()}
+```
+
+```{r ref.label= 'percentage_agreement_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_V, eval= print_strata()}
+```
+
+```{r ref.label= 'average_percentage_error_all_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VI, eval= print_strata()}
+```
+
+```{r ref.label= 'rb_by_strata', eval = print_strata()}
+
+
+```
+
+```{r ref.label= 'bias_plots_all_by_strata', fig.width = 5, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VII, eval= print_strata()}
+```
+
+```{r ref.label= 'bias_table_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VIII, eval= print_strata()}
+```
+
+```{r ref.label= 'growth_analysis_by_strata', fig.width = 8, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+
+<!-- eighth strata -->
+
+```{r ref.label= 'strata_plus_one'}
+
+```
+
+\
+
+```{r ref.label= 'results_by_strata_and_reader_title', eval = print_strata()}
+
+```
+
+<!-- Select data by strata -->
+```{r ref.label= 'select_data_by_strata', eval = print_strata()}
+
+
+```
+
+
+```{r conditional_text_heading_section_I, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM) text -->
+```{r ref.label= 'summary_multiple_modes_all_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_II, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM), PA, CV and APE text -->
+```{r ref.label= 'summary_statistics_all_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_III, eval= print_strata()}
+```
+
+```{r ref.label= 'cv_table_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_IV, eval= print_strata()}
+```
+
+```{r ref.label= 'percentage_agreement_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_V, eval= print_strata()}
+```
+
+```{r ref.label= 'average_percentage_error_all_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VI, eval= print_strata()}
+```
+
+```{r ref.label= 'rb_by_strata', eval = print_strata()}
+
+
+```
+
+```{r ref.label= 'bias_plots_all_by_strata', fig.width = 5, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VII, eval= print_strata()}
+```
+
+```{r ref.label= 'bias_table_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VIII, eval= print_strata()}
+```
+
+```{r ref.label= 'growth_analysis_by_strata', fig.width = 8, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+
+\newpage
+
+```{r set_by_strata_all}
+# initialise strata loop
+istrata <- 0
+group <- "all"
+print_strata <- function() length(params$strata) >= istrata
+```
+
+```{r ref.label= 'strata_plus_one'}
+
+```
+
+
+```{r conditional_text_IV, eval= print_strata()}
+
+asis_output("***Overall comparison of results by strata***")
+
+```  
+  
+```{r ar_by_strata_all, eval = print_strata()}
+
+group <- "all"
+
+# NUMBER OF AGE READINGS PER STOCK - Advanced readers #########################
+# Table caption
+set.caption('**Table X:** Number of age readings per strata and modal age for all advanced readers combined.')
+
+# Output table
+pander(style_table1(get(vname("num_read_tab_by_strata"))), missing = "-")
+```
+
+\
+
+```{r text_comparison_I, eval= print_strata()}
+
+asis_output("*Coefficient of Variation (CV)*")
+
+```  
+
+
+```{r cv_by_strata_all, eval = print_strata()}
+
+# Table caption
+set.caption('**Table X:** CV per strata and modal age for all advanced readers combined.')
+
+# Output table
+pander(style_table2(get(vname("cv_tab_by_strata"))), missing = "-")
+```
+
+\
+
+```{r text_comparison_II, eval= print_strata()}
+
+asis_output("*Percentage of Agreement (PA)*")
+
+```  
+
+
+```{r pa_by_strata_all, eval = print_strata()}
+# Section title
+
+# Table caption
+set.caption('**Table X:** Percentage Agreement per strata and modal age for all advanced readers combined.')
+
+# Output table
+pander(style_table2(get(vname("pa_tab_by_strata"))), missing = "-")
+```
+
+\
+
+```{r text_comparison_III, eval= print_strata()}
+
+asis_output("*Average Percentage Error (APE)*")
+
+```  
+
+
+
+```{r ape_by_strata_all, eval = print_strata()}
+# Section title
+
+# Table caption
+set.caption('**Table X:** Average Percentage Error per strata and modal age for all advanced readers combined.')
+
+# Output table
+pander(style_table2(get(vname("ape_tab_by_strata"))), missing = "-")
+```
+
+\
+
+```{r text_comparison_IV, eval= print_strata()}
+
+asis_output("*Relative bias*")
+
+```  
+
+
+```{r rb_by_strata_all, eval = print_strata()}
+# Section title
+
+# Table caption
+set.caption('**Table X:** Relative Bias per strata and modal age for all advanced readers combined.')
+
+# Output table
+pander(style_table2(get(vname("rel_bias_tab_by_strata"))), missing = "-")
+```
+
+\
+
+```{r text_comparison_V, eval= print_strata()}
+
+asis_output("*Growth analysis*")
+
+```  
+
+
+```{r growth_analysis_all_by, fig.width = 8, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+# GROWTH ANALYSIS - All readers ##########################################
+
+# Table caption
+cap_in <- '**Figure X:** Plot of average distance from the centre to the winter
+           rings for all readers by strata. The boxes represent 
+           the median, upper and lower box boundaries of the interquartile range,
+           whiskers represent the minimum and maximum values and the dots represent 
+           the outliers.'
+
+# Output table
+plot_growth(dist, ad_long_all, stratif = "all_strata")
+```
+
+
+
+
+\newpage
+
+
+### Advanced readers
+
+**All samples included**
+
+*Multimodal cases*
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM) text -->
+```{r summary_multiple_modes_adv}
+summary_multiple_modes_adv <-
+    c(NSample  = length(unique(ad_long_adv$SampleID)),
+    PercMM_traditional=unique(ifelse(multimode_cases_tab_traditional_adv$NModes_trad=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_traditional_adv)/length(unique(ad_long_adv$SampleID)))*100, digits=0),"%"))),
+    PercMM_linear_weight=unique(ifelse(multimode_cases_tab_linear_adv$NModes_linear=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_linear_adv)/length(unique(ad_long_adv$SampleID)))*100, digits=0),"%"))),
+    PercMM_negexp_weight=unique(ifelse(multimode_cases_tab_negexp_adv$NModes_negexp=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_negexp_adv)/length(unique(ad_long_adv$SampleID)))*100, digits=0),"%"))),
+    PercMM_multistage=unique(ifelse(multimode_cases_tab_multistage_adv$NModes_multistage=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_multistage_adv)/length(unique(ad_long_adv$SampleID)))*100, digits=0),"%"))))
+
+# Table caption
+set.caption('**Table X:** Summary of statistics; Total number of samples (NSample), a percentage of cases (fish samples) with multiple modes depending on the approach to weight the experience of the reader which will be considered when defining the fish age mode. PercMM_traditional shows the percentage of the total samples for which multiple modes are obtained when all the readers are equally weighted. PercMM_linear_weight shows the percentage of the total samples for which multiple modes are obtained when the weight assigned to the different readers decreases linearly with the experience, while in the PercMM_negexp the weight applied decreases with a negative exponential shape with the experience. The PercMM_multistage shows the percentage of multiple mode cases when a combination of the different methodologies is used, as explained in the material and methods section')
+
+# Output table
+pander(style_table0(summary_multiple_modes_adv), missing="")
+
+```
+
+\
+
+*Summary statistics*
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM), PA, CV and APE text -->
+```{r summary_statistics_adv}
+summary_statistics_adv <-
+    c(NSample  = length(unique(ad_long_all$SampleID)),
+    CV  = cv_tab_all[nrow(cv_tab_all), "all"],
+    PA  = pa_tab_all[nrow(pa_tab_all), "total"],
+    APE = ape_tab_all[nrow(ape_tab_all), "all"])
+
+# Table caption
+set.caption('**Table X:** Summary of statistics; Total number of samples (NSample), coefficient of variance (CV), percentage of agreement (PA) and average percentage error (APE) for all ages and readers')
+
+# Output table
+pander(style_table0(summary_statistics_adv), missing="")
+
+```
+
+
+In this exchange event, `r summary_statistics_adv[1]` otolith fish individuals were aged. Of those, `r summary_multiple_modes_adv[2]`when the traditional approach (all readers equally weighted) is used to define the mode. The percentage of multiple mode cases is reduced to `r summary_multiple_modes_adv[5]`. The complete list of cases with multiple modes is presented in table X in the annex 3 section, where the ageing from each of the readers participating in the exchange event is presented. When all the otolith samples are considered (both single and multimodal cases) the weighted average percentage agreement based on modal ages for all readers is `r summary_statistics_adv[3]`, with the weighted average CV of `r summary_statistics_adv[2]` and APE of `r summary_statistics_adv[4]`.
+
+\
+
+*Coefficient of Variation (CV)*
+
+```{r cv_adv}
+
+# CV TABLE - Advanced readers #################################################
+data=cv_tab_adv
+stagers=reader_data[reader_data$Expertise=="Advanced",]
+nstagers=length(unique(stagers$'Reader code'))
+ncols=dim(data[,!colnames(data) %in% c("all")])[2]
+basicols=ncols-nstagers
+
+Z=8
+nfig=ceiling((dim(data)[2]-basicols)/Z)
+N=min(Z,ncols)
+for(i in 1:nfig)
+{
+  if(i==1){
+    # Table caption
+    set.caption('**Table X:** Coefficient of Variation (CV) table presents the
+             CV per modal age and advanced reader, the CV of all advanced
+             readers combined per modal age and a weighted mean of the CV
+             per reader.')
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+  } else { if(i<nfig){
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+    } else {
+      selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):dim(data)[2])]
+      pander(style_table1(selec), missing = "-")
+    }
+  }
+}
+
+
+```
+
+\
+
+*Percentage of Agreement (PA)*
+
+```{r percentage_agreement_adv}
+
+# PERCENTAGE AGREEMENT TABLE - Advanced readers ###############################
+data=pa_tab_adv
+stagers=reader_data[reader_data$Expertise=="Advanced",]
+nstagers=length(unique(stagers$'Reader code'))
+ncols=dim(data[,!colnames(data) %in% c("total")])[2]
+basicols=ncols-nstagers
+
+Z=8
+nfig=ceiling((dim(data)[2]-basicols)/Z)
+N=min(Z,ncols)
+for(i in 1:nfig)
+{
+  if(i==1){
+    # Table caption
+    set.caption('**Table X:** Percentage agreement (PA) table represents the PA per
+             modal age and reader, advanced the PA of all advanced readers
+             combined per modal age and a weighted mean of the PA per reader.')
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+  } else { if(i<nfig){
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+    } else {
+      selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):dim(data)[2])]
+      pander(style_table1(selec), missing = "-")
+    }
+  }
+}
+
+```
+
+\
+
+*Average Percentage Error (APE)*
+
+```{r average_percentage_error_adv}
+
+# AVERAGE PERCENTAGE ERROR TABLE - Advanced readers ###############################
+data=ape_tab_adv
+stagers=reader_data[reader_data$Expertise=="Advanced",]
+nstagers=length(unique(stagers$'Reader code'))
+ncols=dim(data[,!colnames(data) %in% c("all")])[2]
+basicols=ncols-nstagers
+
+Z=8
+nfig=ceiling((dim(data)[2]-basicols)/Z)
+N=min(Z,ncols)
+for(i in 1:nfig)
+{
+  if(i==1){
+    # Table caption
+    set.caption('**Table X:** Average Percentage Error (APE) table represents the APE per
+             modal age and reader, the APE of all advanced readers
+             combined per modal age and a weighted mean of the APE per reader.')
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+  } else { if(i<nfig){
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+    } else {
+      selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):dim(data)[2])]
+      pander(style_table1(selec), missing = "-")
+    }
+  }
+}
+
+```
+
+\
+
+*Relative Bias*
+ 
+```{r rb_adv,results='asis'}
+
+# RELATIVE BIAS TABLE - Advanced readers ######################################
+data=rel_bias_tab_adv
+stagers=reader_data[reader_data$Expertise=="Advanced",]
+nstagers=length(unique(stagers$'Reader code'))
+ncols=dim(data[,!colnames(data) %in% c("all")])[2]
+basicols=ncols-nstagers
+
+Z=8
+nfig=ceiling((dim(data)[2]-basicols)/Z)
+N=min(Z,ncols)
+for(i in 1:nfig)
+{
+  if(i==1){
+    # Table caption
+    set.caption('**Table X:** The relative bias (as the difference between the mean and modal age) per
+             modal age and advanced reader is presented, as well as the weighted mean relative bias per reader and the relative bias per modal age for all
+             advanced readers combined.')
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+  } else { if(i<nfig){
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+    } else {
+      selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):dim(data)[2])]
+      pander(style_table1(selec), missing = "-")
+    }
+  }
+}
+
+```
+
+
+
+
+```{r bias_plots_exp, fig.width = 5, fig.height = 4, fig.cap = cap_in}
+
+# BIAS PLOT - Advanced readers ################################################
+
+# Table caption
+cap_in <- '**Figure X:** Age bias plot for advanced readers. Mean age recorded +/- 2 stdev of each reader and all readers combined are plotted against modal age. The estimated mean age corresponds to modal age, if the estimated mean age is on the 1:1 equilibrium line (solid line). Relative bias is the age difference between estimated mean age and modal age.'
+
+# Output table
+plot_bias_all(ad_long_adv, sel_readers="Advanced readers")
+
+```
+
+\
+
+*Growth analysis*
+
+```{r growth_analysis_exp, fig.width = 8, fig.height = 4, fig.cap = cap_in}
+
+# GROWTH ANALYSIS - Advanced readers ##########################################
+
+# Table caption
+cap_in <- '**Figure X:** Plot of average distacne from the centre to the winter
+           rings for advanced readers. The boxes represent the mean, upper and
+           lower box boundaries of the interquartile range, whiskers represent
+           the minimum and maximum values and the dots represent the outliers.'
+
+# Output table
+plot_growth(dist, ad_long_adv, stratif="no_stratification")
+
+```
+
+\
+
+*General Age Error Matrix (AEM)*
+
+```{r age_error_matrix_adv, results='asis'}
+
+# General AEM - Advanced readers #################################################
+
+# Table caption
+  cap_i <- "**Table X:** General Age error matrix (AEM)"
+  set.caption(cap_i)
+  pander(style_table3(ae_mat_adv[[1]]), missing = "-")
+
+```
+
+\
+
+*AEM by ICES area*
+
+```{r age_error_matrix_by_area_adv, results='asis'}
+
+# AEM by area - Advanced readers #################################################
+
+# Loop through each area and output AEM for that area
+for (i in seq_along(ae_mat_by_area_adv)) {
+  # name of strata
+  ices_area <- names(ae_mat_by_area_adv)[i]
+  
+  # Table caption
+  cap_i <- paste0("**Table X:** Age error matrix (AEM) for ICES area ", ices_area,".")
+
+  set.caption(cap_i)
+  pander(style_table3(ae_mat_by_area_adv[[i]]), missing = "-")
+
+}
+
+```
+
+\
+
+*AEM by strata*
+
+```{r age_error_matrix_by_strata_adv, results='asis'}
+
+# AEM by strata - Advanced readers #################################################
+
+# Loop through each area and output AEM for that area
+for (i in seq_along(ae_mat_by_strata_adv)) {
+  # name of strata
+  strata_name <- names(ae_mat_by_strata_adv)[i]
+  
+  # Table caption
+  tempdat=t(as.data.frame(as.matrix(strsplit(strata_name, ", ")[[1]])))
+  colnames(tempdat)=config$strata
+  cap_i <- paste0("**Table X:** Age error matrix (AEM) for ", apply(tempdat, 1, function(x) {paste(str_to_title(config$strata), x, sep="_", collapse="_and_")}),".")
+  
+  set.caption(cap_i)
+  pander(style_table3(ae_mat_by_strata_adv[[i]]), missing = "-")
+
+}
+
+```
+
+
+<!--------------------------------------------->
+<!--------- Start with stratification --------->
+<!--------------------------------------------->
+```{r set_strata_adv}
+# initialise strata loop
+istrata <- 0
+group <- "adv"
+print_strata <- function() length(params$strata) >= istrata
+```
+
+<!-- first strata -->
+```{r ref.label= 'strata_plus_one'}
+
+```
+
+
+\newpage
+
+```{r conditional_text_Ib, eval= print_strata()}
+
+asis_output("***Samples split by strata***")
+
+```
+
+```{r results_by_strata_and_reader_title_adv, eval = print_strata()}
+stratum <- params$strata[istrata]
+# Section title
+asis_output(paste0("**Comparison results by reader on strata: ", stratum, "**"))
+```
+
+<!-- Select data by strata -->
+```{r select_data_by_strata_adv, eval = print_strata()}
+
+ad_long_adv_by_strata=ad_long_adv[ad_long_adv[["strata"]]==stratum,]
+
+```
+
+```{r conditional_text_heading_section_I, eval= print_strata()}
+asis_output("*Multimodal cases*")
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM) text -->
+```{r summary_multiple_modes_adv_by_strata, eval = print_strata()}
+summary_multiple_modes_adv <-
+    c(NSample  = length(unique(ad_long_adv_by_strata$SampleID)),
+    PercMM_traditional=unique(ifelse(eval(parse(text=paste0(vsname("multimode_cases_tab_traditional"),"$NModes_trad")))=="zero", paste(0,"%"), paste(round((nrow(eval(parse(text=vsname("multimode_cases_tab_traditional"))))/length(unique(ad_long_adv_by_strata$SampleID)))*100, digits=0),"%"))),
+    PercMM_linear_weight=unique(ifelse(eval(parse(text=paste0(vsname("multimode_cases_tab_linear"),"$NModes_linear")))=="zero", paste(0,"%"), paste(round((nrow(eval(parse(text=vsname("multimode_cases_tab_linear"))))/length(unique(ad_long_adv$SampleID)))*100, digits=0),"%"))),
+    PercMM_negexp_weight=unique(ifelse(eval(parse(text=paste0(vsname("multimode_cases_tab_negexp"),"$NModes_negexp")))=="zero", paste(0,"%"), paste(round((nrow(eval(parse(text=vsname("multimode_cases_tab_negexp"))))/length(unique(ad_long_adv$SampleID)))*100, digits=0),"%"))),
+    PercMM_multistage=unique(ifelse(eval(parse(text=paste0(vsname("multimode_cases_tab_multistage"),"$NModes_multistage")))=="zero", paste(0,"%"), paste(round((nrow(eval(parse(text=vsname("multimode_cases_tab_multistage"))))/length(unique(ad_long_adv$SampleID)))*100, digits=0),"%"))))
+
+# Table caption
+set.caption(paste('**Table X:** Strata', stratum, '.Total number of samples (NSample) and percentage of cases (fish samples) with multiple modes depending on the approach to weight the experience of the reader which will be considered when defining the fish age mode. PercMM_traditional shows the percentage of the total samples for which multiple modes are obtained when all the readers are equally weighted. PercMM_linear_weight shows the percentage of the total samples for which multiple modes are obtained when the weight assigned to the different readers decreases linearly with the experience, while in the PercMM_negexp the weight applied decreases with a negative exponential shape with the experience. The PercMM_multistage shows the percentage of multiple mode cases when a combination of the different methodologies is used, as explained in the material and methods section'))
+
+# Output table
+pander(style_table0(summary_multiple_modes_adv), missing="")
+
+```
+
+\
+
+```{r conditional_text_heading_section_II, eval= print_strata()}
+
+asis_output("*Summary statistics*")
+
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM), PA, CV and APE text -->
+```{r summary_statistics_adv_by_strata, eval = print_strata()}
+summary_statistics_adv <-
+    c(NSample  = length(unique(ad_long_adv_by_strata$SampleID)),
+    CV  = eval(parse(text=vsname("cv_tab")))[nrow(eval(parse(text=vsname("cv_tab")))), "all"],
+    PA  = eval(parse(text=vsname("pa_tab")))[nrow(eval(parse(text=vsname("pa_tab")))), "total"],
+    APE = eval(parse(text=vsname("ape_tab")))[nrow(eval(parse(text=vsname("ape_tab")))), "all"])
+
+# Table caption
+set.caption(paste('**Table X:** Strata', stratum, '.Summary of statistics; Total number of samples (NSample), coefficient of variance (CV), percentage of agreement (PA) and average percentage error (APE) for all ages and readers'))
+
+# Output table
+pander(style_table0(summary_statistics_adv), missing="")
+
+```
+
+
+```{r conditional_text_V, eval= print_strata()}
+
+asis_output(paste0("In this exchange event ", summary_statistics_adv[1], " otolith fish individuals were aged. Of those, ", summary_multiple_modes_adv[2], "when the traditional approach (all readers equally weighted) is used to define the mode. The percentage of multiple mode cases is reduced to ", summary_multiple_modes_adv[5], ". The complete list of cases with multiple modes is presented in table X in the annex 3 section, where the ageing from each of the readers participating in the exchange event is presented. When all the otolith samples are considered (both single and multimodal cases) the weighted average percentage agreement based on modal ages for all readers is ", summary_statistics_adv[3], ", with the weighted average CV of ", summary_statistics_adv[2], " and APE of ",  summary_statistics_adv[4], "."))
+
+```  
+
+\
+
+```{r conditional_text_heading_section_III, eval= print_strata()}
+
+asis_output("*Coefficient of Variation (CV)*")
+
+```
+
+
+```{r cv_table_by_strata_adv, eval = print_strata()}
+
+# CV TABLE - Advanced readers ######################################################
+data=eval(parse(text=vsname("cv_tab")))
+stagers=reader_data[reader_data$Expertise=="Advanced",]
+nstagers=length(unique(stagers$'Reader code'))
+ncols=dim(data[,!colnames(data) %in% c("all")])[2]
+basicols=ncols-nstagers
+
+Z=8
+nfig=ceiling((dim(data)[2]-basicols)/Z)
+N=min(Z,ncols)
+for(i in 1:nfig)
+{
+  if(i==1){
+    # Table caption
+    set.caption(paste('**Table X:** Strata', stratum, '.Coefficient of Variation (CV) table presents the CV
+             per modal age and reader, the CV of all readers combined per modal
+             age and a weighted mean of the CV per reader'))
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+  } else { if(i<nfig){
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+    } else {
+      selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):dim(data)[2])]
+      pander(style_table1(selec), missing = "-")
+    }
+  }
+}
+
+```
+
+\
+
+```{r conditional_text_heading_section_IV, eval= print_strata()}
+
+asis_output("*Percentage of Agreement (PA)*")
+
+```
+
+
+```{r conditional_text_VI, eval= print_strata()}
+
+# <!-- PA text -->
+
+asis_output("The percentage agreement per reader per modal age tells how large part of the
+readings that are equal to the modal age. The weighted mean including at the
+bottom of the table is weighted according to number of age readings.")
+
+```
+
+
+```{r percentage_agreement_by_strata_adv, eval = print_strata()}
+
+# PERCENTAGE AGREEMENT TABLE - Advanced readers ####################################
+data=eval(parse(text=vsname("pa_tab")))
+stagers=reader_data[reader_data$Expertise=="Advanced",]
+nstagers=length(unique(stagers$'Reader code'))
+ncols=dim(data[,!colnames(data) %in% c("total")])[2]
+basicols=ncols-nstagers
+
+Z=8
+nfig=ceiling((dim(data)[2]-basicols)/Z)
+N=min(Z,ncols)
+for(i in 1:nfig)
+{
+  if(i==1){
+    # Table caption
+    set.caption(paste('**Table X:** Strata', stratum, '.Percentage agreement (PA) table represents the PA per
+             modal age and reader, the PA of all readers combined per modal
+             age and a weighted mean of the PA per reader.'))
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+  } else { if(i<nfig){
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+    } else {
+      selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):dim(data)[2])]
+      pander(style_table1(selec), missing = "-")
+    }
+  }
+}
+
+```
+
+\
+
+```{r conditional_text_heading_section_V, eval= print_strata()}
+
+asis_output("*Average Percentage Error (APE)*")
+
+```
+
+```{r average_percentage_error_adv_by_strata, eval = print_strata()}
+
+# AVERAGE PERCENTAGE ERROR TABLE - Advanced readers ###############################
+data=eval(parse(text=vsname("ape_tab")))
+stagers=reader_data[reader_data$Expertise=="Advanced",]
+nstagers=length(unique(stagers$'Reader code'))
+ncols=dim(data[,!colnames(data) %in% c("all")])[2]
+basicols=ncols-nstagers
+
+Z=8
+nfig=ceiling((dim(data)[2]-basicols)/Z)
+N=min(Z,ncols)
+for(i in 1:nfig)
+{
+  if(i==1){
+    # Table caption
+    set.caption(paste('**Table X:** Strata', stratum, '.Average Percentage Error (APE) table represents the APE per
+             modal age and reader, the APE of all advanced readers
+             combined per modal age and a weighted mean of the APE per reader.'))
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+  } else { if(i<nfig){
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+    } else {
+      selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):dim(data)[2])]
+      pander(style_table1(selec), missing = "-")
+    }
+  }
+}
+
+```
+
+\
+
+```{r conditional_text_heading_section_VI, eval= print_strata()}
+
+asis_output("*Relative bias*")
+
+```
+
+```{r conditional_text_VII, eval= print_strata()}
+
+# <!-- Relative bias text -->
+asis_output("The relative bias is the difference between the mean age (per modal age per
+reader) and modal age. As for the previous tables, a combined bias for all
+readers and weighted means are calculated.")
+
+```
+
+```{r rb_adv_by_strata, eval = print_strata()}
+
+# RELATIVE BIAS TABLE - Advanced readers ###########################################
+data=eval(parse(text=vsname("rel_bias_tab")))
+stagers=reader_data[reader_data$Expertise=="Advanced",]
+nstagers=length(unique(stagers$'Reader code'))
+ncols=dim(data[,!colnames(data) %in% c("all")])[2]
+basicols=ncols-nstagers
+
+Z=8
+nfig=ceiling((dim(data)[2]-basicols)/Z)
+N=min(Z,ncols)
+for(i in 1:nfig)
+{
+  if(i==1){
+    # Table caption
+    set.caption(paste('**Table X:** Strata', stratum, '. The relative bias (as the difference between the mean and modal age) per
+             modal age and advanced reader is presented, as well as the weighted mean relative bias per reader and the relative bias per modal age for all
+             advanced readers combined.'))
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+  } else { if(i<nfig){
+    selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
+    pander(style_table1(selec), missing = "-")
+    } else {
+      selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):dim(data)[2])]
+      pander(style_table1(selec), missing = "-")
+    }
+  }
+}
+
+
+
+```
+
+```{r bias_plots_adv_by_strata, fig.width = 5, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+# BIAS PLOTS - Advanced readers by strata ####################################################
+
+# Figure Caption
+cap_in <- paste('**Figure X:** Strata', stratum, '.Age bias plot for advance readers. Mean age recorded +/- 2 stdev of each reader and all readers combined are plotted against modal age. The estimated mean age corresponds to modal age, if the estimated mean age is on the 1:1 equilibrium line (solid line). Relative bias is the age difference between estimated mean age and modal age.')
+
+# Output figure
+plot_bias_all(ad_long_adv_by_strata, sel_readers="Advanced readers")
+```
+
+
+\
+
+```{r conditional_text_heading_section_VII, eval= print_strata()}
+
+asis_output("*Inter-reader bias test*")
+
+```
+
+```{r bias_table_by_strata_adv, eval = print_strata()}
+
+# INTER READER BIAS TEST - All readers ########################################
+
+# Table caption
+set.caption(paste('**Table X:** Strata', stratum, '.Inter reader bias test. The Inter-reader bias test
+             gives probability of bias between readers and with modal age.
+             - = no sign of bias (p>0.05), * = possibility of bias
+             (0.01<p<0.05), * * = certainty of bias (p<0.01) '))
+
+# Output table
+pander(style_table3(bias_tab_adv), missing = ".", style = "simple")
+
+```
+
+\
+
+```{r conditional_text_heading_section_VIII, eval= print_strata()}
+
+asis_output("*Growth Analysis*")
+
+```
+
+```{r growth_analysis_by_strata_adv, fig.width = 8, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+# GROWTH ANALYSIS - All readers ###############################################
+
+# Figure caption
+cap_in <- paste('**Figure X:** Strata', stratum, '.Plot of average distance from the centre to the winter rings for advanced readers. The boxes represent the median, upper and lower box boundaries of the interquartile range, whiskers represent the minimum and maximum values and the dots represent the outliers.')
+
+
+# Output figure
+
+plot_growth(dist, ad_long_adv_by_strata, stratif=stratum)
+```
+
+
+
+<!-- second strata -->
+
+```{r ref.label= 'strata_plus_one'}
+
+```
+
+\
+
+```{r ref.label= 'results_by_strata_and_reader_title', eval = print_strata()}
+
+```
+
+<!-- Select data by strata -->
+```{r ref.label= 'select_data_by_strata_adv', eval = print_strata()}
+
+
+```
+
+```{r conditional_text_heading_section_I, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM) text -->
+```{r ref.label= 'summary_multiple_modes_adv_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_II, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM), PA, CV and APE text -->
+```{r ref.label= 'summary_statistics_adv_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_III, eval= print_strata()}
+```
+
+```{r ref.label= 'cv_table_by_strata_adv', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_IV, eval= print_strata()}
+```
+
+```{r ref.label= 'percentage_agreement_by_strata_adv', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_V, eval= print_strata()}
+```
+
+```{r ref.label= 'average_percentage_error_adv_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VI, eval= print_strata()}
+```
+
+```{r ref.label= 'rb_adv_by_strata', eval = print_strata()}
+
+
+```
+
+```{r ref.label= 'bias_plots_adv_by_strata', fig.width = 5, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VII, eval= print_strata()}
+```
+
+```{r ref.label= 'bias_table_by_strata_adv', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VIII, eval= print_strata()}
+```
+
+```{r ref.label= 'growth_analysis_by_strata_adv', fig.width = 8, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+
+<!-- third strata -->
+
+```{r ref.label= 'strata_plus_one'}
+
+```
+
+\
+
+```{r ref.label= 'results_by_strata_and_reader_title', eval = print_strata()}
+
+```
+
+<!-- Select data by strata -->
+```{r ref.label= 'select_data_by_strata_adv', eval = print_strata()}
+
+
+```
+
+```{r conditional_text_heading_section_I, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM) text -->
+```{r ref.label= 'summary_multiple_modes_adv_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_II, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM), PA, CV and APE text -->
+```{r ref.label= 'summary_statistics_adv_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_III, eval= print_strata()}
+```
+
+```{r ref.label= 'cv_table_by_strata_adv', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_IV, eval= print_strata()}
+```
+
+```{r ref.label= 'percentage_agreement_by_strata_adv', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_V, eval= print_strata()}
+```
+
+```{r ref.label= 'average_percentage_error_adv_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VI, eval= print_strata()}
+```
+
+```{r ref.label= 'rb_adv_by_strata', eval = print_strata()}
+
+
+```
+
+```{r ref.label= 'bias_plots_adv_by_strata', fig.width = 5, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VII, eval= print_strata()}
+```
+
+```{r ref.label= 'bias_table_by_strata_adv', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VIII, eval= print_strata()}
+```
+
+```{r ref.label= 'growth_analysis_by_strata_adv', fig.width = 8, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+
+<!-- forth strata -->
+
+```{r ref.label= 'strata_plus_one'}
+
+```
+
+\
+
+```{r ref.label= 'results_by_strata_and_reader_title', eval = print_strata()}
+
+```
+
+<!-- Select data by strata -->
+```{r ref.label= 'select_data_by_strata_adv', eval = print_strata()}
+
+
+```
+
+```{r conditional_text_heading_section_I, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM) text -->
+```{r ref.label= 'summary_multiple_modes_adv_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_II, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM), PA, CV and APE text -->
+```{r ref.label= 'summary_statistics_adv_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_III, eval= print_strata()}
+```
+
+```{r ref.label= 'cv_table_by_strata_adv', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_IV, eval= print_strata()}
+```
+
+```{r ref.label= 'percentage_agreement_by_strata_adv', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_V, eval= print_strata()}
+```
+
+```{r ref.label= 'average_percentage_error_adv_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VI, eval= print_strata()}
+```
+
+```{r ref.label= 'rb_adv_by_strata', eval = print_strata()}
+
+
+```
+
+```{r ref.label= 'bias_plots_adv_by_strata', fig.width = 5, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VII, eval= print_strata()}
+```
+
+```{r ref.label= 'bias_table_by_strata_adv', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VIII, eval= print_strata()}
+```
+
+```{r ref.label= 'growth_analysis_by_strata_adv', fig.width = 8, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+
+<!-- fifth strata -->
+
+```{r ref.label= 'strata_plus_one'}
+
+```
+
+\
+
+```{r ref.label= 'results_by_strata_and_reader_title', eval = print_strata()}
+
+```
+
+<!-- Select data by strata -->
+```{r ref.label= 'select_data_by_strata_adv', eval = print_strata()}
+
+
+```
+
+```{r conditional_text_heading_section_I, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM) text -->
+```{r ref.label= 'summary_multiple_modes_adv_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_II, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM), PA, CV and APE text -->
+```{r ref.label= 'summary_statistics_adv_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_III, eval= print_strata()}
+```
+
+```{r ref.label= 'cv_table_by_strata_adv', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_IV, eval= print_strata()}
+```
+
+```{r ref.label= 'percentage_agreement_by_strata_adv', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_V, eval= print_strata()}
+```
+
+```{r ref.label= 'average_percentage_error_adv_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VI, eval= print_strata()}
+```
+
+```{r ref.label= 'rb_adv_by_strata', eval = print_strata()}
+
+
+```
+
+```{r ref.label= 'bias_plots_adv_by_strata', fig.width = 5, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VII, eval= print_strata()}
+```
+
+```{r ref.label= 'bias_table_by_strata_adv', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VIII, eval= print_strata()}
+```
+
+```{r ref.label= 'growth_analysis_by_strata_adv', fig.width = 8, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+
+<!-- sixth strata -->
+
+```{r ref.label= 'strata_plus_one'}
+
+```
+
+\
+
+```{r ref.label= 'results_by_strata_and_reader_title', eval = print_strata()}
+
+```
+
+<!-- Select data by strata -->
+```{r ref.label= 'select_data_by_strata_adv', eval = print_strata()}
+
+
+```
+
+```{r conditional_text_heading_section_I, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM) text -->
+```{r ref.label= 'summary_multiple_modes_adv_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_II, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM), PA, CV and APE text -->
+```{r ref.label= 'summary_statistics_adv_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_III, eval= print_strata()}
+```
+
+```{r ref.label= 'cv_table_by_strata_adv', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_IV, eval= print_strata()}
+```
+
+```{r ref.label= 'percentage_agreement_by_strata_adv', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_V, eval= print_strata()}
+```
+
+```{r ref.label= 'average_percentage_error_adv_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VI, eval= print_strata()}
+```
+
+```{r ref.label= 'rb_adv_by_strata', eval = print_strata()}
+
+
+```
+
+```{r ref.label= 'bias_plots_adv_by_strata', fig.width = 5, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VII, eval= print_strata()}
+```
+
+```{r ref.label= 'bias_table_by_strata_adv', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VIII, eval= print_strata()}
+```
+
+```{r ref.label= 'growth_analysis_by_strata_adv', fig.width = 8, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+
+<!-- seventh strata -->
+
+```{r ref.label= 'strata_plus_one'}
+
+```
+
+\
+
+```{r ref.label= 'results_by_strata_and_reader_title', eval = print_strata()}
+
+```
+
+<!-- Select data by strata -->
+```{r ref.label= 'select_data_by_strata_adv', eval = print_strata()}
+
+
+```
+
+```{r conditional_text_heading_section_I, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM) text -->
+```{r ref.label= 'summary_multiple_modes_adv_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_II, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM), PA, CV and APE text -->
+```{r ref.label= 'summary_statistics_adv_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_III, eval= print_strata()}
+```
+
+```{r ref.label= 'cv_table_by_strata_adv', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_IV, eval= print_strata()}
+```
+
+```{r ref.label= 'percentage_agreement_by_strata_adv', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_V, eval= print_strata()}
+```
+
+```{r ref.label= 'average_percentage_error_adv_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VI, eval= print_strata()}
+```
+
+```{r ref.label= 'rb_adv_by_strata', eval = print_strata()}
+
+
+```
+
+```{r ref.label= 'bias_plots_adv_by_strata', fig.width = 5, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VII, eval= print_strata()}
+```
+
+```{r ref.label= 'bias_table_by_strata_adv', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VIII, eval= print_strata()}
+```
+
+```{r ref.label= 'growth_analysis_by_strata_adv', fig.width = 8, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+
+<!-- eighth strata -->
+
+```{r ref.label= 'strata_plus_one'}
+
+```
+
+\
+
+```{r ref.label= 'results_by_strata_and_reader_title', eval = print_strata()}
+
+```
+
+<!-- Select data by strata -->
+```{r ref.label= 'select_data_by_strata_adv', eval = print_strata()}
+
+
+```
+
+```{r conditional_text_heading_section_I, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM) text -->
+```{r ref.label= 'summary_multiple_modes_adv_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_II, eval= print_strata()}
+```
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM), PA, CV and APE text -->
+```{r ref.label= 'summary_statistics_adv_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_III, eval= print_strata()}
+```
+
+```{r ref.label= 'cv_table_by_strata_adv', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_IV, eval= print_strata()}
+```
+
+```{r ref.label= 'percentage_agreement_by_strata_adv', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_V, eval= print_strata()}
+```
+
+```{r ref.label= 'average_percentage_error_adv_by_strata', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VI, eval= print_strata()}
+```
+
+```{r ref.label= 'rb_adv_by_strata', eval = print_strata()}
+
+
+```
+
+```{r ref.label= 'bias_plots_adv_by_strata', fig.width = 5, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VII, eval= print_strata()}
+```
+
+```{r ref.label= 'bias_table_by_strata_adv', eval = print_strata()}
+
+
+```
+
+\
+
+```{r conditional_text_heading_section_VIII, eval= print_strata()}
+```
+
+```{r ref.label= 'growth_analysis_by_strata_adv', fig.width = 8, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+
+
+```
+
+
+\newpage
+
+```{r set_by_strata_adv}
+# initialise strata loop
+istrata <- 0
+group <- "adv"
+print_strata <- function() length(params$strata) >= istrata
+```
+
+```{r ref.label= 'strata_plus_one'}
+
+```
+
+```{r conditional_text_VIII, eval= print_strata()}
+
+asis_output("***Overall comparison of results by strata***")
+
+```
+
+
+```{r ar_by_strata_adv, eval = print_strata()}
+
+group="adv"
+# NUMBER OF AGE READINGS PER STOCK - Advanced readers #########################
+# Table caption
+set.caption('**Table X:** Number of age readings per strata and modal age for all advanced readers combined.')
+
+# Output table
+pander(style_table1(get(vname("num_read_tab_by_strata"))), missing = "-")
+```
+
+\
+
+```{r text_comparison_adv_I, eval= print_strata()}
+
+asis_output("*Coefficient of Variation (CV)*")
+
+```  
+
+
+```{r cv_by_strata_adv, eval = print_strata()}
+
+# Table caption
+set.caption('**Table X:** CV per strata and modal age for all advanced readers combined.')
+
+# Output table
+pander(style_table2(get(vname("cv_tab_by_strata"))), missing = "-")
+```
+
+\
+
+```{r text_comparison_adv_II, eval= print_strata()}
+
+asis_output("*Percentage of Agreement (PA)*")
+
+```  
+
+
+```{r pa_by_strata_adv, eval = print_strata()}
+# Section title
+
+# Table caption
+set.caption('**Table X:** Percentage Agreement per strata and modal age for all advanced readers combined.')
+
+# Output table
+pander(style_table2(get(vname("pa_tab_by_strata"))), missing = "-")
+```
+
+\
+
+```{r text_comparison_adv_III, eval= print_strata()}
+
+asis_output("*Average Percentage Error (APE)*")
+
+```  
+
+
+```{r ape_by_strata_adv, eval = print_strata()}
+# Section title
+
+# Table caption
+set.caption('**Table X:** Average Percentag Error per strata and modal age for all advanced readers combined.')
+
+# Output table
+pander(style_table2(get(vname("ape_tab_by_strata"))), missing = "-")
+```
+
+\
+
+```{r text_comparison_adv_IV, eval= print_strata()}
+
+asis_output("*Relative bias*")
+
+```  
+
+
+```{r rb_by_strata_adv, eval = print_strata()}
+# Section title
+
+# Table caption
+set.caption('**Table X:** Relative Bias per strata and modal age for all advanced readers combined.')
+
+# Output table
+pander(style_table2(get(vname("rel_bias_tab_by_strata"))), missing = "-")
+```
+
+\
+
+```{r text_comparison_adv_V, eval= print_strata()}
+
+asis_output("*Growth analysis*")
+
+```  
+
+
+```{r growth_analysis_adv_by, fig.width = 8, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
+# GROWTH ANALYSIS - All readers ##########################################
+
+# Table caption
+cap_in <- '**Figure X:** Plot of average distance from the centre to the winter
+           rings for all readers by strata. The boxes represent 
+           the median, upper and lower box boundaries of the interquartile range,
+           whiskers represent the minimum and maximum values and the dots represent 
+           the outliers.'
+
+# Output table
+plot_growth(dist, ad_long_adv, stratif = "all_strata")
+```
+
+
+
+## Discussion
+
+## Conclusion
+
+
+<!------------------------------ OTHER --------------------------------------->
+
+# Other ToRs
+
+# References
+
+Beamish R. J. and Fournier D. A. (1981) A method for comparing the precision of a set of age determination. Canadian Journal of Fisheries and Aquatic Sciences, 38, 982–983
+
+GUIDELINES AND TOOLS FOR AGE READING. Eltink, A.T.G.W., Newton A.W., Morgado C., Santamaria M.T.G and Modin J. (2000) Guidelines and tools for age Reading. (PDF document version 1.0 October 2000) Internet: http://www.efan.no
+
+Eltink, A.T.G.W. (2000) Age reading comparisons. (MS Excel workbook version 1.0 October 2000) Internet: http://www.efan.no
+
+ICES (2014) Report of the Workshop on Statistical Analysis of Biological Calibration Studies (WKSABCAL). ICES CM 2014/ACOM: 35
+
+
+<!------------------------------ ANNEX --------------------------------------->
+
+# Annex 1. Agenda
+
+# Annex 2. List of participants
+
+```{r participants}
+
+# COMPLETE PARTICIPANTS LIST ##################################################
+
+# Table caption
+set.caption('**Table X:** Participants list.')
+
+# Output table
+pander(style_table0(reader_data), missing = "-")
+
+```
+
+
+# Annex 3. Additional results
+
+## Results all readers
+
+*Summary statistics*
+
+```{r tab_sum_stat_all}
+
+# DATA SUMMARY STATISTICS - All readers #######################################
+
+# Table caption
+set.caption('**Table X:** Summary of statistics; PA (%), CV (%) and APE (%).')
+
+# Output table
+pander(style_table0(summary_statistics_all), missing="")
+
+```
+
+
+```{r set_annex_all}
+group <- "all"
+```
+
+\
+
+*Data Overview*
+
+```{r data_overview}
+# DATA OVERVIEW - All readers #################################################
+
+# Table caption
+set.caption('**Table X:** Data overview including modal
+             age and statistics per sample.')
+
+# Output table
+pander(style_table0(get(vname("data_overview_tab"))), missing="-", style = "simple")
+```
+
+\
+
+*List of multimodal cases*
+
+```{r table_with_multimode_cases}
+
+# Table of Multimodal cases - All readers ########################################
+
+# Table caption
+set.caption('**Table X:** List of cases for which multiple modes where obtained when all readers are considered. The column NModes_trad shows the number of multiple modes for each FishID or sampleID when all readers are given the same expertise weight.')
+
+# Output table
+pander(style_table2(get(vname("multimode_cases_tab_traditional"))),missing="-")
+
+```
+
+\
+
+*Number of age readings by modal age*
+
+```{r num_age_readings}
+
+# NUMBER OF AGE READINGS - All readers ########################################
+
+# Table caption
+set.caption('**Table X:** Number of age readings table gives an overview of
+             number of readings per reader and modal age. The total numbers of
+             readings by modal age and by reader are also presented.')
+# Output table
+pander(style_table2(get(vname("num_read_tab"))),missing="-")
+
+```
+
+\
+
+*Number of age readings by age*
+
+```{r ac}
+
+# AGE COMPOSITION - All readers ###############################################
+
+# Table caption
+set.caption('**Table X:** Age composition by reader gives a
+             summary of number of readings per reader and age. The total numbers of
+             readings by age and by reader are also presented.')
+
+# Output table
+pander(style_table2(get(vname("age_composition_tab"))), missing = "0")
+
+```
+
+\
+
+*Separate age bias plots by reader*
+
+```{r bias_plots, fig.width = 3.5, fig.height = 3, fig.cap = cap_in}
+# INDIVIDUAL BIAS PLOTS - All readers #########################################
+
+# Figure caption
+cap_in <- 'Figure xx: Separate age bias plot for each reader. Mean age recorded +/- 2 stdev of each reader and all readers combined are plotted against modal age. If the estimated mean age is on the 1:1 equilibrium line (solid line) the estimated mean age corresponds to modal age. Relative bias is the age difference between estimated mean age and modal age.'
+
+# Output figures
+plot_bias(get(vname("ad_long")))
+```
+
+\
+
+*Statistics by modal age plot (STDEV, CV and PA)*
+
+```{r stat_plot, fig.width = 7, fig.height = 4, fig.cap = cap_in}
+# PLOT STATISTICS, STDEV, CV AND PA - All readers #############################
+
+# Figure caption
+cap_in <- '**Figure X:** CV, PA and (STDEV (standard deviation) are
+           plotted against modal age'
+
+# The coefficient of variation (CV%), percent agreement and
+# the standard deviation (STDEV) are plotted against MODAL age
+
+# Output figure
+plot_stat(get(vname("ad_long")))
+```
+
+\
+
+*Distribution of age reading errors*
+
+```{r a_dist_plot, fig.width = 7, fig.height = 4, fig.cap = cap_in}
+# PLOT AGE DISTRIBUTION - All readers #########################################
+
+# Figure caption
+cap_in <- '**Figure X:** The distribution of the age reading errors in
+           percentage by modal age as observed from the whole group of age
+           readers in an age reading comparison to modal age. The achieved
+           precision in age reading by MODAL age group is shown by the spread
+           of the age readings errors. There appears to be no relative bias,
+           if the age reading errors are normally distributed. The
+           distributions are skewed, if relative bias occurs.'
+
+# Output figure
+plot_rdist(get(vname("ad_long")))
+```
+
+\
+
+*Relative bias for all readers*
+
+```{r rb_plot, fig.width = 7, fig.height = 4, fig.cap = cap_in}
+
+# RELATIEV BIAS - All readers #################################################
+
+# Figure caption
+cap_in <- '**Figure X:** The relative bias by modal age as estimated
+           by all age readers combined.'
+
+# Output figure
+plot_rb_ma(get(vname("rel_bias_tab")))
+
+```
+
+\
+
+*Mean length at age by reader*
+
+```{r mla}
+
+# MEAN LENGTH AT AGE - All readers ############################################
+
+# Table caption
+set.caption('**Table X:** Mean fish length at age per reader is calculated per
+             reader and age (not modal age) and for all readers combined per
+             age. A weighted mean is also given.')
+
+# Output table
+panderOptions('round', 1)
+panderOptions('keep.trailing.zeros', TRUE)
+pander(style_table2(get(vname("mean_length_tab"))), missing = "-")
+
+```
+
+
+```{r mla_plot, fig.width = 7, fig.height = 4, fig.cap = cap_in}
+# PLOT AGE DISTRIBUTION - All readers #########################################
+
+# Figure caption
+cap_in <- "**Figure X:** The mean fish length at age as
+           estimated by each age reader."
+
+# Output figure
+plot_mla(get(vname("ad_long")))
+```
+
+
+## Results Advanced readers
+
+**All samples included**
+
+*Summary statistics*
+
+```{r tab_sum_stat_adv}
+
+# DATA SUMMARY STATISTICS - Experienced readers #######################################
+
+# Table caption
+set.caption('**Table X:** Summary of statistics; PA (%), CV (%) and APE (%).')
+
+# Output table
+pander(style_table0(summary_statistics_adv), missing="")
+
+```
+
+```{r set_annex_adv}
+group <- "adv"
+
+```
+
+\
+
+*Data overview*
+
+```{r ref.label = 'data_overview'}
+
+```
+
+\
+
+*List of multimodal cases*
+
+```{r ref.label = 'table_with_multimode_cases'}
+
+
+```
+
+\
+
+*Number of age readings by modal age*
+
+```{r ref.label = 'num_age_readings'}
+
+
+```
+\
+
+*Number of age readings by age*
+
+```{r ref.label = 'ac'}
+
+
+```
+
+\
+
+*Separate age bias plots by reader*
+
+```{r ref.label = 'bias_plots', fig.width = 3.5, fig.height = 3, fig.cap = cap_in}
+
+
+```
+
+\
+
+*Statistics by modal age plot (STDEV, CV and PA)*
+
+```{r ref.label = 'stat_plot', fig.width = 7, fig.height = 4, fig.cap = cap_in}
+
+
+```
+
+\
+
+*Distribution of age reading errors*
+
+```{r ref.label = 'a_dist_plot', fig.width = 7, fig.height = 4, fig.cap = cap_in}
+
+
+```
+
+\
+
+*Relative bias for all readers*
+
+```{r ref.label = 'rb_plot', fig.width = 7, fig.height = 4, fig.cap = cap_in}
+
+
+```
+
+\
+
+*Mean length at age by reader*
+
+```{r ref.label = 'mla'}
+
+
+```
+
+
+```{r ref.label = 'mla_plot', fig.width = 7, fig.height = 4, fig.cap = cap_in}
+
+
+```
+
+
+# Annex 4. ToRs for next meeting
+
+# Annex 5. Recommendations
+
+# Annex 6. Report specific annexes
