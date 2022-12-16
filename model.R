@@ -15,6 +15,7 @@ library(tibble) # bias_test
 
 library(ggplot2)
 library(scales) # rescale_none
+library(janitor) #aem function adorn_totals
 
 # make model directory
 mkdir("model")
