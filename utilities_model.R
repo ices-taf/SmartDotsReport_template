@@ -436,7 +436,7 @@ bias_test <- function(ad_long) {
 
 age_er_matrix <- function(ad_long, by = NULL) {
   # Relative contribution of each age per modal age (long format)
-  ad_long %>%
+   ad_long %>%
     group_by_at(c("modal_age", "age", by)) %>%
     summarise(
       age_per_modal = sum(!is.na(age))
@@ -445,21 +445,16 @@ age_er_matrix <- function(ad_long, by = NULL) {
     group_by_at(c("modal_age", by)) %>%
     mutate(
       total_per_modal = sum(age_per_modal)
-    ) %>%
+    ) %>% #rename("real"=age) %>%
     ungroup %>%
     mutate(
-      rel_age = age_per_modal / total_per_modal
-    ) %>%
+      rel_age = round(age_per_modal / total_per_modal,2)) %>% 
     select_at(c(by, "age", "modal_age", "rel_age")) %>%
-    spread(modal_age, rel_age) %>%
-    mutate(age = paste("Age", age)) %>%
-    rename(`Modal age` = age) %>%
-    as.data.frame %>%
-    # split into several data.frames?
+    spread(age, rel_age) %>% adorn_totals("col")  %>% ##library(janitor)
     by(apply(.[by], 1, paste, collapse = ", "), function(x) {rownames(x) <- NULL; x}) %>%
-      unclass %>%
-      (function(x) {
-        attr(x, "call") <- NULL
-        x
-      })
+    unclass %>%
+    (function(x) {
+      attr(x, "call") <- NULL
+      x
+    })
 }
