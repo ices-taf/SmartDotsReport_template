@@ -28,11 +28,11 @@ source("utilities_model.R")
 
 # read input data
 ad_long_all <- read.taf("data/ad_long.csv")
-ad_long_ex <- read.taf("data/ad_long_ex.csv")
+ad_long_adv <- read.taf("data/ad_long_adv.csv")
 
 # model age range
 modal_age_range_all <-  with(ad_long_all, min(modal_age, na.rm = TRUE):max(modal_age, na.rm = TRUE))
-modal_age_range_ex <-  with(ad_long_ex, min(modal_age, na.rm = TRUE):max(modal_age, na.rm = TRUE))
+modal_age_range_adv <-  with(ad_long_adv, min(modal_age, na.rm = TRUE):max(modal_age, na.rm = TRUE))
 
 # set strata to NULL if all are NA
 if (all(is.na(ad_long_all[["strata"]]))) config$strata <- NULL
@@ -52,9 +52,9 @@ write.taf(reader_data, dir = "model")
 
 # repeat for all and for experts only
 
-for (group in c("all", "ex")) {
+for (group in c("all", "adv")) {
  #group <- "all"
- #group <- "ex"
+ #group <- "adv"
 
   # get the appropriate dataset
   ad_long <- get(vname("ad_long"))
@@ -289,7 +289,7 @@ for (group in c("all", "ex")) {
   write.taf(vname("mean_length_tab"), dir = "model")
 
   # Age error matrix (AEM) only for advanced readers
-  if(group=="ex"){
+  if(group=="adv"){
   
     # Age error matrix (AEM) only for advanced readers, all data together
     assign(
