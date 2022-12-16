@@ -1892,7 +1892,7 @@ plot_growth(dist, ad_long_adv, stratif="no_stratification")
 # General AEM - Advanced readers #################################################
 
 # Table caption
-  cap_i <- "**Table X:** General Age error matrix (AEM)"
+  cap_i <- "**Table X:** General Age error matrix (AEM). The modal age is in rows and the age classifications by the advanced readers in columns."
   set.caption(cap_i)
   pander(style_table3(ae_mat_adv[[1]]), missing = "-")
 
