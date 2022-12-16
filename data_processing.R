@@ -91,14 +91,14 @@ ad_long <- ad %>%
   add_modal_linearweight(config$ma_method) %>%
   add_modal_negexpweight(config$ma_method)
 
-ad_long_ex <- ad[ad$expertise == "Advanced", ] %>%
+ad_long_adv <- ad[ad$expertise == "Advanced", ] %>%
   add_modal_trad(config$ma_method) %>%
   add_modal_linearweight(config$ma_method) %>%
   add_modal_negexpweight(config$ma_method)
 
 # Choose the final mode (traditional, readers linear weight or negative exponential linear weight) based in the existence of multimodality or not.
 ad_long <- select_mode(ad_long, config$ma_method, config$mode_definition)
-ad_long_ex <- select_mode(ad_long_ex, config$ma_method, config$mode_definition)
+ad_long_adv <- select_mode(ad_long_adv, config$ma_method, config$mode_definition)
 
 # prepare data in wbgr output format
 # IMAGE,1,2,3,4,5,6,7,8,9,10,11,12,13
@@ -121,5 +121,5 @@ head(webgr)
 write.taf(dist, dir = "data", quote = TRUE)
 write.taf(ad, file = "data.csv", dir = "data", quote = TRUE)
 write.taf(ad_long, dir = "data", quote = TRUE)
-write.taf(ad_long_ex, dir = "data", quote = TRUE)
+write.taf(ad_long_adv, dir = "data", quote = TRUE)
 write.taf(webgr, file = "WebGR_ages_all.csv", dir = "data", quote = TRUE)
