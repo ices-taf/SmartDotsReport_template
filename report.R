@@ -28,7 +28,7 @@ config <- read_json("bootstrap/data/config.json", simplifyVector = TRUE)
 # load data for report
 dist <- read.taf("data/dist.csv")
 ad_long_all <- read.taf("data/ad_long.csv")
-ad_long_ex <- read.taf("data/ad_long_ex.csv")
+ad_long_adv <- read.taf("data/ad_long_adv.csv")
 
 # set strata to NULL is all are NA
 if (all(is.na(ad_long_all[["strata"]]))) config$strata <- NULL
