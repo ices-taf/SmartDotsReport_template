@@ -8,5 +8,5 @@
   "report_title": "SmartDots Report for event 347",
   "report_tokens": "tokens goes here",
   "mode_definition": "multistage",
-  "strata": ["stock_component"]
+  "strata": ["strata"]
 }
