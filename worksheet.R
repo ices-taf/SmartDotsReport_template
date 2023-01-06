@@ -35,6 +35,9 @@ write_json(
   pretty = TRUE
 )
 
+# install missing dependencies
+install.deps()
+
 # fetch data
 taf.bootstrap(taf = TRUE)
 
