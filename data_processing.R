@@ -50,8 +50,8 @@ ad$prep_method[is.na(ad$prep_method) | ad$prep_method == ""] <- "missing"
 # if variables are missing add "missing"
 dist$ices_area[is.na(dist$ices_area) | dist$ices_area == ""] <- "missing"
 
-# Create the stratification here
-if (is.null(config$strata)) {
+# check or create the stratification here
+if (is.null(config$strata) || is.na(config$strata)) {
   ad$strata = NA
 } else {
   ad$strata = apply(as.data.frame(ad[, config$strata]), 1, function(x) {
