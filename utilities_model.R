@@ -417,6 +417,9 @@ bias_test <- function(ad_long) {
 
   }
 
+  # Add a different NA marker for cases where two reader have not read the same samples
+  replace_index <- cbind(row = 1:nrow(int_bias2), column= match(rownames(int_bias2), colnames(int_bias2)))
+  int_bias2[replace_index] <- "/"
   int_bias2[is.na(int_bias2)]="X"
   # Last corrections..
   #int_bias2[is.na(int_bias2)] <- ""
