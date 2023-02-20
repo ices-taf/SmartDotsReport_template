@@ -240,6 +240,22 @@ pander(style_table0(summary_multiple_modes_all), missing="")
 
 \
 
+*List of multimodal cases*
+
+```{r table_with_multimode_cases}
+
+# Table of Multimodal cases - All readers ########################################
+
+# Table caption
+set.caption('**Table X:** List of cases for which multiple modes where obtained when all readers are considered. The column NModes_trad shows the number of multiple modes for each FishID or SampleID when all readers are given the same expertise weight.')
+
+# Output table
+pander(style_table2(get(vname("multimode_cases_tab_traditional"))),missing="-")
+
+```
+
+\
+
 *Summary statistics*
 
 <!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM), PA, CV and APE text -->
@@ -526,13 +542,13 @@ summary_multiple_modes_all <-
     PercMM_multistage=unique(ifelse(eval(parse(text=paste0(vsname("multimode_cases_tab_multistage"),"$NModes_multistage")))=="zero", paste(0,"%"), paste(round((nrow(eval(parse(text=vsname("multimode_cases_tab_multistage"))))/length(unique(ad_long_all$SampleID)))*100, digits=0),"%"))))
 
 # Table caption
-set.caption(paste('**Table X:** Strata', unique(ad_long_all[["strata"]])[istrata], '.Total number of samples (NSample) and percentage of cases (fish samples) with multiple modes depending on the approach to weight the experience of the reader which will be considered when defining the fish age mode. PercMM_traditional shows the percentage of the total samples for which multiple modes are obtained when all the readers are equally weighted. PercMM_linear_weight shows the percentage of the total samples for which multiple modes are obtained when the weight assigned to the different readers decreases linearly with the experience, while in the PercMM_negexp the weight applied decreases with a negative exponential shape with the experience. The PercMM_multistage shows the percentage of multiple mode cases when a combination of the different methodologies is used, as explained in the material and methods section'))
+set.caption(paste('**Table X:** Strata', str_remove(unique(ad_long_all[["strata"]])[istrata], "Strata_"), '.Total number of samples (NSample) and percentage of cases (fish samples) with multiple modes depending on the approach to weight the experience of the reader which will be considered when defining the fish age mode. PercMM_traditional shows the percentage of the total samples for which multiple modes are obtained when all the readers are equally weighted. PercMM_linear_weight shows the percentage of the total samples for which multiple modes are obtained when the weight assigned to the different readers decreases linearly with the experience, while in the PercMM_negexp the weight applied decreases with a negative exponential shape with the experience. The PercMM_multistage shows the percentage of multiple mode cases when a combination of the different methodologies is used, as explained in the material and methods section'))
 # Output table
 pander(style_table0(summary_multiple_modes_all), missing="")
 
 ```
 
-\
+
 
 ```{r conditional_text_heading_section_II, eval= print_strata()}
 ```
@@ -580,7 +596,7 @@ for(i in 1:nfig)
 {
   if(i==1){
     # Table caption
-    set.caption(paste('**Table X:** Strata', stratum, '.Coefficient of Variation (CV) table presents the CV
+    set.caption(paste('**Table X:** ', stratum, '.Coefficient of Variation (CV) table presents the CV
              per modal age and reader, the CV of all readers combined per modal
              age and a weighted mean of the CV per reader'))
     selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
@@ -628,7 +644,7 @@ for(i in 1:nfig)
 {
   if(i==1){
     # Table caption
-    set.caption(paste('**Table X:** Strata', stratum, '.Percentage agreement (PA) table represents the PA per
+    set.caption(paste('**Table X:** ', stratum, '.Percentage agreement (PA) table represents the PA per
              modal age and reader, the PA of all readers combined per modal
              age and a weighted mean of the PA per reader.'))
     selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
@@ -666,7 +682,7 @@ for(i in 1:nfig)
 {
   if(i==1){
     # Table caption
-    set.caption(paste('**Table X:** Strata', stratum, '.Average Percentage Error (APE) table represents the APE per
+    set.caption(paste('**Table X:** ', stratum, '.Average Percentage Error (APE) table represents the APE per
              modal age and reader, the APE of all advanced readers
              combined per modal age and a weighted mean of the APE per reader.'))
     selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
@@ -714,7 +730,7 @@ for(i in 1:nfig)
 {
   if(i==1){
     # Table caption
-    set.caption(paste('**Table X:** Strata', stratum, '. The relative bias (as the difference between the mean and modal age) per
+    set.caption(paste('**Table X:** ', stratum, '. The relative bias (as the difference between the mean and modal age) per
              modal age and reader is presented, as well as the weighted mean relative bias per reader and the relative bias per modal age for all
              readers combined.'))
     selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
@@ -736,7 +752,7 @@ for(i in 1:nfig)
 # BIAS PLOTS - All readers by strata ####################################################
 
 # Figure Caption
-cap_in <- paste('**Figure X:** Strata', stratum, '.Age bias plot for all readers. Mean age recorded +/- 2 stdev of each reader and all readers combined are plotted against modal age. The estimated mean age corresponds to modal age, if the estimated mean age is on the 1:1 equilibrium line (solid line). Relative bias is the age difference between estimated mean age and modal age.')
+cap_in <- paste('**Figure X:** ', stratum, '.Age bias plot for all readers. Mean age recorded +/- 2 stdev of each reader and all readers combined are plotted against modal age. The estimated mean age corresponds to modal age, if the estimated mean age is on the 1:1 equilibrium line (solid line). Relative bias is the age difference between estimated mean age and modal age.')
 
 # Output figure
 plot_bias_all(ad_long_all_by_strata, sel_readers="All readers")
@@ -752,7 +768,7 @@ plot_bias_all(ad_long_all_by_strata, sel_readers="All readers")
 # INTER READER BIAS TEST - All readers ########################################
 
 # Table caption
-set.caption(paste('**Table X:** Strata', stratum, '.Inter reader bias test. The Inter-reader bias test
+set.caption(paste('**Table X:** ', stratum, '.Inter reader bias test. The Inter-reader bias test
              gives probability of bias between readers and with modal age.
              - = no sign of bias (p>0.05), * = possibility of bias
              (0.01<p<0.05), * * = certainty of bias (p<0.01) '))
@@ -772,7 +788,7 @@ pander(style_table3(bias_tab_all), missing = ".", style = "simple")
 # GROWTH ANALYSIS - All readers ###############################################
 
 # Figure caption
-cap_in <- paste('**Figure X:** Strata', stratum, '.Plot of average distance from the centre to the winter rings for all readers. The boxes represent the median, upper and lower box boundaries of the interquartile range, whiskers represent the minimum and maximum values and the dots represent the outliers.')
+cap_in <- paste('**Figure X:** ', stratum, '.Plot of average distance from the centre to the winter rings for all readers. The boxes represent the median, upper and lower box boundaries of the interquartile range, whiskers represent the minimum and maximum values and the dots represent the outliers.')
 
 
 # Output figure
@@ -3217,23 +3233,7 @@ set.caption('**Table X:** Data overview including modal
 pander(style_table0(get(vname("data_overview_tab"))), missing="-", style = "simple")
 ```
 
-\
 
-*List of multimodal cases*
-
-```{r table_with_multimode_cases}
-
-# Table of Multimodal cases - All readers ########################################
-
-# Table caption
-set.caption('**Table X:** List of cases for which multiple modes where obtained when all readers are considered. The column NModes_trad shows the number of multiple modes for each FishID or sampleID when all readers are given the same expertise weight.')
-
-# Output table
-pander(style_table2(get(vname("multimode_cases_tab_traditional"))),missing="-")
-
-```
-
-\
 
 *Number of age readings by modal age*
 
@@ -3477,7 +3477,6 @@ group <- "adv"
 
 
 ```
-
 
 # Annex 4. ToRs for next meeting
 
