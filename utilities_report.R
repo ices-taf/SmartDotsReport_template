@@ -1,5 +1,3 @@
-
-
 # Style output tables #########################################################
 
 # These four functions are used to change the style of the output tables.
@@ -99,7 +97,6 @@ plot_growth <- function(dist, ad_long, stratif = NULL) {
       arrange(reader, AnnotationID, mark) %>%
       filter(mark > 0, distance > 0, reader %in% unique(ad_long$reader)) %>%
       group_by(reader, AnnotationID) %>%
-      mutate(cum_distance = cumsum(distance)) %>%
       ungroup %>%
       #    select(AnnotationID, mark, distance, cum_distance, reader) %>%
       mutate(
@@ -107,9 +104,8 @@ plot_growth <- function(dist, ad_long, stratif = NULL) {
         Reader = factor(reader)
       ) %>%
       left_join(ad_long) %>%  # add by here
-      #    filter(FishID == "Npout_056") %>%
-      select_at(c("Annulus", "cum_distance", "prep_method", "Reader")) %>%
-      ggplot(aes(x = Annulus, y = cum_distance, col = Reader)) +
+      select_at(c("Annulus", "distance", "prep_method", "Reader")) %>%
+      ggplot(aes(x = Annulus, y = distance, col = Reader)) +
       geom_boxplot() +
       xlab("Annulus") +
       ylab("Distance from center (mm)")+
@@ -118,23 +114,20 @@ plot_growth <- function(dist, ad_long, stratif = NULL) {
             axis.title = element_text(size = 14),
             legend.title = element_text(size = 12))
     p
-  } else { if(stratif=="all_strata") {
+  } else { if(stratif=="strata") {
     p <-
       dist %>%
       arrange(reader, AnnotationID, mark) %>%
       filter(mark > 0, distance > 0, reader %in% unique(ad_long$reader)) %>%
       group_by(reader, AnnotationID) %>%
-      mutate(cum_distance = cumsum(distance)) %>%
       ungroup %>%
-      #    select(AnnotationID, mark, distance, cum_distance, reader) %>%
       mutate(
         Annulus = factor(mark),
         Reader = factor(reader)
       ) %>%
       left_join(ad_long) %>%  # add by here
-      #    filter(FishID == "Npout_056") %>%
-      select_at(c("Annulus", "cum_distance", "prep_method", "Reader", "strata")) %>%
-      ggplot(aes(x = Annulus, y = cum_distance, col = Reader)) +
+      select_at(c("Annulus", "distance", "prep_method", "Reader", "strata")) %>%
+      ggplot(aes(x = Annulus, y = distance, col = Reader)) +
       geom_boxplot() + 
       facet_wrap(~strata, dir="v", scales="free_y") +
       xlab("Annulus") +
@@ -150,7 +143,6 @@ plot_growth <- function(dist, ad_long, stratif = NULL) {
       arrange(reader, AnnotationID, mark) %>%
       filter(mark > 0, distance > 0, reader %in% unique(ad_long$reader)) %>%
       group_by(reader, AnnotationID) %>%
-      mutate(cum_distance = cumsum(distance)) %>%
       ungroup %>%
       #    select(AnnotationID, mark, distance, cum_distance, reader) %>%
       mutate(
@@ -158,10 +150,10 @@ plot_growth <- function(dist, ad_long, stratif = NULL) {
         Reader = factor(reader)
       ) %>%
       left_join(ad_long) %>%  # add by here
-      #    filter(FishID == "Npout_056") %>%
-      select_at(c("Annulus", "cum_distance", "prep_method", "Reader", "strata")) %>%
+      select_at(c("Annulus", "distance", "prep_method", "Reader", "strata")) %>%
       subset(strata==stratif) %>%
-      ggplot(aes(x = Annulus, y = cum_distance, col = Reader)) +
+      #ggplot(aes(x = Annulus, y = cum_distance, col = Reader)) +
+      ggplot(aes(x = Annulus, y = distance, col = Reader)) +
       geom_boxplot()
     
     # formatting
