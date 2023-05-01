@@ -1,4 +1,4 @@
-# 2018_smartdotsReport_template
+# 2023_smartdotsReport_template
 
 This template is used to create reports from smartdots events.  The 
 settings for the report are contained in the [config.json](config.json) 
