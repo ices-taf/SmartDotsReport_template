@@ -445,7 +445,7 @@ plot_bias_all(ad_long_all, sel_readers="All readers")
 set.caption('**Table X:** Inter reader bias test. The Inter-reader bias test
              gives probability of bias between readers and with modal age.
              - = no sign of bias (p>0.05), * = possibility of bias
-             (0.01<p<0.05), * * = certainty of bias (p<0.01) ')
+             (0.01<p<0.05), * * = certainty of bias (p<0.01), / = diagonal of the table (no bias) ')
 
 # Output table
 pander(style_table3(bias_tab_all), missing = ".", style = "simple")
