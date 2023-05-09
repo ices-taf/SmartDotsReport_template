@@ -1,5 +1,3 @@
-
-
 # Style output tables #########################################################
 
 # These four functions are used to change the style of the output tables.
@@ -51,20 +49,18 @@ style_table3 <- function(tab) {
 
 
 
-
-
 # Here the age bias are plotted for all readers combined.
 
-plot_bias_all <- function(ad_long, max_age,max_modal){
+plot_bias_all <- function(ad_long, max_age, max_modal, sel_readers){
 
   # limits
-  max_modal <- max(ad_long$modal_age, na.rm = TRUE)
+  max_modal <- max(as.numeric(as.character(ad_long$modal_age, na.rm = TRUE)))
   max_age <- max(ad_long$age, na.rm = TRUE)
 
   p <-
     ad_long %>%
     # Make variable for facet
-    mutate(group_in = "All readers") %>%
+    mutate(group_in = sel_readers) %>%
     ggplot(aes(modal_age, age, group = group_in), color="#80B1D3")
 
   # Plot data and make settings/design
@@ -92,58 +88,87 @@ plot_bias_all <- function(ad_long, max_age,max_modal){
 
 # Growth analysis #############################################################
 
-# Plot
-# plot_growth(dist, compl_sample, part_tab2, "Expert")
-# compl <- compl_sample; part <- part_tab2; exp <- "Expert"
-plot_growth <- function(dist, ad_long, strata = NULL) {
+plot_growth <- function(dist, ad_long, stratif = NULL) {
 
-  # add fake data - TODO fix this later
-  #fake <- expand.grid(winterring = unique(gro_dat1$winterring), Reader = levels(gro_dat1$Reader))
-  #fake <- anti_join(fake, unique(select(gro_dat1, -distance)))
-  #if (nrow(fake)) {
-  #  fake$distance <- max(gro_dat1$distance) * 2
-  #  gro_dat3 <- rbind(gro_dat1, fake)
-  #} else {
-  #  gro_dat3 <- gro_dat1
-  #}
-
-  if (prod(dim(do.call(table, ad_long[strata]))) == 1) {
-    strata <- NULL
-  }
-
-  p <-
-    dist %>%
-    arrange(reader, AnnotationID, mark) %>%
-    filter(mark > 0, distance > 0, reader %in% unique(ad_long$reader)) %>%
-    group_by(reader, AnnotationID) %>%
-    mutate(cum_distance = cumsum(distance)) %>%
-    ungroup %>%
-#    select(AnnotationID, mark, distance, cum_distance, reader) %>%
-    mutate(
-      Annulus = factor(mark),
-      Reader = factor(reader)
-    ) %>%
-    left_join(ad_long) %>%  # add by here
-#    filter(FishID == "Npout_056") %>%
-    select_at(c("Annulus", "cum_distance", "prep_method", "Reader", strata)) %>%
-    ggplot(aes(x = Annulus, y = cum_distance, col = Reader)) +
+  if(stratif=="no_stratification")
+  {
+    p <-
+      dist %>%
+      arrange(reader, AnnotationID, mark) %>%
+      filter(mark > 0, distance > 0, reader %in% unique(ad_long$reader)) %>%
+      group_by(reader, AnnotationID) %>%
+      ungroup %>%
+      #    select(AnnotationID, mark, distance, cum_distance, reader) %>%
+      mutate(
+        Annulus = factor(mark),
+        Reader = factor(reader)
+      ) %>%
+      left_join(ad_long) %>%  # add by here
+      select_at(c("Annulus", "distance", "prep_method", "Reader")) %>%
+      ggplot(aes(x = Annulus, y = distance, col = Reader)) +
+      geom_boxplot() +
+      xlab("Annulus") +
+      ylab("Distance from center (mm)")+
+      theme_bw() +
+      theme(axis.text = element_text(size = 12),
+            axis.title = element_text(size = 14),
+            legend.title = element_text(size = 12))
+    p
+  } else { if(stratif=="strata") {
+    p <-
+      dist %>%
+      arrange(reader, AnnotationID, mark) %>%
+      filter(mark > 0, distance > 0, reader %in% unique(ad_long$reader)) %>%
+      group_by(reader, AnnotationID) %>%
+      ungroup %>%
+      mutate(
+        Annulus = factor(mark),
+        Reader = factor(reader)
+      ) %>%
+      left_join(ad_long) %>%  # add by here
+      select_at(c("Annulus", "distance", "prep_method", "Reader", "strata")) %>%
+      ggplot(aes(x = Annulus, y = distance, col = Reader)) +
+      geom_boxplot() + 
+      facet_wrap(~strata, dir="v", scales="free_y") +
+      xlab("Annulus") +
+      ylab("Distance from center (mm)")+
+      theme_bw() +
+      theme(axis.text = element_text(size = 12),
+            axis.title = element_text(size = 14),
+            legend.title = element_text(size = 12))
+    p
+  } else {
+    p <-
+      dist %>%
+      arrange(reader, AnnotationID, mark) %>%
+      filter(mark > 0, distance > 0, reader %in% unique(ad_long$reader)) %>%
+      group_by(reader, AnnotationID) %>%
+      ungroup %>%
+      #    select(AnnotationID, mark, distance, cum_distance, reader) %>%
+      mutate(
+        Annulus = factor(mark),
+        Reader = factor(reader)
+      ) %>%
+      left_join(ad_long) %>%  # add by here
+      select_at(c("Annulus", "distance", "prep_method", "Reader", "strata")) %>%
+      subset(strata==stratif) %>%
+      #ggplot(aes(x = Annulus, y = cum_distance, col = Reader)) +
+      ggplot(aes(x = Annulus, y = distance, col = Reader)) +
       geom_boxplot()
-
-  # facet if there are strata present
-  if (!is.null(strata)) {
-    p <- p + facet_wrap(strata)
-  }
-
-  # formatting
-  p +
-    xlab("Annulus") +
-    ylab("Distance from center (mm)")+
-    theme_bw() +
-    theme(axis.text = element_text(size = 12),
-          axis.title = element_text(size = 14),
-          legend.title = element_text(size = 12))
+    
+    # formatting
+    p +
+      xlab("Annulus") +
+      ylab("Distance from center (mm)")+
+      theme_bw() +
+      theme(axis.text = element_text(size = 12),
+            axis.title = element_text(size = 14),
+            legend.title = element_text(size = 12))
+    # + theme(aspect.ratio = 0.8)
     # don;t show fake data
     #coord_cartesian(ylim = range(growth_dat$distance) + c(-.25, .25))
+  }
+ }
 }
 
 
@@ -193,18 +218,21 @@ plot_bias <- function(ad_long) {
 # Plot overall std, CA and PA per modal age in same plot
 plot_stat <- function(ad_long) {
 
+  max_modal <- max(ad_long$modal_age, na.rm = TRUE)
+  max_age <- max(ad_long$age, na.rm = TRUE)
+
   # Combine the three data sets
   dat_in <-
     ad_long %>%
       group_by(modal_age) %>%
       summarise(
-        cv = cv(age),
+        cv = cv_II(age),
         pa = mean(age == modal_age, na.rm = TRUE) * 100,
         sd = sd(age, na.rm = TRUE)
       )
 
   # Limit to use for axis
-  std_lim <- pmax(ceiling(max(dat_in$sd, na.rm = T)), 1)
+  std_lim <- ceiling(max(dat_in$sd, na.rm = T))
 
   p <-
     dat_in %>%
@@ -223,6 +251,8 @@ plot_stat <- function(ad_long) {
     geom_line(aes(x = modal_age, y = pa*std_lim/100, colour = "pa")) +
     geom_point(aes(x = modal_age, y = pa*std_lim/100, colour = "pa",
                   shape = "pa"), size = 3) +
+    scale_x_continuous(breaks = seq(0, max_modal, 1),
+                       limits = c(0, max_modal), oob = rescale_none) +
     # Make left side y-axis
     scale_y_continuous(name = expression("Standard deviation (years)"),
                       limits = c(0, std_lim))  +
@@ -264,7 +294,8 @@ plot_rdist <- function(ad_long) {
       scale_colour_discrete(name = "Modal age") +
       theme_bw() +
       labs(x = "Age error", y = "Frequency") +
-      scale_y_continuous(labels = percent) #+
+      scale_y_continuous(labels = percent) +
+      guides(col = guide_legend(nrow = 8))
       #theme(text = element_text(family="Calibri"))
 }
 
@@ -277,6 +308,7 @@ plot_rb_ma <- function(rel_bias_tab) {
     filter(`Modal age` != "Weighted Mean" & !is.na(all)) %>%
     select(`Modal age`, all) %>%
     rename(modal_age = `Modal age`) %>%
+    mutate(modal_age=as.numeric(modal_age)) %>%
     ggplot(aes(x = modal_age, y = all, group = 1)) +
       geom_point(size = 2, colour = "#80B1D3") +
       geom_line(colour = "#80B1D3") +
@@ -307,5 +339,8 @@ plot_mla <- function(ad_long) {
       labs(x = "Reader", y = "Mean length (mm)") +
       theme(axis.text.x = element_text(size = text_x, angle = 30, vjust = 0.9, hjust = 1.01)
             #text = element_text(family="Calibri")
-            )
+            ) +
+    guides(col = guide_legend(nrow = 8))
+  
 }
+

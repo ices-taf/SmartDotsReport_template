@@ -4,12 +4,12 @@ output:
     fig_caption: true
     fig_height: 10
     fig_width: 10
-    reference_docx: bootstrap/data/summaryTemplate.docx
+    reference_docx: bootstrap/initial/data/summaryTemplate.docx
     toc: false
     keep_md: false
 params:
   summary_title: ""
-  strata: "strata"
+  strata: NULL
 ---
 
 
@@ -43,7 +43,7 @@ panderOptions('keep.trailing.zeros', TRUE)
 panderOptions('table.alignment.default', "center")
 panderOptions('knitr.auto.asis', FALSE)
 
-group <- "ex"
+group <- "adv"
 
 # from extrafont
 # font_import(pattern=c("Cali"))
@@ -66,7 +66,7 @@ title: `r params$summary_title`
 
 modal_age_range <- range(ad_long_all$modal_age, na.rm = TRUE)
 # Table caption
-set.caption(paste('**Table X:** Overview of samples used for the xxx exchange. The modal age range for all samples is ', modal_age_range[1], "-", modal_age_range[2], '.', sep=""))
+set.caption(paste('**Table X:** Overview of samples used for the exchange event', config$event_id, '. The modal age range for all samples is ', modal_age_range[1], "-", modal_age_range[2], '.', sep=""))
 
 # Output table
 pander(style_table0(sample_data_overview), style = "simple")
@@ -80,10 +80,13 @@ pander(style_table0(sample_data_overview), style = "simple")
 # PARTICIPATANTS OVERVIEW #####################################################
 
 # Table caption
-set.caption('**Table X:** Overview of advanced readers.')
+set.caption('**Table X:** Overview of number of readers.')
 
 # Output table
-pander(style_table0(filter(reader_data, Expertise != "Basic")))
+datab=filter(reader_data, Expertise!="Basic")
+selvar=colnames(datab)[-c(1, 3)]
+datab=ddply(datab, c(selvar), summarise, N_readers=length(Expertise))
+pander(style_table0(datab))
 ```
 
 
@@ -93,70 +96,101 @@ pander(style_table0(filter(reader_data, Expertise != "Basic")))
 
 # Results overview
 
+## Multimodal cases
+
+<!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM) text -->
+```{r summary_multiple_modes}
+summary_multiple_modes <-
+    c(NSample  = length(unique(ad_long_adv$SampleID)),
+    PercMM_traditional=unique(ifelse(multimode_cases_tab_traditional_adv$NModes_trad=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_traditional_adv)/length(unique(ad_long_adv$SampleID)))*100, digits=0),"%"))),
+    PercMM_linear_weight=unique(ifelse(multimode_cases_tab_linear_adv$NModes_linear=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_linear_adv)/length(unique(ad_long_adv$SampleID)))*100, digits=0),"%"))),
+    PercMM_negexp_weight=unique(ifelse(multimode_cases_tab_negexp_adv$NModes_negexp=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_negexpweight_adv)/length(unique(ad_long_adv$SampleID)))*100, digits=0),"%"))),
+    PercMM_multistage=unique(ifelse(multimode_cases_tab_multistage_adv$NModes_multistage=="zero", paste(0,"%"), paste(round((nrow(multimode_cases_tab_multistage_adv)/length(unique(ad_long_adv$SampleID)))*100, digits=0),"%"))))
+
+# Table caption
+set.caption('**Table X:** Summary of statistics; Total number of samples (NSample), a percentage of cases (fish samples) with multiple modes depending on the approach to weight the experience of the reader which will be considered when defining the fish age mode. PercMM_traditional shows the percentage of the total samples for which multiple modes are obtained when all the readers are equally weighted. PercMM_linear_weight shows the percentage of the total samples for which multiple modes are obtained when the weight assigned to the different readers decreases linearly with the experience, while in the PercMM_negexp the weight applied decreases with a negative exponential shape with the experience. The PercMM_multistage shows the percentage of multiple mode cases when a combination of the different methodologies is used, as explained in the material and methods section')
+
+# Output table
+pander(style_table0(summary_multiple_modes), missing="")
+
+```
 
 ## Age readings
 
-```{r num_read_ex}
+```{r num_read_adv}
 
 # Age readings TABLE - Advanced readers #################################################
 
 # Table caption
-set.caption('**Table X:** Age reading table presents the
-             number of readings made per expert reader for each modal age.')
+set.caption('**Table X:** Age reading table shows the
+             number of readings by modal age.')
 
 # Output table
-pander(style_table1(num_read_tab_ex), missing = "-")
+pander(style_table1(num_read_tab_adv[,colnames(num_read_tab_adv) %in% c("Modal age", "total")]), missing = "-")
 
 ```
 
 
 ## CV table
 
-```{r cv_ex}
+```{r cv_adv}
 
 # CV TABLE - Advanced readers #################################################
 
 # Table caption
 set.caption('**Table X:** Coefficient of Variation (CV) table presents the
-             CV per modal age and advanced reader, the CV of all advanced
-             readers combined per modal age and a weighted mean of the CV
-             per reader.')
+             CV per modal age for all advanced readers combined.')
 
 # Output table
-pander(style_table1(cv_tab_ex), missing = "-")
+pander(style_table1(cv_tab_adv[,colnames(cv_tab_adv) %in% c("Modal age", "all")]), missing = "-")
 
 ```
 
 ## PA table
 
-```{r percentage_agreement_ex}
+```{r percentage_agreement_adv}
 
 # PERCENTAGE AGREEMENT TABLE - Advanced readers ###############################
 
 # Table caption
 set.caption('**Table X:** Percentage agreement (PA) table represents the PA per
-             modal age and reader, advanced the PA of all advanced readers
-             combined per modal age and a weighted mean of the PA per reader.')
+             modal age for all advanced readers combined.')
 
 # Output table
-pander(style_table1(pa_tab_ex), missing = "-")
+pander(style_table1(pa_tab_adv[,colnames(pa_tab_adv) %in% c("Modal age", "total")]), missing = "-")
 
 ```
 
+
+## APE table
+
+```{r average_percentage_error_adv}
+
+# AVERAGE PERCENTAGE ERROR TABLE - Advanced readers ###############################
+
+# Table caption
+set.caption('**Table X:** Average Percentage Error (APE) table represents the APE per
+             modal age for all advanced readers combined.')
+
+# Output table
+pander(style_table1(ape_tab_adv[,colnames(ape_tab_adv) %in% c("Modal age", "all")]), missing = "-")
+
+```
+
+
+
 ## Relative bias table
 
-```{r rb_ex,results='asis'}
+```{r rb_adv,results='asis'}
 
 # RELATIVE BIAS TABLE - Advanced readers ######################################
 
 # Table caption
-set.caption('**Table X:** Relative bias table represents the relative bias per
-             modal age and advanced reader, the relative bias of all
-             advanced readers combined per modal age and a weighted mean of
-             the relative bias per reader.')
+set.caption('**Table X:** The relative bias (as the difference between the mean and modal age) per
+             modal age for all advanced readers combined.')
 
 # Output table
-pander(style_table1(rel_bias_tab_ex), missing = "-")
+pander(style_table1(rel_bias_tab_adv[,colnames(rel_bias_tab_adv) %in% c("Modal age", "all")]), missing = "-")
 
 ```
 
@@ -170,7 +204,7 @@ pander(style_table1(rel_bias_tab_ex), missing = "-")
 cap_in <- '**Figure X:** Age bias plot for advanced readers.'
 
 # Output table
-plot_bias_all(ad_long_ex, max_age, max_modal)
+plot_bias_all(ad_long_adv, max_age, max_modal, sel_readers="Advanced readers")
 
 ```
 
@@ -179,216 +213,210 @@ plot_bias_all(ad_long_ex, max_age, max_modal)
 
 ## Growth analysis
 
-```{r growth_analysis_exp, fig.width = 8, fig.height = 6, fig.cap = cap_in}
+```{r growth_analysis_exp, fig.width = 6, fig.height = 4, fig.cap = cap_in}
 # GROWTH ANALYSIS - Advanced readers ##########################################
 
 # Table caption
 cap_in <- '**Figure X:** Plot of average distance from the centre to the winter
-           rings for advanced readers by preparation method. The boxes represent 
+           rings for advanced readers. The boxes represent 
            the median, upper and lower box boundaries of the interquartile range,
            whiskers extend no further than 1.5 * IQR (where IQR is the inter-quartile 
            range) from the box boundary. Data beyond the end of the whiskers are 
            represent outlers and are plotted individually.'
 
 # Output table
-plot_growth(dist, ad_long_all, strata = "prep_method")
+plot_growth(dist, ad_long_all, stratif = "no_stratification")
 ```
 
-## Age error matrices
+## Age error matrices AEM
 
-```{r age_error_matrix_ex, results='asis'}
+### General Age Error Matrix (AEM)
 
-# AEM AREA - Advanced readers #################################################
+```{r age_error_matrix_adv, results='asis'}
+
+# General AEM - Advanced readers #################################################
+
+# Table caption
+  cap_i <- "**Table X:** General Age error matrix (AEM). The modal age is in rows and the age classifications by the advanced readers in columns."
+  set.caption(cap_i)
+  pander(style_table3(ae_mat_adv[[1]]), missing = "-")
+
+```
+
+### AEM by ICES area
+
+```{r age_error_matrix_by_area_adv, results='asis'}
+
+# AEM by area - Advanced readers #################################################
 
 # Loop through each area and output AEM for that area
-for (i in seq_along(ae_mat_ex)) {
+for (i in seq_along(ae_mat_by_area_adv)) {
   # name of strata
-  strata_name <- names(ae_mat_ex)[i]
+  ices_area <- names(ae_mat_by_area_adv)[i]
   
   # Table caption
-  cap_i <- paste0("**Table X:** Age error matrix (AEM) for ", strata_name,".")
+  cap_i <- paste0("**Table X:** Age error matrix (AEM) for ICES area ", ices_area,".")
 
   set.caption(cap_i)
-  pander(style_table3(ae_mat_ex[[i]]), missing = "-")
+  pander(style_table3(ae_mat_by_area_adv[[i]]), missing = "-")
+
+}
+
+```
+
+### AEM by strata
+
+```{r age_error_matrix_by_strata_adv, results='asis'}
+
+# AEM by strata - Advanced readers #################################################
+
+# Loop through each area and output AEM for that area
+for (i in seq_along(ae_mat_by_strata_adv)) {
+  # name of strata
+  strata_name <- names(ae_mat_by_strata_adv)[i]
+  
+  # Table caption
+  tempdat=t(as.data.frame(as.matrix(strsplit(strata_name, ", ")[[1]])))
+  colnames(tempdat)=config$strata
+  cap_i <- paste0("**Table X:** Age error matrix (AEM) for ", apply(tempdat, 1, function(x) {paste(str_to_title(config$strata), x, sep="_", collapse="_and_")}),".")
+  
+  set.caption(cap_i)
+  pander(style_table3(ae_mat_by_strata_adv[[i]]), missing = "-")
 
 }
 
 ```
 
 
-```{r set_strata}
+
+<!-- Overall comparison of results by strata -->
+
+```{r set_by_strata_adv}
 # initialise strata loop
 istrata <- 0
+group <- "adv"
 print_strata <- function() length(params$strata) >= istrata
 ```
 
-<!-- first strata -->
+```{r ref.label= 'strata_plus_one'}
 
-```{r strata_plus_one}
-# second strata
-istrata <- istrata + 1
 ```
 
-```{r strata_title, eval = print_strata()}
-stratum <- params$strata[istrata]
+```{r text_comparison, eval= print_strata()}
+
+asis_output("***Overall comparison of results by strata***")
+
+```  
+  
+```{r ar_by_strata_adv, eval= print_strata()}
+
+group <- "adv"
+
+# NUMBER OF AGE READINGS PER STOCK - Advanced readers #########################
+# Table caption
+set.caption('**Table X:** Number of age readings per strata and modal age for all advanced readers combined.')
+
+# Output table
+pander(style_table1(get(vname("num_read_tab_by_strata"))), missing = "-")
+```
+
+\
+
+```{r text_comparison_adv_I, eval= print_strata()}
+
+asis_output("*Coefficient of Variation (CV)*")
+
+```  
+
+
+```{r cv_by_strata_adv, eval= print_strata()}
+
+# Table caption
+set.caption('**Table X:** CV per strata and modal age for all advanced readers combined.')
+
+# Output table
+pander(style_table2(get(vname("cv_tab_by_strata"))), missing = "-")
+```
+
+\
+
+```{r text_comparison_adv_II, eval= print_strata()}
+
+asis_output("*Percentage of Agreement (PA)*")
+
+```  
+
+```{r pa_by_strata_adv, eval= print_strata()}
 # Section title
-asis_output(paste("# Results by", stratum))
+
+# Table caption
+set.caption('**Table X:** Percentage Agreement per strata and modal age for all advanced readers combined.')
+
+# Output table
+pander(style_table2(get(vname("pa_tab_by_strata"))), missing = "-")
 ```
 
+\
 
-```{r ar_title, eval = print_strata()}
-#  title
-asis_output(paste("## Age readings by", stratum))
+```{r text_comparison_adv_III, eval= print_strata()}
+
+asis_output("*Average Percentage Error (APE)*")
+
+```  
+
+```{r ape_by_strata_adv, eval= print_strata()}
+# Section title
+
+# Table caption
+set.caption('**Table X:** Average Percentage Error per strata and modal age for all advanced readers combined.')
+
+# Output table
+pander(style_table2(get(vname("ape_tab_by_strata"))), missing = "-")
 ```
 
-```{r growth_analysis_exp_by, fig.width = 8, fig.height = 6, fig.cap = cap_in, eval = print_strata()}
-# GROWTH ANALYSIS - Advanced readers ##########################################
+\
+
+```{r text_comparison_adv_IV, eval= print_strata()}
+
+asis_output("*Relative bias*")
+
+```  
+
+```{r rb_by_strata_adv, eval= print_strata()}
+# Section title
+
+# Table caption
+set.caption('**Table X:** Relative Bias per strata and modal age for all advanced readers combined.')
+
+# Output table
+pander(style_table2(get(vname("rel_bias_tab_by_strata"))), missing = "-")
+```
+
+\
+
+```{r text_comparison_adv_V, eval= print_strata()}
+
+asis_output("*Growth analysis*")
+
+```  
+
+```{r growth_analysis_adv_by, fig.width = 8, fig.height = 4, fig.cap = cap_in, eval= print_strata()}
+# GROWTH ANALYSIS - All readers ##########################################
 
 # Table caption
 cap_in <- '**Figure X:** Plot of average distance from the centre to the winter
-           rings for advanced readers by %s. The boxes represent 
+           rings for all advanced readers by strata. The boxes represent 
            the median, upper and lower box boundaries of the interquartile range,
            whiskers represent the minimum and maximum values and the dots represent 
            the outliers.'
-cap_in <- sprintf(cap_in, stratum)
 
 # Output table
-plot_growth(dist, ad_long_all, strata = stratum)
+plot_growth(dist, ad_long_adv, stratif = "all_strata")
 ```
 
-```{r ar_by, eval = print_strata()}
-# NUMBER OF AGE READINGS PER STOCK - Advanced readers #########################
-
-# Table caption
-set.caption(paste0('**Table X:** Number of age readings per ', stratum, ' for advanced readers.'))
-
-# Output table
-pander(style_table1(get(vsname("num_read_tab"))), missing = "-")
-```
-
-```{r cv_title, eval = print_strata()}
-#  title
-asis_output(paste("## Coefficient of Variation by", stratum))
-```
-
-
-```{r cv_by, eval = print_strata()}
-
-# Table caption
-set.caption(paste0('**Table X:** CV per ', stratum, '.'))
-
-# Output table
-pander(style_table2(get(vsname("cv_tab"))), missing = "-")
-
-```
-
-```{r pa_title, eval = print_strata()}
-#  title
-asis_output(paste("## Percentage Agreement by", stratum))
-```
-
-
-```{r pa_by, eval = print_strata()}
-# Section title
-#asis_("## PA PER STOCK - Advanced readers")  #    #  #############################################
-
-# Table caption
-set.caption(paste0('**Table X:** Percentage Agreement per ', stratum, '.'))
-
-# Output table
-pander(style_table2(get(vsname("pa_tab"))), missing = "-")
-
-```
-
-
-<!-- second strata -->
-
-```{r ref.label='strata_plus_one'}
-```
-
-```{r ref.label='strata_title', eval = print_strata()}
-```
-
-```{r ref.label='ar_title', eval = print_strata()}
-```
-
-```{r ref.label='growth_analysis_exp_by', eval = print_strata()}
-```
-
-```{r ref.label='ar_by', eval = print_strata()}
-```
-
-```{r ref.label='cv_title', eval = print_strata()}
-```
-
-```{r ref.label='cv_by', eval = print_strata()}
-```
-
-```{r ref.label='pa_title', eval = print_strata()}
-```
-
-```{r ref.label='pa_by', eval = print_strata()}
-```
-
-
-<!-- third strata -->
-
-```{r ref.label='strata_plus_one'}
-```
-
-```{r ref.label='strata_title', eval = print_strata()}
-```
-
-```{r ref.label='ar_title', eval = print_strata()}
-```
-
-```{r ref.label='growth_analysis_exp_by', eval = print_strata()}
-```
-
-```{r ref.label='ar_by', eval = print_strata()}
-```
-
-```{r ref.label='cv_title', eval = print_strata()}
-```
-
-```{r ref.label='cv_by', eval = print_strata()}
-```
-
-```{r ref.label='pa_title', eval = print_strata()}
-```
-
-```{r ref.label='pa_by', eval = print_strata()}
-```
-
-
-<!-- fourth strata -->
-
-```{r ref.label='strata_plus_one'}
-```
-
-```{r ref.label='strata_title', eval = print_strata()}
-```
-
-```{r ref.label='ar_title', eval = print_strata()}
-```
-
-```{r ref.label='growth_analysis_exp_by', eval = print_strata()}
-```
-
-```{r ref.label='ar_by', eval = print_strata()}
-```
-
-```{r ref.label='cv_title', eval = print_strata()}
-```
-
-```{r ref.label='cv_by', eval = print_strata()}
-```
-
-```{r ref.label='pa_title', eval = print_strata()}
-```
-
-```{r ref.label='pa_by', eval = print_strata()}
-```
 
 
 # Conclusion
+
+
+
