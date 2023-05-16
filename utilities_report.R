@@ -30,7 +30,7 @@ style_table2 <- function(tab) {
   # Capitalize first letter of column, make header, last column and
   # last row in boldface
   names(tab) <- pandoc.strong.return(names(tab))
-  emphasize.strong.cols(ncol(tab))
+  #emphasize.strong.cols(ncol(tab))
   emphasize.strong.rows(nrow(tab))
 
   return(tab)
