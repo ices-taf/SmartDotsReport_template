@@ -1699,10 +1699,10 @@ pander(style_table0(summary_multiple_modes_adv), missing="")
 <!-- Total number of samples (NSample), number (CountMM) and percentage of multimodal cases (PercMM), PA, CV and APE text -->
 ```{r summary_statistics_adv}
 summary_statistics_adv <-
-    c(NSample  = length(unique(ad_long_all$SampleID)),
-    CV  = cv_tab_all[nrow(cv_tab_all), "all"],
-    PA  = pa_tab_all[nrow(pa_tab_all), "total"],
-    APE = ape_tab_all[nrow(ape_tab_all), "all"])
+    c(NSample  = length(unique(ad_long_adv$SampleID)),
+    CV  = cv_tab_adv[nrow(cv_tab_adv), "all"],
+    PA  = pa_tab_adv[nrow(pa_tab_adv), "total"],
+    APE = ape_tab_adv[nrow(ape_tab_adv), "all"])
 
 # Table caption
 set.caption('**Table X:** Summary of statistics; Total number of samples (NSample), coefficient of variance (CV), percentage of agreement (PA) and average percentage error (APE) for all ages and readers')
