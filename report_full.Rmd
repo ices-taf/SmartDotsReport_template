@@ -1685,7 +1685,7 @@ pander(style_table0(summary_multiple_modes_adv), missing="")
 summary_statistics_adv <-
     c(NSample  = length(unique(ad_long_adv$SampleID)),
     CV  = cv_tab_adv[nrow(cv_tab_adv), "all"],
-    PA  = pa_tab_adv[nrow(pa_tab_adv), "all"],
+    PA  = pa_tab_adv[nrow(pa_tab_adv), "total"],
     APE = ape_tab_adv[nrow(ape_tab_adv), "all"])
 
 # Table caption
