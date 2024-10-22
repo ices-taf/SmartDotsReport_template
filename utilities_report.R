@@ -313,6 +313,7 @@ plot_rdist <- function(ad_long) {
 
 plot_rb_ma <- function(rel_bias_tab) {
   rel_bias_tab %>%
+    mutate_if(is.character, as.numeric) %>% 
     filter(`Modal age` != "Weighted Mean" & !is.na(all)) %>%
     select(`Modal age`, all) %>%
     rename(modal_age = `Modal age`) %>%
