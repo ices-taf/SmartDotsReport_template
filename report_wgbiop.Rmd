@@ -1,0 +1,180 @@
+---
+title: "`r params$wgbiop_title`"
+output:
+  word_document:
+    fig_caption: true
+    fig_height: 10
+    fig_width: 10
+    reference_docx: "bootstrap/initial/data/wgbiopTemplate.docx"
+    toc: false
+    keep_md: true
+params:
+  wgbiop_title: "WGBIOP Report"
+  strata: NULL
+---
+
+
+```{r introduction, include = FALSE}
+
+# INTRODUCTION ################################################################
+
+# This markdown documents and integrated scripts analyse biological
+# age readings to be included in the WGBIOP master table.
+# The output is a .docx template that includes
+# the results of the analysis and should be used as a standard for
+# reporting of age reading comparisons.
+
+```
+
+```{r chunk_setup, include=FALSE}
+# CHUNK SETUPS #################################################################
+
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE,
+                      message=FALSE, results = 'asis', dpi=400)
+
+```
+
+```{r pander_settings, include = FALSE}
+
+# PANDER OPTIONS ##############################################################
+
+panderOptions('table.split.table', Inf)
+panderOptions('keep.trailing.zeros', TRUE)
+panderOptions('table.alignment.default', "center")
+
+```
+
+
+
+---
+title: `r params$wgbiop_title`
+---
+
+
+
+# General info: Overview of the event (species, stock)
+
+```{r overview_statistics_info}
+species_data <- read.csv("https://raw.githubusercontent.com/openfigis/RefData/gh-pages/Eurostat/CL_SPECIES_1_2.csv", stringsAsFactors = FALSE)
+
+spp <- unique(substring(ad_long_all$stock, 1, 3)) 
+
+nome <- spp
+resultados <- list()
+
+nomes<-nome
+
+# Ciclo for
+for (nome in nomes) {
+  if (nome == "mis") {
+    resultados[[nome]] <- NA
+  } else {
+    resultados[[nome]] <- subset(species_data, ALPHA3CODE == toupper(nome))
+  }
+}
+
+
+if (!is.null(resultados[[1]]) && is.data.frame(resultados[[1]]) && !all(is.na(resultados[[1]]))) {
+  scientificname <- resultados[[1]]$SCIENTIFIC_NAME
+  sp_name_eng <- resultados[[1]]$FULL_NAME_E
+  aphia <- wm_name2id(name = scientificname)
+} else {
+  scientificname <- NA
+  sp_name_eng <- NA
+  aphia <- NA
+}
+
+
+overview_statistics_info <-c("ICES stock" =paste(unique(ad_long_all$stock), collapse = ", "), 
+"aphiaID"= paste(aphia), "Species scientific name" = paste(scientificname),
+"Species common name" = paste(sp_name_eng), "ICES WG" = "", "Age-based model"="")
+
+
+# Table caption
+set.caption('**Table 1.1:** Overview of the species from the event: ICES stock, aphiaID, Species scientific name, Species common name, ICES assessment Working Group, Age-based model (yes/no).')
+
+# Output table
+pander(style_table0(overview_statistics_info), missing="")
+
+```
+
+
+
+
+# Overview of the samples and readers
+
+```{r overview_statistics_readers}
+
+# Samples OVERVIEW #####################################################
+overview_statistics_readers <- c(
+  "N. Individuals" = length(unique(ad_long_all$FishID)),
+  "N. Images" = length(unique(ad_long_all$SampleID)),
+  "Preparation method" = paste(unique(ad_long_all$prep_method), collapse = ", "),
+  "All readers (n)" = length(unique(ad_long_all$reader)),
+  "Basic readers (n)" = length(unique(ad_long_all$reader)) - length(unique(ad_long_adv$reader)),
+  "Advanced readers (n)" = length(unique(ad_long_adv$reader)),
+  "Countries" = paste(unique(ad_long_all$country), collapse = " and ")
+)
+
+
+
+# Table caption
+set.caption('**Table 2.1:** Overview results for all readers: Total number of samples (N. Individuals), total number of images (N. Images), preparation method, number of readers [All readers (n)], number os basic readers [Basic readers (n)], number of advanced readers [Advanced readers (n)] and countries participating on the event.')
+
+# Output table
+pander(style_table0(overview_statistics_readers), missing="")
+
+```
+
+
+```{r sample_overview}
+
+modal_age_range <- range(ad_long_all$modal_age, na.rm = TRUE)
+# Table caption
+set.caption(paste('**Table 2.2:** Overview of samples used for the exchange event', config$event_id, '. The modal age range for all samples is ', modal_age_range[1], "-", modal_age_range[2], '.', sep=""))
+
+# Output table
+pander(style_table0(sample_data_overview), style = "simple")
+
+```
+
+
+# Overview of the results
+## Summary table: All readers and Advanced readers
+
+```{r overview_statistics_all}
+overview_statistics_all <-
+    c( Data = "All", CV  = cv_tab_all[nrow(cv_tab_all), "all"],
+    PA  = pa_tab_all[nrow(pa_tab_all), "total"],
+    APE = ape_tab_all[nrow(ape_tab_all), "all"],
+    "All readers (n)" =length(unique(ad_long_all$reader)))
+
+# Table caption
+set.caption('**Table 3.1:** Overview results: coefficient of variance (CV), percentage of agreement (PA),  average percentage error (APE) for all ages and readers and the number of all readers (Data: All) and advanced readers (Data: Advanced) on the event.')
+
+# Output table
+pander(style_table0(overview_statistics_all), missing="")
+
+```
+
+
+
+```{r overview_statistics_adv}
+overview_statistics_adv <-
+    c(Data = "Advanced", CV  = cv_tab_adv[nrow(cv_tab_adv), "all"],
+    PA  = pa_tab_adv[nrow(pa_tab_adv), "total"],
+    APE = ape_tab_adv[nrow(ape_tab_adv), "all"],
+     "Advanced readers (n)" = length(unique(ad_long_adv$reader)))
+
+
+# Output table
+pander(style_table0(overview_statistics_adv), missing="")
+
+```
+
+
+
+
+
+
+
