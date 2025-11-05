@@ -7,6 +7,8 @@
   "report_name": "SmartDots_Report_Event_347",
   "report_title": "SmartDots Report for event 347",
   "report_tokens": "tokens goes here",
+  "wgbiop_name": "SmartDots_WGBIOP_mastertable_Event_347",
+  "wgbiop_title": "SmartDots WGBIOP mastertable Report for event 347",
   "mode_definition": "multistage",
   "strata": ["strata"]
 }
