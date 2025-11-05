@@ -97,5 +97,5 @@ cp(wgbiop_filename, "report", move = TRUE)
 
 
 # move disclaimer to report folder
-cp("bootstrap/data/Disclaimer.txt", "report", move = TRUE)
+#cp("bootstrap/data/Disclaimer.txt", "report", move = TRUE)
 
