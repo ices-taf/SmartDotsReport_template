@@ -14,6 +14,7 @@ library(ggplot2)
 library(scales)
 library(dplyr)
 require(Hmisc)
+library(worrms) #aphiaID
 
 # make report directory
 mkdir("report")
@@ -78,5 +79,23 @@ if(is.null(config$strata)) {
 }
 cp(report_filename, "report", move = TRUE)
 
+# render report and copy to report folder
+wgbiop_filename <- paste0(config$wgbiop_name, ".docx")
+if(is.null(config$strata)) {
+  render("report_wgbiop.Rmd",
+         params = list(wgbiop_title = config$wgbiop_title),
+         output_file = wgbiop_filename,
+         encoding = "UTF-8")
+} else {
+  render("report_wgbiop.Rmd",
+         params = list(wgbiop_title = config$wgbiop_title,
+                       strata = unique(ad_long_all$strata)),
+         output_file = wgbiop_filename,
+         encoding = "UTF-8")
+}
+cp(wgbiop_filename, "report", move = TRUE)
+
+
 # move disclaimer to report folder
 cp("bootstrap/data/Disclaimer.txt", "report", move = TRUE)
+
