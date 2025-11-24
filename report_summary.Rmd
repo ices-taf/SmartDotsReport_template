@@ -160,7 +160,7 @@ pander(style_table1(num_read_tab_adv[,colnames(num_read_tab_adv) %in% c("Modal a
 
 # Table caption
 set.caption('**Table X:** Coefficient of Variation (CV) table presents the
-             CV per modal age for all advanced readers combined.')
+             CV per modal age for advanced readers combined.')
 
 # Output table
 pander(style_table1(cv_tab_adv[,colnames(cv_tab_adv) %in% c("Modal age", "all")]), missing = "-")
@@ -175,7 +175,7 @@ pander(style_table1(cv_tab_adv[,colnames(cv_tab_adv) %in% c("Modal age", "all")]
 
 # Table caption
 set.caption('**Table X:** Percentage agreement (PA) table represents the PA per
-             modal age for all advanced readers combined.')
+             modal age for advanced readers combined.')
 
 # Output table
 pander(style_table1(pa_tab_adv[,colnames(pa_tab_adv) %in% c("Modal age", "total")]), missing = "-")
@@ -191,7 +191,7 @@ pander(style_table1(pa_tab_adv[,colnames(pa_tab_adv) %in% c("Modal age", "total"
 
 # Table caption
 set.caption('**Table X:** Average Percentage Error (APE) table represents the APE per
-             modal age for all advanced readers combined.')
+             modal age for advanced readers combined.')
 
 # Output table
 pander(style_table1(ape_tab_adv[,colnames(ape_tab_adv) %in% c("Modal age", "all")]), missing = "-")
@@ -208,7 +208,7 @@ pander(style_table1(ape_tab_adv[,colnames(ape_tab_adv) %in% c("Modal age", "all"
 
 # Table caption
 set.caption('**Table X:** The relative bias (as the difference between the mean and modal age) per
-             modal age for all advanced readers combined.')
+             modal age for advanced readers combined.')
 
 # Output table
 pander(style_table1(rel_bias_tab_adv[,colnames(rel_bias_tab_adv) %in% c("Modal age", "all")]), missing = "-")
@@ -335,7 +335,7 @@ group <- "adv"
 
 # NUMBER OF AGE READINGS PER STOCK - Advanced readers #########################
 # Table caption
-set.caption('**Table X:** Number of age readings per strata and modal age for all advanced readers combined.')
+set.caption('**Table X:** Number of age readings per strata and modal age for advanced readers combined.')
 
 # Output table
 pander(style_table1(get(vname("num_read_tab_by_strata"))), missing = "-")
@@ -353,7 +353,7 @@ asis_output("*Coefficient of Variation (CV)*")
 ```{r cv_by_strata_adv, eval= print_strata()}
 
 # Table caption
-set.caption('**Table X:** CV per strata and modal age for all advanced readers combined.')
+set.caption('**Table X:** CV per strata and modal age for advanced readers combined.')
 
 # Output table
 pander(style_table2(get(vname("cv_tab_by_strata"))), missing = "-")
@@ -371,7 +371,7 @@ asis_output("*Percentage of Agreement (PA)*")
 # Section title
 
 # Table caption
-set.caption('**Table X:** Percentage Agreement per strata and modal age for all advanced readers combined.')
+set.caption('**Table X:** Percentage Agreement per strata and modal age for advanced readers combined.')
 
 # Output table
 pander(style_table2(get(vname("pa_tab_by_strata"))), missing = "-")
@@ -389,7 +389,7 @@ asis_output("*Average Percentage Error (APE)*")
 # Section title
 
 # Table caption
-set.caption('**Table X:** Average Percentage Error per strata and modal age for all advanced readers combined.')
+set.caption('**Table X:** Average Percentage Error per strata and modal age for advanced readers combined.')
 
 # Output table
 pander(style_table2(get(vname("ape_tab_by_strata"))), missing = "-")
@@ -407,7 +407,7 @@ asis_output("*Relative bias*")
 # Section title
 
 # Table caption
-set.caption('**Table X:** Relative Bias per strata and modal age for all advanced readers combined.')
+set.caption('**Table X:** Relative Bias per strata and modal age for advanced readers combined.')
 
 # Output table
 pander(style_table2(get(vname("rel_bias_tab_by_strata"))), missing = "-")
@@ -422,11 +422,11 @@ asis_output("*Growth analysis*")
 ```  
 
 ```{r growth_analysis_adv_by, fig.width = 8, fig.height = 4, fig.cap = cap_in, eval= print_strata()}
-# GROWTH ANALYSIS - All readers ##########################################
+# GROWTH ANALYSIS - Advanced readers ##########################################
 
 # Table caption
 cap_in <- '**Figure X:** Plot of average distance from the centre to the winter
-           rings for all advanced readers by strata. The boxes represent 
+           rings for advanced readers by strata. The boxes represent 
            the median, upper and lower box boundaries of the interquartile range,
            whiskers represent the minimum and maximum values and the dots represent 
            the outliers.'
@@ -438,6 +438,7 @@ plot_growth(dist, ad_long_adv, stratif = "all_strata")
 
 
 # Conclusion
+
 
 
 
