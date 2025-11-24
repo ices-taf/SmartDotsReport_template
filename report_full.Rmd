@@ -88,7 +88,7 @@ since these are merely used to do calculations for the other tables.
 if(config$mode_definition=="standard") {
   asis_output("**Modal age: a standard approach to define the modal age by sampled fish**
   \
-  In this event, the standard approach to calculate the modal age has been used. When summarizing the output and reporting the results of the exchange events developed within the SmarDots framework, the modal age (the most common age decided by the readers for every fish sample) is the most relevant measurement. It is a key statistic by itself, but it is also fundamental for the estimation of some other relevant statistics to assess the performance of the techniques assessed in the exchange event, like the Percentage Agreement (PA), or input for stock assessments like the Age Error Matrix (AEM) (see below). It is important that with the standard approach to define the modal age by fish individual, the difference in the expertise of the readers is not accounted for, and, in case there are more that one modal age (two or more age categories with the same number of annotations by readers) the mode is decided as the lowest age of all the modal ages. If this standard approach has been selected by the event coordinator, it is specially important checking the table that indicates the percentage of multimodal cases (in the results section) and the table with the fishID and sampleID that obtained multiple modes (included in annex 3). It is important to consider that if the number of cases (FishID or sampleID) with multiple modes is high, this might lead to bias in the calculation of the PA and AEM.")
+  In this event, the standard approach to calculate the modal age has been used. When summarizing the output and reporting the results of the exchange events developed within the SmartDots framework, the modal age (the most common age decided by the readers for every fish sample) is the most relevant measurement. It is a key statistic by itself, but it is also fundamental for the estimation of some other relevant statistics to assess the performance of the techniques assessed in the exchange event, like the Percentage Agreement (PA), or input for stock assessments like the Age Error Matrix (AEM) (see below). It is important that with the standard approach to define the modal age by fish individual, the difference in the expertise of the readers is not accounted for, and, in case there are more that one modal age (two or more age categories with the same number of annotations by readers) the mode is decided as the lowest age of all the modal ages. If this standard approach has been selected by the event coordinator, it is specially important checking the table that indicates the percentage of multimodal cases (in the results section) and the table with the fishID and sampleID that obtained multiple modes (included in annex 3). It is important to consider that if the number of cases (FishID or sampleID) with multiple modes is high, this might lead to bias in the calculation of the PA and AEM.")
   } else {if(config$mode_definition=="multistage"){
   asis_output("**Modal age: a multistage approach to define the modal age by sampled fish**,
   \
@@ -381,7 +381,7 @@ for(i in 1:nfig)
   if(i==1){
     # Table caption
     set.caption('**Table X:** Average Percentage Error (APE) table represents the APE per
-             modal age and reader, the APE of all advanced readers
+             modal age and reader, the APE of all readers
              combined per modal age and a weighted mean of the APE per reader.')
     selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
     pander(style_table1(selec), missing = "-")
@@ -674,7 +674,7 @@ for(i in 1:nfig)
 
 ```{r average_percentage_error_all_by_strata, eval = print_strata()}
 
-# AVERAGE PERCENTAGE ERROR TABLE - Advanced readers ###############################
+# AVERAGE PERCENTAGE ERROR TABLE - All readers ###############################
 data=eval(parse(text=vsname("ape_tab")))
 nstagers=length(unique(reader_data$'Reader code'))
 ncols=dim(data[,!colnames(data) %in% c("all")])[2]
@@ -688,7 +688,7 @@ for(i in 1:nfig)
   if(i==1){
     # Table caption
     set.caption(paste('**Table X:** Strata', stratum, '.Average Percentage Error (APE) table represents the APE per
-             modal age and reader, the APE of all advanced readers
+             modal age and reader, the APE of all readers
              combined per modal age and a weighted mean of the APE per reader.'))
     selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
     pander(style_table1(selec), missing = "-")
@@ -1561,9 +1561,9 @@ asis_output("***Overall comparison of results by strata***")
 
 group <- "all"
 
-# NUMBER OF AGE READINGS PER STOCK - Advanced readers #########################
+# NUMBER OF AGE READINGS PER STOCK - All readers #########################
 # Table caption
-set.caption('**Table X:** Number of age readings per strata and modal age for all advanced readers combined.')
+set.caption('**Table X:** Number of age readings per strata and modal age for all readers combined.')
 
 # Output table
 pander(style_table1(get(vname("num_read_tab_by_strata"))), missing = "-")
@@ -1581,7 +1581,7 @@ asis_output("*Coefficient of Variation (CV)*")
 ```{r cv_by_strata_all, eval = print_strata()}
 
 # Table caption
-set.caption('**Table X:** CV per strata and modal age for all advanced readers combined.')
+set.caption('**Table X:** CV per strata and modal age for all readers combined.')
 
 # Output table
 pander(style_table2(get(vname("cv_tab_by_strata"))), missing = "-")
@@ -1600,7 +1600,7 @@ asis_output("*Percentage of Agreement (PA)*")
 # Section title
 
 # Table caption
-set.caption('**Table X:** Percentage Agreement per strata and modal age for all advanced readers combined.')
+set.caption('**Table X:** Percentage Agreement per strata and modal age for all readers combined.')
 
 # Output table
 pander(style_table2(get(vname("pa_tab_by_strata"))), missing = "-")
@@ -1620,7 +1620,7 @@ asis_output("*Average Percentage Error (APE)*")
 # Section title
 
 # Table caption
-set.caption('**Table X:** Average Percentage Error per strata and modal age for all advanced readers combined.')
+set.caption('**Table X:** Average Percentage Error per strata and modal age for all readers combined.')
 
 # Output table
 pander(style_table2(get(vname("ape_tab_by_strata"))), missing = "-")
@@ -1639,7 +1639,7 @@ asis_output("*Relative bias*")
 # Section title
 
 # Table caption
-set.caption('**Table X:** Relative Bias per strata and modal age for all advanced readers combined.')
+set.caption('**Table X:** Relative Bias per strata and modal age for all readers combined.')
 
 # Output table
 pander(style_table2(get(vname("rel_bias_tab_by_strata"))), missing = "-")
@@ -1710,7 +1710,7 @@ summary_statistics_adv <-
     APE = ape_tab_adv[nrow(ape_tab_adv), "all"])
 
 # Table caption
-set.caption('**Table X:** Summary of statistics; Total number of samples (NSample), coefficient of variance (CV), percentage of agreement (PA) and average percentage error (APE) for all ages and readers')
+set.caption('**Table X:** Summary of statistics; Total number of samples (NSample), coefficient of variance (CV), percentage of agreement (PA) and average percentage error (APE) for avanced ages and readers')
 
 # Output table
 pander(style_table0(summary_statistics_adv), missing="")
@@ -1741,7 +1741,7 @@ for(i in 1:nfig)
   if(i==1){
     # Table caption
     set.caption('**Table X:** Coefficient of Variation (CV) table presents the
-             CV per modal age and advanced reader, the CV of all advanced
+             CV per modal age and advanced reader, the CV of advanced
              readers combined per modal age and a weighted mean of the CV
              per reader.')
     selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
@@ -1780,7 +1780,7 @@ for(i in 1:nfig)
   if(i==1){
     # Table caption
     set.caption('**Table X:** Percentage agreement (PA) table represents the PA per
-             modal age and reader, advanced the PA of all advanced readers
+             modal age and reader, advanced the PA of advanced readers
              combined per modal age and a weighted mean of the PA per reader.')
     selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
     pander(style_table1(selec), missing = "-")
@@ -1817,7 +1817,7 @@ for(i in 1:nfig)
   if(i==1){
     # Table caption
     set.caption('**Table X:** Average Percentage Error (APE) table represents the APE per
-             modal age and reader, the APE of all advanced readers
+             modal age and reader, the APE of advanced readers
              combined per modal age and a weighted mean of the APE per reader.')
     selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
     pander(style_table1(selec), missing = "-")
@@ -1854,7 +1854,7 @@ for(i in 1:nfig)
   if(i==1){
     # Table caption
     set.caption('**Table X:** The relative bias (as the difference between the mean and modal age) per
-             modal age and advanced reader is presented, as well as the weighted mean relative bias per reader and the relative bias per modal age for all
+             modal age and advanced reader is presented, as well as the weighted mean relative bias per reader and the relative bias per modal age for 
              advanced readers combined.')
     selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
     pander(style_table1(selec), missing = "-")
@@ -2083,7 +2083,7 @@ for(i in 1:nfig)
   if(i==1){
     # Table caption
     set.caption(paste('**Table X:** Strata', stratum, '.Coefficient of Variation (CV) table presents the CV
-             per modal age and reader, the CV of all readers combined per modal
+             per modal age and reader, the CV of advanced readers combined per modal
              age and a weighted mean of the CV per reader'))
     selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
     pander(style_table1(selec), missing = "-")
@@ -2112,7 +2112,7 @@ asis_output("*Percentage of Agreement (PA)*")
 
 # <!-- PA text -->
 
-asis_output("The percentage agreement per reader per modal age tells how large part of the
+asis_output("The percentage agreement per advanced reader per modal age tells how large part of the
 readings that are equal to the modal age. The weighted mean including at the
 bottom of the table is weighted according to number of age readings.")
 
@@ -2136,7 +2136,7 @@ for(i in 1:nfig)
   if(i==1){
     # Table caption
     set.caption(paste('**Table X:** Strata', stratum, '.Percentage agreement (PA) table represents the PA per
-             modal age and reader, the PA of all readers combined per modal
+             modal age and advanced reader, the PA of all advanced readers combined per modal
              age and a weighted mean of the PA per reader.'))
     selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
     pander(style_table1(selec), missing = "-")
@@ -2177,7 +2177,7 @@ for(i in 1:nfig)
   if(i==1){
     # Table caption
     set.caption(paste('**Table X:** Strata', stratum, '.Average Percentage Error (APE) table represents the APE per
-             modal age and reader, the APE of all advanced readers
+             modal age and reader, the APE of advanced readers
              combined per modal age and a weighted mean of the APE per reader.'))
     selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
     pander(style_table1(selec), missing = "-")
@@ -2205,7 +2205,7 @@ asis_output("*Relative bias*")
 
 # <!-- Relative bias text -->
 asis_output("The relative bias is the difference between the mean age (per modal age per
-reader) and modal age. As for the previous tables, a combined bias for all
+advanced reader) and modal age. As for the previous tables, a combined bias for advanced
 readers and weighted means are calculated.")
 
 ```
@@ -2227,7 +2227,7 @@ for(i in 1:nfig)
   if(i==1){
     # Table caption
     set.caption(paste('**Table X:** Strata', stratum, '. The relative bias (as the difference between the mean and modal age) per
-             modal age and advanced reader is presented, as well as the weighted mean relative bias per reader and the relative bias per modal age for all
+             modal age and advanced reader is presented, as well as the weighted mean relative bias per reader and the relative bias per modal age for 
              advanced readers combined.'))
     selec=data[,c(1:basicols, (i+basicols+((N-1)*(i-1))):((i+basicols+((N-1)*(i-1)))+(N-1)))]
     pander(style_table1(selec), missing = "-")
@@ -3055,7 +3055,7 @@ asis_output("***Overall comparison of results by strata***")
 group="adv"
 # NUMBER OF AGE READINGS PER STOCK - Advanced readers #########################
 # Table caption
-set.caption('**Table X:** Number of age readings per strata and modal age for all advanced readers combined.')
+set.caption('**Table X:** Number of age readings per strata and modal age for advanced readers combined.')
 
 # Output table
 pander(style_table1(get(vname("num_read_tab_by_strata"))), missing = "-")
@@ -3073,7 +3073,7 @@ asis_output("*Coefficient of Variation (CV)*")
 ```{r cv_by_strata_adv, eval = print_strata()}
 
 # Table caption
-set.caption('**Table X:** CV per strata and modal age for all advanced readers combined.')
+set.caption('**Table X:** CV per strata and modal age for advanced readers combined.')
 
 # Output table
 pander(style_table2(get(vname("cv_tab_by_strata"))), missing = "-")
@@ -3092,7 +3092,7 @@ asis_output("*Percentage of Agreement (PA)*")
 # Section title
 
 # Table caption
-set.caption('**Table X:** Percentage Agreement per strata and modal age for all advanced readers combined.')
+set.caption('**Table X:** Percentage Agreement per strata and modal age for advanced readers combined.')
 
 # Output table
 pander(style_table2(get(vname("pa_tab_by_strata"))), missing = "-")
@@ -3111,7 +3111,7 @@ asis_output("*Average Percentage Error (APE)*")
 # Section title
 
 # Table caption
-set.caption('**Table X:** Average Percentag Error per strata and modal age for all advanced readers combined.')
+set.caption('**Table X:** Average Percentage Error per strata and modal age for advanced readers combined.')
 
 # Output table
 pander(style_table2(get(vname("ape_tab_by_strata"))), missing = "-")
@@ -3130,7 +3130,7 @@ asis_output("*Relative bias*")
 # Section title
 
 # Table caption
-set.caption('**Table X:** Relative Bias per strata and modal age for all advanced readers combined.')
+set.caption('**Table X:** Relative Bias per strata and modal age for advanced readers combined.')
 
 # Output table
 pander(style_table2(get(vname("rel_bias_tab_by_strata"))), missing = "-")
@@ -3146,11 +3146,11 @@ asis_output("*Growth analysis*")
 
 
 ```{r growth_analysis_adv_by, fig.width = 8, fig.height = 4, fig.cap = cap_in, eval = print_strata()}
-# GROWTH ANALYSIS - All readers ##########################################
+# GROWTH ANALYSIS - Advanced readers ##########################################
 
 # Table caption
 cap_in <- '**Figure X:** Plot of average distance from the centre to the winter
-           rings for all readers by strata. The boxes represent 
+           rings for advanced readers by strata. The boxes represent 
            the median, upper and lower box boundaries of the interquartile range,
            whiskers represent the minimum and maximum values and the dots represent 
            the outliers.'
@@ -3505,3 +3505,4 @@ group <- "adv"
 # Annex 5. Recommendations
 
 # Annex 6. Report specific annexes
+
