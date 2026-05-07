@@ -1,11 +1,11 @@
 ---
-title: "`r params$wgbiop_title`"
+#title: "`r params$wgbiop_title`"
 output:
   word_document:
     fig_caption: true
     fig_height: 10
     fig_width: 10
-    #reference_docx: "bootstrap/initial/data/wgbiopTemplate.docx"
+    reference_docx: "bootstrap/initial/data/wgbiopTemplate.docx"
     toc: false
     keep_md: true
 params:
